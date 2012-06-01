@@ -1,0 +1,1480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="yes"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="yes"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="yes"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="yes"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="yes"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="yes"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="yes"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="yes"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="yes"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="yes"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="yes"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<description>&lt;b&gt;Tyco Electronics Connector&lt;/b&gt;&lt;p&gt;
+http://catalog.tycoelectronics.com&lt;br&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="6ESRM-P">
+<description>&lt;b&gt;AC Connector&lt;/b&gt;&lt;p&gt;
+120/250 VAC&lt;br&gt;
+Source: http://catalog.tycoelectronics.com .. ENG_DS_1654001_1099_SR_0406.pdf</description>
+<wire x1="-24.9" y1="-16.9" x2="24.9" y2="-16.9" width="0.2032" layer="21"/>
+<wire x1="24.9" y1="-16.9" x2="24.9" y2="-13.9" width="0.2032" layer="21"/>
+<wire x1="24.9" y1="-13.9" x2="-24.9" y2="-13.9" width="0.2032" layer="21"/>
+<wire x1="-24.9" y1="-13.9" x2="-24.9" y2="-16.9" width="0.2032" layer="21"/>
+<wire x1="-15.025" y1="-16.95" x2="-15.025" y2="-18.475" width="0.2032" layer="21"/>
+<wire x1="-15.025" y1="-18.475" x2="15.025" y2="-18.475" width="0.2032" layer="21"/>
+<wire x1="15.025" y1="-18.475" x2="15.025" y2="-16.975" width="0.2032" layer="21"/>
+<wire x1="-24.9" y1="-13.9" x2="-24.9" y2="6.4" width="0.2032" layer="21"/>
+<wire x1="-24.9" y1="6.4" x2="-14.605" y2="6.4" width="0.2032" layer="21"/>
+<wire x1="14.605" y1="6.4" x2="24.9" y2="6.4" width="0.2032" layer="21"/>
+<wire x1="24.9" y1="6.4" x2="24.9" y2="-13.9" width="0.2032" layer="21"/>
+<wire x1="-14.605" y1="8.255" x2="14.605" y2="8.255" width="0.2032" layer="21"/>
+<wire x1="14.605" y1="8.255" x2="14.605" y2="6.4" width="0.2032" layer="21"/>
+<wire x1="14.605" y1="6.4" x2="14.605" y2="-13.97" width="0.2032" layer="21"/>
+<wire x1="-14.605" y1="8.255" x2="-14.605" y2="6.4" width="0.2032" layer="21"/>
+<wire x1="-14.605" y1="6.4" x2="-14.605" y2="-13.97" width="0.2032" layer="21"/>
+<pad name="1" x="-9.1" y="9.7" drill="1.6" diameter="2.6"/>
+<pad name="2" x="0" y="9.7" drill="1.6" diameter="2.6"/>
+<pad name="3" x="9.1" y="9.7" drill="1.6" diameter="2.6"/>
+<text x="-23.495" y="6.985" size="1.27" layer="25">&gt;NAME</text>
+<text x="-10.16" y="-8.255" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-9.675" y1="8.25" x2="-8.525" y2="10.175" layer="51"/>
+<rectangle x1="-0.575" y1="8.25" x2="0.575" y2="10.175" layer="51"/>
+<rectangle x1="8.525" y1="8.25" x2="9.675" y2="10.175" layer="51"/>
+<hole x="-20" y="0" drill="3.6"/>
+<hole x="20" y="0" drill="3.6"/>
+</package>
+<package name="RJ11-SHIELD1">
+<description>&lt;b&gt;RJ11 Low Profile&lt;/b&gt; Shield Type 1&lt;p&gt;
+For all RJ11 N and Z Series Models&lt;br&gt;
+Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</description>
+<wire x1="6.877" y1="-3.151" x2="6.877" y2="-7.147" width="0.2032" layer="51"/>
+<wire x1="-6.877" y1="-7.147" x2="-6.877" y2="-3.151" width="0.2032" layer="51"/>
+<wire x1="-6.877" y1="10.819" x2="6.877" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="7.8105" y1="-8.18" x2="-7.8105" y2="-8.18" width="0.01" layer="20"/>
+<wire x1="6.877" y1="-10.322" x2="-6.877" y2="-10.322" width="0.2032" layer="21"/>
+<wire x1="-6.877" y1="-10.322" x2="-6.877" y2="-6.961" width="0.2032" layer="21"/>
+<wire x1="6.877" y1="-6.961" x2="6.877" y2="-10.322" width="0.2032" layer="21"/>
+<wire x1="-6.877" y1="-3.337" x2="-6.877" y2="7.009" width="0.2032" layer="21"/>
+<wire x1="6.877" y1="7.009" x2="6.877" y2="-3.337" width="0.2032" layer="21"/>
+<wire x1="6.877" y1="10.819" x2="6.877" y2="6.823" width="0.2032" layer="51"/>
+<wire x1="-6.877" y1="6.823" x2="-6.877" y2="10.819" width="0.2032" layer="51"/>
+<wire x1="-6.875" y1="-6.34" x2="-7.575" y2="-6.34" width="0.2032" layer="51"/>
+<wire x1="-7.575" y1="-6.34" x2="-8.05" y2="-6.815" width="0.2032" layer="51" curve="90"/>
+<wire x1="-8.05" y1="-6.815" x2="-8.05" y2="-8.135" width="0.2032" layer="21"/>
+<wire x1="-8.05" y1="-8.135" x2="-9.785" y2="-9.87" width="0.2032" layer="21" curve="-90"/>
+<wire x1="6.875" y1="-6.34" x2="7.575" y2="-6.34" width="0.2032" layer="51"/>
+<wire x1="7.575" y1="-6.34" x2="8.05" y2="-6.815" width="0.2032" layer="51" curve="-90"/>
+<wire x1="8.05" y1="-6.815" x2="8.05" y2="-8.135" width="0.2032" layer="21"/>
+<wire x1="8.05" y1="-8.135" x2="9.785" y2="-9.87" width="0.2032" layer="21" curve="90"/>
+<pad name="4" x="0.635" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="3" x="-0.635" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="2" x="-1.905" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="5" x="1.905" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="1" x="-3.175" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="6" x="3.175" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="M1" x="-6.985" y="-5.334" drill="1.9" diameter="2.5"/>
+<pad name="M2" x="6.985" y="-5.334" drill="1.9" diameter="2.5"/>
+<pad name="M3" x="-6.985" y="8.763" drill="1.9" diameter="2.5"/>
+<pad name="M4" x="6.985" y="8.763" drill="1.9" diameter="2.5"/>
+<text x="-7.62" y="-0.635" size="1.778" layer="25" rot="R90">&gt;NAME</text>
+<text x="-5.715" y="2.54" size="1.778" layer="27">&gt;VALUE</text>
+<rectangle x1="6.95" y1="-8.175" x2="7.875" y2="-6.882" layer="21"/>
+<rectangle x1="-7.875" y1="-8.175" x2="-6.95" y2="-6.882" layer="21"/>
+<hole x="-5.08" y="0" drill="3.2512"/>
+<hole x="5.08" y="0" drill="3.2512"/>
+</package>
+<package name="RJ11-NO_SHIELD">
+<description>&lt;b&gt;RJ11 Low Profile&lt;/b&gt; No Shield&lt;/b&gt;&lt;p&gt;
+For all RJ11 N and Z Series Models&lt;br&gt;
+Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</description>
+<wire x1="-6.877" y1="10.819" x2="6.877" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="7.8105" y1="-5.51" x2="-7.8105" y2="-5.51" width="0.01" layer="20"/>
+<wire x1="6.877" y1="-7.782" x2="-6.877" y2="-7.782" width="0.2032" layer="21"/>
+<wire x1="-6.877" y1="-7.782" x2="-6.877" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="6.877" y1="10.819" x2="6.877" y2="-7.782" width="0.2032" layer="21"/>
+<pad name="4" x="0.635" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="3" x="-0.635" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="2" x="-1.905" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="5" x="1.905" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="1" x="-3.175" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="6" x="3.175" y="6.35" drill="0.9" diameter="1.4"/>
+<text x="-7.62" y="-0.635" size="1.778" layer="25" rot="R90">&gt;NAME</text>
+<text x="-5.715" y="2.54" size="1.778" layer="27">&gt;VALUE</text>
+<rectangle x1="6.95" y1="-5.485" x2="7.875" y2="-4.342" layer="21"/>
+<rectangle x1="-7.875" y1="-5.485" x2="-6.95" y2="-4.342" layer="21"/>
+<hole x="-5.08" y="0" drill="3.2512"/>
+<hole x="5.08" y="0" drill="3.2512"/>
+</package>
+<package name="RJ45-SHIELD1">
+<description>&lt;b&gt;RJ45 Low Profile&lt;/b&gt; Shield Type 1&lt;p&gt;
+For all RJ45 N and Z Series Models&lt;br&gt;
+Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</description>
+<wire x1="7.777" y1="-0.611" x2="7.777" y2="-5.242" width="0.2032" layer="51"/>
+<wire x1="-7.777" y1="-5.242" x2="-7.777" y2="-0.611" width="0.2032" layer="51"/>
+<wire x1="-7.777" y1="10.819" x2="7.777" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="8.4455" y1="-5.5118" x2="-8.4455" y2="-5.5118" width="0.01" layer="20"/>
+<wire x1="7.777" y1="-7.782" x2="-7.777" y2="-7.782" width="0.2032" layer="21"/>
+<wire x1="-7.777" y1="-7.782" x2="-7.777" y2="-5.056" width="0.2032" layer="21"/>
+<wire x1="7.777" y1="-5.056" x2="7.777" y2="-7.782" width="0.2032" layer="21"/>
+<wire x1="-7.777" y1="6.823" x2="-7.777" y2="10.819" width="0.2032" layer="51"/>
+<wire x1="7.777" y1="10.819" x2="7.777" y2="6.823" width="0.2032" layer="51"/>
+<wire x1="-7.777" y1="-0.797" x2="-7.777" y2="7.009" width="0.2032" layer="21"/>
+<wire x1="7.777" y1="7.009" x2="7.777" y2="-0.797" width="0.2032" layer="21"/>
+<pad name="4" x="-0.635" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="3" x="-1.905" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="2" x="-3.175" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="5" x="0.635" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="1" x="-4.445" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="6" x="1.905" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="S1" x="-8.128" y="-3.048" drill="1.9" diameter="2.5"/>
+<pad name="S2" x="8.128" y="-3.048" drill="1.9" diameter="2.5"/>
+<pad name="7" x="3.175" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="8" x="4.445" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="S3" x="-8.128" y="8.76" drill="1.9" diameter="2.5"/>
+<pad name="S4" x="8.128" y="8.76" drill="1.9" diameter="2.5"/>
+<text x="-9.525" y="-0.635" size="1.778" layer="25" rot="R90">&gt;NAME</text>
+<text x="-5.715" y="2.54" size="1.778" layer="27">&gt;VALUE</text>
+<rectangle x1="7.85" y1="-5.485" x2="8.775" y2="-4.342" layer="51"/>
+<rectangle x1="-8.775" y1="-5.485" x2="-7.85" y2="-4.342" layer="51"/>
+<hole x="-5.715" y="0" drill="3.2512"/>
+<hole x="5.715" y="0" drill="3.2512"/>
+</package>
+<package name="RJ45-SHIELD2">
+<description>&lt;b&gt;RJ45 Low Profile&lt;/b&gt; Shield Type 2&lt;p&gt;
+For all RJ45 L, LC, LCT and X Series Models&lt;br&gt;
+Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</description>
+<wire x1="8.777" y1="-3.151" x2="8.777" y2="-7.147" width="0.2032" layer="51"/>
+<wire x1="-8.777" y1="-7.147" x2="-8.777" y2="-3.151" width="0.2032" layer="51"/>
+<wire x1="-8.777" y1="10.819" x2="8.777" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="9.7155" y1="-8.18" x2="-9.7155" y2="-8.18" width="0.01" layer="20"/>
+<wire x1="8.777" y1="-10.322" x2="-8.777" y2="-10.322" width="0.2032" layer="21"/>
+<wire x1="-8.777" y1="-10.322" x2="-8.777" y2="-6.961" width="0.2032" layer="21"/>
+<wire x1="8.777" y1="-6.961" x2="8.777" y2="-10.322" width="0.2032" layer="21"/>
+<wire x1="-8.777" y1="6.823" x2="-8.777" y2="10.819" width="0.2032" layer="51"/>
+<wire x1="8.777" y1="10.819" x2="8.777" y2="6.823" width="0.2032" layer="51"/>
+<wire x1="-8.777" y1="-3.337" x2="-8.777" y2="7.009" width="0.2032" layer="21"/>
+<wire x1="8.777" y1="7.009" x2="8.777" y2="-3.337" width="0.2032" layer="21"/>
+<pad name="4" x="-0.635" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="3" x="-1.905" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="2" x="-3.175" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="5" x="0.635" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="1" x="-4.445" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="6" x="1.905" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="S1" x="-8.128" y="-5.33" drill="1.9" diameter="2.5"/>
+<pad name="S2" x="8.128" y="-5.33" drill="1.9" diameter="2.5"/>
+<pad name="7" x="3.175" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="8" x="4.445" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="S3" x="-8.128" y="8.76" drill="1.9" diameter="2.5"/>
+<pad name="S4" x="8.128" y="8.76" drill="1.9" diameter="2.5"/>
+<text x="-9.525" y="-0.635" size="1.778" layer="25" rot="R90">&gt;NAME</text>
+<text x="-5.715" y="2.54" size="1.778" layer="27">&gt;VALUE</text>
+<rectangle x1="8.85" y1="-8.175" x2="9.775" y2="-7.032" layer="21"/>
+<rectangle x1="-9.775" y1="-8.175" x2="-8.85" y2="-7.032" layer="21"/>
+<hole x="-5.715" y="0" drill="3.2512"/>
+<hole x="5.715" y="0" drill="3.2512"/>
+</package>
+<package name="RJ11-SHIELD2">
+<description>&lt;b&gt;RJ11 Low Profile&lt;/b&gt; Shield Type 2&lt;p&gt;
+For all RJ11 N and Z Series Models&lt;br&gt;
+Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</description>
+<wire x1="6.877" y1="-3.151" x2="6.877" y2="-7.147" width="0.2032" layer="51"/>
+<wire x1="-6.877" y1="-7.147" x2="-6.877" y2="-3.151" width="0.2032" layer="51"/>
+<wire x1="-6.877" y1="10.819" x2="6.877" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="7.8105" y1="-8.18" x2="-7.8105" y2="-8.18" width="0.01" layer="20"/>
+<wire x1="6.877" y1="-10.322" x2="-6.877" y2="-10.322" width="0.2032" layer="21"/>
+<wire x1="-6.877" y1="-10.322" x2="-6.877" y2="-6.961" width="0.2032" layer="21"/>
+<wire x1="6.877" y1="-6.961" x2="6.877" y2="-10.322" width="0.2032" layer="21"/>
+<wire x1="-6.877" y1="-3.337" x2="-6.877" y2="7.009" width="0.2032" layer="21"/>
+<wire x1="6.877" y1="7.009" x2="6.877" y2="-3.337" width="0.2032" layer="21"/>
+<wire x1="6.877" y1="10.819" x2="6.877" y2="6.823" width="0.2032" layer="51"/>
+<wire x1="-6.877" y1="6.823" x2="-6.877" y2="10.819" width="0.2032" layer="51"/>
+<pad name="4" x="0.635" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="3" x="-0.635" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="2" x="-1.905" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="5" x="1.905" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="1" x="-3.175" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="6" x="3.175" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="S1" x="-6.985" y="-5.334" drill="1.9" diameter="2.5"/>
+<pad name="S2" x="6.985" y="-5.334" drill="1.9" diameter="2.5"/>
+<pad name="S3" x="-6.985" y="8.763" drill="1.9" diameter="2.5"/>
+<pad name="S4" x="6.985" y="8.763" drill="1.9" diameter="2.5"/>
+<text x="-7.62" y="-0.635" size="1.778" layer="25" rot="R90">&gt;NAME</text>
+<text x="-5.715" y="2.54" size="1.778" layer="27">&gt;VALUE</text>
+<rectangle x1="6.95" y1="-8.175" x2="7.875" y2="-6.882" layer="21"/>
+<rectangle x1="-7.875" y1="-8.175" x2="-6.95" y2="-6.882" layer="21"/>
+<hole x="-5.08" y="0" drill="3.2512"/>
+<hole x="5.08" y="0" drill="3.2512"/>
+</package>
+<package name="6RJ11">
+<description>&lt;b&gt;RJ11&lt;/b&gt; x 6&lt;p&gt;
+Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</description>
+<wire x1="-36.347" y1="10.819" x2="-22.968" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="-36.347" y1="-10.322" x2="-36.347" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="-24.784" y1="10.819" x2="-11.03" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="-12.846" y1="10.819" x2="0.908" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="-0.908" y1="10.819" x2="12.846" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="11.03" y1="10.819" x2="24.784" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="22.968" y1="10.819" x2="36.347" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="36.347" y1="-10.322" x2="-36.347" y2="-10.322" width="0.2032" layer="21"/>
+<wire x1="36.347" y1="10.819" x2="36.347" y2="-10.322" width="0.2032" layer="21"/>
+<wire x1="37.1475" y1="-8.18" x2="-37.1475" y2="-8.18" width="0.01" layer="20"/>
+<pad name="1-4" x="-29.21" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="1-3" x="-30.48" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="1-2" x="-31.75" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="1-5" x="-27.94" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="1-1" x="-33.02" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="1-6" x="-26.67" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="2-4" x="-17.272" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="2-3" x="-18.542" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="2-2" x="-19.812" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="2-5" x="-16.002" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="2-1" x="-21.082" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="2-6" x="-14.732" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="3-4" x="-5.334" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="3-3" x="-6.604" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="3-2" x="-7.874" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="3-5" x="-4.064" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="3-1" x="-9.144" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="3-6" x="-2.794" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="4-4" x="6.604" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="4-3" x="5.334" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="4-2" x="4.064" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="4-5" x="7.874" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="4-1" x="2.794" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="4-6" x="9.144" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="5-4" x="18.542" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="5-3" x="17.272" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="5-2" x="16.002" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="5-5" x="19.812" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="5-1" x="14.732" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="5-6" x="21.082" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="6-4" x="30.48" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="6-3" x="29.21" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="6-2" x="27.94" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="6-5" x="31.75" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="6-1" x="26.67" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="6-6" x="33.02" y="6.35" drill="0.9" diameter="1.4"/>
+<text x="-35.56" y="11.43" size="1.778" layer="25">&gt;NAME</text>
+<text x="-20.32" y="-5.08" size="1.778" layer="27">&gt;VALUE</text>
+<rectangle x1="-37.7" y1="-8.175" x2="-36.42" y2="-6.882" layer="21"/>
+<rectangle x1="36.42" y1="-8.175" x2="37.7" y2="-6.882" layer="21"/>
+<hole x="-34.925" y="0" drill="3.2512"/>
+<hole x="34.925" y="0" drill="3.2512"/>
+</package>
+<package name="4RJ11">
+<description>&lt;b&gt;RJ11&lt;/b&gt; x 4&lt;p&gt;
+Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</description>
+<wire x1="-24.409" y1="-10.322" x2="-24.409" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="-24.409" y1="10.819" x2="24.409" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="24.409" y1="-10.322" x2="-24.409" y2="-10.322" width="0.2032" layer="21"/>
+<wire x1="24.409" y1="10.819" x2="24.409" y2="-10.322" width="0.2032" layer="21"/>
+<wire x1="25.2095" y1="-8.18" x2="-25.2095" y2="-8.18" width="0.01" layer="20"/>
+<pad name="1-4" x="-17.272" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="1-3" x="-18.542" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="1-2" x="-19.812" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="1-5" x="-16.002" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="1-1" x="-21.082" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="1-6" x="-14.732" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="2-4" x="-5.334" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="2-3" x="-6.604" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="2-2" x="-7.874" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="2-5" x="-4.064" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="2-1" x="-9.144" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="2-6" x="-2.794" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="3-4" x="6.604" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="3-3" x="5.334" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="3-2" x="4.064" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="3-5" x="7.874" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="3-1" x="2.794" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="3-6" x="9.144" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="4-4" x="18.542" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="4-3" x="17.272" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="4-2" x="16.002" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="4-5" x="19.812" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="4-1" x="14.732" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="4-6" x="21.082" y="6.35" drill="0.9" diameter="1.4"/>
+<text x="-23.622" y="11.43" size="1.778" layer="25">&gt;NAME</text>
+<text x="-16.51" y="-5.08" size="1.778" layer="27">&gt;VALUE</text>
+<rectangle x1="-25.762" y1="-8.175" x2="-24.482" y2="-6.882" layer="21"/>
+<rectangle x1="24.482" y1="-8.175" x2="25.762" y2="-6.882" layer="21"/>
+<hole x="-22.987" y="0" drill="3.2512"/>
+<hole x="22.987" y="0" drill="3.2512"/>
+</package>
+<package name="2RJ11">
+<description>&lt;b&gt;RJ11&lt;/b&gt; x 2&lt;p&gt;
+Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</description>
+<wire x1="-12.471" y1="-10.322" x2="-12.471" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="-12.471" y1="10.819" x2="12.471" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="12.471" y1="-10.322" x2="-12.471" y2="-10.322" width="0.2032" layer="21"/>
+<wire x1="12.471" y1="10.819" x2="12.471" y2="-10.322" width="0.2032" layer="21"/>
+<wire x1="13.2715" y1="-8.18" x2="-13.2715" y2="-8.18" width="0.01" layer="20"/>
+<pad name="1-4" x="-5.334" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="1-3" x="-6.604" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="1-2" x="-7.874" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="1-5" x="-4.064" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="1-1" x="-9.144" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="1-6" x="-2.794" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="2-4" x="6.604" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="2-3" x="5.334" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="2-2" x="4.064" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="2-5" x="7.874" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="2-1" x="2.794" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="2-6" x="9.144" y="6.35" drill="0.9" diameter="1.4"/>
+<text x="-11.684" y="11.43" size="1.778" layer="25">&gt;NAME</text>
+<text x="-8.89" y="-5.08" size="1.778" layer="27">&gt;VALUE</text>
+<rectangle x1="-13.824" y1="-8.175" x2="-12.544" y2="-6.882" layer="21"/>
+<rectangle x1="12.544" y1="-8.175" x2="13.824" y2="-6.882" layer="21"/>
+<hole x="-11.049" y="0" drill="3.2512"/>
+<hole x="11.049" y="0" drill="3.2512"/>
+</package>
+<package name="RJ45-NO-SHIELD">
+<description>&lt;b&gt;RJ45 Low Profile&lt;/b&gt; No Shield&lt;p&gt;
+For all RJ45 N and Z Series Models&lt;br&gt;
+Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</description>
+<wire x1="-7.527" y1="10.819" x2="7.527" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="8.4455" y1="-5.5118" x2="-8.4455" y2="-5.5118" width="0.01" layer="20"/>
+<wire x1="7.527" y1="-7.782" x2="-7.527" y2="-7.782" width="0.2032" layer="21"/>
+<wire x1="-7.527" y1="-7.782" x2="-7.527" y2="10.819" width="0.2032" layer="21"/>
+<wire x1="7.527" y1="10.819" x2="7.527" y2="-7.782" width="0.2032" layer="21"/>
+<pad name="4" x="-0.635" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="3" x="-1.905" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="2" x="-3.175" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="5" x="0.635" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="1" x="-4.445" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="6" x="1.905" y="8.89" drill="0.9" diameter="1.4"/>
+<pad name="7" x="3.175" y="6.35" drill="0.9" diameter="1.4"/>
+<pad name="8" x="4.445" y="8.89" drill="0.9" diameter="1.4"/>
+<text x="-9.525" y="-0.635" size="1.778" layer="25" rot="R90">&gt;NAME</text>
+<text x="-5.715" y="2.54" size="1.778" layer="27">&gt;VALUE</text>
+<rectangle x1="7.6" y1="-5.485" x2="8.875" y2="-4.342" layer="21"/>
+<rectangle x1="-8.875" y1="-5.485" x2="-7.625" y2="-4.342" layer="21"/>
+<hole x="-5.715" y="0" drill="3.2512"/>
+<hole x="5.715" y="0" drill="3.2512"/>
+</package>
+</packages>
+<symbols>
+<symbol name="AC-CONNECTOR">
+<wire x1="0" y1="6.35" x2="0" y2="-6.35" width="0.254" layer="94"/>
+<wire x1="0" y1="-6.35" x2="8.89" y2="-6.35" width="0.254" layer="94"/>
+<wire x1="8.89" y1="-6.35" x2="8.89" y2="6.35" width="0.254" layer="94"/>
+<wire x1="8.89" y1="6.35" x2="0" y2="6.35" width="0.254" layer="94"/>
+<wire x1="4.8696" y1="-5.08" x2="5.2288" y2="-4.9312" width="0.254" layer="94" curve="44.999323"/>
+<wire x1="5.2288" y1="-4.9312" x2="7.4712" y2="-2.6888" width="0.254" layer="94"/>
+<wire x1="7.4712" y1="-2.6888" x2="7.62" y2="-2.3296" width="0.254" layer="94" curve="44.999323"/>
+<wire x1="7.62" y1="-2.3296" x2="7.62" y2="2.3296" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.3296" x2="7.4712" y2="2.6888" width="0.254" layer="94" curve="44.999323"/>
+<wire x1="7.4712" y1="2.6888" x2="5.2288" y2="4.9312" width="0.254" layer="94"/>
+<wire x1="5.2288" y1="4.9312" x2="4.8696" y2="5.08" width="0.254" layer="94" curve="44.999323"/>
+<wire x1="4.8696" y1="5.08" x2="1.778" y2="5.08" width="0.254" layer="94"/>
+<wire x1="1.778" y1="5.08" x2="1.27" y2="4.572" width="0.254" layer="94" curve="90"/>
+<wire x1="1.27" y1="4.572" x2="1.27" y2="-4.572" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-4.572" x2="1.778" y2="-5.08" width="0.254" layer="94" curve="90"/>
+<wire x1="1.778" y1="-5.08" x2="4.8696" y2="-5.08" width="0.254" layer="94"/>
+<rectangle x1="2.54" y1="3.429" x2="4.572" y2="4.064" layer="94"/>
+<rectangle x1="5.08" y1="-0.254" x2="6.985" y2="0.254" layer="94"/>
+<rectangle x1="2.54" y1="-3.937" x2="4.572" y2="-3.302" layer="94"/>
+<pin name="AC1" x="-2.54" y="5.08" visible="pad" length="short" direction="pas"/>
+<pin name="AC2" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas"/>
+<pin name="SH" x="-2.54" y="0" visible="pad" length="short" direction="pas"/>
+</symbol>
+<symbol name="JACK6">
+<wire x1="1.524" y1="5.588" x2="0" y2="5.588" width="0.254" layer="94"/>
+<wire x1="0" y1="5.588" x2="0" y2="4.572" width="0.254" layer="94"/>
+<wire x1="0" y1="4.572" x2="1.524" y2="4.572" width="0.254" layer="94"/>
+<wire x1="1.524" y1="3.048" x2="0" y2="3.048" width="0.254" layer="94"/>
+<wire x1="0" y1="3.048" x2="0" y2="2.032" width="0.254" layer="94"/>
+<wire x1="0" y1="2.032" x2="1.524" y2="2.032" width="0.254" layer="94"/>
+<wire x1="1.524" y1="0.508" x2="0" y2="0.508" width="0.254" layer="94"/>
+<wire x1="0" y1="0.508" x2="0" y2="-0.508" width="0.254" layer="94"/>
+<wire x1="0" y1="-0.508" x2="1.524" y2="-0.508" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-2.032" x2="0" y2="-2.032" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.032" x2="0" y2="-3.048" width="0.254" layer="94"/>
+<wire x1="0" y1="-3.048" x2="1.524" y2="-3.048" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-4.572" x2="0" y2="-4.572" width="0.254" layer="94"/>
+<wire x1="0" y1="-4.572" x2="0" y2="-5.588" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.588" x2="1.524" y2="-5.588" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-7.112" x2="0" y2="-7.112" width="0.254" layer="94"/>
+<wire x1="0" y1="-7.112" x2="0" y2="-8.128" width="0.254" layer="94"/>
+<wire x1="0" y1="-8.128" x2="1.524" y2="-8.128" width="0.254" layer="94"/>
+<wire x1="4.318" y1="-3.556" x2="6.858" y2="-3.556" width="0.1998" layer="94"/>
+<wire x1="6.858" y1="-3.556" x2="6.858" y2="-2.286" width="0.1998" layer="94"/>
+<wire x1="6.858" y1="-2.286" x2="7.874" y2="-2.286" width="0.1998" layer="94"/>
+<wire x1="7.874" y1="-2.286" x2="7.874" y2="-0.254" width="0.1998" layer="94"/>
+<wire x1="7.874" y1="-0.254" x2="6.858" y2="-0.254" width="0.1998" layer="94"/>
+<wire x1="6.858" y1="-0.254" x2="6.858" y2="1.016" width="0.1998" layer="94"/>
+<wire x1="6.858" y1="1.016" x2="4.318" y2="1.016" width="0.1998" layer="94"/>
+<wire x1="4.318" y1="1.016" x2="4.318" y2="0" width="0.1998" layer="94"/>
+<wire x1="4.318" y1="0" x2="4.318" y2="-0.508" width="0.1998" layer="94"/>
+<wire x1="4.318" y1="-0.508" x2="4.318" y2="-1.016" width="0.1998" layer="94"/>
+<wire x1="4.318" y1="-1.016" x2="4.318" y2="-1.524" width="0.1998" layer="94"/>
+<wire x1="4.318" y1="-1.524" x2="4.318" y2="-2.032" width="0.1998" layer="94"/>
+<wire x1="4.318" y1="-2.032" x2="4.318" y2="-2.54" width="0.1998" layer="94"/>
+<wire x1="4.318" y1="-2.54" x2="4.318" y2="-3.556" width="0.1998" layer="94"/>
+<wire x1="4.318" y1="0" x2="5.08" y2="0" width="0.1998" layer="94"/>
+<wire x1="4.318" y1="-0.508" x2="5.08" y2="-0.508" width="0.1998" layer="94"/>
+<wire x1="4.318" y1="-1.016" x2="5.08" y2="-1.016" width="0.1998" layer="94"/>
+<wire x1="4.318" y1="-1.524" x2="5.08" y2="-1.524" width="0.1998" layer="94"/>
+<wire x1="4.318" y1="-2.032" x2="5.08" y2="-2.032" width="0.1998" layer="94"/>
+<wire x1="4.318" y1="-2.54" x2="5.08" y2="-2.54" width="0.1998" layer="94"/>
+<text x="-2.54" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-10.668" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-2.54" y="5.08" visible="pin" length="short" direction="pas" swaplevel="1"/>
+<pin name="2" x="-2.54" y="2.54" visible="pin" length="short" direction="pas" swaplevel="1"/>
+<pin name="3" x="-2.54" y="0" visible="pin" length="short" direction="pas" swaplevel="1"/>
+<pin name="4" x="-2.54" y="-2.54" visible="pin" length="short" direction="pas" swaplevel="1"/>
+<pin name="5" x="-2.54" y="-5.08" visible="pin" length="short" direction="pas" swaplevel="1"/>
+<pin name="6" x="-2.54" y="-7.62" visible="pin" length="short" direction="pas" swaplevel="1"/>
+</symbol>
+<symbol name="JACK8">
+<wire x1="1.524" y1="8.128" x2="0" y2="8.128" width="0.254" layer="94"/>
+<wire x1="0" y1="8.128" x2="0" y2="7.112" width="0.254" layer="94"/>
+<wire x1="0" y1="7.112" x2="1.524" y2="7.112" width="0.254" layer="94"/>
+<wire x1="1.524" y1="5.588" x2="0" y2="5.588" width="0.254" layer="94"/>
+<wire x1="0" y1="5.588" x2="0" y2="4.572" width="0.254" layer="94"/>
+<wire x1="0" y1="4.572" x2="1.524" y2="4.572" width="0.254" layer="94"/>
+<wire x1="1.524" y1="3.048" x2="0" y2="3.048" width="0.254" layer="94"/>
+<wire x1="0" y1="3.048" x2="0" y2="2.032" width="0.254" layer="94"/>
+<wire x1="0" y1="2.032" x2="1.524" y2="2.032" width="0.254" layer="94"/>
+<wire x1="1.524" y1="0.508" x2="0" y2="0.508" width="0.254" layer="94"/>
+<wire x1="0" y1="0.508" x2="0" y2="-0.508" width="0.254" layer="94"/>
+<wire x1="0" y1="-0.508" x2="1.524" y2="-0.508" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-2.032" x2="0" y2="-2.032" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.032" x2="0" y2="-3.048" width="0.254" layer="94"/>
+<wire x1="0" y1="-3.048" x2="1.524" y2="-3.048" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-4.572" x2="0" y2="-4.572" width="0.254" layer="94"/>
+<wire x1="0" y1="-4.572" x2="0" y2="-5.588" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.588" x2="1.524" y2="-5.588" width="0.254" layer="94"/>
+<wire x1="3.048" y1="-2.032" x2="5.588" y2="-2.032" width="0.1998" layer="94"/>
+<wire x1="5.588" y1="-2.032" x2="5.588" y2="-0.254" width="0.1998" layer="94"/>
+<wire x1="5.588" y1="-0.254" x2="6.604" y2="-0.254" width="0.1998" layer="94"/>
+<wire x1="6.604" y1="-0.254" x2="6.604" y2="1.778" width="0.1998" layer="94"/>
+<wire x1="6.604" y1="1.778" x2="5.588" y2="1.778" width="0.1998" layer="94"/>
+<wire x1="5.588" y1="1.778" x2="5.588" y2="3.556" width="0.1998" layer="94"/>
+<wire x1="5.588" y1="3.556" x2="3.048" y2="3.556" width="0.1998" layer="94"/>
+<wire x1="3.048" y1="3.556" x2="3.048" y2="2.54" width="0.1998" layer="94"/>
+<wire x1="3.048" y1="2.54" x2="3.048" y2="2.032" width="0.1998" layer="94"/>
+<wire x1="3.048" y1="2.032" x2="3.048" y2="1.524" width="0.1998" layer="94"/>
+<wire x1="3.048" y1="1.524" x2="3.048" y2="1.016" width="0.1998" layer="94"/>
+<wire x1="3.048" y1="1.016" x2="3.048" y2="0.508" width="0.1998" layer="94"/>
+<wire x1="3.048" y1="0.508" x2="3.048" y2="0" width="0.1998" layer="94"/>
+<wire x1="3.048" y1="0" x2="3.048" y2="-0.508" width="0.1998" layer="94"/>
+<wire x1="3.048" y1="-0.508" x2="3.048" y2="-1.016" width="0.1998" layer="94"/>
+<wire x1="3.048" y1="-1.016" x2="3.048" y2="-2.032" width="0.1998" layer="94"/>
+<wire x1="3.048" y1="2.54" x2="3.81" y2="2.54" width="0.1998" layer="94"/>
+<wire x1="3.048" y1="2.032" x2="3.81" y2="2.032" width="0.1998" layer="94"/>
+<wire x1="3.048" y1="1.524" x2="3.81" y2="1.524" width="0.1998" layer="94"/>
+<wire x1="3.048" y1="1.016" x2="3.81" y2="1.016" width="0.1998" layer="94"/>
+<wire x1="3.048" y1="0.508" x2="3.81" y2="0.508" width="0.1998" layer="94"/>
+<wire x1="3.048" y1="0" x2="3.81" y2="0" width="0.1998" layer="94"/>
+<wire x1="1.524" y1="-7.112" x2="0" y2="-7.112" width="0.254" layer="94"/>
+<wire x1="0" y1="-7.112" x2="0" y2="-8.128" width="0.254" layer="94"/>
+<wire x1="0" y1="-8.128" x2="1.524" y2="-8.128" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-9.652" x2="0" y2="-9.652" width="0.254" layer="94"/>
+<wire x1="0" y1="-9.652" x2="0" y2="-10.668" width="0.254" layer="94"/>
+<wire x1="0" y1="-10.668" x2="1.524" y2="-10.668" width="0.254" layer="94"/>
+<wire x1="3.048" y1="-0.508" x2="3.81" y2="-0.508" width="0.1998" layer="94"/>
+<wire x1="3.048" y1="-1.016" x2="3.81" y2="-1.016" width="0.1998" layer="94"/>
+<text x="-2.54" y="10.16" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-13.208" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-2.54" y="7.62" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="2" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="3" x="-2.54" y="2.54" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="4" x="-2.54" y="0" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="5" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="6" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="7" x="-2.54" y="-7.62" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="8" x="-2.54" y="-10.16" visible="pad" length="short" direction="pas" swaplevel="1"/>
+</symbol>
+<symbol name="JACK6SHIELD4">
+<wire x1="-3.556" y1="8.128" x2="-5.08" y2="8.128" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="8.128" x2="-5.08" y2="7.112" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="7.112" x2="-3.556" y2="7.112" width="0.254" layer="94"/>
+<wire x1="-3.556" y1="5.588" x2="-5.08" y2="5.588" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="5.588" x2="-5.08" y2="4.572" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="4.572" x2="-3.556" y2="4.572" width="0.254" layer="94"/>
+<wire x1="-3.556" y1="3.048" x2="-5.08" y2="3.048" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="3.048" x2="-5.08" y2="2.032" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.032" x2="-3.556" y2="2.032" width="0.254" layer="94"/>
+<wire x1="-3.556" y1="0.508" x2="-5.08" y2="0.508" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="0.508" x2="-5.08" y2="-0.508" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-0.508" x2="-3.556" y2="-0.508" width="0.254" layer="94"/>
+<wire x1="-3.556" y1="-2.032" x2="-5.08" y2="-2.032" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.032" x2="-5.08" y2="-3.048" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-3.048" x2="-3.556" y2="-3.048" width="0.254" layer="94"/>
+<wire x1="-3.556" y1="-4.572" x2="-5.08" y2="-4.572" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-4.572" x2="-5.08" y2="-5.588" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.588" x2="-3.556" y2="-5.588" width="0.254" layer="94"/>
+<wire x1="-5.461" y1="-7.62" x2="-4.826" y2="-7.62" width="0.127" layer="94"/>
+<wire x1="-4.064" y1="-7.62" x2="-3.556" y2="-7.62" width="0.127" layer="94"/>
+<wire x1="-2.794" y1="-7.62" x2="-2.286" y2="-7.62" width="0.127" layer="94"/>
+<wire x1="4.318" y1="-7.62" x2="4.572" y2="-7.62" width="0.127" layer="94"/>
+<wire x1="4.572" y1="-7.62" x2="4.572" y2="-7.112" width="0.127" layer="94"/>
+<wire x1="4.572" y1="7.366" x2="4.572" y2="7.874" width="0.127" layer="94"/>
+<wire x1="4.572" y1="8.382" x2="4.572" y2="8.89" width="0.127" layer="94"/>
+<wire x1="-4.826" y1="8.89" x2="-5.461" y2="8.89" width="0.127" layer="94"/>
+<wire x1="-5.461" y1="8.89" x2="-5.461" y2="8.128" width="0.127" layer="94"/>
+<wire x1="-5.461" y1="7.112" x2="-5.461" y2="5.588" width="0.127" layer="94"/>
+<wire x1="-5.461" y1="4.572" x2="-5.461" y2="3.048" width="0.127" layer="94"/>
+<wire x1="-5.461" y1="2.032" x2="-5.461" y2="0.508" width="0.127" layer="94"/>
+<wire x1="-5.461" y1="-0.508" x2="-5.461" y2="-2.032" width="0.127" layer="94"/>
+<wire x1="-5.461" y1="-3.048" x2="-5.461" y2="-4.572" width="0.127" layer="94"/>
+<wire x1="-5.461" y1="-5.588" x2="-5.461" y2="-7.62" width="0.127" layer="94"/>
+<wire x1="-1.27" y1="4.064" x2="-1.27" y2="2.54" width="0.1998" layer="94"/>
+<wire x1="-1.27" y1="2.54" x2="-1.27" y2="2.032" width="0.1998" layer="94"/>
+<wire x1="-1.27" y1="2.032" x2="-1.27" y2="1.524" width="0.1998" layer="94"/>
+<wire x1="-1.27" y1="1.524" x2="-1.27" y2="1.016" width="0.1998" layer="94"/>
+<wire x1="-1.27" y1="1.016" x2="-1.27" y2="0.508" width="0.1998" layer="94"/>
+<wire x1="-1.27" y1="0.508" x2="-1.27" y2="0" width="0.1998" layer="94"/>
+<wire x1="-1.27" y1="0" x2="-1.27" y2="-1.524" width="0.1998" layer="94"/>
+<wire x1="-1.27" y1="-1.524" x2="1.27" y2="-1.524" width="0.1998" layer="94"/>
+<wire x1="1.27" y1="-1.524" x2="1.27" y2="-0.254" width="0.1998" layer="94"/>
+<wire x1="1.27" y1="-0.254" x2="2.794" y2="-0.254" width="0.1998" layer="94"/>
+<wire x1="2.794" y1="-0.254" x2="2.794" y2="2.794" width="0.1998" layer="94"/>
+<wire x1="2.794" y1="2.794" x2="1.27" y2="2.794" width="0.1998" layer="94"/>
+<wire x1="1.27" y1="2.794" x2="1.27" y2="4.064" width="0.1998" layer="94"/>
+<wire x1="1.27" y1="4.064" x2="-1.27" y2="4.064" width="0.1998" layer="94"/>
+<wire x1="-1.27" y1="2.54" x2="-0.508" y2="2.54" width="0.1998" layer="94"/>
+<wire x1="-1.27" y1="2.032" x2="-0.508" y2="2.032" width="0.1998" layer="94"/>
+<wire x1="-1.27" y1="1.524" x2="-0.508" y2="1.524" width="0.1998" layer="94"/>
+<wire x1="-1.27" y1="1.016" x2="-0.508" y2="1.016" width="0.1998" layer="94"/>
+<wire x1="-1.27" y1="0.508" x2="-0.508" y2="0.508" width="0.1998" layer="94"/>
+<wire x1="-1.27" y1="0" x2="-0.508" y2="0" width="0.1998" layer="94"/>
+<wire x1="4.572" y1="6.096" x2="4.572" y2="6.604" width="0.127" layer="94"/>
+<wire x1="4.572" y1="4.826" x2="4.572" y2="5.334" width="0.127" layer="94"/>
+<wire x1="4.572" y1="3.556" x2="4.572" y2="4.064" width="0.127" layer="94"/>
+<wire x1="4.572" y1="2.286" x2="4.572" y2="2.794" width="0.127" layer="94"/>
+<wire x1="4.572" y1="1.016" x2="4.572" y2="1.524" width="0.127" layer="94"/>
+<wire x1="4.572" y1="-0.254" x2="4.572" y2="0.254" width="0.127" layer="94"/>
+<wire x1="4.572" y1="-1.524" x2="4.572" y2="-1.016" width="0.127" layer="94"/>
+<wire x1="4.572" y1="-2.794" x2="4.572" y2="-2.286" width="0.127" layer="94"/>
+<wire x1="4.572" y1="-4.064" x2="4.572" y2="-3.556" width="0.127" layer="94"/>
+<wire x1="4.572" y1="-5.334" x2="4.572" y2="-4.826" width="0.127" layer="94"/>
+<wire x1="4.572" y1="-6.604" x2="4.572" y2="-6.096" width="0.127" layer="94"/>
+<wire x1="-1.016" y1="-7.62" x2="-1.651" y2="-7.62" width="0.127" layer="94"/>
+<wire x1="0.254" y1="-7.62" x2="-0.381" y2="-7.62" width="0.127" layer="94"/>
+<wire x1="1.524" y1="-7.62" x2="0.889" y2="-7.62" width="0.127" layer="94"/>
+<wire x1="2.794" y1="-7.62" x2="2.159" y2="-7.62" width="0.127" layer="94"/>
+<wire x1="4.064" y1="-7.62" x2="3.429" y2="-7.62" width="0.127" layer="94"/>
+<wire x1="-3.556" y1="8.89" x2="-4.191" y2="8.89" width="0.127" layer="94"/>
+<wire x1="-2.286" y1="8.89" x2="-2.921" y2="8.89" width="0.127" layer="94"/>
+<wire x1="-1.016" y1="8.89" x2="-1.651" y2="8.89" width="0.127" layer="94"/>
+<wire x1="0.254" y1="8.89" x2="-0.381" y2="8.89" width="0.127" layer="94"/>
+<wire x1="1.524" y1="8.89" x2="0.889" y2="8.89" width="0.127" layer="94"/>
+<wire x1="2.794" y1="8.89" x2="2.159" y2="8.89" width="0.127" layer="94"/>
+<wire x1="3.556" y1="8.89" x2="4.191" y2="8.89" width="0.127" layer="94"/>
+<text x="-5.08" y="9.144" size="1.778" layer="95">&gt;NAME</text>
+<text x="7.366" y="-7.62" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="1" x="-7.62" y="7.62" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="2" x="-7.62" y="5.08" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="3" x="-7.62" y="2.54" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="4" x="-7.62" y="0" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="5" x="-7.62" y="-2.54" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="6" x="-7.62" y="-5.08" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="S@2" x="-2.54" y="-10.16" visible="off" length="short" direction="pas" swaplevel="2" rot="R90"/>
+<pin name="S@1" x="-5.08" y="-10.16" visible="off" length="short" direction="pas" swaplevel="2" rot="R90"/>
+<pin name="S@3" x="0" y="-10.16" visible="off" length="short" direction="pas" swaplevel="2" rot="R90"/>
+<pin name="S@4" x="2.54" y="-10.16" visible="off" length="short" direction="pas" swaplevel="2" rot="R90"/>
+</symbol>
+<symbol name="JACK8SHILED4">
+<wire x1="-5.461" y1="-10.16" x2="-4.826" y2="-10.16" width="0.127" layer="94"/>
+<wire x1="-4.064" y1="-10.16" x2="-3.556" y2="-10.16" width="0.127" layer="94"/>
+<wire x1="-2.794" y1="-10.16" x2="-2.286" y2="-10.16" width="0.127" layer="94"/>
+<wire x1="4.318" y1="-10.16" x2="4.572" y2="-10.16" width="0.127" layer="94"/>
+<wire x1="4.572" y1="-10.16" x2="4.572" y2="-9.652" width="0.127" layer="94"/>
+<wire x1="4.572" y1="9.906" x2="4.572" y2="10.414" width="0.127" layer="94"/>
+<wire x1="4.572" y1="10.922" x2="4.572" y2="11.43" width="0.127" layer="94"/>
+<wire x1="-4.826" y1="11.43" x2="-5.461" y2="11.43" width="0.127" layer="94"/>
+<wire x1="-5.461" y1="11.43" x2="-5.461" y2="10.668" width="0.127" layer="94"/>
+<wire x1="-5.461" y1="9.652" x2="-5.461" y2="8.128" width="0.127" layer="94"/>
+<wire x1="-5.461" y1="7.112" x2="-5.461" y2="5.588" width="0.127" layer="94"/>
+<wire x1="-5.461" y1="4.572" x2="-5.461" y2="3.048" width="0.127" layer="94"/>
+<wire x1="-5.461" y1="2.032" x2="-5.461" y2="0.508" width="0.127" layer="94"/>
+<wire x1="-5.461" y1="-0.508" x2="-5.461" y2="-2.032" width="0.127" layer="94"/>
+<wire x1="-5.461" y1="-8.128" x2="-5.461" y2="-10.16" width="0.127" layer="94"/>
+<wire x1="4.572" y1="8.636" x2="4.572" y2="9.144" width="0.127" layer="94"/>
+<wire x1="4.572" y1="7.366" x2="4.572" y2="7.874" width="0.127" layer="94"/>
+<wire x1="4.572" y1="6.096" x2="4.572" y2="6.604" width="0.127" layer="94"/>
+<wire x1="4.572" y1="4.826" x2="4.572" y2="5.334" width="0.127" layer="94"/>
+<wire x1="4.572" y1="3.556" x2="4.572" y2="4.064" width="0.127" layer="94"/>
+<wire x1="4.572" y1="2.286" x2="4.572" y2="2.794" width="0.127" layer="94"/>
+<wire x1="4.572" y1="1.016" x2="4.572" y2="1.524" width="0.127" layer="94"/>
+<wire x1="4.572" y1="-0.254" x2="4.572" y2="0.254" width="0.127" layer="94"/>
+<wire x1="4.572" y1="-1.524" x2="4.572" y2="-1.016" width="0.127" layer="94"/>
+<wire x1="-1.016" y1="-10.16" x2="-1.651" y2="-10.16" width="0.127" layer="94"/>
+<wire x1="0.254" y1="-10.16" x2="-0.381" y2="-10.16" width="0.127" layer="94"/>
+<wire x1="1.524" y1="-10.16" x2="0.889" y2="-10.16" width="0.127" layer="94"/>
+<wire x1="2.794" y1="-10.16" x2="2.159" y2="-10.16" width="0.127" layer="94"/>
+<wire x1="4.064" y1="-10.16" x2="3.429" y2="-10.16" width="0.127" layer="94"/>
+<wire x1="-3.556" y1="11.43" x2="-4.191" y2="11.43" width="0.127" layer="94"/>
+<wire x1="-2.286" y1="11.43" x2="-2.921" y2="11.43" width="0.127" layer="94"/>
+<wire x1="-1.016" y1="11.43" x2="-1.651" y2="11.43" width="0.127" layer="94"/>
+<wire x1="0.254" y1="11.43" x2="-0.381" y2="11.43" width="0.127" layer="94"/>
+<wire x1="1.524" y1="11.43" x2="0.889" y2="11.43" width="0.127" layer="94"/>
+<wire x1="2.794" y1="11.43" x2="2.159" y2="11.43" width="0.127" layer="94"/>
+<wire x1="3.556" y1="11.43" x2="4.191" y2="11.43" width="0.127" layer="94"/>
+<wire x1="-3.556" y1="10.668" x2="-5.08" y2="10.668" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="10.668" x2="-5.08" y2="9.652" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="9.652" x2="-3.556" y2="9.652" width="0.254" layer="94"/>
+<wire x1="-3.556" y1="8.128" x2="-5.08" y2="8.128" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="8.128" x2="-5.08" y2="7.112" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="7.112" x2="-3.556" y2="7.112" width="0.254" layer="94"/>
+<wire x1="-3.556" y1="5.588" x2="-5.08" y2="5.588" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="5.588" x2="-5.08" y2="4.572" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="4.572" x2="-3.556" y2="4.572" width="0.254" layer="94"/>
+<wire x1="-3.556" y1="3.048" x2="-5.08" y2="3.048" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="3.048" x2="-5.08" y2="2.032" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.032" x2="-3.556" y2="2.032" width="0.254" layer="94"/>
+<wire x1="-3.556" y1="0.508" x2="-5.08" y2="0.508" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="0.508" x2="-5.08" y2="-0.508" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-0.508" x2="-3.556" y2="-0.508" width="0.254" layer="94"/>
+<wire x1="-3.556" y1="-2.032" x2="-5.08" y2="-2.032" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.032" x2="-5.08" y2="-3.048" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-3.048" x2="-3.556" y2="-3.048" width="0.254" layer="94"/>
+<wire x1="-1.651" y1="-1.524" x2="0.889" y2="-1.524" width="0.1998" layer="94"/>
+<wire x1="0.889" y1="-1.524" x2="0.889" y2="0.254" width="0.1998" layer="94"/>
+<wire x1="0.889" y1="0.254" x2="1.905" y2="0.254" width="0.1998" layer="94"/>
+<wire x1="1.905" y1="0.254" x2="1.905" y2="2.286" width="0.1998" layer="94"/>
+<wire x1="1.905" y1="2.286" x2="0.889" y2="2.286" width="0.1998" layer="94"/>
+<wire x1="0.889" y1="2.286" x2="0.889" y2="4.064" width="0.1998" layer="94"/>
+<wire x1="0.889" y1="4.064" x2="-1.651" y2="4.064" width="0.1998" layer="94"/>
+<wire x1="-1.651" y1="4.064" x2="-1.651" y2="3.048" width="0.1998" layer="94"/>
+<wire x1="-1.651" y1="3.048" x2="-1.651" y2="2.54" width="0.1998" layer="94"/>
+<wire x1="-1.651" y1="2.54" x2="-1.651" y2="2.032" width="0.1998" layer="94"/>
+<wire x1="-1.651" y1="2.032" x2="-1.651" y2="1.524" width="0.1998" layer="94"/>
+<wire x1="-1.651" y1="1.524" x2="-1.651" y2="1.016" width="0.1998" layer="94"/>
+<wire x1="-1.651" y1="1.016" x2="-1.651" y2="0.508" width="0.1998" layer="94"/>
+<wire x1="-1.651" y1="0.508" x2="-1.651" y2="0" width="0.1998" layer="94"/>
+<wire x1="-1.651" y1="0" x2="-1.651" y2="-0.508" width="0.1998" layer="94"/>
+<wire x1="-1.651" y1="-0.508" x2="-1.651" y2="-1.524" width="0.1998" layer="94"/>
+<wire x1="-1.651" y1="3.048" x2="-0.889" y2="3.048" width="0.1998" layer="94"/>
+<wire x1="-1.651" y1="2.54" x2="-0.889" y2="2.54" width="0.1998" layer="94"/>
+<wire x1="-1.651" y1="2.032" x2="-0.889" y2="2.032" width="0.1998" layer="94"/>
+<wire x1="-1.651" y1="1.524" x2="-0.889" y2="1.524" width="0.1998" layer="94"/>
+<wire x1="-1.651" y1="1.016" x2="-0.889" y2="1.016" width="0.1998" layer="94"/>
+<wire x1="-1.651" y1="0.508" x2="-0.889" y2="0.508" width="0.1998" layer="94"/>
+<wire x1="-3.556" y1="-4.572" x2="-5.08" y2="-4.572" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-4.572" x2="-5.08" y2="-5.588" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.588" x2="-3.556" y2="-5.588" width="0.254" layer="94"/>
+<wire x1="-3.556" y1="-7.112" x2="-5.08" y2="-7.112" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-7.112" x2="-5.08" y2="-8.128" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-8.128" x2="-3.556" y2="-8.128" width="0.254" layer="94"/>
+<wire x1="-1.651" y1="0" x2="-0.889" y2="0" width="0.1998" layer="94"/>
+<wire x1="-1.651" y1="-0.508" x2="-0.889" y2="-0.508" width="0.1998" layer="94"/>
+<wire x1="-5.461" y1="-3.048" x2="-5.461" y2="-4.572" width="0.127" layer="94"/>
+<wire x1="-5.461" y1="-5.588" x2="-5.461" y2="-7.112" width="0.127" layer="94"/>
+<wire x1="4.572" y1="-2.794" x2="4.572" y2="-2.286" width="0.127" layer="94"/>
+<wire x1="4.572" y1="-4.064" x2="4.572" y2="-3.556" width="0.127" layer="94"/>
+<wire x1="4.572" y1="-5.334" x2="4.572" y2="-4.826" width="0.127" layer="94"/>
+<wire x1="4.572" y1="-6.604" x2="4.572" y2="-6.096" width="0.127" layer="94"/>
+<wire x1="4.572" y1="-7.874" x2="4.572" y2="-7.366" width="0.127" layer="94"/>
+<wire x1="4.572" y1="-9.144" x2="4.572" y2="-8.636" width="0.127" layer="94"/>
+<text x="-5.08" y="11.684" size="1.778" layer="95">&gt;NAME</text>
+<text x="7.62" y="-10.16" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="S@2" x="-2.54" y="-12.7" visible="off" length="short" direction="pas" swaplevel="2" rot="R90"/>
+<pin name="S@1" x="-5.08" y="-12.7" visible="off" length="short" direction="pas" swaplevel="2" rot="R90"/>
+<pin name="S@3" x="0" y="-12.7" visible="off" length="short" direction="pas" swaplevel="2" rot="R90"/>
+<pin name="S@4" x="2.54" y="-12.7" visible="off" length="short" direction="pas" swaplevel="2" rot="R90"/>
+<pin name="1" x="-7.62" y="10.16" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="2" x="-7.62" y="7.62" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="3" x="-7.62" y="5.08" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="4" x="-7.62" y="2.54" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="5" x="-7.62" y="0" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="6" x="-7.62" y="-2.54" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="7" x="-7.62" y="-5.08" visible="pad" length="short" direction="pas" swaplevel="1"/>
+<pin name="8" x="-7.62" y="-7.62" visible="pad" length="short" direction="pas" swaplevel="1"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="6ESRM-P" prefix="X">
+<description>&lt;b&gt;AC Connector&lt;/b&gt;&lt;p&gt;
+120/250 VAC&lt;br&gt;
+Source: http://catalog.tycoelectronics.com .. ENG_DS_1654001_1099_SR_0406.pdf</description>
+<gates>
+<gate name="G$1" symbol="AC-CONNECTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="6ESRM-P">
+<connects>
+<connect gate="G$1" pin="AC1" pad="1"/>
+<connect gate="G$1" pin="AC2" pad="3"/>
+<connect gate="G$1" pin="SH" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="6ESRM-P" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="87F1821" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RJ11" prefix="J">
+<description>&lt;b&gt;CORCOM Modular RJ Jacks&lt;/b&gt; No Shield&lt;p&gt;
+Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</description>
+<gates>
+<gate name="G$1" symbol="JACK6" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RJ11-NO_SHIELD">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+</connects>
+<technologies>
+<technology name="-2L-B">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="RJ11-2L-B" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="83F4463" constant="no"/>
+</technology>
+<technology name="-2L-S">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ11-2L-S" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="73K3294" constant="no"/>
+</technology>
+<technology name="-2X">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-4L-B">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="RJ11-4L-B" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="52K3315" constant="no"/>
+</technology>
+<technology name="-4L-S">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ11-4L-S" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="69K7126" constant="no"/>
+</technology>
+<technology name="-4X">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="6609214-3" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="19R7022" constant="no"/>
+</technology>
+<technology name="-6L-B">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="RJ11-6L-B" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="52K3613" constant="no"/>
+</technology>
+<technology name="-6L-S">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="RJ11-6L-S" constant="no"/>
+<attribute name="OC_FARNELL" value="1654827" constant="no"/>
+<attribute name="OC_NEWARK" value="50F1358" constant="no"/>
+</technology>
+<technology name="-6X">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ11-6X" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="16R6089" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="6RJ11-6LB" prefix="J">
+<description>&lt;b&gt;CORCOM Modular RJ Jacks&lt;/b&gt; L - Ganged Series&lt;p&gt;
+Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</description>
+<gates>
+<gate name="-1" symbol="JACK6" x="-22.86" y="27.94" addlevel="always"/>
+<gate name="-2" symbol="JACK6" x="-22.86" y="5.08" addlevel="always"/>
+<gate name="-3" symbol="JACK6" x="-2.54" y="27.94" addlevel="always"/>
+<gate name="-4" symbol="JACK6" x="-2.54" y="5.08" addlevel="always"/>
+<gate name="-5" symbol="JACK6" x="15.24" y="27.94" addlevel="always"/>
+<gate name="-6" symbol="JACK6" x="15.24" y="5.08" addlevel="always"/>
+</gates>
+<devices>
+<device name="" package="6RJ11">
+<connects>
+<connect gate="-1" pin="1" pad="1-1"/>
+<connect gate="-1" pin="2" pad="1-2"/>
+<connect gate="-1" pin="3" pad="1-3"/>
+<connect gate="-1" pin="4" pad="1-4"/>
+<connect gate="-1" pin="5" pad="1-5"/>
+<connect gate="-1" pin="6" pad="1-6"/>
+<connect gate="-2" pin="1" pad="2-1"/>
+<connect gate="-2" pin="2" pad="2-2"/>
+<connect gate="-2" pin="3" pad="2-3"/>
+<connect gate="-2" pin="4" pad="2-4"/>
+<connect gate="-2" pin="5" pad="2-5"/>
+<connect gate="-2" pin="6" pad="2-6"/>
+<connect gate="-3" pin="1" pad="3-1"/>
+<connect gate="-3" pin="2" pad="3-2"/>
+<connect gate="-3" pin="3" pad="3-3"/>
+<connect gate="-3" pin="4" pad="3-4"/>
+<connect gate="-3" pin="5" pad="3-5"/>
+<connect gate="-3" pin="6" pad="3-6"/>
+<connect gate="-4" pin="1" pad="4-1"/>
+<connect gate="-4" pin="2" pad="4-2"/>
+<connect gate="-4" pin="3" pad="4-3"/>
+<connect gate="-4" pin="4" pad="4-4"/>
+<connect gate="-4" pin="5" pad="4-5"/>
+<connect gate="-4" pin="6" pad="4-6"/>
+<connect gate="-5" pin="1" pad="5-1"/>
+<connect gate="-5" pin="2" pad="5-2"/>
+<connect gate="-5" pin="3" pad="5-3"/>
+<connect gate="-5" pin="4" pad="5-4"/>
+<connect gate="-5" pin="5" pad="5-5"/>
+<connect gate="-5" pin="6" pad="5-6"/>
+<connect gate="-6" pin="1" pad="6-1"/>
+<connect gate="-6" pin="2" pad="6-2"/>
+<connect gate="-6" pin="3" pad="6-3"/>
+<connect gate="-6" pin="4" pad="6-4"/>
+<connect gate="-6" pin="5" pad="6-5"/>
+<connect gate="-6" pin="6" pad="6-6"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="6RJ11-6L-B" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="19R5426" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="4RJ11-6L-B" prefix="J">
+<description>&lt;b&gt;CORCOM Modular RJ Jacks&lt;/b&gt; L - Ganged Series&lt;p&gt;
+Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</description>
+<gates>
+<gate name="-1" symbol="JACK6" x="-7.62" y="12.7" addlevel="always"/>
+<gate name="-2" symbol="JACK6" x="-7.62" y="-10.16" addlevel="always"/>
+<gate name="-3" symbol="JACK6" x="10.16" y="12.7" addlevel="always"/>
+<gate name="-4" symbol="JACK6" x="10.16" y="-10.16" addlevel="always"/>
+</gates>
+<devices>
+<device name="" package="4RJ11">
+<connects>
+<connect gate="-1" pin="1" pad="1-1"/>
+<connect gate="-1" pin="2" pad="1-2"/>
+<connect gate="-1" pin="3" pad="1-3"/>
+<connect gate="-1" pin="4" pad="1-4"/>
+<connect gate="-1" pin="5" pad="1-5"/>
+<connect gate="-1" pin="6" pad="1-6"/>
+<connect gate="-2" pin="1" pad="2-1"/>
+<connect gate="-2" pin="2" pad="2-2"/>
+<connect gate="-2" pin="3" pad="2-3"/>
+<connect gate="-2" pin="4" pad="2-4"/>
+<connect gate="-2" pin="5" pad="2-5"/>
+<connect gate="-2" pin="6" pad="2-6"/>
+<connect gate="-3" pin="1" pad="3-1"/>
+<connect gate="-3" pin="2" pad="3-2"/>
+<connect gate="-3" pin="3" pad="3-3"/>
+<connect gate="-3" pin="4" pad="3-4"/>
+<connect gate="-3" pin="5" pad="3-5"/>
+<connect gate="-3" pin="6" pad="3-6"/>
+<connect gate="-4" pin="1" pad="4-1"/>
+<connect gate="-4" pin="2" pad="4-2"/>
+<connect gate="-4" pin="3" pad="4-3"/>
+<connect gate="-4" pin="4" pad="4-4"/>
+<connect gate="-4" pin="5" pad="4-5"/>
+<connect gate="-4" pin="6" pad="4-6"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="4RJ11-6L-B" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="48F3956" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="2RJ11-6L-B" prefix="J">
+<description>&lt;b&gt;CORCOM Modular RJ Jacks&lt;/b&gt; L - Ganged Series&lt;p&gt;
+Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</description>
+<gates>
+<gate name="-1" symbol="JACK6" x="-10.16" y="0" addlevel="always"/>
+<gate name="-2" symbol="JACK6" x="7.62" y="0" addlevel="always"/>
+</gates>
+<devices>
+<device name="" package="2RJ11">
+<connects>
+<connect gate="-1" pin="1" pad="1-1"/>
+<connect gate="-1" pin="2" pad="1-2"/>
+<connect gate="-1" pin="3" pad="1-3"/>
+<connect gate="-1" pin="4" pad="1-4"/>
+<connect gate="-1" pin="5" pad="1-5"/>
+<connect gate="-1" pin="6" pad="1-6"/>
+<connect gate="-2" pin="1" pad="2-1"/>
+<connect gate="-2" pin="2" pad="2-2"/>
+<connect gate="-2" pin="3" pad="2-3"/>
+<connect gate="-2" pin="4" pad="2-4"/>
+<connect gate="-2" pin="5" pad="2-5"/>
+<connect gate="-2" pin="6" pad="2-6"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="2RJ11-6L-B" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="48F3954" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RJ11*2" prefix="X">
+<description>&lt;b&gt;RJ11&lt;/b&gt; (Style 1 Shield / Style 2 Shield)&lt;p&gt;
+Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</description>
+<gates>
+<gate name="G$1" symbol="JACK6SHIELD4" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-S" package="RJ11-SHIELD2">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="S@1" pad="S1"/>
+<connect gate="G$1" pin="S@2" pad="S2"/>
+<connect gate="G$1" pin="S@3" pad="S3"/>
+<connect gate="G$1" pin="S@4" pad="S4"/>
+</connects>
+<technologies>
+<technology name="-2LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ11-2LC2-S" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="16R6077" constant="no"/>
+</technology>
+<technology name="-4L">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="RJ11-4L2-S" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="50F8855" constant="no"/>
+</technology>
+<technology name="-4LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-6L">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="RJ11-6L2-S=F9181" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="80K4730" constant="no"/>
+</technology>
+<technology name="-6LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ11-6LC2-S" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="16R6086" constant="no"/>
+</technology>
+<technology name="-6LCT">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="RJ11-6LCT2-S." constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="91F7257" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-B" package="RJ11-SHIELD2">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="S@1" pad="S1"/>
+<connect gate="G$1" pin="S@2" pad="S2"/>
+<connect gate="G$1" pin="S@3" pad="S3"/>
+<connect gate="G$1" pin="S@4" pad="S4"/>
+</connects>
+<technologies>
+<technology name="-2LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-4L">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="RJ11-4L2-B" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="50F8856" constant="no"/>
+</technology>
+<technology name="-4LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ11-4LC2-B" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="21M5804" constant="no"/>
+</technology>
+<technology name="-6L">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ11-6L2-B" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="10M8526" constant="no"/>
+</technology>
+<technology name="-6LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ11-6LC2-B" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="16R6085" constant="no"/>
+</technology>
+<technology name="-6LCT">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ11-6LCT2-B" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="16R6083" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1-S" package="RJ11-SHIELD1">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="S@1" pad="M1"/>
+<connect gate="G$1" pin="S@2" pad="M2"/>
+<connect gate="G$1" pin="S@3" pad="M3"/>
+<connect gate="G$1" pin="S@4" pad="M4"/>
+</connects>
+<technologies>
+<technology name="-2LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-4L">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-4LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-6L">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-6LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-6LCT">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1-B" package="RJ11-SHIELD1">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="S@1" pad="M1"/>
+<connect gate="G$1" pin="S@2" pad="M2"/>
+<connect gate="G$1" pin="S@3" pad="M3"/>
+<connect gate="G$1" pin="S@4" pad="M4"/>
+</connects>
+<technologies>
+<technology name="-2LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-4L">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-4LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-6L">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-6LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-6LCT">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RJ45" prefix="X">
+<description>&lt;b&gt;CORCOM Modular RJ Jacks&lt;/b&gt; No Shield&lt;p&gt;
+Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</description>
+<gates>
+<gate name="G$1" symbol="JACK8" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RJ45-NO-SHIELD">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+</connects>
+<technologies>
+<technology name="-6L-B">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ45-6L-B" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="16R6090" constant="no"/>
+</technology>
+<technology name="-6L-S">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ45-6L-S" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="16R6091" constant="no"/>
+</technology>
+<technology name="-6X">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ45-6X" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="01P1604" constant="no"/>
+</technology>
+<technology name="-8L-B">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="RJ45-8L-B" constant="no"/>
+<attribute name="OC_FARNELL" value="1279843" constant="no"/>
+<attribute name="OC_NEWARK" value="52K4445" constant="no"/>
+</technology>
+<technology name="-8L-S">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="RJ45-8L-S" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="80K9067" constant="no"/>
+</technology>
+<technology name="-8X">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ45-8X" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="16R6101" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RJ45*2" prefix="X">
+<description>&lt;b&gt;RJ45 Low Profile&lt;/b&gt; Shield Type 2&lt;p&gt;
+For all RJ45 L, LC, LCT and X Series Models&lt;br&gt;
+Source: www.tycoelectronics.com .. ENG_DS_1654001_1099_RJ_L_0507.pdf</description>
+<gates>
+<gate name="G$1" symbol="JACK8SHILED4" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-S" package="RJ45-SHIELD2">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="S@1" pad="S1"/>
+<connect gate="G$1" pin="S@2" pad="S2"/>
+<connect gate="G$1" pin="S@3" pad="S3"/>
+<connect gate="G$1" pin="S@4" pad="S4"/>
+</connects>
+<technologies>
+<technology name="-6L">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ45-6L2-S" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="16R6097" constant="no"/>
+</technology>
+<technology name="-6LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ45-6LC2-S" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="16R6095" constant="no"/>
+</technology>
+<technology name="-6LCT">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-8L">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="RJ45-8L2-S" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="52K4446" constant="no"/>
+</technology>
+<technology name="-8LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ45-8LC2-S" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="16R6099" constant="no"/>
+</technology>
+<technology name="-8LCT">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="RJ45-8LCT2-S" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="84K0524" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="-B" package="RJ45-SHIELD2">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="S@1" pad="S1"/>
+<connect gate="G$1" pin="S@2" pad="S2"/>
+<connect gate="G$1" pin="S@3" pad="S3"/>
+<connect gate="G$1" pin="S@4" pad="S4"/>
+</connects>
+<technologies>
+<technology name="-6L">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ45-6L2-B" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="16R6096" constant="no"/>
+</technology>
+<technology name="-6LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="RJ45-6LC2-B" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="16R6094" constant="no"/>
+</technology>
+<technology name="-8L">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="RJ45-8L2-B" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="52K3810" constant="no"/>
+</technology>
+<technology name="-8LC">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="RJ45-8LC2-B." constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="50F1338" constant="no"/>
+</technology>
+<technology name="-8LCT">
+<attribute name="MF" value="TYCO ELECTRONICS" constant="no"/>
+<attribute name="MPN" value="RJ45-8LCT2-B" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="91F7263" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1-S" package="RJ45-SHIELD1">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="S@1" pad="S1"/>
+<connect gate="G$1" pin="S@2" pad="S2"/>
+<connect gate="G$1" pin="S@3" pad="S3"/>
+<connect gate="G$1" pin="S@4" pad="S4"/>
+</connects>
+<technologies>
+<technology name="-6L">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-6LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-8L">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-8LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-8LCT">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="1-B" package="RJ45-SHIELD1">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="S@1" pad="S1"/>
+<connect gate="G$1" pin="S@2" pad="S2"/>
+<connect gate="G$1" pin="S@3" pad="S3"/>
+<connect gate="G$1" pin="S@4" pad="S4"/>
+</connects>
+<technologies>
+<technology name="-6L">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-6LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-8L">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-8LC">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="-8LCT">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>

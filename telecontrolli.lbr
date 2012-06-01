@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+</layers>
+<library>
+<description>&lt;b&gt;to telecontrolli&lt;/b&gt; RF Receivers, RF Transmitters, RF Transceivers&lt;p&gt;
+Thick Film Hybrid Technology&lt;p&gt;
+Via Naz. delle Puglie, 177&lt;br&gt;
+80026 CASORIA (NA), Italy&lt;br&gt;
+Tel: +39 081 7599033&lt;br&gt;
+http://www.telecontrolli.com/eng/default.html</description>
+<packages>
+<package name="RRFQ1">
+<description>&lt;b&gt;Ceramic Hybrid Package&lt;/b&gt;&lt;p&gt;
+Source: http://www.telecontrolli.com/eng/default-wproducts.html ... rrfq1.pdf</description>
+<wire x1="-18.95" y1="0.375" x2="-11.55" y2="0.375" width="0.2032" layer="51"/>
+<wire x1="-11.55" y1="0.375" x2="-3.7" y2="0.375" width="0.2032" layer="21"/>
+<wire x1="-3.7" y1="0.375" x2="-1.575" y2="0.375" width="0.2032" layer="51"/>
+<wire x1="-1.575" y1="0.375" x2="6.5" y2="0.375" width="0.2032" layer="21"/>
+<wire x1="6.5" y1="0.375" x2="18.95" y2="0.375" width="0.2032" layer="51"/>
+<wire x1="18.95" y1="0.375" x2="18.95" y2="-2.425" width="0.2032" layer="21"/>
+<wire x1="18.95" y1="-2.425" x2="-18.95" y2="-2.425" width="0.2032" layer="21"/>
+<wire x1="-18.95" y1="-2.425" x2="-18.95" y2="0.375" width="0.2032" layer="21"/>
+<pad name="1" x="-17.78" y="0" drill="1" diameter="1.4224"/>
+<pad name="2" x="-15.24" y="0" drill="1" diameter="1.4224"/>
+<pad name="3" x="-12.7" y="0" drill="1" diameter="1.4224"/>
+<pad name="7" x="-2.54" y="0" drill="1" diameter="1.4224"/>
+<pad name="11" x="7.62" y="0" drill="1" diameter="1.4224"/>
+<pad name="12" x="10.16" y="0" drill="1" diameter="1.4224"/>
+<pad name="13" x="12.7" y="0" drill="1" diameter="1.4224"/>
+<pad name="14" x="15.24" y="0" drill="1" diameter="1.4224"/>
+<pad name="15" x="17.78" y="0" drill="1" diameter="1.4224"/>
+<text x="-17.78" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-10.16" y="1.27" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="RTFQ2">
+<description>&lt;b&gt;Ceramic Hybrid Package&lt;/b&gt;&lt;p&gt;
+Source: http://www.telecontrolli.com/eng/default-wproducts.html ... rtfq2.pdf</description>
+<wire x1="-15.14" y1="0.375" x2="-7.74" y2="0.375" width="0.2032" layer="51"/>
+<wire x1="-7.74" y1="0.375" x2="0.11" y2="0.375" width="0.2032" layer="21"/>
+<wire x1="0.11" y1="0.375" x2="2.235" y2="0.375" width="0.2032" layer="51"/>
+<wire x1="2.235" y1="0.375" x2="10.31" y2="0.375" width="0.2032" layer="21"/>
+<wire x1="10.31" y1="0.375" x2="15.14" y2="0.375" width="0.2032" layer="51"/>
+<wire x1="15.14" y1="0.375" x2="15.14" y2="-2.425" width="0.2032" layer="21"/>
+<wire x1="15.14" y1="-2.425" x2="-15.14" y2="-2.425" width="0.2032" layer="21"/>
+<wire x1="-15.14" y1="-2.425" x2="-15.14" y2="0.375" width="0.2032" layer="21"/>
+<pad name="1" x="-13.97" y="0" drill="1" diameter="1.4224"/>
+<pad name="2" x="-11.43" y="0" drill="1" diameter="1.4224"/>
+<pad name="11" x="11.43" y="0" drill="1" diameter="1.4224"/>
+<pad name="12" x="13.97" y="0" drill="1" diameter="1.4224"/>
+<pad name="10" x="8.89" y="0" drill="1" diameter="1.4224"/>
+<text x="-13.97" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-6.35" y="1.27" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="RXQ1">
+<description>&lt;b&gt;RXQ1-433.9 Dual Band FM Transceiver&lt;/b&gt;&lt;p&gt;
+Source: http://www.telecontrolli.com/pdf/transceivers/RXQ1.pdf</description>
+<wire x1="-15.175" y1="11.375" x2="15.175" y2="11.375" width="0.1016" layer="21"/>
+<wire x1="15.175" y1="-11.375" x2="-15.175" y2="-11.375" width="0.1016" layer="21"/>
+<wire x1="-15.175" y1="11.375" x2="-15.175" y2="-11.375" width="0.1016" layer="51"/>
+<wire x1="15.175" y1="-11.375" x2="15.175" y2="11.375" width="0.1016" layer="51"/>
+<pad name="1" x="-15.24" y="10.16" drill="1" diameter="1.4224"/>
+<pad name="2" x="-15.24" y="7.62" drill="1" diameter="1.4224"/>
+<pad name="3" x="-15.24" y="5.08" drill="1" diameter="1.4224"/>
+<pad name="4" x="-15.24" y="2.54" drill="1" diameter="1.4224"/>
+<pad name="5" x="-15.24" y="0" drill="1" diameter="1.4224"/>
+<pad name="6" x="-15.24" y="-2.54" drill="1" diameter="1.4224"/>
+<pad name="7" x="-15.24" y="-5.08" drill="1" diameter="1.4224"/>
+<pad name="8" x="-15.24" y="-7.62" drill="1" diameter="1.4224"/>
+<pad name="9" x="-15.24" y="-10.16" drill="1" diameter="1.4224"/>
+<pad name="10" x="15.24" y="-10.16" drill="1" diameter="1.4224"/>
+<pad name="11" x="15.24" y="-7.62" drill="1" diameter="1.4224"/>
+<pad name="12" x="15.24" y="-5.08" drill="1" diameter="1.4224"/>
+<pad name="13" x="15.24" y="-2.54" drill="1" diameter="1.4224"/>
+<pad name="14" x="15.24" y="0" drill="1" diameter="1.4224"/>
+<pad name="15" x="15.24" y="2.54" drill="1" diameter="1.4224"/>
+<pad name="16" x="15.24" y="5.08" drill="1" diameter="1.4224"/>
+<pad name="17" x="15.24" y="7.62" drill="1" diameter="1.4224"/>
+<pad name="18" x="15.24" y="10.16" drill="1" diameter="1.4224"/>
+<text x="-14" y="12" size="1.27" layer="25">&gt;NAME</text>
+<text x="-4" y="-7" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="RRFQ1">
+<wire x1="-7.62" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<text x="0" y="8.89" size="1.778" layer="95">&gt;NAME</text>
+<text x="5.08" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-3.302" y="5.334" size="1.524" layer="95">+5V</text>
+<text x="-1.778" y="-6.858" size="1.524" layer="95">GND</text>
+<pin name="+5V" x="-2.54" y="10.16" visible="pad" length="short" direction="pwr" rot="R270"/>
+<pin name="RSSI" x="-10.16" y="-2.54" length="short" direction="in"/>
+<pin name="GND" x="-2.54" y="-10.16" visible="pad" length="short" direction="pwr" rot="R90"/>
+<pin name="GND@1" x="0" y="-10.16" visible="pad" length="short" direction="pwr" rot="R90"/>
+<pin name="GND@2" x="2.54" y="-10.16" visible="pad" length="short" direction="pwr" rot="R90"/>
+<pin name="IN" x="-10.16" y="2.54" length="short" direction="in"/>
+<pin name="OUT" x="10.16" y="2.54" length="short" direction="out" rot="R180"/>
+<pin name="PD" x="-10.16" y="0" length="short" direction="in"/>
+</symbol>
+<symbol name="RTFQ2">
+<wire x1="-7.62" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<text x="0" y="6.35" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-3.302" y="2.794" size="1.524" layer="95">+5V</text>
+<text x="-3.048" y="-4.318" size="1.524" layer="95">GND</text>
+<pin name="+5V" x="-2.54" y="7.62" visible="pad" length="short" direction="pwr" rot="R270"/>
+<pin name="GND" x="-2.54" y="-7.62" visible="pad" length="short" direction="pwr" rot="R90"/>
+<pin name="GND@1" x="0" y="-7.62" visible="pad" length="short" direction="pwr" rot="R90"/>
+<pin name="IN" x="-10.16" y="0" length="short" direction="in"/>
+<pin name="EA" x="10.16" y="0" length="short" direction="out" rot="R180"/>
+</symbol>
+<symbol name="RXQ1">
+<wire x1="-7.62" y1="-5.08" x2="22.86" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="22.86" y1="-5.08" x2="22.86" y2="20.32" width="0.254" layer="94"/>
+<wire x1="22.86" y1="20.32" x2="-7.62" y2="20.32" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="20.32" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<text x="-7.62" y="21.59" size="1.778" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="RF_GND@1" x="-10.16" y="10.16" length="short" direction="pwr"/>
+<pin name="ANT" x="-10.16" y="17.78" length="short" direction="in"/>
+<pin name="RF_GND@2" x="-10.16" y="7.62" length="short" direction="pwr"/>
+<pin name="GND@1" x="-10.16" y="2.54" length="short" direction="pwr"/>
+<pin name="GND@2" x="-10.16" y="0" length="short" direction="pwr"/>
+<pin name="GND@3" x="-10.16" y="-2.54" length="short" direction="pwr"/>
+<pin name="RXD" x="25.4" y="5.08" length="short" direction="out" rot="R180"/>
+<pin name="TXD" x="25.4" y="12.7" length="short" direction="in" rot="R180"/>
+<pin name="!TXSELECT" x="25.4" y="10.16" length="short" direction="in" rot="R180"/>
+<pin name="!RXSELECT" x="25.4" y="2.54" length="short" direction="in" rot="R180"/>
+<pin name="VCC" x="-10.16" y="12.7" length="short" direction="pwr"/>
+<pin name="CS" x="25.4" y="-2.54" length="short" direction="in" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="RRFQ1-*" prefix="HY">
+<description>&lt;b&gt;FSK Superhet Receiver with Crystal Oscillator&lt;/b&gt;&lt;p&gt;
+Source: http://www.telecontrolli.com/eng/default-wproducts.html ... rrfq1.pdf</description>
+<gates>
+<gate name="G$1" symbol="RRFQ1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RRFQ1">
+<connects>
+<connect gate="G$1" pin="+5V" pad="1"/>
+<connect gate="G$1" pin="GND" pad="2"/>
+<connect gate="G$1" pin="GND@1" pad="7"/>
+<connect gate="G$1" pin="GND@2" pad="11"/>
+<connect gate="G$1" pin="IN" pad="3"/>
+<connect gate="G$1" pin="OUT" pad="14"/>
+<connect gate="G$1" pin="PD" pad="15"/>
+<connect gate="G$1" pin="RSSI" pad="13"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="FM-RRFQ1-868" constant="no"/>
+<attribute name="OC_FARNELL" value="1201003" constant="no"/>
+<attribute name="OC_NEWARK" value="01M7854" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RTFQ2-*" prefix="HY">
+<description>&lt;b&gt;FSK Radio Transmitter with Crystal Oscillator and External Antenna&lt;/b&gt;&lt;p&gt;
+Source: http://www.telecontrolli.com/eng/default-wproducts.html ... rtfq2.pdf</description>
+<gates>
+<gate name="G$1" symbol="RTFQ2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RTFQ2">
+<connects>
+<connect gate="G$1" pin="+5V" pad="10"/>
+<connect gate="G$1" pin="EA" pad="2"/>
+<connect gate="G$1" pin="GND" pad="1"/>
+<connect gate="G$1" pin="GND@1" pad="11"/>
+<connect gate="G$1" pin="IN" pad="12"/>
+</connects>
+<technologies>
+<technology name="315">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="433.92">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="FM-RTFQ2-433R" constant="no"/>
+<attribute name="OC_FARNELL" value="1200990" constant="no"/>
+<attribute name="OC_NEWARK" value="01M7858" constant="no"/>
+</technology>
+<technology name="868.35">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RXQ1*" prefix="HY">
+<description>&lt;b&gt;RXQ1-433.9 Dual Band FM Transceiver&lt;/b&gt;&lt;p&gt;
+Source: http://www.telecontrolli.com/pdf/transceivers/RXQ1.pdf</description>
+<gates>
+<gate name="G$1" symbol="RXQ1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RXQ1">
+<connects>
+<connect gate="G$1" pin="!RXSELECT" pad="16"/>
+<connect gate="G$1" pin="!TXSELECT" pad="15"/>
+<connect gate="G$1" pin="ANT" pad="2"/>
+<connect gate="G$1" pin="CS" pad="18"/>
+<connect gate="G$1" pin="GND@1" pad="5"/>
+<connect gate="G$1" pin="GND@2" pad="9"/>
+<connect gate="G$1" pin="GND@3" pad="10"/>
+<connect gate="G$1" pin="RF_GND@1" pad="1"/>
+<connect gate="G$1" pin="RF_GND@2" pad="3"/>
+<connect gate="G$1" pin="RXD" pad="12"/>
+<connect gate="G$1" pin="TXD" pad="14"/>
+<connect gate="G$1" pin="VCC" pad="17"/>
+</connects>
+<technologies>
+<technology name="-433.9">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="FM-RXQ1-433" constant="no"/>
+<attribute name="OC_FARNELL" value="1200988" constant="no"/>
+<attribute name="OC_NEWARK" value="96K9948" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>

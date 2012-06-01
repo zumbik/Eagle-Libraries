@@ -1,0 +1,1828 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="100" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="yes"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="yes"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="yes"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="yes"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="yes"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="yes"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="yes"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="yes"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="yes"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="yes"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="yes"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="yes" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="yes" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="yes" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="yes" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="yes" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Dokumentation" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Hilfslinien" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<description>&lt;b&gt;Schütze und Relais für Elektropläne&lt;/b&gt;&lt;p&gt;
+
+Wenn das von Ihnen gewünschte Schütz in der vorliegenden Bibliothek nicht vorhanden ist, laden Sie
+die Bibliothek &lt;u&gt;e-symbole.lbr&lt;/u&gt;, und starten Sie das User-Languag-Programm  &lt;u&gt;e-bauteil-erstellen.ulp&lt;/u&gt;.&lt;p&gt; 
+
+&lt;author&gt;Autor librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="BLINKRELAIS">
+<description>Dummy</description>
+<pad name="14" x="10.16" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="13" x="10.16" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="A1" x="0" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="A2" x="0" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="FORTSCHALTRELAIS_STROMSTOSSRELAIS">
+<description>Dummy</description>
+<pad name="1" x="1.905" y="1.905" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="1.905" y="-1.27" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="A1" x="-1.905" y="1.905" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="A2" x="-1.905" y="-1.27" drill="0.2" diameter="0.6" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-3.175" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HAUPTSCHUETZ_3-POL_MIT_HILFSKONTAKT_13-14_OHNE_KONTAKTSPIEGEL">
+<description>Dummy</description>
+<pad name="1" x="7.62" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="7.62" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="3" x="12.7" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="4" x="12.7" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="5" x="17.78" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="6" x="17.78" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="13" x="22.86" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="14" x="22.86" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="A1" x="0" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="A2" x="0" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HILFSSCHUETZ_13-14_23_24_33-34_43-44_OHNE_KONTAKTSPIEGEL">
+<description>Dummy</description>
+<pad name="13" x="7.62" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="14" x="7.62" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="23" x="12.7" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="24" x="12.7" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="33" x="17.78" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="34" x="17.78" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="43" x="22.86" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="44" x="22.86" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="A1" x="0" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="A2" x="0" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HILFSSCHUETZ_13-14_21-22_31-32_43-44_OHNE_KONTAKTSPIEGEL">
+<description>Dummy</description>
+<pad name="13" x="7.62" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="14" x="7.62" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="21" x="12.7" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="22" x="12.7" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="31" x="17.78" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="32" x="17.78" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="43" x="22.86" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="44" x="22.86" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="A1" x="0" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="A2" x="0" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HILFSSCHUETZ_13-14_21-22_33-34_43-44_OHNE_KONTAKTSPIEGEL">
+<description>Dummy</description>
+<pad name="13" x="7.62" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="14" x="7.62" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="21" x="12.7" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="22" x="12.7" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="33" x="17.78" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="34" x="17.78" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="43" x="22.86" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="44" x="22.86" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="A1" x="0" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="A2" x="0" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HAUPTSCHUETZ_3-POL_MIT_HILFSKONTAKT_11-12_OHNE_KONTAKTSPIEGEL">
+<description>Dummy</description>
+<pad name="1" x="7.62" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="7.62" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="3" x="12.7" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="4" x="12.7" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="5" x="17.78" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="6" x="17.78" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="11" x="22.86" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="12" x="22.86" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="A1" x="0" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="A2" x="0" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HILFSSCHUETZ_11-12">
+<description>Dummy</description>
+<pad name="11" x="2.54" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="12" x="2.54" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A1" x="-10.16" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HILFSSCHUETZ_13-14">
+<description>Dummy</description>
+<pad name="13" x="2.54" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="14" x="2.54" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A1" x="-10.16" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HILFSSCHUETZ_13-14_12-22">
+<description>Dummy</description>
+<pad name="11" x="2.54" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="12" x="2.54" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="23" x="7.62" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="24" x="7.62" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A1" x="-10.16" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HILFSSCHUETZ_11-12_21-22_33-34">
+<description>Dummy</description>
+<pad name="11" x="2.54" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="12" x="2.54" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="21" x="7.62" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="22" x="7.62" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="33" x="12.7" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="34" x="12.7" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A1" x="-10.16" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HILFSSCHUETZ_13-14_21-22_31-32_41-42">
+<description>Dummy</description>
+<pad name="13" x="2.54" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="14" x="2.54" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="21" x="7.62" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="22" x="7.62" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="31" x="12.7" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="32" x="12.7" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="41" x="17.78" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="42" x="17.78" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A1" x="-10.16" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HILFSSCHUETZ_13-14_21-22_31-32_41-42_51-52">
+<description>Dummy</description>
+<pad name="13" x="2.54" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="14" x="2.54" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="21" x="7.62" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="22" x="7.62" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="31" x="12.7" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="32" x="12.7" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="41" x="17.78" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="42" x="17.78" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="51" x="22.86" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="52" x="22.86" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A1" x="-10.16" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HILFSSCHUETZ_11-12_21-22">
+<description>Dummy</description>
+<pad name="11" x="2.54" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="12" x="2.54" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="21" x="7.62" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="22" x="7.62" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A1" x="-10.16" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HILFSSCHUETZ_13-14_24-24_31-32">
+<description>Dummy</description>
+<pad name="13" x="2.54" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="14" x="2.54" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="23" x="7.62" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="24" x="7.62" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="31" x="12.7" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="32" x="12.7" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A1" x="-10.16" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HILFSSCHUETZ_13-14_23-24_31-32_41-42">
+<description>Dummy</description>
+<pad name="13" x="2.54" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="14" x="2.54" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="23" x="7.62" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="24" x="7.62" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="31" x="12.7" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="32" x="12.7" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="41" x="17.78" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="42" x="17.78" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A1" x="-10.16" y="5.08" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-5.08" drill="0.5" diameter="1" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HILFSSCHUETZ_11-12-14">
+<description>Dummy</description>
+<wire x1="-3.81" y1="2.54" x2="-3.81" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="1.27" x2="-5.715" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-5.715" y1="1.27" x2="-5.715" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-5.715" y1="-0.635" x2="-3.81" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="-0.635" x2="-1.905" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="-0.635" x2="-1.905" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-1.905" y1="1.27" x2="-3.81" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-3.81" y1="-0.635" x2="-3.81" y2="-2.54" width="0.1524" layer="21"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="0" y1="-0.635" x2="2.54" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="-0.635" x2="3.175" y2="-2.54" width="0.254" layer="21"/>
+<wire x1="3.81" y1="-0.635" x2="6.35" y2="-0.635" width="0.1524" layer="21"/>
+<wire x1="6.35" y1="-0.635" x2="6.35" y2="-2.54" width="0.1524" layer="21"/>
+<pad name="A1" x="-3.81" y="3.175" drill="0.8" shape="square"/>
+<pad name="A2" x="-3.81" y="-3.175" drill="0.8" shape="square"/>
+<pad name="12" x="0" y="-3.175" drill="0.8" shape="square"/>
+<pad name="11" x="3.175" y="-3.175" drill="0.8" shape="square"/>
+<pad name="14" x="6.35" y="-3.175" drill="0.8" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HILFSSCHUETZ_13-14_23-24">
+<description>Dummy</description>
+<pad name="A1" x="-3.81" y="1.905" drill="0.8" shape="square"/>
+<pad name="A2" x="-3.81" y="-1.905" drill="0.8" shape="square"/>
+<pad name="14" x="0" y="-1.905" drill="0.8" shape="square"/>
+<pad name="13" x="0" y="1.905" drill="0.8" shape="square"/>
+<pad name="24" x="3.175" y="-1.905" drill="0.8" shape="square"/>
+<pad name="23" x="3.175" y="1.905" drill="0.8" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HILFSSCHUETZ_13-14_23-24_33_34">
+<description>Dummy</description>
+<pad name="A1" x="-3.81" y="1.905" drill="0.8" shape="square"/>
+<pad name="A2" x="-3.81" y="-1.905" drill="0.8" shape="square"/>
+<pad name="14" x="0" y="-1.905" drill="0.8" shape="square"/>
+<pad name="13" x="0" y="1.905" drill="0.8" shape="square"/>
+<pad name="24" x="3.175" y="-1.905" drill="0.8" shape="square"/>
+<pad name="23" x="3.175" y="1.905" drill="0.8" shape="square"/>
+<pad name="34" x="6.35" y="-1.905" drill="0.8" shape="square"/>
+<pad name="33" x="6.35" y="1.905" drill="0.8" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="HAUPTSCHUETZ_3-POL">
+<description>Dummy</description>
+<pad name="A1" x="-10.16" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="1" x="7.62" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="2" x="7.62" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="3" x="12.7" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="4" x="12.7" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="5" x="17.78" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="6" x="17.78" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+</package>
+<package name="HAUPTSCHUETZ_3-POL+HILFSKONTAKT_13-14_OHNE_KONTAKTSPIEGEL">
+<description>Dummy</description>
+<pad name="A1" x="-10.16" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="1" x="2.54" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="2" x="2.54" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="3" x="7.62" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="4" x="7.62" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="5" x="12.7" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="6" x="12.7" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="14" x="17.78" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="13" x="17.78" y="2.54" drill="0.5" diameter="1" shape="square"/>
+</package>
+<package name="HAUPTSCHUETZ_3-POL+HILFSKONTAKT_13-14">
+<description>Dummy</description>
+<pad name="A1" x="-10.16" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="1" x="2.54" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="2" x="2.54" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="3" x="7.62" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="4" x="7.62" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="5" x="12.7" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="6" x="12.7" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="13" x="17.78" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="14" x="17.78" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+</package>
+<package name="HAUPTSCHUETZ_3-POL+HILFSKONTAKT_11-12">
+<description>Dummy</description>
+<pad name="A1" x="-10.16" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="1" x="2.54" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="2" x="2.54" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="3" x="7.62" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="4" x="7.62" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="5" x="12.7" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="6" x="12.7" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="11" x="17.78" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="12" x="17.78" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+</package>
+<package name="HAUPTSCHUETZ_2-POL">
+<description>Dummy</description>
+<pad name="A1" x="-7.62" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-7.62" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="1" x="2.54" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="2" x="2.54" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="3" x="7.62" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="4" x="7.62" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+</package>
+<package name="HAUPTSCHUETZ_3-POL+HILFSKONTAKT_12-12_13-14">
+<description>Dummy</description>
+<pad name="A1" x="-10.16" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="1" x="2.54" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="2" x="2.54" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="3" x="7.62" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="4" x="7.62" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="5" x="12.7" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="6" x="12.7" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="11" x="17.78" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="12" x="17.78" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="13" x="22.86" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="14" x="22.86" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+</package>
+<package name="HILFSSCHUETZ_OEFFNET_VERZOEGERT_15-16">
+<description>Dummy</description>
+<pad name="A1" x="-10.16" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="15" x="2.54" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="16" x="2.54" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+</package>
+<package name="HILFSSCHUETZ_SCHLIESST_VERZOEGERT_15-16">
+<description>Dummy</description>
+<pad name="A1" x="-10.16" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="15" x="2.54" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="16" x="2.54" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+</package>
+<package name="HILFSSCHUETZ_OEFFNET_VERZOEGERT_17-18">
+<description>Dummy</description>
+<pad name="A1" x="-10.16" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="18" x="2.54" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="17" x="2.54" y="2.54" drill="0.5" diameter="1" shape="square"/>
+</package>
+<package name="HILFSSCHUETZ_SCHLIESST_VERZOEGERT_17-18">
+<description>Dummy</description>
+<pad name="A1" x="-10.16" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="18" x="2.54" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="17" x="2.54" y="2.54" drill="0.5" diameter="1" shape="square"/>
+</package>
+<package name="ZEITRELAIS_1_POL">
+<description>Dummy</description>
+<pad name="13" x="10.16" y="-2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="14" x="10.16" y="-12.7" drill="0.5" diameter="1" shape="square"/>
+<pad name="A1" x="0" y="-2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="0" y="-12.7" drill="0.5" diameter="1" shape="square"/>
+</package>
+<package name="RELAIS_2-POL-UM">
+<description>Dummy</description>
+<pad name="11" x="5.08" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="21" x="2.54" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="41" x="7.62" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="12" x="12.7" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="22" x="10.16" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="42" x="15.24" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="A1" x="-10.16" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+</package>
+<package name="RELAIS_4-POL-UM">
+<description>Dummy</description>
+<pad name="11" x="5.08" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="21" x="2.54" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="41" x="7.62" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="12" x="12.7" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="22" x="10.16" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="42" x="15.24" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="13" x="20.32" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="23" x="17.78" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="43" x="22.86" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="14" x="27.94" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="24" x="25.4" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="44" x="30.48" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+<pad name="A1" x="-10.16" y="2.54" drill="0.5" diameter="1" shape="square"/>
+<pad name="A2" x="-10.16" y="-7.62" drill="0.5" diameter="1" shape="square"/>
+</package>
+</packages>
+<symbols>
+<symbol name="BLINKRELAIS">
+<wire x1="3.302" y1="0" x2="4.572" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.842" y1="0" x2="7.112" y2="0" width="0.1524" layer="94"/>
+<wire x1="8.001" y1="0" x2="9.271" y2="0" width="0.1524" layer="94"/>
+<wire x1="-4.191" y1="-0.762" x2="-3.302" y2="-0.762" width="0.1524" layer="94"/>
+<wire x1="-5.461" y1="-0.762" x2="-6.35" y2="-0.762" width="0.1524" layer="94"/>
+<wire x1="-5.461" y1="-0.762" x2="-5.461" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="-4.191" y1="-0.762" x2="-4.191" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="-4.191" y1="0.508" x2="-5.461" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="-6.477" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-6.477" y1="-1.651" x2="-6.477" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="-6.477" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-2.54" x2="8.89" y2="1.524" width="0.254" layer="94"/>
+<wire x1="10.16" y1="2.54" x2="10.16" y2="1.778" width="0.1524" layer="94"/>
+<text x="-7.62" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-7.62" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<text x="-7.62" y="-7.62" size="1.778" layer="96" rot="R180">&gt;FUNKTION</text>
+<text x="-7.62" y="-2.54" size="1.778" layer="96" rot="R180">&gt;TYPE</text>
+<text x="-7.62" y="-5.08" size="1.778" layer="96" rot="R180">&gt;HERSTELLER</text>
+<pin name="3" x="10.16" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="10.16" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="ZEITRELAIS_1_POL">
+<wire x1="5.08" y1="0" x2="6.6016" y2="0" width="0.1524" layer="94"/>
+<wire x1="7.6202" y1="0" x2="9.1416" y2="0" width="0.1524" layer="94"/>
+<wire x1="-6.477" y1="1.651" x2="-3.175" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-6.477" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="3.302" y1="0" x2="4.318" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="-6.477" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-6.477" y1="-1.651" x2="-6.477" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="-6.477" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-2.54" x2="8.89" y2="1.524" width="0.254" layer="94"/>
+<wire x1="10.16" y1="2.54" x2="10.16" y2="1.778" width="0.1524" layer="94"/>
+<text x="-7.62" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-7.62" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<text x="-7.62" y="-10.16" size="1.778" layer="96" rot="R180">&gt;FUNKTION</text>
+<text x="-7.62" y="-5.08" size="1.778" layer="96" rot="R180">&gt;TYPE</text>
+<text x="-7.62" y="-2.54" size="1.778" layer="96" rot="R180">&gt;VALUE2</text>
+<text x="-7.62" y="-7.62" size="1.778" layer="96" rot="R180">&gt;HERSTELLER</text>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+<pin name="4" x="10.16" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="3" x="10.16" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="FORTSCHALTRELAIS_STROMSTOSSRELAIS">
+<wire x1="6.4724" y1="0" x2="7.491" y2="0" width="0.1524" layer="94"/>
+<wire x1="4.4482" y1="0" x2="5.4668" y2="-1.2764" width="0.1524" layer="94"/>
+<wire x1="5.4668" y1="-1.2764" x2="6.4724" y2="0" width="0.1524" layer="94"/>
+<wire x1="4.4482" y1="0" x2="3.4296" y2="0" width="0.1524" layer="94"/>
+<wire x1="9.4508" y1="0" x2="8.4322" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0.762" x2="0" y2="-0.762" width="0.1524" layer="94"/>
+<wire x1="0" y1="0.762" x2="0.762" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.762" x2="-0.762" y2="-0.762" width="0.1524" layer="94"/>
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="-2.54" x2="8.89" y2="1.524" width="0.254" layer="94"/>
+<wire x1="10.16" y1="2.54" x2="10.16" y2="1.778" width="0.1524" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<text x="-3.81" y="-7.62" size="1.778" layer="96" rot="R180">&gt;FUNKTION</text>
+<text x="-3.81" y="-2.54" size="1.778" layer="96" rot="R180">&gt;TYPE</text>
+<text x="-3.81" y="-5.08" size="1.778" layer="96" rot="R180">&gt;HERSTELLER</text>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+<pin name="1" x="10.16" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="10.16" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="HAUPTSCHUETZ_3-POL_MIT_HILFSKONTAKT_13-14_OHNE_KONTAKTSPIEGEL">
+<wire x1="22.1042" y1="0.0064" x2="22.098" y2="0" width="0.1524" layer="94"/>
+<wire x1="22.098" y1="0" x2="19.5772" y2="0.0064" width="0.1524" layer="94"/>
+<wire x1="19.558" y1="0" x2="22.098" y2="0" width="0.1524" layer="94"/>
+<wire x1="13.97" y1="0" x2="11.43" y2="0" width="0.1524" layer="94"/>
+<wire x1="18.034" y1="0" x2="15.494" y2="0" width="0.1524" layer="94"/>
+<wire x1="7.112" y1="0" x2="9.652" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.302" y1="0" x2="5.08" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="6.35" y2="1.524" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="12.7" y1="-2.54" x2="11.43" y2="1.524" width="0.254" layer="94"/>
+<wire x1="12.7" y1="2.54" x2="12.7" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="17.78" y1="-2.54" x2="16.51" y2="1.524" width="0.254" layer="94"/>
+<wire x1="17.78" y1="2.54" x2="17.78" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="22.86" y1="-2.54" x2="21.59" y2="1.524" width="0.254" layer="94"/>
+<wire x1="22.86" y1="2.54" x2="22.86" y2="1.778" width="0.1524" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<text x="-3.81" y="-7.62" size="1.778" layer="96" rot="R180">&gt;FUNKTION</text>
+<text x="-3.81" y="-2.54" size="1.778" layer="96" rot="R180">&gt;TYPE</text>
+<text x="-3.81" y="-5.08" size="1.778" layer="96" rot="R180">&gt;HERSTELLER</text>
+<pin name="1" x="7.62" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="7.62" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="3" x="12.7" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="12.7" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="5" x="17.78" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="6" x="17.78" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="13" x="22.86" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="14" x="22.86" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="HILFSSCHUETZ_13-14_23_24_33-34_43-44_OHNE_KONTAKTSPIEGEL">
+<wire x1="22.1042" y1="0.0064" x2="22.098" y2="0" width="0.1524" layer="94"/>
+<wire x1="22.098" y1="0" x2="19.5772" y2="0.0064" width="0.1524" layer="94"/>
+<wire x1="19.558" y1="0" x2="22.098" y2="0" width="0.1524" layer="94"/>
+<wire x1="13.97" y1="0" x2="11.43" y2="0" width="0.1524" layer="94"/>
+<wire x1="18.034" y1="0" x2="15.494" y2="0" width="0.1524" layer="94"/>
+<wire x1="7.112" y1="0" x2="9.652" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.302" y1="0" x2="5.08" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="6.35" y2="1.524" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="12.7" y1="-2.54" x2="11.43" y2="1.524" width="0.254" layer="94"/>
+<wire x1="12.7" y1="2.54" x2="12.7" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="17.78" y1="-2.54" x2="16.51" y2="1.524" width="0.254" layer="94"/>
+<wire x1="17.78" y1="2.54" x2="17.78" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="22.86" y1="-2.54" x2="21.59" y2="1.524" width="0.254" layer="94"/>
+<wire x1="22.86" y1="2.54" x2="22.86" y2="1.778" width="0.1524" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<text x="-3.81" y="-7.62" size="1.778" layer="96" rot="R180">&gt;FUNKTION</text>
+<text x="-3.81" y="-2.54" size="1.778" layer="96" rot="R180">&gt;TYPE</text>
+<text x="-3.81" y="-5.08" size="1.778" layer="96" rot="R180">&gt;HERSTELLER</text>
+<pin name="14" x="7.62" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="13" x="7.62" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="24" x="12.7" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="23" x="12.7" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="34" x="17.78" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="33" x="17.78" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="44" x="22.86" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="43" x="22.86" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="HILFSSCHUETZ_13-14_21-22_31-32_43-44_OHNE_KONTAKTSPIEGEL">
+<wire x1="22.1042" y1="0.0064" x2="22.098" y2="0" width="0.1524" layer="94"/>
+<wire x1="22.098" y1="0" x2="19.5772" y2="0.0064" width="0.1524" layer="94"/>
+<wire x1="19.558" y1="0" x2="22.098" y2="0" width="0.1524" layer="94"/>
+<wire x1="13.97" y1="0" x2="11.43" y2="0" width="0.1524" layer="94"/>
+<wire x1="18.034" y1="0" x2="15.494" y2="0" width="0.1524" layer="94"/>
+<wire x1="7.112" y1="0" x2="9.652" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.175" y1="0" x2="5.08" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="12.7" y1="1.778" x2="14.478" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="12.7" y1="-2.54" x2="13.97" y2="2.286" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="6.35" y2="1.524" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="12.7" y1="2.54" x2="12.7" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="22.86" y1="-2.54" x2="21.59" y2="1.524" width="0.254" layer="94"/>
+<wire x1="22.86" y1="2.54" x2="22.86" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="17.78" y1="-2.54" x2="19.05" y2="2.286" width="0.254" layer="94"/>
+<wire x1="17.78" y1="1.778" x2="19.558" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="17.78" y1="2.54" x2="17.78" y2="1.778" width="0.1524" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<text x="-3.81" y="-7.62" size="1.778" layer="96" rot="R180">&gt;FUNKTION</text>
+<text x="-3.81" y="-2.54" size="1.778" layer="96" rot="R180">&gt;TYPE</text>
+<text x="-3.81" y="-5.08" size="1.778" layer="96" rot="R180">&gt;HERSTELLER</text>
+<pin name="14" x="7.62" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="13" x="7.62" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="22" x="12.7" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="21" x="12.7" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="32" x="17.78" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="31" x="17.78" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="44" x="22.86" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="43" x="22.86" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="HILFSSCHUETZ_13-14_21-22_33-34_43-44_OHNE_KONTAKTSPIEGEL">
+<wire x1="22.1042" y1="0.0064" x2="22.098" y2="0" width="0.1524" layer="94"/>
+<wire x1="22.098" y1="0" x2="19.5772" y2="0.0064" width="0.1524" layer="94"/>
+<wire x1="19.558" y1="0" x2="22.098" y2="0" width="0.1524" layer="94"/>
+<wire x1="13.97" y1="0" x2="11.43" y2="0" width="0.1524" layer="94"/>
+<wire x1="18.034" y1="0" x2="15.494" y2="0" width="0.1524" layer="94"/>
+<wire x1="7.112" y1="0" x2="9.652" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.302" y1="0" x2="5.08" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="12.7" y1="1.778" x2="14.478" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="12.7" y1="-2.54" x2="13.97" y2="2.286" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="6.35" y2="1.524" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="12.7" y1="2.54" x2="12.7" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="17.78" y1="-2.54" x2="16.51" y2="1.524" width="0.254" layer="94"/>
+<wire x1="17.78" y1="2.54" x2="17.78" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="22.86" y1="-2.54" x2="21.59" y2="1.524" width="0.254" layer="94"/>
+<wire x1="22.86" y1="2.54" x2="22.86" y2="1.778" width="0.1524" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<text x="-3.81" y="-7.62" size="1.778" layer="96" rot="R180">&gt;FUNKTION</text>
+<text x="-3.81" y="-2.54" size="1.778" layer="96" rot="R180">&gt;TYPE</text>
+<text x="-3.81" y="-5.08" size="1.778" layer="96" rot="R180">&gt;HERSTELLER</text>
+<pin name="14" x="7.62" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="13" x="7.62" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="22" x="12.7" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="21" x="12.7" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="34" x="17.78" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="33" x="17.78" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="44" x="22.86" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="43" x="22.86" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="HAUPTSCHUETZ_3-POL_MIT_HILFSKONTAKT_11-12_OHNE_KONTAKTSPIEGEL">
+<wire x1="22.1042" y1="0.0064" x2="22.098" y2="0" width="0.1524" layer="94"/>
+<wire x1="22.098" y1="0" x2="19.5772" y2="0.0064" width="0.1524" layer="94"/>
+<wire x1="19.558" y1="0" x2="22.098" y2="0" width="0.1524" layer="94"/>
+<wire x1="13.97" y1="0" x2="11.43" y2="0" width="0.1524" layer="94"/>
+<wire x1="18.034" y1="0" x2="15.494" y2="0" width="0.1524" layer="94"/>
+<wire x1="7.112" y1="0" x2="9.652" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.302" y1="0" x2="5.08" y2="0" width="0.1524" layer="94"/>
+<wire x1="22.86" y1="1.778" x2="24.638" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="22.86" y1="-2.54" x2="24.13" y2="2.286" width="0.254" layer="94"/>
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="6.35" y2="1.524" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="12.7" y1="-2.54" x2="11.43" y2="1.524" width="0.254" layer="94"/>
+<wire x1="12.7" y1="2.54" x2="12.7" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="17.78" y1="-2.54" x2="16.51" y2="1.524" width="0.254" layer="94"/>
+<wire x1="17.78" y1="2.54" x2="17.78" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="22.86" y1="2.54" x2="22.86" y2="1.778" width="0.1524" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<text x="-3.81" y="-7.62" size="1.778" layer="96" rot="R180">&gt;FUNKTION</text>
+<text x="-3.81" y="-2.54" size="1.778" layer="96" rot="R180">&gt;TYPE</text>
+<text x="-3.81" y="-5.08" size="1.778" layer="96" rot="R180">&gt;HERSTELLER</text>
+<pin name="2" x="7.62" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="7.62" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="12.7" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="3" x="12.7" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="6" x="17.78" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="5" x="17.78" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="22" x="22.86" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="21" x="22.86" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="SPULE">
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<text x="-3.81" y="-7.62" size="1.778" layer="96" rot="R180">&gt;FUNKTION</text>
+<text x="-3.81" y="-2.54" size="1.778" layer="96" rot="R180">&gt;TYPE</text>
+<text x="-3.81" y="-5.08" size="1.778" layer="96" rot="R180">&gt;HERSTELLER</text>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+</symbol>
+<symbol name="OEFFNER">
+<wire x1="0" y1="1.778" x2="1.778" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.27" y2="2.286" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-1.27" y="-1.27" size="1.27" layer="95" rot="R180">&gt;XREF</text>
+<pin name="2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="SCHLIESSER">
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-1.27" y="-1.27" size="1.27" layer="95" rot="R180">&gt;XREF</text>
+<pin name="3" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="WECHSLER">
+<wire x1="-2.54" y1="-1.524" x2="-1.27" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="-1.27" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="2.54" y2="-1.524" width="0.1524" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="0" size="1.27" layer="95" rot="R180">&gt;XREF</text>
+<pin name="1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="2" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SPULE_ABFALLVERZOEGERT">
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="-6.477" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-6.477" y1="-1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-6.477" y1="-1.651" x2="-6.477" y2="1.651" width="0.254" layer="94"/>
+<text x="-7.62" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-7.62" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<text x="-7.62" y="-7.62" size="1.778" layer="96" rot="R180">&gt;FUNKTION</text>
+<text x="-7.62" y="-2.54" size="1.778" layer="96" rot="R180">&gt;TYPE</text>
+<text x="-7.62" y="-5.08" size="1.778" layer="96" rot="R180">&gt;HERSTELLER</text>
+<rectangle x1="-6.477" y1="-1.651" x2="-3.175" y2="1.651" layer="94"/>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="SPULE_ANZUGVERZOEGERT">
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="-6.477" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-6.477" y1="-1.651" x2="-6.477" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="-6.477" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-6.477" y1="1.651" x2="-3.175" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-6.477" y2="-1.651" width="0.1524" layer="94"/>
+<text x="-7.62" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-7.62" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<text x="-7.62" y="-7.62" size="1.778" layer="96" rot="R180">&gt;FUNKTION</text>
+<text x="-7.62" y="-2.54" size="1.778" layer="96" rot="R180">&gt;TYPE</text>
+<text x="-7.62" y="-5.08" size="1.778" layer="96" rot="R180">&gt;HERSTELLER</text>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="HAUPTSCHUETZ_3-POL+HILFSKONTAKT_13-14_OHNE_KONTAKTSPIEGEL">
+<wire x1="0" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="6.477" y2="0" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="0" x2="8.89" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="2.286" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.286" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="3.81" y2="1.524" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="2.286" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="2.286" x2="5.08" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="-2.54" x2="8.89" y2="1.524" width="0.254" layer="94"/>
+<wire x1="10.16" y1="2.54" x2="10.16" y2="2.286" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="2.286" x2="10.16" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="15.24" y1="-2.54" x2="13.97" y2="1.524" width="0.254" layer="94"/>
+<wire x1="12.7" y1="0" x2="13.97" y2="0" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="0" x2="11.557" y2="0" width="0.1524" layer="94"/>
+<wire x1="-4.445" y1="1.651" x2="-7.62" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="1.651" x2="-10.795" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-10.795" y1="1.651" x2="-10.795" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-10.795" y1="-1.651" x2="-7.62" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-1.651" x2="-4.445" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-4.445" y1="-1.651" x2="-4.445" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="2.54" x2="-7.62" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="-7.62" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="-4.318" y1="0" x2="-3.81" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.651" x2="0" y2="2.286" width="0.1524" layer="94" curve="-157.380135"/>
+<wire x1="5.08" y1="1.651" x2="5.08" y2="2.286" width="0.1524" layer="94" curve="-157.380135"/>
+<wire x1="10.16" y1="1.651" x2="10.16" y2="2.286" width="0.1524" layer="94" curve="-157.380135"/>
+<wire x1="15.24" y1="2.54" x2="15.24" y2="1.651" width="0.1524" layer="94"/>
+<text x="-11.43" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-11.43" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<text x="-11.43" y="-7.62" size="1.778" layer="96" rot="R180">&gt;FUNKTION</text>
+<text x="-11.43" y="-2.54" size="1.778" layer="96" rot="R180">&gt;TYPE</text>
+<text x="-11.43" y="-5.08" size="1.778" layer="96" rot="R180">&gt;HERSTELLER</text>
+<pin name="2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="3" x="5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="5.08" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="5" x="10.16" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="6" x="10.16" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="7" x="15.24" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="8" x="15.24" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="A2" x="-7.62" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+<pin name="A1" x="-7.62" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+</symbol>
+<symbol name="SCHLIESSER_HAUPTSCHUETZ">
+<wire x1="0" y1="1.778" x2="0" y2="2.413" width="0.1524" layer="94" curve="-157.380135"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-1.27" y="-1.27" size="1.27" layer="95" rot="R180">&gt;XREF</text>
+<pin name="3" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SCHLIESSER_HAUPTSCHUETZ_3-POL">
+<wire x1="-5.08" y1="0" x2="-3.81" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="1.397" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0" x2="3.81" y2="0" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="1.778" x2="-5.08" y2="2.413" width="0.1524" layer="94" curve="-157.380135"/>
+<wire x1="-5.08" y1="-2.54" x2="-6.35" y2="1.524" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.778" x2="0" y2="2.413" width="0.1524" layer="94" curve="-157.380135"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="1.778" x2="5.08" y2="2.413" width="0.1524" layer="94" curve="-157.380135"/>
+<wire x1="5.08" y1="-2.54" x2="3.81" y2="1.524" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="1.778" width="0.1524" layer="94"/>
+<text x="-7.62" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-6.35" y="-1.27" size="1.27" layer="95" rot="R180">&gt;XREF</text>
+<text x="-8.89" y="-3.81" size="1.778" layer="95" rot="R180">&gt;VALUE2</text>
+<pin name="2" x="-5.08" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="-5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="3" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="5" x="5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="6" x="5.08" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="OEFFNER_OEFFNET_VERZOEGERT">
+<wire x1="0" y1="1.778" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="2.032" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.27" y2="2.286" width="0.254" layer="94"/>
+<wire x1="0.635" y1="0" x2="-1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.381" y1="0.762" x2="-0.381" y2="-1.27" width="0.1524" layer="94" curve="180"/>
+<wire x1="0.508" y1="-0.508" x2="-1.27" y2="-0.508" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.27" layer="95" rot="R180">&gt;XREF</text>
+<pin name="6" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="5" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="SCHLIESSER_SCHLIESST_VERZOEGERT">
+<wire x1="-0.889" y1="0" x2="-2.413" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-1.524" y1="0.762" x2="-1.524" y2="-1.27" width="0.1524" layer="94" curve="180"/>
+<wire x1="-0.762" y1="-0.508" x2="-2.413" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<text x="-3.81" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.667" y="-1.27" size="1.27" layer="95" rot="R180">&gt;XREF</text>
+<pin name="CS1" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="S1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="OEFFNER_SCHLIESST_VERZOEGERT">
+<wire x1="0" y1="1.778" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="2.032" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.27" y2="2.286" width="0.254" layer="94"/>
+<wire x1="0.635" y1="0" x2="-0.127" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="-1.27" x2="-1.143" y2="0.762" width="0.1524" layer="94" curve="180"/>
+<wire x1="0.508" y1="-0.508" x2="-0.127" y2="-0.508" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.27" layer="95" rot="R180">&gt;XREF</text>
+<pin name="6" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="5" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="SCHLIESSER_OEFFNET_VERZOEGERT">
+<wire x1="-0.889" y1="0" x2="-1.524" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-1.27" x2="-2.54" y2="0.762" width="0.1524" layer="94" curve="180"/>
+<wire x1="-0.762" y1="-0.508" x2="-1.524" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<text x="-3.81" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.667" y="-1.27" size="1.27" layer="95" rot="R180">&gt;XREF</text>
+<pin name="CS1" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="S1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="BLINKRELAIS" prefix="K" uservalue="yes">
+<description>Blinkrelais</description>
+<gates>
+<gate name="G$1" symbol="BLINKRELAIS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="BLINKRELAIS">
+<connects>
+<connect gate="G$1" pin="3" pad="13"/>
+<connect gate="G$1" pin="4" pad="14"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ZEITRELAIS_1_POL" prefix="K" uservalue="yes">
+<description>Zeitrelais, 1-pol.</description>
+<gates>
+<gate name="G$1" symbol="ZEITRELAIS_1_POL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ZEITRELAIS_1_POL">
+<connects>
+<connect gate="G$1" pin="3" pad="13"/>
+<connect gate="G$1" pin="4" pad="14"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+<attribute name="VALUE2" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FORTSCHALTRELAIS_STROMSTOSSRELAIS" prefix="K" uservalue="yes">
+<description>Fortschaltrelais, Stromstoßrelais</description>
+<gates>
+<gate name="G$1" symbol="FORTSCHALTRELAIS_STROMSTOSSRELAIS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="FORTSCHALTRELAIS_STROMSTOSSRELAIS">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_13-14_23_24_33-34_43-44_OHNE_KONTAKTSPIEGEL" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit 4 Schließern ohne Kontaktspiegel</description>
+<gates>
+<gate name="G$1" symbol="HILFSSCHUETZ_13-14_23_24_33-34_43-44_OHNE_KONTAKTSPIEGEL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_13-14_23_24_33-34_43-44_OHNE_KONTAKTSPIEGEL">
+<connects>
+<connect gate="G$1" pin="13" pad="13"/>
+<connect gate="G$1" pin="14" pad="14"/>
+<connect gate="G$1" pin="23" pad="23"/>
+<connect gate="G$1" pin="24" pad="24"/>
+<connect gate="G$1" pin="33" pad="33"/>
+<connect gate="G$1" pin="34" pad="34"/>
+<connect gate="G$1" pin="43" pad="43"/>
+<connect gate="G$1" pin="44" pad="44"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_13-14_21-22_31-32_43-44_OHNE_KONTAKTSPIEGEL" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit 2 Schließern und 2 Öffnern  ohne Kontaktspiegel</description>
+<gates>
+<gate name="G$1" symbol="HILFSSCHUETZ_13-14_21-22_31-32_43-44_OHNE_KONTAKTSPIEGEL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_13-14_21-22_31-32_43-44_OHNE_KONTAKTSPIEGEL">
+<connects>
+<connect gate="G$1" pin="13" pad="13"/>
+<connect gate="G$1" pin="14" pad="14"/>
+<connect gate="G$1" pin="21" pad="21"/>
+<connect gate="G$1" pin="22" pad="22"/>
+<connect gate="G$1" pin="31" pad="31"/>
+<connect gate="G$1" pin="32" pad="32"/>
+<connect gate="G$1" pin="43" pad="43"/>
+<connect gate="G$1" pin="44" pad="44"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_13-14_21-22_33-34_43-44_OHNE_KONTAKTSPIEGEL" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit 3 Schließern, 1 Öffner ohne Kontaktspiegel</description>
+<gates>
+<gate name="G$1" symbol="HILFSSCHUETZ_13-14_21-22_33-34_43-44_OHNE_KONTAKTSPIEGEL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_13-14_21-22_33-34_43-44_OHNE_KONTAKTSPIEGEL">
+<connects>
+<connect gate="G$1" pin="13" pad="13"/>
+<connect gate="G$1" pin="14" pad="14"/>
+<connect gate="G$1" pin="21" pad="21"/>
+<connect gate="G$1" pin="22" pad="22"/>
+<connect gate="G$1" pin="33" pad="33"/>
+<connect gate="G$1" pin="34" pad="34"/>
+<connect gate="G$1" pin="43" pad="43"/>
+<connect gate="G$1" pin="44" pad="44"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HAUPTSCHUETZ_3-POL_HILFSKONTAKT_11-12_OHNE_KONTAKTSPIEGEL" prefix="K" uservalue="yes">
+<description>Hauptschütz mit 3 Schließern, 1 Öffner ohne Kontaktspiegel</description>
+<gates>
+<gate name="G$1" symbol="HAUPTSCHUETZ_3-POL_MIT_HILFSKONTAKT_11-12_OHNE_KONTAKTSPIEGEL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="HAUPTSCHUETZ_3-POL_MIT_HILFSKONTAKT_11-12_OHNE_KONTAKTSPIEGEL">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="21" pad="11"/>
+<connect gate="G$1" pin="22" pad="12"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_13-14" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit 1 Schließer</description>
+<gates>
+<gate name="G$1" symbol="SPULE" x="-10.16" y="5.08" addlevel="must"/>
+<gate name="1" symbol="SCHLIESSER" x="2.54" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_13-14">
+<connects>
+<connect gate="1" pin="3" pad="13"/>
+<connect gate="1" pin="4" pad="14"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_11-12" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit 1 Öffner</description>
+<gates>
+<gate name="G$1" symbol="SPULE" x="-10.16" y="5.08" addlevel="must"/>
+<gate name="1" symbol="OEFFNER" x="2.54" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_11-12">
+<connects>
+<connect gate="1" pin="1" pad="11"/>
+<connect gate="1" pin="2" pad="12"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_11-12_21-22" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit 2 Öffnern</description>
+<gates>
+<gate name="G$1" symbol="SPULE" x="-10.16" y="5.08" addlevel="must"/>
+<gate name="1" symbol="OEFFNER" x="2.54" y="5.08"/>
+<gate name="2" symbol="OEFFNER" x="7.62" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_11-12_21-22">
+<connects>
+<connect gate="1" pin="1" pad="11"/>
+<connect gate="1" pin="2" pad="12"/>
+<connect gate="2" pin="1" pad="21"/>
+<connect gate="2" pin="2" pad="22"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_13-14_23-24_31-32_41-42" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit 2 Schließern, 2 Öffnern</description>
+<gates>
+<gate name="G$1" symbol="SPULE" x="-10.16" y="5.08" addlevel="must"/>
+<gate name="1" symbol="SCHLIESSER" x="2.54" y="5.08"/>
+<gate name="2" symbol="SCHLIESSER" x="7.62" y="5.08"/>
+<gate name="3" symbol="OEFFNER" x="12.7" y="5.08"/>
+<gate name="4" symbol="OEFFNER" x="17.78" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_13-14_23-24_31-32_41-42">
+<connects>
+<connect gate="1" pin="3" pad="13"/>
+<connect gate="1" pin="4" pad="14"/>
+<connect gate="2" pin="3" pad="23"/>
+<connect gate="2" pin="4" pad="24"/>
+<connect gate="3" pin="1" pad="31"/>
+<connect gate="3" pin="2" pad="32"/>
+<connect gate="4" pin="1" pad="41"/>
+<connect gate="4" pin="2" pad="42"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_11-12_21-22_33-34" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit zwei 2 Öffnern, 1 Schließer</description>
+<gates>
+<gate name="G$1" symbol="SPULE" x="-10.16" y="5.08" addlevel="must"/>
+<gate name="3" symbol="SCHLIESSER" x="12.7" y="5.08"/>
+<gate name="1" symbol="OEFFNER" x="2.54" y="5.08"/>
+<gate name="2" symbol="OEFFNER" x="7.62" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_11-12_21-22_33-34">
+<connects>
+<connect gate="1" pin="1" pad="11"/>
+<connect gate="1" pin="2" pad="12"/>
+<connect gate="2" pin="1" pad="21"/>
+<connect gate="2" pin="2" pad="22"/>
+<connect gate="3" pin="3" pad="33"/>
+<connect gate="3" pin="4" pad="34"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_13-14_21-22_31-32_41-42" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit 1 Schließer, 3 Öffnern</description>
+<gates>
+<gate name="G$1" symbol="SPULE" x="-10.16" y="5.08" addlevel="must"/>
+<gate name="1" symbol="SCHLIESSER" x="2.54" y="5.08"/>
+<gate name="2" symbol="OEFFNER" x="7.62" y="5.08"/>
+<gate name="3" symbol="OEFFNER" x="12.7" y="5.08"/>
+<gate name="4" symbol="OEFFNER" x="17.78" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_13-14_21-22_31-32_41-42">
+<connects>
+<connect gate="1" pin="3" pad="13"/>
+<connect gate="1" pin="4" pad="14"/>
+<connect gate="2" pin="1" pad="21"/>
+<connect gate="2" pin="2" pad="22"/>
+<connect gate="3" pin="1" pad="31"/>
+<connect gate="3" pin="2" pad="32"/>
+<connect gate="4" pin="1" pad="41"/>
+<connect gate="4" pin="2" pad="42"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_13-14_21-22_31-32_41-42_51-52" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit 1 Schließer, 4 Öffnern</description>
+<gates>
+<gate name="G$1" symbol="SPULE" x="-10.16" y="5.08" addlevel="must"/>
+<gate name="1" symbol="SCHLIESSER" x="2.54" y="5.08"/>
+<gate name="2" symbol="OEFFNER" x="7.62" y="5.08"/>
+<gate name="3" symbol="OEFFNER" x="12.7" y="5.08"/>
+<gate name="4" symbol="OEFFNER" x="17.78" y="5.08"/>
+<gate name="5" symbol="OEFFNER" x="22.86" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_13-14_21-22_31-32_41-42_51-52">
+<connects>
+<connect gate="1" pin="3" pad="13"/>
+<connect gate="1" pin="4" pad="14"/>
+<connect gate="2" pin="1" pad="21"/>
+<connect gate="2" pin="2" pad="22"/>
+<connect gate="3" pin="1" pad="31"/>
+<connect gate="3" pin="2" pad="32"/>
+<connect gate="4" pin="1" pad="41"/>
+<connect gate="4" pin="2" pad="42"/>
+<connect gate="5" pin="1" pad="51"/>
+<connect gate="5" pin="2" pad="52"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_13-14_24-24_31-32" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit 2 Schließern, 1 Öffner</description>
+<gates>
+<gate name="G$1" symbol="SPULE" x="-10.16" y="5.08" addlevel="must"/>
+<gate name="1" symbol="SCHLIESSER" x="2.54" y="5.08"/>
+<gate name="2" symbol="SCHLIESSER" x="7.62" y="5.08"/>
+<gate name="3" symbol="OEFFNER" x="12.7" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_13-14_24-24_31-32">
+<connects>
+<connect gate="1" pin="3" pad="13"/>
+<connect gate="1" pin="4" pad="14"/>
+<connect gate="2" pin="3" pad="23"/>
+<connect gate="2" pin="4" pad="24"/>
+<connect gate="3" pin="1" pad="31"/>
+<connect gate="3" pin="2" pad="32"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_11-12-14" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit Wechselkontakt</description>
+<gates>
+<gate name="0" symbol="SPULE" x="-10.16" y="-2.54" addlevel="must"/>
+<gate name="1" symbol="WECHSLER" x="5.08" y="-2.54"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_11-12-14">
+<connects>
+<connect gate="0" pin="A1" pad="A1"/>
+<connect gate="0" pin="A2" pad="A2"/>
+<connect gate="1" pin="1" pad="11"/>
+<connect gate="1" pin="2" pad="12"/>
+<connect gate="1" pin="4" pad="14"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_13-14_23-24" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit 2 Schließern</description>
+<gates>
+<gate name="_" symbol="SPULE" x="-10.16" y="5.08" addlevel="must"/>
+<gate name="1" symbol="SCHLIESSER" x="2.54" y="5.08"/>
+<gate name="2" symbol="SCHLIESSER" x="7.62" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_13-14_23-24">
+<connects>
+<connect gate="1" pin="3" pad="13"/>
+<connect gate="1" pin="4" pad="14"/>
+<connect gate="2" pin="3" pad="23"/>
+<connect gate="2" pin="4" pad="24"/>
+<connect gate="_" pin="A1" pad="A1"/>
+<connect gate="_" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_13-14_23-24_33_34" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit 3 Schließern</description>
+<gates>
+<gate name="G$1" symbol="SPULE" x="-10.16" y="5.08" addlevel="must"/>
+<gate name="1" symbol="SCHLIESSER" x="2.54" y="5.08"/>
+<gate name="2" symbol="SCHLIESSER" x="7.62" y="5.08"/>
+<gate name="3" symbol="SCHLIESSER" x="12.7" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_13-14_23-24_33_34">
+<connects>
+<connect gate="1" pin="3" pad="13"/>
+<connect gate="1" pin="4" pad="14"/>
+<connect gate="2" pin="3" pad="23"/>
+<connect gate="2" pin="4" pad="24"/>
+<connect gate="3" pin="3" pad="33"/>
+<connect gate="3" pin="4" pad="34"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HAUPTSCHUETZ_3-POL" prefix="Q" uservalue="yes">
+<description>Hauptschütz mit 3 Schließern</description>
+<gates>
+<gate name="G$1" symbol="SPULE" x="-10.16" y="5.08" addlevel="must"/>
+<gate name="G$2" symbol="SCHLIESSER_HAUPTSCHUETZ_3-POL" x="7.62" y="5.08" addlevel="always"/>
+</gates>
+<devices>
+<device name="" package="HAUPTSCHUETZ_3-POL">
+<connects>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+<connect gate="G$2" pin="1" pad="1"/>
+<connect gate="G$2" pin="2" pad="2"/>
+<connect gate="G$2" pin="3" pad="3"/>
+<connect gate="G$2" pin="4" pad="4"/>
+<connect gate="G$2" pin="5" pad="5"/>
+<connect gate="G$2" pin="6" pad="6"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+<attribute name="VALUE2" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HAUPTSCHUETZ_3-POL_HILFSKONTAKT_13-14_OHNE_KONTAKTSPIEGEL" prefix="Q" uservalue="yes">
+<description>Hauptschütz, 3-pol. mit Hilfskontakt-Schließer ohne Kontaktspiegel</description>
+<gates>
+<gate name="1" symbol="HAUPTSCHUETZ_3-POL+HILFSKONTAKT_13-14_OHNE_KONTAKTSPIEGEL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="HAUPTSCHUETZ_3-POL+HILFSKONTAKT_13-14_OHNE_KONTAKTSPIEGEL">
+<connects>
+<connect gate="1" pin="1" pad="1"/>
+<connect gate="1" pin="2" pad="2"/>
+<connect gate="1" pin="3" pad="3"/>
+<connect gate="1" pin="4" pad="4"/>
+<connect gate="1" pin="5" pad="5"/>
+<connect gate="1" pin="6" pad="6"/>
+<connect gate="1" pin="7" pad="13"/>
+<connect gate="1" pin="8" pad="14"/>
+<connect gate="1" pin="A1" pad="A1"/>
+<connect gate="1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HAUPTSCHUETZ_3-POL_HILFSKONTAKT_13-14" prefix="Q" uservalue="yes">
+<description>Hauptschütz 3-pol. mit Hilfskontakt-Schließer</description>
+<gates>
+<gate name="1" symbol="SPULE" x="-10.16" y="5.08" addlevel="must"/>
+<gate name="3" symbol="SCHLIESSER" x="17.78" y="5.08"/>
+<gate name="G$1" symbol="SCHLIESSER_HAUPTSCHUETZ_3-POL" x="7.62" y="5.08" addlevel="always"/>
+</gates>
+<devices>
+<device name="" package="HAUPTSCHUETZ_3-POL+HILFSKONTAKT_13-14">
+<connects>
+<connect gate="1" pin="A1" pad="A1"/>
+<connect gate="1" pin="A2" pad="A2"/>
+<connect gate="3" pin="3" pad="13"/>
+<connect gate="3" pin="4" pad="14"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+<attribute name="VALUE2" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HAUPTSCHUETZ_3-POL_HILFSKONTAKT_11-12" prefix="Q" uservalue="yes">
+<description>Hauptschütz 3-pol. mit Hilfskontakt Öffner</description>
+<gates>
+<gate name="1" symbol="SPULE" x="-10.16" y="5.08" addlevel="must"/>
+<gate name="3" symbol="OEFFNER" x="17.78" y="5.08" addlevel="always"/>
+<gate name="G$1" symbol="SCHLIESSER_HAUPTSCHUETZ_3-POL" x="7.62" y="5.08" addlevel="always"/>
+</gates>
+<devices>
+<device name="" package="HAUPTSCHUETZ_3-POL+HILFSKONTAKT_11-12">
+<connects>
+<connect gate="1" pin="A1" pad="A1"/>
+<connect gate="1" pin="A2" pad="A2"/>
+<connect gate="3" pin="1" pad="11"/>
+<connect gate="3" pin="2" pad="12"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+<attribute name="VALUE2" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HAUPTSCHUETZ_2-POL" prefix="Q" uservalue="yes">
+<description>Hauptschütz mit 2 Schließern</description>
+<gates>
+<gate name="1" symbol="SPULE" x="-7.62" y="5.08" addlevel="must"/>
+<gate name="G$1" symbol="SCHLIESSER_HAUPTSCHUETZ" x="2.54" y="5.08" addlevel="always"/>
+<gate name="G$2" symbol="SCHLIESSER_HAUPTSCHUETZ" x="7.62" y="5.08" addlevel="always"/>
+</gates>
+<devices>
+<device name="" package="HAUPTSCHUETZ_2-POL">
+<connects>
+<connect gate="1" pin="A1" pad="A1"/>
+<connect gate="1" pin="A2" pad="A2"/>
+<connect gate="G$1" pin="3" pad="1"/>
+<connect gate="G$1" pin="4" pad="2"/>
+<connect gate="G$2" pin="3" pad="3"/>
+<connect gate="G$2" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HAUPTSCHUETZ_3-POL_HILFSKONTAKT_11-12_13-14" prefix="Q" uservalue="yes">
+<description>Hauptschütz mit Öffner und Schließer</description>
+<gates>
+<gate name="G$1" symbol="SPULE" x="-10.16" y="5.08" addlevel="must"/>
+<gate name="G$2" symbol="SCHLIESSER_HAUPTSCHUETZ_3-POL" x="7.62" y="5.08" addlevel="always"/>
+<gate name="G$3" symbol="OEFFNER" x="17.78" y="5.08"/>
+<gate name="G$4" symbol="SCHLIESSER" x="22.86" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="HAUPTSCHUETZ_3-POL+HILFSKONTAKT_12-12_13-14">
+<connects>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+<connect gate="G$2" pin="1" pad="1"/>
+<connect gate="G$2" pin="2" pad="2"/>
+<connect gate="G$2" pin="3" pad="3"/>
+<connect gate="G$2" pin="4" pad="4"/>
+<connect gate="G$2" pin="5" pad="5"/>
+<connect gate="G$2" pin="6" pad="6"/>
+<connect gate="G$3" pin="1" pad="11"/>
+<connect gate="G$3" pin="2" pad="12"/>
+<connect gate="G$4" pin="3" pad="13"/>
+<connect gate="G$4" pin="4" pad="14"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+<attribute name="VALUE2" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_SCHLIESST_VERZOEGERT_17-18" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit Schließer, schließt verzögert</description>
+<gates>
+<gate name="G$1" symbol="SPULE_ANZUGVERZOEGERT" x="-10.16" y="5.08" addlevel="must"/>
+<gate name="G$2" symbol="SCHLIESSER_SCHLIESST_VERZOEGERT" x="2.54" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_SCHLIESST_VERZOEGERT_17-18">
+<connects>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+<connect gate="G$2" pin="CS1" pad="18"/>
+<connect gate="G$2" pin="S1" pad="17"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_OEFFNET_VERZOEGERT_17-18" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit Schließer, öffnet verzögert</description>
+<gates>
+<gate name="G$2" symbol="SCHLIESSER_OEFFNET_VERZOEGERT" x="2.54" y="5.08"/>
+<gate name="G$1" symbol="SPULE_ABFALLVERZOEGERT" x="-10.16" y="5.08" addlevel="must"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_OEFFNET_VERZOEGERT_17-18">
+<connects>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+<connect gate="G$2" pin="CS1" pad="18"/>
+<connect gate="G$2" pin="S1" pad="17"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_SCHLIESST_VERZOEGERT_15-16" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit Öffner, schließt verzögert</description>
+<gates>
+<gate name="G$2" symbol="OEFFNER_SCHLIESST_VERZOEGERT" x="2.54" y="5.08"/>
+<gate name="G$1" symbol="SPULE_ABFALLVERZOEGERT" x="-10.16" y="5.08" addlevel="must"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_SCHLIESST_VERZOEGERT_15-16">
+<connects>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+<connect gate="G$2" pin="5" pad="15"/>
+<connect gate="G$2" pin="6" pad="16"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HILFSSCHUETZ_OEFFNET_VERZOEGERT_15-16" prefix="K" uservalue="yes">
+<description>Hilfsschütz mit Öffner, öffnet verzögert</description>
+<gates>
+<gate name="G$2" symbol="OEFFNER_OEFFNET_VERZOEGERT" x="2.54" y="5.08"/>
+<gate name="G$1" symbol="SPULE_ANZUGVERZOEGERT" x="-10.16" y="5.08" addlevel="must"/>
+</gates>
+<devices>
+<device name="" package="HILFSSCHUETZ_OEFFNET_VERZOEGERT_15-16">
+<connects>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+<connect gate="G$2" pin="5" pad="15"/>
+<connect gate="G$2" pin="6" pad="16"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RELAIS_2-POL-UM" prefix="K">
+<description>Relais mit 2 Wechsleschalter</description>
+<gates>
+<gate name="G$1" symbol="SPULE" x="-10.16" y="5.08" addlevel="must"/>
+<gate name="1" symbol="WECHSLER" x="5.08" y="5.08"/>
+<gate name="2" symbol="WECHSLER" x="12.7" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="RELAIS_2-POL-UM">
+<connects>
+<connect gate="1" pin="1" pad="11"/>
+<connect gate="1" pin="2" pad="21"/>
+<connect gate="1" pin="4" pad="41"/>
+<connect gate="2" pin="1" pad="12"/>
+<connect gate="2" pin="2" pad="22"/>
+<connect gate="2" pin="4" pad="42"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RELAIS_4-POL-UM" prefix="K">
+<description>Relais mit 2 Wechsleschalter</description>
+<gates>
+<gate name="G$1" symbol="SPULE" x="-10.16" y="5.08" addlevel="must"/>
+<gate name="1" symbol="WECHSLER" x="5.08" y="5.08"/>
+<gate name="2" symbol="WECHSLER" x="12.7" y="5.08"/>
+<gate name="3" symbol="WECHSLER" x="20.32" y="5.08"/>
+<gate name="4" symbol="WECHSLER" x="27.94" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="RELAIS_4-POL-UM">
+<connects>
+<connect gate="1" pin="1" pad="11"/>
+<connect gate="1" pin="2" pad="21"/>
+<connect gate="1" pin="4" pad="41"/>
+<connect gate="2" pin="1" pad="12"/>
+<connect gate="2" pin="2" pad="22"/>
+<connect gate="2" pin="4" pad="42"/>
+<connect gate="3" pin="1" pad="13"/>
+<connect gate="3" pin="2" pad="23"/>
+<connect gate="3" pin="4" pad="43"/>
+<connect gate="4" pin="1" pad="14"/>
+<connect gate="4" pin="2" pad="24"/>
+<connect gate="4" pin="4" pad="44"/>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>

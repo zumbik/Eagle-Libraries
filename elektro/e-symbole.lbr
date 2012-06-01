@@ -1,0 +1,3319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Hilfslinien" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<description>&lt;b&gt;Devices und Symbole zur Definition eigener Schaltzeichen&lt;/b&gt;&lt;p&gt;
+
+Neben den Devices, die direkt in einer Schaltung platziert werden können, enthält die
+vorliegende Bibliothek eine Reihe von Symbolen, die von keinem Device verwendet werden.
+Sie bieten dem Benutzer die Möglichkeit, sich eigene Schaltzeichen (Devices) zusammenzustellen.
+Die Definition von Schützen wird besonders einfach, wenn Sie das User-Language-Programm
+&lt;u&gt;e-bauteil-erstellen.ulp&lt;/u&gt; verwenden. Damit können Sie Schützspulen, Haupt- und Nebenkontakte
+beliebig kombinieren und deren Kontaktnamen frei wählen. Zusätzlich können Zeichensymbole ohne
+Kontakte, etwa für automatische Rückstellung, in das Device aufgenommen werden.&lt;p&gt;
+
+Laden Sie dazu die vorliegende Bibliothek, und tippen Sie in die Kommandozeile:&lt;p&gt;
+
+&lt;author&gt;run e-bauteil-erstellen.ulp&lt;/author&gt;&lt;p&gt;
+
+ein.&lt;p&gt;
+
+Wenn Sie Devices ohne das oben genannte ULP auf Basis dieser Bibliothek definieren
+oder eigene Symbole anlegen wollen, sind folgende Punkte von Bedeutung:&lt;p&gt;
+
+Endet ein Symbolname mit _KS, wird ein Kontaktspiegel erzeugt (statt &gt;VALUE
+steht dann &gt;XREF im Symbol).&lt;p&gt;
+
+Im Spulensymbol steht &gt;VALUE (kein &gt;XREF); das ist für die Erzeugung des Kontaktspiegels
+nicht relevant.&lt;p&gt;
+
+Für jedes Device ist ein Package erforderlich. Im Schaltplan werden nicht die Pin-Namen des
+Symbols, sondern die Pad-Namen des Package angezeigt.&lt;p&gt;
+
+Gehen Sie am besten so vor:&lt;p&gt;
+1. Symbol erstellen und gewünschte Pin-Namen vergeben.&lt;p&gt;
+2. &lt;u&gt;run e-packages-aus-devices-pin-ist-padname.ulp&lt;/u&gt; in Kommandozeile eintippen. Es entsteht
+das komplette Device mit Package und den richtigen Pad-Namen.&lt;p&gt;
+&lt;author&gt;librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="DREHSTROM_400/230V_3/PE_~50HZ">
+<wire x1="-1.27" y1="0" x2="0" y2="0" width="0.254" layer="94" curve="-123.850343"/>
+<wire x1="0" y1="0" x2="1.27" y2="0" width="0.254" layer="94" curve="126.869898"/>
+<text x="-5.08" y="-0.508" size="1.016" layer="94">3/PE</text>
+<text x="1.905" y="-0.508" size="1.016" layer="94">50Hz</text>
+</symbol>
+<symbol name="GLEICHSTROM">
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-0.635" x2="-0.762" y2="-0.635" width="0.254" layer="94"/>
+<wire x1="0.762" y1="-0.635" x2="1.27" y2="-0.635" width="0.254" layer="94"/>
+<wire x1="-0.254" y1="-0.635" x2="0.254" y2="-0.635" width="0.254" layer="94"/>
+</symbol>
+<symbol name="WECHSELSTROM">
+<wire x1="-1.27" y1="0" x2="0" y2="0" width="0.254" layer="94" curve="-123.850343"/>
+<wire x1="0" y1="0" x2="1.27" y2="0" width="0.254" layer="94" curve="126.869898"/>
+</symbol>
+<symbol name="THERMISCHE_WIRKUNG">
+<wire x1="0" y1="1.27" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="1.27" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="ELEKTROMAG_WIRKUNG">
+<wire x1="-1.27" y1="0" x2="-2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0" x2="0" y2="0" width="0.1524" layer="94" curve="-180"/>
+<wire x1="0" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="MAGNETISCHE_ABHAENGIGKEIT">
+<wire x1="-1.27" y1="0" x2="0" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="1.27" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="HANDANTRIEB">
+<wire x1="2.54" y1="0" x2="1.397" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.143" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="HANDANTRIEB_MIT_SCHUTZ_GEGEN_ZUFAELLIGE_BERUEHRUNG">
+<wire x1="2.54" y1="0" x2="1.397" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0.762" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-0.762" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.381" y1="1.143" x2="-0.381" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="0.127" y1="1.143" x2="-0.381" y2="1.143" width="0.1524" layer="94"/>
+<wire x1="0.127" y1="1.651" x2="0.127" y2="1.143" width="0.1524" layer="94"/>
+<wire x1="0.127" y1="-1.143" x2="-0.381" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="0.127" y1="-1.143" x2="0.127" y2="-1.651" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="BETAETIGUNG_DURCH_ZIEHEN">
+<wire x1="2.54" y1="0" x2="1.397" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-0.889" y1="1.27" x2="0" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="-0.889" y1="-1.27" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="BETAETIGUNG_DURCH_DRUECKEN">
+<wire x1="2.54" y1="0" x2="1.397" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="0.889" y1="1.27" x2="0" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="0.889" y1="-1.27" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="BETAETIGUNG_DURCH_DREHEN">
+<wire x1="2.54" y1="0" x2="1.397" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-0.889" y1="-1.27" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="0.889" y1="1.27" x2="0" y2="1.27" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="BETAETIGUNG_DURCH_ANNAEHERN">
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="-0.381" y2="0.889" width="0.1524" layer="94"/>
+<wire x1="-0.381" y1="0.889" x2="-1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0" x2="-0.381" y2="-0.889" width="0.1524" layer="94"/>
+<wire x1="-0.381" y1="-0.889" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="0.381" y2="0.889" width="0.1524" layer="94"/>
+<wire x1="0.381" y1="0.889" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="0.381" y2="-0.889" width="0.1524" layer="94"/>
+<wire x1="0.381" y1="-0.889" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-0.381" y1="0.889" x2="-0.381" y2="-0.889" width="0.1524" layer="94"/>
+<wire x1="0.381" y1="0.889" x2="0.381" y2="-0.889" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="BETAETIGUNG_DURCH_BERUEHREN">
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="-0.381" y2="0.889" width="0.1524" layer="94"/>
+<wire x1="-0.381" y1="0.889" x2="-1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0" x2="-0.381" y2="-0.889" width="0.1524" layer="94"/>
+<wire x1="-0.381" y1="-0.889" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="0.381" y2="0.889" width="0.1524" layer="94"/>
+<wire x1="0.381" y1="0.889" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="0.381" y2="-0.889" width="0.1524" layer="94"/>
+<wire x1="0.381" y1="-0.889" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-0.381" y1="0.889" x2="-0.381" y2="-0.889" width="0.1524" layer="94"/>
+<wire x1="0.381" y1="0.889" x2="0.381" y2="-0.889" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0" x2="-1.27" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="0" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="BETAETIGUNG_DURCH_PILZTASTER">
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="-1.27" width="0.1524" layer="94" curve="180"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="-1.27" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="BETAETIGUNG_DURCH_HANDRAD">
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="1.016" y2="-0.635" width="0.1524" layer="94"/>
+<wire x1="-1.016" y1="-0.635" x2="0" y2="0" width="0.1524" layer="94"/>
+<circle x="0" y="0" radius="1.27" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="BETAETIGUNG_DURCH_FUESSE">
+<wire x1="2.54" y1="0" x2="1.397" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.889" y1="1.27" x2="-0.889" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-1.778" y1="-0.381" x2="-0.889" y2="-1.27" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="BETAETIGUNG_DURCH_HEBEL">
+<wire x1="2.54" y1="0" x2="1.397" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.889" y1="1.27" x2="0.508" y2="-0.762" width="0.1524" layer="94"/>
+<circle x="0.635" y="-1.016" radius="0.2839" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="BETAETIGUNG_DURCH_WEGNEHMBAREN_HANDGRIFF">
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="-1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="BETAETIGUNG_DURCH_SCHLUESSEL">
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.889" y1="0.127" x2="-1.143" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="-0.127" y1="0.127" x2="0.127" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="-1.143" x2="0.127" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0" x2="1.397" y2="0" width="0.1524" layer="94"/>
+<circle x="-0.508" y="0.635" radius="0.635" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="BETAETIGUNG_DURCH_KURBEL">
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-1.27" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="BETAETIGUNG_DURCH_ROLLE">
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="0.381" y2="0" width="0.1524" layer="94"/>
+<circle x="-0.635" y="0" radius="0.635" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="BETAETIGUNG_DURCH_NOCKENSTEUERUNG">
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="0" y2="1.27" width="0.1524" layer="94" curve="-270"/>
+</symbol>
+<symbol name="HYDRAULISCHER_ODER_PNEUMATISCHER_ANTRIEB">
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0" x2="-1.27" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="1.27" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="-1.27" x2="1.27" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-3.81" y1="1.27" x2="-1.27" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="-3.81" y1="-1.27" x2="-1.27" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-3.81" y1="1.27" x2="-3.81" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="-1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="-3.048" y1="1.905" x2="-0.508" y2="1.905" width="0.1524" layer="94"/>
+<polygon width="0.1524" layer="94">
+<vertex x="-0.508" y="1.905"/>
+<vertex x="-0.889" y="1.651"/>
+<vertex x="-0.889" y="2.159"/>
+</polygon>
+</symbol>
+<symbol name="ELEKTROMAG_BETAETIGT">
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.635" y1="0.635" x2="-0.635" y2="-0.635" width="0.1524" layer="94" curve="-182.291526"/>
+<wire x1="-0.635" y1="1.27" x2="-0.635" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="-0.635" y1="-1.27" x2="-0.635" y2="-0.635" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="0.381" y2="0" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="STEUERUNG_DURCH_THERMISCHEN_EFFEKT">
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.635" x2="0" y2="-1.905" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.635" x2="1.27" y2="-0.635" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-0.635" x2="1.27" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0.635" x2="0" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="0" y1="0.635" x2="0" y2="1.905" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="STEUERUNG_DURCH_ELEKTROMOTOR">
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="-0.508" x2="-0.508" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="0.508" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="0.508" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0.508" x2="0.508" y2="-0.508" width="0.1524" layer="94"/>
+<circle x="0" y="0" radius="1.27" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="STEUERUNG_DURCH_ELEKTRISCHE_UHR">
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.016" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="-0.635" y2="0" width="0.1524" layer="94"/>
+<circle x="0" y="0" radius="1.27" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="STEUERUNG_DURCH_HALBLEITER">
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.635" y1="0.508" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="0.635" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="-0.762" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0.508" x2="0" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0.889" x2="1.27" y2="0.889" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0.889" x2="1.27" y2="-0.889" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-0.889" x2="-1.27" y2="-0.889" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="-0.889" x2="-1.27" y2="0.889" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="STEUERUNG_DURCH_FLUESSIGKEITSPEGEL">
+<wire x1="2.54" y1="0" x2="1.905" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="-0.1991" y2="1.263" width="0.1524" layer="94"/>
+<wire x1="-0.1991" y1="1.263" x2="-0.3961" y2="1.2422" width="0.1524" layer="94"/>
+<wire x1="-0.3961" y1="1.2422" x2="-0.5887" y2="1.2078" width="0.1524" layer="94"/>
+<wire x1="-0.5887" y1="1.2078" x2="-0.7748" y2="1.1602" width="0.1524" layer="94"/>
+<wire x1="-0.7748" y1="1.1602" x2="-0.9525" y2="1.0999" width="0.1524" layer="94"/>
+<wire x1="-0.9525" y1="1.0999" x2="-1.1197" y2="1.0275" width="0.1524" layer="94"/>
+<wire x1="-1.1197" y1="1.0275" x2="-1.2747" y2="0.9438" width="0.1524" layer="94"/>
+<wire x1="-1.2747" y1="0.9438" x2="-1.4157" y2="0.8498" width="0.1524" layer="94"/>
+<wire x1="-1.4157" y1="0.8498" x2="-1.5412" y2="0.7465" width="0.1524" layer="94"/>
+<wire x1="-1.5412" y1="0.7465" x2="-1.6498" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="-1.6498" y1="0.635" x2="-1.7403" y2="0.5166" width="0.1524" layer="94"/>
+<wire x1="-1.7403" y1="0.5166" x2="-1.8118" y2="0.3925" width="0.1524" layer="94"/>
+<wire x1="-1.8118" y1="0.3925" x2="-1.8634" y2="0.264" width="0.1524" layer="94"/>
+<wire x1="-1.8634" y1="0.264" x2="-1.8946" y2="0.1328" width="0.1524" layer="94"/>
+<wire x1="-1.8946" y1="0.1328" x2="-1.905" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="0" x2="-1.8946" y2="-0.1328" width="0.1524" layer="94"/>
+<wire x1="-1.8946" y1="-0.1328" x2="-1.8634" y2="-0.264" width="0.1524" layer="94"/>
+<wire x1="-1.8634" y1="-0.264" x2="-1.8118" y2="-0.3925" width="0.1524" layer="94"/>
+<wire x1="-1.8118" y1="-0.3925" x2="-1.7403" y2="-0.5166" width="0.1524" layer="94"/>
+<wire x1="-1.7403" y1="-0.5166" x2="-1.6498" y2="-0.635" width="0.1524" layer="94"/>
+<wire x1="-1.6498" y1="-0.635" x2="-1.5412" y2="-0.7465" width="0.1524" layer="94"/>
+<wire x1="-1.5412" y1="-0.7465" x2="-1.4157" y2="-0.8498" width="0.1524" layer="94"/>
+<wire x1="-1.4157" y1="-0.8498" x2="-1.2747" y2="-0.9438" width="0.1524" layer="94"/>
+<wire x1="-1.2747" y1="-0.9438" x2="-1.1197" y2="-1.0275" width="0.1524" layer="94"/>
+<wire x1="-1.1197" y1="-1.0275" x2="-0.9525" y2="-1.0999" width="0.1524" layer="94"/>
+<wire x1="-0.9525" y1="-1.0999" x2="-0.7748" y2="-1.1602" width="0.1524" layer="94"/>
+<wire x1="-0.7748" y1="-1.1602" x2="-0.5887" y2="-1.2078" width="0.1524" layer="94"/>
+<wire x1="-0.5887" y1="-1.2078" x2="-0.3961" y2="-1.2422" width="0.1524" layer="94"/>
+<wire x1="-0.3961" y1="-1.2422" x2="-0.1991" y2="-1.263" width="0.1524" layer="94"/>
+<wire x1="-0.1991" y1="-1.263" x2="0" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="-1.27" x2="0.1991" y2="-1.263" width="0.1524" layer="94"/>
+<wire x1="0.1991" y1="-1.263" x2="0.3961" y2="-1.2422" width="0.1524" layer="94"/>
+<wire x1="0.3961" y1="-1.2422" x2="0.5887" y2="-1.2078" width="0.1524" layer="94"/>
+<wire x1="0.5887" y1="-1.2078" x2="0.7748" y2="-1.1602" width="0.1524" layer="94"/>
+<wire x1="0.7748" y1="-1.1602" x2="0.9525" y2="-1.0999" width="0.1524" layer="94"/>
+<wire x1="0.9525" y1="-1.0999" x2="1.1197" y2="-1.0275" width="0.1524" layer="94"/>
+<wire x1="1.1197" y1="-1.0275" x2="1.2747" y2="-0.9438" width="0.1524" layer="94"/>
+<wire x1="1.2747" y1="-0.9438" x2="1.4157" y2="-0.8498" width="0.1524" layer="94"/>
+<wire x1="1.4157" y1="-0.8498" x2="1.5412" y2="-0.7465" width="0.1524" layer="94"/>
+<wire x1="1.5412" y1="-0.7465" x2="1.6498" y2="-0.635" width="0.1524" layer="94"/>
+<wire x1="1.6498" y1="-0.635" x2="1.7403" y2="-0.5166" width="0.1524" layer="94"/>
+<wire x1="1.7403" y1="-0.5166" x2="1.8118" y2="-0.3925" width="0.1524" layer="94"/>
+<wire x1="1.8118" y1="-0.3925" x2="1.8634" y2="-0.264" width="0.1524" layer="94"/>
+<wire x1="1.8634" y1="-0.264" x2="1.8946" y2="-0.1328" width="0.1524" layer="94"/>
+<wire x1="1.8946" y1="-0.1328" x2="1.905" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.905" y1="0" x2="1.8946" y2="0.1328" width="0.1524" layer="94"/>
+<wire x1="1.8946" y1="0.1328" x2="1.8634" y2="0.264" width="0.1524" layer="94"/>
+<wire x1="1.8634" y1="0.264" x2="1.8118" y2="0.3925" width="0.1524" layer="94"/>
+<wire x1="1.8118" y1="0.3925" x2="1.7403" y2="0.5166" width="0.1524" layer="94"/>
+<wire x1="1.7403" y1="0.5166" x2="1.6498" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="1.6498" y1="0.635" x2="1.5412" y2="0.7465" width="0.1524" layer="94"/>
+<wire x1="1.5412" y1="0.7465" x2="1.4157" y2="0.8498" width="0.1524" layer="94"/>
+<wire x1="1.4157" y1="0.8498" x2="1.2747" y2="0.9438" width="0.1524" layer="94"/>
+<wire x1="1.2747" y1="0.9438" x2="1.1197" y2="1.0275" width="0.1524" layer="94"/>
+<wire x1="1.1197" y1="1.0275" x2="0.9525" y2="1.0999" width="0.1524" layer="94"/>
+<wire x1="0.9525" y1="1.0999" x2="0.7748" y2="1.1602" width="0.1524" layer="94"/>
+<wire x1="0.7748" y1="1.1602" x2="0.5887" y2="1.2078" width="0.1524" layer="94"/>
+<wire x1="0.5887" y1="1.2078" x2="0.3961" y2="1.2422" width="0.1524" layer="94"/>
+<wire x1="0.3961" y1="1.2422" x2="0.1991" y2="1.263" width="0.1524" layer="94"/>
+<wire x1="0.1991" y1="1.263" x2="0" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="0" y2="1.905" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="STEUERUNG_DURCH_EREIGNISZAEHLER">
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="1.27" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-1.27" x2="-1.27" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="-1.27" x2="-1.27" y2="1.27" width="0.1524" layer="94"/>
+<circle x="0" y="0" radius="0.635" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="DURCHFLUSS_FLUESSIGKEIT">
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="1.27" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-1.27" x2="-1.27" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="-1.27" x2="-1.27" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="-0.762" y1="0.127" x2="0" y2="0.127" width="0.1524" layer="94" curve="180"/>
+<wire x1="0" y1="0.127" x2="0.762" y2="0.127" width="0.1524" layer="94" curve="180"/>
+<wire x1="1.27" y1="1.27" x2="2.794" y2="1.27" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="DURCHFLUSS_GAS">
+<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="1.27" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-1.27" x2="-1.27" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="-1.27" x2="-1.27" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="2.794" y2="1.27" width="0.1524" layer="94"/>
+<circle x="0.762" y="-0.762" radius="0.2839" width="0" layer="94"/>
+</symbol>
+<symbol name="BEWEGUNG_IN_PFEILRICHTUNG">
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<polygon width="0.1524" layer="94">
+<vertex x="1.27" y="0"/>
+<vertex x="0.762" y="0.254"/>
+<vertex x="0.762" y="-0.254"/>
+</polygon>
+</symbol>
+<symbol name="BEWEGUNG_IN_BEIDEN_PFEILRICHTUNGEN">
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<polygon width="0.1524" layer="94">
+<vertex x="1.27" y="0"/>
+<vertex x="0.762" y="0.254"/>
+<vertex x="0.762" y="-0.254"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-1.27" y="0"/>
+<vertex x="-0.762" y="-0.254"/>
+<vertex x="-0.762" y="0.254"/>
+</polygon>
+</symbol>
+<symbol name="IN_EINER_RICHTUNG_DREHBAR">
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.1524" layer="94" curve="-106.260205"/>
+<polygon width="0.1524" layer="94">
+<vertex x="1.27" y="0"/>
+<vertex x="0.9398" y="0.508"/>
+<vertex x="0.7112" y="0.2286"/>
+</polygon>
+</symbol>
+<symbol name="IN_BEIDEN_RICHTUNGEN_DREHBAR">
+<wire x1="-1.27" y1="0" x2="1.27" y2="0" width="0.1524" layer="94" curve="-106.260205"/>
+<polygon width="0.1524" layer="94">
+<vertex x="1.27" y="0"/>
+<vertex x="0.9398" y="0.508"/>
+<vertex x="0.7112" y="0.2286"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-1.27" y="0"/>
+<vertex x="-0.9398" y="0.508"/>
+<vertex x="-0.7112" y="0.2286"/>
+</polygon>
+</symbol>
+<symbol name="ENERGIE-SIGNALFLUSS_IN_EINER_RICHTUNG">
+<wire x1="-1.27" y1="0" x2="0.508" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.127" y1="0.254" x2="0.508" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0" x2="0.127" y2="-0.254" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="ENERGIE-SIGNALFLUSS_IN_BEIDEN_RICHTUNGEN_GLEICHZEITIG">
+<wire x1="-1.27" y1="0" x2="-0.508" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="0" x2="0.508" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.127" y1="0.254" x2="0.508" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0" x2="0.127" y2="-0.254" width="0.1524" layer="94"/>
+<wire x1="-0.127" y1="-0.254" x2="-0.508" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="0" x2="-0.127" y2="0.254" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="SENDEN">
+<wire x1="-1.27" y1="0" x2="0.508" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.127" y1="0.254" x2="0.508" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0" x2="0.127" y2="-0.254" width="0.1524" layer="94"/>
+<circle x="-0.508" y="0" radius="0.3048" width="0" layer="94"/>
+</symbol>
+<symbol name="EMPFANGEN">
+<wire x1="-1.27" y1="0" x2="-0.127" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.127" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.127" y1="0" x2="-0.508" y2="0.254" width="0.1524" layer="94"/>
+<wire x1="-0.127" y1="0" x2="-0.508" y2="-0.254" width="0.1524" layer="94"/>
+<circle x="0.508" y="0" radius="0.3048" width="0" layer="94"/>
+</symbol>
+<symbol name="BETAETIGUNG_BEI_UEBERSCHREITUNG_DES_EINSTELLWERTES">
+<wire x1="-0.254" y1="0.635" x2="0.508" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0" x2="-0.254" y2="-0.635" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="BETAETIGUNG_BEI_UNTERSCHREITUNG_DES_EINSTELLWERTES">
+<wire x1="0.254" y1="-0.635" x2="-0.508" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="0" x2="0.254" y2="0.635" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="BETAETIGUNG_DURCH_UEBER_ODER_UNTERSCHREITUNG_DES_EINSTELLWERTES">
+<wire x1="0.381" y1="0.127" x2="-0.381" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="-0.381" y1="-0.508" x2="0.381" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="-0.381" y1="1.143" x2="0.381" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="0.381" y1="0.508" x2="-0.381" y2="-0.127" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="RASTE">
+<wire x1="1.651" y1="0" x2="0.762" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.413" y1="0" x2="-2.921" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.762" y1="0" x2="-1.651" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.762" y1="0" x2="0" y2="-1.397" width="0.1524" layer="94"/>
+<wire x1="0" y1="-1.397" x2="-0.762" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.413" y1="0" x2="2.921" y2="0" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="RASTE_NICHT_EINGERASTET">
+<wire x1="1.651" y1="0" x2="0.762" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.413" y1="0" x2="-2.921" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.762" y1="0" x2="-1.651" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.762" y1="0" x2="0" y2="-1.397" width="0.1524" layer="94"/>
+<wire x1="0" y1="-1.397" x2="-0.762" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.413" y1="0" x2="2.921" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.762" y1="1.27" x2="0.762" y2="0.381" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="RASTE_EINGERASTET">
+<wire x1="1.651" y1="0" x2="0.762" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.413" y1="0" x2="-2.921" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.762" y1="0" x2="-1.651" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.762" y1="0" x2="0" y2="-1.397" width="0.1524" layer="94"/>
+<wire x1="0" y1="-1.397" x2="-0.762" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.413" y1="0" x2="2.921" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.27" x2="0" y2="0.381" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="AUTOMATISCHE_RUECKSTELLUNG">
+<wire x1="1.651" y1="0" x2="0.762" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.127" y1="0" x2="-0.762" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0.508" x2="0.127" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.413" y1="0" x2="2.921" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-0.508" x2="0.127" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0.508" x2="1.27" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0" x2="-2.159" y2="0" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="MECHANISCHE_VERRIEGELUNG">
+<wire x1="1.651" y1="0" x2="0.762" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.413" y1="0" x2="-2.921" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.762" y1="0" x2="-1.651" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.413" y1="0" x2="2.921" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.762" x2="-0.889" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="0.889" y1="0.635" x2="0" y2="-0.762" width="0.1524" layer="94"/>
+<wire x1="-0.889" y1="0.635" x2="0.889" y2="0.635" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="KLINKE_NICHT_EINGEKLINKT">
+<wire x1="1.651" y1="0" x2="0.762" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.762" y1="0" x2="-1.143" y2="1.143" width="0.1524" layer="94"/>
+<wire x1="2.413" y1="0" x2="2.921" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.762" y1="1.524" x2="0.762" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="1.143" x2="-1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.762" y1="0" x2="-1.524" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.159" y1="0" x2="-2.921" y2="0" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="KLINKE_EINGEKLINKT">
+<wire x1="1.651" y1="0" x2="0.762" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.762" y1="0" x2="-1.143" y2="1.143" width="0.1524" layer="94"/>
+<wire x1="2.413" y1="0" x2="2.921" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.397" y1="1.524" x2="-1.397" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="1.143" x2="-1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.762" y1="0" x2="-1.524" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.159" y1="0" x2="-2.921" y2="0" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="SPERRE">
+<wire x1="1.651" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="0.762" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.413" y1="0" x2="2.921" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.127" y1="0" x2="-0.254" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.254" y1="0" x2="-0.762" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.397" y1="0" x2="-2.286" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.254" y1="1.397" x2="-0.254" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.254" y1="1.397" x2="1.27" y2="1.397" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="1.27" y2="1.397" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="SPERRE_NACH_LINKS_GESPERRT">
+<wire x1="1.651" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="0.762" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.413" y1="0" x2="2.921" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.127" y1="0" x2="-0.254" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.254" y1="0" x2="-0.762" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.397" y1="0" x2="-2.286" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.254" y1="1.397" x2="-0.254" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.254" y1="1.397" x2="1.27" y2="1.397" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="1.27" y2="1.397" width="0.1524" layer="94"/>
+<wire x1="-0.635" y1="1.016" x2="-0.635" y2="2.159" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="SPULE_ALLGEMEIN">
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="SPULE_ABFALLVERZOEGERT">
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="-6.604" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-6.604" y1="-1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-6.604" y1="-1.651" x2="-6.604" y2="1.651" width="0.254" layer="94"/>
+<text x="-8.89" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-8.89" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<rectangle x1="-6.477" y1="-1.524" x2="-3.302" y2="1.524" layer="94"/>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+</symbol>
+<symbol name="SPULE_ANZUGSVERZOEGERT">
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="-6.604" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-6.604" y1="-1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-6.604" y1="-1.651" x2="-6.604" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-6.604" y1="-1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="-6.604" y2="1.651" width="0.254" layer="94"/>
+<text x="-8.89" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-8.89" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+</symbol>
+<symbol name="SPULE_MIT_ZWEI_GEGENSINNIG_WIRKENDEN_WICKLUNGEN">
+<wire x1="3.175" y1="1.651" x2="2.54" y2="1.651" width="0.254" layer="94"/>
+<wire x1="2.54" y1="1.651" x2="1.143" y2="1.651" width="0.254" layer="94"/>
+<wire x1="1.143" y1="1.651" x2="-1.016" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="1.651" x2="-2.54" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="-2.54" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-1.651" x2="2.54" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="2.54" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="-2.794" y1="-1.524" x2="-1.016" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="2.794" y1="-1.524" x2="1.143" y2="1.651" width="0.1524" layer="94"/>
+<text x="-5.08" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A2" x="-2.54" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+<pin name="A1" x="-2.54" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="A3" x="2.54" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="A4" x="2.54" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="SPULE_ANZUGS-ABFALLVERZOEGERT">
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="-6.604" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-6.604" y1="-1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-6.604" y1="-1.651" x2="-6.604" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-6.604" y1="-1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="-6.604" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-10.033" y1="1.651" x2="-6.604" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-10.033" y1="-1.651" x2="-6.604" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-10.033" y1="-1.651" x2="-10.033" y2="1.651" width="0.254" layer="94"/>
+<text x="-11.43" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-11.43" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<rectangle x1="-10.16" y1="-1.524" x2="-6.731" y2="1.524" layer="94"/>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+</symbol>
+<symbol name="SPULE_MIT_EINER_WIRKSAMEN_WICKLUNG">
+<wire x1="3.175" y1="1.651" x2="1.27" y2="1.651" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="-1.397" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-1.397" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="-1.397" y1="-1.651" x2="1.27" y2="1.651" width="0.1524" layer="94"/>
+<text x="-5.08" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+</symbol>
+<symbol name="SPULE_MIT_ZWEI_GETRENNTEN_WICKLUNGEN">
+<wire x1="3.175" y1="1.651" x2="2.921" y2="1.651" width="0.254" layer="94"/>
+<wire x1="2.921" y1="1.651" x2="2.54" y2="1.651" width="0.254" layer="94"/>
+<wire x1="2.54" y1="1.651" x2="0.381" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0.381" y1="1.651" x2="-2.54" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="-2.921" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-2.921" y1="-1.651" x2="-2.54" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-1.651" x2="-0.381" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-0.381" y1="-1.651" x2="2.54" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="2.54" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="-2.921" y1="-1.651" x2="0.381" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="-0.381" y1="-1.651" x2="2.921" y2="1.651" width="0.1524" layer="94"/>
+<text x="-5.08" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A2" x="-2.54" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+<pin name="A1" x="-2.54" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="A3" x="2.54" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+<pin name="A4" x="2.54" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+</symbol>
+<symbol name="BREMSE_GESCHLOSSEN">
+<wire x1="1.651" y1="1.27" x2="0" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="1.27" x2="-1.651" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-2.286" y1="0" x2="-1.651" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-3.302" y1="0" x2="-4.445" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.286" y1="0" x2="-2.286" y2="0" width="0.254" layer="94"/>
+<wire x1="4.445" y1="0" x2="3.302" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.286" y1="0" x2="1.651" y2="1.27" width="0.254" layer="94"/>
+<wire x1="6.604" y1="0" x2="5.461" y2="0" width="0.1524" layer="94"/>
+<wire x1="-5.461" y1="0" x2="-6.604" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.778" x2="0" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.667" x2="0" y2="3.81" width="0.1524" layer="94"/>
+<text x="2.54" y="-1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="BREMSE_OFFEN">
+<wire x1="1.651" y1="2.032" x2="0" y2="2.032" width="0.254" layer="94"/>
+<wire x1="0" y1="2.032" x2="-1.651" y2="2.032" width="0.254" layer="94"/>
+<wire x1="-2.286" y1="0.762" x2="-1.651" y2="2.032" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="0" x2="-4.953" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.286" y1="0.762" x2="-2.286" y2="0.762" width="0.254" layer="94"/>
+<wire x1="2.286" y1="0.762" x2="1.651" y2="2.032" width="0.254" layer="94"/>
+<wire x1="-5.969" y1="0" x2="-7.112" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="2.032" width="0.1524" layer="94"/>
+<wire x1="0" y1="3.429" x2="0" y2="4.572" width="0.1524" layer="94"/>
+<wire x1="-1.651" y1="0" x2="-2.794" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="0" x2="-0.635" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.667" y1="0" x2="1.524" y2="0" width="0.1524" layer="94"/>
+<wire x1="4.826" y1="0" x2="3.683" y2="0" width="0.1524" layer="94"/>
+<wire x1="6.985" y1="0" x2="5.842" y2="0" width="0.1524" layer="94"/>
+<text x="2.54" y="-1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="PERMANENTMAGNET_STAB-FORM">
+<wire x1="-5.08" y1="1.778" x2="5.08" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="1.778" x2="5.08" y2="-1.778" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="-1.778" x2="-5.08" y2="-1.778" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="-1.778" x2="-5.08" y2="1.778" width="0.1524" layer="94"/>
+<text x="0" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="0" y="-3.81" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="0" y1="-1.778" x2="5.08" y2="1.778" layer="94"/>
+</symbol>
+<symbol name="PERMANENTMAGNET_U-FORM">
+<wire x1="-3.0428" y1="0.6876" x2="3.06" y2="0.6876" width="0" layer="94"/>
+<wire x1="3.06" y1="-2.699" x2="3.06" y2="0.6876" width="0" layer="94"/>
+<wire x1="-3.0428" y1="-2.699" x2="-3.0428" y2="0.6876" width="0" layer="94"/>
+<wire x1="-5.08" y1="-2.794" x2="-3.048" y2="-2.794" width="0.1524" layer="94"/>
+<wire x1="-3.048" y1="-2.794" x2="-3.048" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-3.048" y1="0.762" x2="3.048" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="3.048" y1="0.762" x2="3.048" y2="-2.794" width="0.1524" layer="94"/>
+<wire x1="3.048" y1="-2.794" x2="5.08" y2="-2.794" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="-2.794" x2="5.08" y2="2.794" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="2.794" x2="-5.08" y2="2.794" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="2.794" x2="-5.08" y2="-2.794" width="0.1524" layer="94"/>
+<text x="0" y="3.81" size="1.778" layer="95">&gt;NAME</text>
+<text x="0" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-5.08" y1="-2.794" x2="-3.048" y2="2.794" layer="94"/>
+<rectangle x1="-3.048" y1="0.762" x2="3.048" y2="2.794" layer="94"/>
+<rectangle x1="3.048" y1="-2.794" x2="5.08" y2="2.794" layer="94"/>
+</symbol>
+<symbol name="KRAFTANTRIEB_ALLGEMEIN">
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.921" y1="0" x2="1.778" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.143" y1="1.143" x2="1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.143" y1="0" x2="1.143" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="1.143" x2="1.143" y2="1.143" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="-1.143" x2="1.143" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="1.143" x2="-1.143" y2="-1.143" width="0.1524" layer="94"/>
+<text x="2.54" y="-2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+</symbol>
+<symbol name="KRAFTANTRIEB_DRUCK">
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.794" y1="0" x2="1.651" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="-0.635" x2="-0.127" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-0.127" y1="0.762" x2="0.254" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="0.254" y1="0.762" x2="0.254" y2="0.127" width="0.1524" layer="94" curve="-180"/>
+<wire x1="0.254" y1="0.127" x2="-0.254" y2="0.127" width="0.1524" layer="94"/>
+<wire x1="1.143" y1="1.143" x2="1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.143" y1="0" x2="1.143" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="1.143" x2="1.143" y2="1.143" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="-1.143" x2="1.143" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="1.143" x2="-1.143" y2="-1.143" width="0.1524" layer="94"/>
+<text x="2.54" y="-2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+</symbol>
+<symbol name="KRAFTANTRIEB_TEMPERATUR">
+<wire x1="-0.762" y1="-0.254" x2="-0.508" y2="-0.254" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="-0.254" x2="-0.381" y2="-0.762" width="0.1524" layer="94" curve="43.596597"/>
+<wire x1="-0.381" y1="-0.762" x2="0" y2="-0.762" width="0.1524" layer="94" curve="92.803375"/>
+<wire x1="0" y1="-0.762" x2="0.508" y2="0.381" width="0.1524" layer="94" curve="43.593141"/>
+<wire x1="0.508" y1="0.381" x2="0.381" y2="0.762" width="0.1524" layer="94" curve="36.881932"/>
+<wire x1="0.381" y1="0.762" x2="0.127" y2="0.762" width="0.1524" layer="94" curve="106.231337"/>
+<wire x1="0.127" y1="0.762" x2="0.254" y2="0.381" width="0.1524" layer="94" curve="73.761456"/>
+<wire x1="0.254" y1="0.381" x2="0.889" y2="0.381" width="0.1524" layer="94" curve="87.356049"/>
+<wire x1="-1.143" y1="1.143" x2="-1.143" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="-1.143" x2="1.143" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="1.143" x2="1.143" y2="1.143" width="0.1524" layer="94"/>
+<wire x1="1.143" y1="-1.143" x2="1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.143" y1="0" x2="1.143" y2="1.143" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="3.937" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.921" y1="0" x2="1.778" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="1.143" y2="0" width="0.1524" layer="94"/>
+<text x="2.54" y="-2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+</symbol>
+<symbol name="KUPPLUNG_ENTKUPPELT">
+<wire x1="1.651" y1="2.54" x2="-1.651" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-1.143" y1="0" x2="-1.143" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-1.651" y1="1.778" x2="-1.651" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-1.143" y1="0" x2="-2.286" y2="0" width="0.1524" layer="94"/>
+<wire x1="-3.302" y1="0" x2="-4.445" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.286" y1="0" x2="1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="4.445" y1="0" x2="3.302" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.143" y1="0" x2="1.143" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="1.651" y1="1.778" x2="1.651" y2="2.54" width="0.254" layer="94"/>
+<text x="2.54" y="-1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-6.35" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="KUPPLUNG_GEKUPPELT">
+<wire x1="1.651" y1="1.27" x2="-1.651" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-1.143" y1="0" x2="-1.143" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-1.651" y1="0.508" x2="-1.651" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-1.143" y1="0" x2="-2.286" y2="0" width="0.1524" layer="94"/>
+<wire x1="-3.302" y1="0" x2="-4.445" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.286" y1="0" x2="1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="4.445" y1="0" x2="3.302" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.143" y1="0" x2="1.143" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="1.651" y1="0.508" x2="1.651" y2="1.27" width="0.254" layer="94"/>
+<text x="2.54" y="-1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-6.35" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="SCHALTSCHLOSS_ELEKTROMECHANISCH">
+<wire x1="1.524" y1="0" x2="1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="0" x2="-1.524" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.143" y1="1.143" x2="1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.143" y1="0" x2="1.143" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="1.143" x2="1.143" y2="1.143" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="-1.143" x2="1.143" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="0" x2="-1.143" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="1.143" x2="-1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.143" y1="0" x2="-1.143" y2="0" width="0.1524" layer="94"/>
+<text x="-2.54" y="0" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A1" x="0" y="5.08" visible="pad" length="middle" direction="pas" rot="R270"/>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="middle" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SCHALTSCHLOSS_MECHANISCH">
+<wire x1="1.524" y1="0" x2="1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="0" x2="-1.778" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.143" y1="1.143" x2="1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.143" y1="0" x2="1.143" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="1.905" y1="0" x2="1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="1.143" x2="1.143" y2="1.143" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="-1.143" x2="1.143" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="0" x2="-1.143" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="-1.143" y1="1.143" x2="-1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.397" x2="0" y2="-1.397" width="0.1524" layer="94"/>
+<wire x1="1.143" y1="0" x2="-1.143" y2="0" width="0.1524" layer="94"/>
+<text x="-2.54" y="0" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-2.54" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+</symbol>
+<symbol name="SIGNAL_BLINKEND">
+<wire x1="-0.381" y1="0" x2="-1.016" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.381" y1="0" x2="-0.381" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="-0.381" y1="1.27" x2="0.381" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="0.381" y1="1.27" x2="0.381" y2="0" width="0.1524" layer="94"/>
+<wire x1="0.381" y1="0" x2="1.016" y2="0" width="0.1524" layer="94"/>
+</symbol>
+<symbol name="ENERGIEZAEHLER_WATTSTUNDENZAEHLER_1-PHASEN">
+<wire x1="-3.81" y1="0" x2="3.81" y2="0" width="0.254" layer="94"/>
+<wire x1="3.81" y1="0" x2="3.81" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="3.81" y1="-5.08" x2="-3.81" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="-5.08" x2="-3.81" y2="0" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="0" x2="-3.81" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="2.54" x2="3.81" y2="2.54" width="0.254" layer="94"/>
+<wire x1="3.81" y1="2.54" x2="3.81" y2="0" width="0.254" layer="94"/>
+<text x="-1.905" y="-3.302" size="1.778" layer="94">Wh</text>
+<text x="-5.08" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="U1" x="2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="U2" x="2.54" y="-7.62" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="I1" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="I2" x="-2.54" y="-7.62" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="MOTOR">
+<circle x="0" y="-1.27" radius="6.35" width="0.2032" layer="94"/>
+<text x="-1.27" y="-2.54" size="2.54" layer="94">M</text>
+<text x="-7.62" y="3.81" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-7.62" y="1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="1" x="0" y="7.62" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="0" y="-10.16" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SCHLIESSER_VERZOEGERT">
+<wire x1="-0.762" y1="0" x2="-2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-1.651" y1="0.762" x2="-1.651" y2="-1.27" width="0.1524" layer="94" curve="180"/>
+<wire x1="-0.635" y1="-0.508" x2="-2.54" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="-3.683" y1="-1.27" x2="-3.683" y2="0.762" width="0.1524" layer="94" curve="180"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.651" width="0.254" layer="94"/>
+<text x="-5.08" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-2.54" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="4" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="3" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="WISCHKONTAKT_IN_BEIDEN_RICHTUNGEN_SCHLIESSEND">
+<wire x1="0" y1="2.54" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.778" x2="-0.381" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.778" x2="0.381" y2="2.54" width="0.1524" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="L1" x="0" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="L2" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="OEFFNER_1-POL_KS">
+<wire x1="2.032" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.778" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.3768" y2="2.1384" width="0.254" layer="94"/>
+<wire x1="1.016" y1="1.778" x2="0.381" y2="1.778" width="0.1524" layer="94" curve="-200.005665"/>
+<wire x1="0.381" y1="1.778" x2="1.016" y2="1.778" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="SCHLIESSER_ARBEITSKONTAKT">
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="3" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SCHLIESSER_OEFFNET_VERZOEGERT">
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-0.889" y1="0" x2="-1.524" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-1.27" x2="-2.54" y2="0.762" width="0.1524" layer="94" curve="180"/>
+<wire x1="-0.762" y1="-0.508" x2="-1.524" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<text x="-5.08" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="5" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="6" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SCHLIESSER_TEMPERATURABHAENGIG">
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<wire x1="1.4224" y1="0.254" x2="1.4224" y2="-0.0508" width="0.0508" layer="94"/>
+<wire x1="1.8796" y1="0.254" x2="1.8796" y2="-0.0508" width="0.0508" layer="94"/>
+<wire x1="1.524" y1="0.635" x2="1.524" y2="-0.381" width="0.1524" layer="94" curve="180"/>
+<wire x1="1.778" y1="-0.381" x2="1.778" y2="0.635" width="0.1524" layer="94" curve="180"/>
+<wire x1="1.524" y1="0.635" x2="1.778" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="-0.381" x2="1.778" y2="-0.381" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<rectangle x1="1.4224" y1="0.0508" x2="1.8796" y2="0.1524" layer="94"/>
+<pin name="3" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="LASTTRENNSCHALTER">
+<wire x1="0" y1="2.54" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.651" width="0.254" layer="94"/>
+<circle x="0" y="1.27" radius="0.381" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="L1.2" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="L1.1" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="LEISTUNGSSCHALTER">
+<wire x1="0" y1="2.54" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-0.254" y1="2.032" x2="0.254" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="-0.254" y1="1.524" x2="0.254" y2="2.032" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="L1.2" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="L1.1" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="MEHRSTELLENSCHALTER_4-POL">
+<wire x1="2.54" y1="2.54" x2="2.54" y2="1.397" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="1.4224" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="1.397" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.143" x2="-2.54" y2="-1.143" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-1.143" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="-1.143" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<text x="-5.08" y="0.254" size="0.7316" layer="94">1 </text>
+<text x="-2.54" y="0.254" size="0.7316" layer="94">2 </text>
+<text x="0" y="0.254" size="0.7316" layer="94">3 </text>
+<text x="2.54" y="0.254" size="0.7316" layer="94">4 </text>
+<text x="-7.62" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-7.62" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="0" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="-5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="3" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="MEHRSTELLENSCHALTER_6-POL">
+<wire x1="0" y1="-0.381" x2="-5.08" y2="-0.381" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="15.24" y1="2.54" x2="15.24" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="-0.381" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="1.27" width="0.1524" layer="94"/>
+<text x="0" y="0" size="0.7316" layer="94">2 </text>
+<text x="5.08" y="0" size="0.7316" layer="94">3 </text>
+<text x="10.16" y="0" size="0.7316" layer="94">4 </text>
+<text x="15.24" y="0" size="0.7316" layer="94">5 </text>
+<text x="20.32" y="0" size="0.7316" layer="94">6 </text>
+<text x="-5.08" y="0" size="0.7316" layer="94">1 </text>
+<text x="-7.62" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-7.62" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="X" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="-5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="3" x="5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="10.16" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="5" x="15.24" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="6" x="20.32" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="OEFFNER_OEFFNET_VERZOEGERT">
+<wire x1="0" y1="1.778" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="2.032" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.27" y2="2.286" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0.254" x2="-1.397" y2="0.254" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="1.016" x2="-0.508" y2="-1.016" width="0.1524" layer="94" curve="180"/>
+<wire x1="0.508" y1="-0.254" x2="-1.397" y2="-0.254" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="OEFFNER_RASTEND">
+<wire x1="-0.254" y1="0" x2="-1.016" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="-1.016" y1="-1.016" x2="-1.778" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.254" y1="0" x2="0.508" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.778" y1="0" x2="-3.302" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.032" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.778" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.27" y2="2.286" width="0.254" layer="94"/>
+<text x="-3.81" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="OEFFNER_SCHLIESST_VERZOEGERT">
+<wire x1="0" y1="1.778" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="2.032" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.27" y2="2.286" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0.254" x2="-0.381" y2="0.254" width="0.1524" layer="94"/>
+<wire x1="-1.397" y1="-1.016" x2="-1.397" y2="1.016" width="0.1524" layer="94" curve="180"/>
+<wire x1="0.635" y1="-0.254" x2="-0.381" y2="-0.254" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="OEFFNER_MIT_VORZEITIGER_OEFFNUNG">
+<wire x1="2.032" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.778" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.3768" y2="2.1384" width="0.254" layer="94"/>
+<wire x1="1.905" y1="2.032" x2="1.397" y2="2.159" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="OEFFNER_MIT_VORZEITIGER_SCHLIESSUNG">
+<wire x1="2.032" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.778" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.3768" y2="2.1384" width="0.254" layer="94"/>
+<wire x1="0.889" y1="2.286" x2="1.397" y2="2.159" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="SCHLIESSER_MIT_VORZEITIGER_SCHLIESSUNG">
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-0.762" y1="1.651" x2="-1.27" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="3" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SCHLIESSER_MIT_VERZOEGERTER_SCHLIESSUNG">
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<wire x1="-1.778" y1="1.397" x2="-1.27" y2="1.524" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="3" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="UMSCHALTKONTAKT">
+<wire x1="-2.54" y1="-1.524" x2="-1.27" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="2.54" y2="-2.159" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="-1.27" y2="-1.651" width="0.254" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="11" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="14" x="2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="12" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="UMSCHALTKONTAKT_MIT_UEBERBRUECKUNG">
+<wire x1="-0.508" y1="-1.778" x2="-2.54" y2="-1.778" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-1.778" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="-1.27" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="-0.8382" y1="-2.5654" x2="-1.778" y2="-2.286" width="0.254" layer="94"/>
+<text x="-3.81" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="11" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="12" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="14" x="2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="UMSCHALTKONTAKT_OEFFNET_VERZOEGERT_15_16_18">
+<wire x1="-0.508" y1="-1.778" x2="-2.54" y2="-1.778" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-1.778" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="-1.27" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="-0.762" y1="0" x2="-1.524" y2="0" width="0.1524" layer="94"/>
+<wire x1="-3.302" y1="0" x2="-2.286" y2="0" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-4.064" y2="0" width="0.1524" layer="94"/>
+<wire x1="-3.556" y1="1.016" x2="-3.556" y2="-1.016" width="0.1524" layer="94" curve="-180"/>
+<text x="-6.35" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-6.35" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="15" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="16" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="18" x="2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="UMSCHALTKONTAKT_SCHLIESST_VERZOEGERT_15/16/18">
+<wire x1="-0.508" y1="-1.778" x2="-2.54" y2="-1.778" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-1.778" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="-1.27" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="-0.762" y1="0" x2="-1.524" y2="0" width="0.1524" layer="94"/>
+<wire x1="-3.302" y1="0" x2="-2.286" y2="0" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-4.064" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-1.016" x2="-2.54" y2="1.016" width="0.1524" layer="94" curve="-180"/>
+<text x="-6.35" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-6.35" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="15" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="16" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="18" x="2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="ZWEIWEG-UMSCHALTKONTAKT_MIT_AUS-STELLUNG">
+<wire x1="0" y1="2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<text x="-3.81" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="3" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="6" x="2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="4" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SPULE_POLARISIERT">
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="-6.477" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-6.477" y1="-1.651" x2="-6.477" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="-6.477" y2="-1.651" width="0.254" layer="94"/>
+<circle x="1.374" y="2.5626" radius="0.2582" width="0" layer="94"/>
+<text x="-7.62" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-7.62" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<rectangle x1="-6.477" y1="0.889" x2="-3.175" y2="1.651" layer="94"/>
+<rectangle x1="-6.477" y1="-1.651" x2="-3.175" y2="-0.889" layer="94"/>
+<rectangle x1="-3.937" y1="-1.016" x2="-3.175" y2="1.016" layer="94" rot="R180"/>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="SPULE_REMANENZRELAIS">
+<wire x1="-3.175" y1="1.651" x2="-6.477" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="-6.477" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-6.477" y1="-1.651" x2="-6.477" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="-6.477" y2="-1.651" width="0.254" layer="94"/>
+<text x="-7.62" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-7.62" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+</symbol>
+<symbol name="SPULE_FUER_MECHANISCHE_RESONANZ">
+<wire x1="5.08" y1="0" x2="6.35" y2="0" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="0" x2="8.255" y2="0" width="0.1524" layer="94"/>
+<wire x1="8.255" y1="0" x2="8.89" y2="0" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="0" x2="11.684" y2="0" width="0.1524" layer="94"/>
+<wire x1="8.255" y1="0" x2="8.128" y2="2.286" width="0.1524" layer="94" curve="135.535529"/>
+<wire x1="8.3272" y1="0.0254" x2="8.382" y2="-2.286" width="0.1524" layer="94" curve="135.54327"/>
+<wire x1="3.302" y1="0" x2="4.318" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="SPULE_MECH_VERRIEGELT">
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="-6.604" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-6.604" y1="-1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-6.604" y1="-1.651" x2="-6.604" y2="0.127" width="0.254" layer="94"/>
+<wire x1="-6.604" y1="0.127" x2="-6.604" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-6.604" y2="0.127" width="0.1524" layer="94"/>
+<wire x1="-6.604" y1="0.127" x2="-3.175" y2="-1.651" width="0.1524" layer="94"/>
+<text x="-7.62" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-7.62" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+</symbol>
+<symbol name="SPULE_FUER_WECHSELSTROM">
+<wire x1="3.175" y1="1.651" x2="0" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-3.175" y1="-1.651" x2="0" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.651" x2="3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="3.175" y1="-1.651" x2="3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.651" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<wire x1="-6.604" y1="1.651" x2="-3.175" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-6.604" y1="-1.651" x2="-3.175" y2="-1.651" width="0.254" layer="94"/>
+<wire x1="-6.604" y1="-1.651" x2="-6.604" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-6.096" y1="0" x2="-4.953" y2="0" width="0.1524" layer="94" curve="-135.673041"/>
+<wire x1="-3.81" y1="0" x2="-4.953" y2="0" width="0.1524" layer="94" curve="-135.673041"/>
+<text x="-7.62" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-7.62" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A2" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+<pin name="A1" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+</symbol>
+<symbol name="OEFFNER_THERMISCH">
+<wire x1="2.032" y1="1.524" x2="0" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.397" y2="2.159" width="0.254" layer="94"/>
+<wire x1="-0.5228" y1="0.5038" x2="-1.5346" y2="0.5038" width="0.1524" layer="94"/>
+<wire x1="-0.5228" y1="-0.508" x2="-0.5228" y2="0.5038" width="0.1524" layer="94"/>
+<wire x1="-1.5346" y1="-0.508" x2="-1.5346" y2="0.5038" width="0.1524" layer="94"/>
+<wire x1="0.4994" y1="-0.508" x2="-0.5228" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="-1.5346" y1="-0.508" x2="-2.54" y2="-0.508" width="0.1524" layer="94"/>
+<text x="-3.81" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="DOPPELFUNKENSTRECKE">
+<wire x1="1.27" y1="0" x2="-3.81" y2="0" width="0.1524" layer="94"/>
+<text x="-5.08" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<polygon width="0.1524" layer="94">
+<vertex x="-0.258" y="2.7752"/>
+<vertex x="0.2708" y="2.7752"/>
+<vertex x="0" y="1.2668"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="0.258" y="-2.7752"/>
+<vertex x="-0.2708" y="-2.7752"/>
+<vertex x="0" y="-1.2668"/>
+</polygon>
+</symbol>
+<symbol name="FUNKENSTRECKE">
+<text x="-1.27" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-1.27" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<polygon width="0.1524" layer="94">
+<vertex x="-0.258" y="2.7752"/>
+<vertex x="0.2708" y="2.7752"/>
+<vertex x="0" y="1.2668"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="0.258" y="-2.7752"/>
+<vertex x="-0.2708" y="-2.7752"/>
+<vertex x="0" y="-1.2668"/>
+</polygon>
+</symbol>
+<symbol name="SICHERUNG_-MIT_KENNZEICHNUNG_DES_NETZTEILIGEN_ANSCHLUSSES">
+<wire x1="-1.27" y1="-2.54" x2="-1.27" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="2.54" x2="1.27" y2="2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="1.27" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<rectangle x1="-1.27" y1="1.27" x2="1.27" y2="2.54" layer="94"/>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="TRENNSICHERUNG_1-POL">
+<wire x1="0.508" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.778" x2="-0.508" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-0.8264" y1="0.476" x2="0.545" y2="-2.2672" width="0.254" layer="94"/>
+<wire x1="-0.5454" y1="-2.8128" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0.545" y2="-2.2672" width="0.254" layer="94"/>
+<wire x1="-1.9168" y1="-0.0696" x2="-0.5454" y2="-2.8128" width="0.254" layer="94"/>
+<wire x1="-0.8264" y1="0.476" x2="-1.3714" y2="0.2032" width="0.254" layer="94"/>
+<wire x1="-1.3714" y1="0.2032" x2="-1.9168" y2="-0.0696" width="0.254" layer="94"/>
+<wire x1="-1.3714" y1="0.2032" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="1.27" x2="-1.397" y2="0.254" width="0.1524" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="1" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+<pin name="2" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+</symbol>
+<symbol name="WICKLUNG">
+<wire x1="0" y1="2.54" x2="-2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-5.08" x2="-2.54" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="-5.08" width="0.1524" layer="94"/>
+<text x="-3.81" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="-2.54" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<rectangle x1="-5.08" y1="-2.54" x2="2.54" y2="0" layer="94" rot="R270"/>
+<pin name="1" x="2.54" y="2.54" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="2" x="2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="PRIMAERELEMENT_AKKUMULATOR-BATTERIE">
+<wire x1="0" y1="0" x2="-0.771" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.7818" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.771" y1="3.0544" x2="-0.771" y2="-3.0544" width="0.254" layer="94"/>
+<wire x1="-1.7818" y1="1.2732" x2="-1.7818" y2="-1.2732" width="0.254" layer="94"/>
+<text x="1.27" y="5.08" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="1.27" y="-3.81" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="1" x="-5.08" y="0" visible="pad" length="short" direction="pas"/>
+<pin name="2" x="2.54" y="0" visible="pad" length="short" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="STECKERSTIFT">
+<wire x1="0" y1="2.54" x2="0" y2="2.032" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<rectangle x1="-0.381" y1="0" x2="0.381" y2="2.032" layer="94"/>
+<pin name="1.1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="DREHSTROM_400/230V_3/N/PE_~50HZ">
+<wire x1="18.542" y1="0.508" x2="19.812" y2="0.508" width="0.254" layer="94" curve="-123.850343"/>
+<wire x1="19.812" y1="0.508" x2="21.082" y2="0.508" width="0.254" layer="94" curve="126.869898"/>
+<text x="0" y="0" size="1.016" layer="94">Drehstrom 400/230V 3/N/PE</text>
+<text x="21.717" y="0" size="1.016" layer="94">50Hz</text>
+</symbol>
+<symbol name="STECKVERBINDER">
+<wire x1="-1.016" y1="0" x2="1.016" y2="0" width="0.1524" layer="94" curve="181.330826"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.143" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="2.032" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<rectangle x1="-0.381" y1="0" x2="0.381" y2="2.032" layer="94"/>
+<pin name="1.1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="1.2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="STECKERBUCHSE">
+<wire x1="-1.016" y1="0" x2="1.016" y2="0" width="0.1524" layer="94" curve="181.330826"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.143" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="1.2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SCHLIESSER_SCHLIESST_VERZOEGERT">
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-0.889" y1="0" x2="-2.413" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.524" y1="-1.27" x2="-1.524" y2="0.762" width="0.1524" layer="94" curve="-180"/>
+<wire x1="-0.762" y1="-0.508" x2="-2.413" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<text x="-5.08" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="5" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="6" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SCHLIESSER_VERZOEGERT_KS">
+<wire x1="-0.762" y1="0" x2="-2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-1.651" y1="0.762" x2="-1.651" y2="-1.27" width="0.1524" layer="94" curve="180"/>
+<wire x1="-0.635" y1="-0.508" x2="-2.54" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="-3.683" y1="-1.27" x2="-3.683" y2="0.762" width="0.1524" layer="94" curve="180"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.651" width="0.254" layer="94"/>
+<text x="-5.08" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-2.54" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_8" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="_7" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="LASTTRENNSCHALTER_KS">
+<wire x1="0" y1="2.54" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.651" width="0.254" layer="94"/>
+<circle x="0" y="1.27" radius="0.381" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="2" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="1" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="LEISTUNGSSCHALTER_KS">
+<wire x1="0" y1="2.54" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.651" width="0.254" layer="94"/>
+<wire x1="-0.254" y1="2.032" x2="0.254" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="-0.254" y1="1.524" x2="0.254" y2="2.032" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="2" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+<pin name="1" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="MEHRSTELLENSCHALTER_4-POL_KS">
+<wire x1="2.54" y1="2.54" x2="2.54" y2="1.397" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="1.4224" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="1.397" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.143" x2="-2.54" y2="-1.143" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-1.143" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="-1.143" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<text x="-5.08" y="0.254" size="0.7316" layer="94">1 </text>
+<text x="-2.54" y="0.254" size="0.7316" layer="94">2 </text>
+<text x="0" y="0.254" size="0.7316" layer="94">3 </text>
+<text x="2.54" y="0.254" size="0.7316" layer="94">4 </text>
+<text x="-7.62" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-7.62" y="-1.27" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="0" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="-5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="3" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="MEHRSTELLENSCHALTER_6-POL_KS">
+<wire x1="0" y1="-0.381" x2="-5.08" y2="-0.381" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="15.24" y1="2.54" x2="15.24" y2="1.27" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="-0.381" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="1.27" width="0.1524" layer="94"/>
+<text x="0" y="0" size="0.7316" layer="94">2 </text>
+<text x="5.08" y="0" size="0.7316" layer="94">3 </text>
+<text x="10.16" y="0" size="0.7316" layer="94">4 </text>
+<text x="15.24" y="0" size="0.7316" layer="94">5 </text>
+<text x="20.32" y="0" size="0.7316" layer="94">6 </text>
+<text x="-5.08" y="0" size="0.7316" layer="94">1 </text>
+<text x="-7.62" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-7.62" y="-1.27" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="0" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="-5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="3" x="5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="10.16" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="5" x="15.24" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="6" x="20.32" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="OEFFNER_MIT_VORZEITIGER_OEFFNUNG_KS">
+<wire x1="2.032" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.778" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.3768" y2="2.1384" width="0.254" layer="94"/>
+<wire x1="1.905" y1="2.032" x2="1.397" y2="2.159" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_6" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="_5" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="OEFFNER_MIT_VORZEITIGER_SCHLIESSUNG_KS">
+<wire x1="2.032" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.778" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.3768" y2="2.1384" width="0.254" layer="94"/>
+<wire x1="0.889" y1="2.286" x2="1.397" y2="2.159" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_6" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="_5" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="OEFFNER_OEFFNET_VERZOEGERT_KS">
+<wire x1="0" y1="1.778" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="2.032" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.27" y2="2.286" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0.254" x2="-1.397" y2="0.254" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="1.016" x2="-0.508" y2="-1.016" width="0.1524" layer="94" curve="180"/>
+<wire x1="0.508" y1="-0.254" x2="-1.397" y2="-0.254" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_6" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="_5" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="OEFFNER_RASTEND_KS">
+<wire x1="-0.254" y1="0" x2="-1.016" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="-1.016" y1="-1.016" x2="-1.778" y2="0" width="0.1524" layer="94"/>
+<wire x1="-0.254" y1="0" x2="0.508" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.778" y1="0" x2="-3.302" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.032" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.778" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.27" y2="2.286" width="0.254" layer="94"/>
+<text x="-3.81" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="-1.27" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="_1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="OEFFNER_RUHEKONTAKT_KS">
+<wire x1="2.032" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.778" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.3768" y2="2.1384" width="0.254" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="_1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="OEFFNER_SCHLIESST_VERZOEGERT_KS">
+<wire x1="0" y1="1.778" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="2.032" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.27" y2="2.286" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0.254" x2="-0.381" y2="0.254" width="0.1524" layer="94"/>
+<wire x1="-1.397" y1="-1.016" x2="-1.397" y2="1.016" width="0.1524" layer="94" curve="180"/>
+<wire x1="0.635" y1="-0.254" x2="-0.381" y2="-0.254" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_6" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="_5" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="OEFFNER_THERMISCH_KS">
+<wire x1="2.032" y1="1.524" x2="0" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.397" y2="2.159" width="0.254" layer="94"/>
+<wire x1="-0.5228" y1="0.5038" x2="-1.5346" y2="0.5038" width="0.1524" layer="94"/>
+<wire x1="-0.5228" y1="-0.508" x2="-0.5228" y2="0.5038" width="0.1524" layer="94"/>
+<wire x1="-1.5346" y1="-0.508" x2="-1.5346" y2="0.5038" width="0.1524" layer="94"/>
+<wire x1="0.4994" y1="-0.508" x2="-0.5228" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="-1.5346" y1="-0.508" x2="-2.54" y2="-0.508" width="0.1524" layer="94"/>
+<text x="-3.81" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="-1.27" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="_2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SCHLIESSER_ARBEITSKONTAKT_KS">
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_3" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="_4" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SCHLIESSER_MIT_VERZOEGERTER_SCHLIESSUNG_KS">
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<wire x1="-1.778" y1="1.397" x2="-1.27" y2="1.524" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_7" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="_8" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SCHLIESSER_MIT_VORZEITIGER_SCHLIESSUNG_KS">
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-0.762" y1="1.651" x2="-1.27" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_7" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="_8" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SCHLIESSER_OEFFNET_VERZOEGERT_KS">
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-0.889" y1="0" x2="-1.524" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-1.27" x2="-2.54" y2="0.762" width="0.1524" layer="94" curve="180"/>
+<wire x1="-0.762" y1="-0.508" x2="-1.524" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<text x="-5.08" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="0" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_7" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="_8" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SCHLIESSER_SCHLIESST_VERZOEGERT_KS">
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-0.889" y1="0" x2="-2.413" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.524" y1="-1.27" x2="-1.524" y2="0.762" width="0.1524" layer="94" curve="-180"/>
+<wire x1="-0.762" y1="-0.508" x2="-2.413" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<text x="-5.08" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="0" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_7" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="_8" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SCHLIESSER_TEMPERATURABHAENGIG_KS">
+<wire x1="0" y1="1.524" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<wire x1="1.4224" y1="0.254" x2="1.4224" y2="-0.0508" width="0.0508" layer="94"/>
+<wire x1="1.8796" y1="0.254" x2="1.8796" y2="-0.0508" width="0.0508" layer="94"/>
+<wire x1="1.524" y1="0.635" x2="1.524" y2="-0.381" width="0.1524" layer="94" curve="180"/>
+<wire x1="1.778" y1="-0.381" x2="1.778" y2="0.635" width="0.1524" layer="94" curve="180"/>
+<wire x1="1.524" y1="0.635" x2="1.778" y2="0.635" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="-0.381" x2="1.778" y2="-0.381" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<rectangle x1="1.4224" y1="0.0508" x2="1.8796" y2="0.1524" layer="94"/>
+<pin name="_3" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="_4" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SICHERUNG_-MIT_KENNZEICHNUNG_DES_NETZTEILIGEN_ANSCHLUSSES_KS">
+<wire x1="-1.27" y1="-2.54" x2="-1.27" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="2.54" x2="1.27" y2="2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="1.27" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<rectangle x1="-1.27" y1="1.27" x2="1.27" y2="2.54" layer="94"/>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="TRENNSICHERUNG_1-POL_KS">
+<wire x1="0.508" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.778" x2="-0.508" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-0.8264" y1="0.476" x2="0.545" y2="-2.2672" width="0.254" layer="94"/>
+<wire x1="-0.5454" y1="-2.8128" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0.545" y2="-2.2672" width="0.254" layer="94"/>
+<wire x1="-1.9168" y1="-0.0696" x2="-0.5454" y2="-2.8128" width="0.254" layer="94"/>
+<wire x1="-0.8264" y1="0.476" x2="-1.3714" y2="0.2032" width="0.254" layer="94"/>
+<wire x1="-1.3714" y1="0.2032" x2="-1.9168" y2="-0.0696" width="0.254" layer="94"/>
+<wire x1="-1.3714" y1="0.2032" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="1.27" x2="-1.397" y2="0.254" width="0.1524" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="0" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="1" x="0" y="-5.08" visible="pad" length="short" direction="in" rot="R90"/>
+<pin name="2" x="0" y="5.08" visible="pad" length="short" direction="in" rot="R270"/>
+</symbol>
+<symbol name="UMSCHALTKONTAKT_KS">
+<wire x1="-2.54" y1="-1.524" x2="-1.27" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="2.54" y2="-2.159" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="-1.27" y2="-1.651" width="0.254" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.794" y="0" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="_4" x="2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="_2" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="UMSCHALTKONTAKT_MIT_UEBERBRUECKUNG_KS">
+<wire x1="-0.508" y1="-1.778" x2="-2.54" y2="-1.778" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-1.778" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="-1.27" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="-0.8382" y1="-2.5654" x2="-1.778" y2="-2.286" width="0.254" layer="94"/>
+<text x="-3.81" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="-1.27" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="_2" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="_4" x="2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="UMSCHALTKONTAKT_OEFFNET_VERZOEGERT_15_16_18_KS">
+<wire x1="-0.508" y1="-1.778" x2="-2.54" y2="-1.778" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-1.778" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="-1.27" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="-0.762" y1="0" x2="-1.524" y2="0" width="0.1524" layer="94"/>
+<wire x1="-3.302" y1="0" x2="-2.286" y2="0" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-4.064" y2="0" width="0.1524" layer="94"/>
+<wire x1="-3.556" y1="1.016" x2="-3.556" y2="-1.016" width="0.1524" layer="94" curve="-180"/>
+<text x="-6.35" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-6.35" y="-1.27" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_5" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="_6" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="_8" x="2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="UMSCHALTKONTAKT_SCHLIESST_VERZOEGERT_15/16/18_KS">
+<wire x1="-0.508" y1="-1.778" x2="-2.54" y2="-1.778" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-1.778" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="-1.27" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="-0.762" y1="0" x2="-1.524" y2="0" width="0.1524" layer="94"/>
+<wire x1="-3.302" y1="0" x2="-2.286" y2="0" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-4.064" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-1.016" x2="-2.54" y2="1.016" width="0.1524" layer="94" curve="-180"/>
+<text x="-6.35" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-6.35" y="-1.27" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_5" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="_6" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="_8" x="2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="WISCHKONTAKT_IN_BEIDEN_RICHTUNGEN_SCHLIESSEND_KS">
+<wire x1="0" y1="2.54" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.651" width="0.254" layer="94"/>
+<wire x1="0" y1="1.778" x2="-0.381" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.778" x2="0.381" y2="2.54" width="0.1524" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="0" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="_1" x="0" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="_2" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="SCHLIESSER_3-POL_KS">
+<wire x1="-5.08" y1="0" x2="-3.81" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="1.397" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0" x2="3.81" y2="0" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="1.778" x2="-5.08" y2="2.413" width="0.1524" layer="94" curve="-157.380135"/>
+<wire x1="-5.08" y1="-2.54" x2="-6.35" y2="1.524" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.778" x2="0" y2="2.413" width="0.1524" layer="94" curve="-157.380135"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="1.778" x2="5.08" y2="2.413" width="0.1524" layer="94" curve="-157.380135"/>
+<wire x1="5.08" y1="-2.54" x2="3.81" y2="1.524" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="1.778" width="0.1524" layer="94"/>
+<text x="-7.62" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-7.62" y="-1.27" size="1.27" layer="95" rot="R180">&gt;XREF</text>
+<pin name="2" x="-5.08" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="-5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="3" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="5" x="5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="6" x="5.08" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SCHLIESSER_4-POL_KS">
+<wire x1="-7.62" y1="0" x2="-6.35" y2="0" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-3.683" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.143" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="1.27" y2="0" width="0.1524" layer="94"/>
+<wire x1="-7.62" y1="1.778" x2="-7.62" y2="2.413" width="0.1524" layer="94" curve="-157.380135"/>
+<wire x1="-7.62" y1="-2.54" x2="-8.89" y2="1.524" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="2.54" x2="-7.62" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="1.778" x2="-2.54" y2="2.413" width="0.1524" layer="94" curve="-157.380135"/>
+<wire x1="-2.54" y1="-2.54" x2="-3.81" y2="1.524" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="1.778" x2="2.54" y2="2.413" width="0.1524" layer="94" curve="-157.380135"/>
+<wire x1="2.54" y1="-2.54" x2="1.27" y2="1.524" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="6.35" y2="0" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="1.778" x2="7.62" y2="2.413" width="0.1524" layer="94" curve="-157.380135"/>
+<wire x1="7.62" y1="-2.54" x2="6.35" y2="1.524" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0" x2="3.81" y2="0" width="0.1524" layer="94"/>
+<text x="-10.16" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-10.16" y="-1.27" size="1.27" layer="95" rot="R180">&gt;XREF</text>
+<pin name="2" x="-7.62" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="-7.62" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="3" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="5" x="2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="6" x="2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="7" x="7.62" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="8" x="7.62" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="SCHLIESSER_1-POL_KS">
+<wire x1="0" y1="1.778" x2="0" y2="2.413" width="0.1524" layer="94" curve="-157.380135"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="1.524" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.27" layer="95" rot="R180">&gt;XREF</text>
+<pin name="2" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="OEFFNER_3-POL_KS">
+<wire x1="-3.048" y1="1.778" x2="-5.08" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="1.778" x2="-5.08" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-3.7032" y2="2.1384" width="0.254" layer="94"/>
+<wire x1="-4.064" y1="1.778" x2="-4.699" y2="1.778" width="0.1524" layer="94" curve="-200.005665"/>
+<wire x1="-4.699" y1="1.778" x2="-4.064" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="2.032" y1="1.778" x2="0" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.778" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.3768" y2="2.1384" width="0.254" layer="94"/>
+<wire x1="1.016" y1="1.778" x2="0.381" y2="1.778" width="0.1524" layer="94" curve="-200.005665"/>
+<wire x1="0.381" y1="1.778" x2="1.016" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="7.112" y1="1.778" x2="5.08" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="1.778" x2="5.08" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="6.4568" y2="2.1384" width="0.254" layer="94"/>
+<wire x1="6.096" y1="1.778" x2="5.461" y2="1.778" width="0.1524" layer="94" curve="-200.005665"/>
+<wire x1="5.461" y1="1.778" x2="6.096" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-3.81" y1="0" x2="-2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0" x2="0.127" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="2.667" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="0" x2="5.08" y2="0" width="0.1524" layer="94"/>
+<text x="-7.62" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-7.62" y="-1.27" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="2" x="-5.08" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="-5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="3" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="0" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="5" x="5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="6" x="5.08" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="OEFFNER_4-POL_KS">
+<wire x1="-5.588" y1="1.778" x2="-7.62" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-7.62" y1="1.778" x2="-7.62" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="-6.2432" y2="2.1384" width="0.254" layer="94"/>
+<wire x1="-6.604" y1="1.778" x2="-7.239" y2="1.778" width="0.1524" layer="94" curve="-200.005665"/>
+<wire x1="-7.239" y1="1.778" x2="-6.604" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="1.778" x2="-2.54" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="1.778" x2="-2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-1.1632" y2="2.1384" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.778" x2="-2.159" y2="1.778" width="0.1524" layer="94" curve="-200.005665"/>
+<wire x1="-2.159" y1="1.778" x2="-1.524" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="4.572" y1="1.778" x2="2.54" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="1.778" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="3.9168" y2="2.1384" width="0.254" layer="94"/>
+<wire x1="3.556" y1="1.778" x2="2.921" y2="1.778" width="0.1524" layer="94" curve="-200.005665"/>
+<wire x1="2.921" y1="1.778" x2="3.556" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="9.652" y1="1.778" x2="7.62" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="1.778" x2="7.62" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="-2.54" x2="8.9968" y2="2.1384" width="0.254" layer="94"/>
+<wire x1="8.636" y1="1.778" x2="8.001" y2="1.778" width="0.1524" layer="94" curve="-200.005665"/>
+<wire x1="8.001" y1="1.778" x2="8.636" y2="1.778" width="0.1524" layer="94"/>
+<wire x1="-6.35" y1="0" x2="-5.08" y2="0" width="0.1524" layer="94"/>
+<wire x1="-3.81" y1="0" x2="-2.413" y2="0" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="0" x2="0.127" y2="0" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="0" x2="5.08" y2="0" width="0.1524" layer="94"/>
+<wire x1="6.35" y1="0" x2="7.62" y2="0" width="0.1524" layer="94"/>
+<text x="-10.16" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-10.16" y="-1.27" size="1.27" layer="96" rot="R180">&gt;XREF</text>
+<pin name="2" x="-7.62" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="-7.62" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="3" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="5" x="2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="6" x="2.54" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="7" x="7.62" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="8" x="7.62" y="-5.08" visible="pad" length="short" direction="pas" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="WECHSELSTROM" prefix="SYMBOL" uservalue="yes">
+<description>Wechselstrom</description>
+<gates>
+<gate name="G$1" symbol="WECHSELSTROM" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="AUTOMATISCHE_RUECKSTELLUNG" prefix="SYMBOL">
+<description>Automatische Rückstellung</description>
+<gates>
+<gate name="1" symbol="AUTOMATISCHE_RUECKSTELLUNG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BETAETIGUNG_BEI_UEBERSCHREITUNG_DES_EINSTELLWERTES" prefix="SYMBOL" uservalue="yes">
+<description>Betätigung bei Überschreitung des Einstellwertes</description>
+<gates>
+<gate name="1" symbol="BETAETIGUNG_BEI_UEBERSCHREITUNG_DES_EINSTELLWERTES" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BETAETIGUNG_BEI_UNTERSCHREITUNG_DES_EINSTELLWERTES" prefix="SYMBOL">
+<description>Betätigung bei Unterschreitung des Einstellwertes</description>
+<gates>
+<gate name="1" symbol="BETAETIGUNG_BEI_UNTERSCHREITUNG_DES_EINSTELLWERTES" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BETAETIGUNG_DURCH_ANNAEHERN" prefix="SYMBOL">
+<description>Betätigung durch Annähern</description>
+<gates>
+<gate name="1" symbol="BETAETIGUNG_DURCH_ANNAEHERN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BETAETIGUNG_DURCH_BERUEHREN" prefix="SYMBOL" uservalue="yes">
+<description>Betätigung durch Berühren</description>
+<gates>
+<gate name="1" symbol="BETAETIGUNG_DURCH_BERUEHREN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BETAETIGUNG_DURCH_DREHEN" prefix="SYMBOL">
+<description>Betätigung durch Drehen</description>
+<gates>
+<gate name="1" symbol="BETAETIGUNG_DURCH_DREHEN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BETAETIGUNG_DURCH_DRUECKEN" prefix="SYMBOL" uservalue="yes">
+<description>Betätigung durch Drücken</description>
+<gates>
+<gate name="1" symbol="BETAETIGUNG_DURCH_DRUECKEN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BETAETIGUNG_DURCH_FUESSE" prefix="SYMBOL">
+<description>Betätigung durch Füße</description>
+<gates>
+<gate name="1" symbol="BETAETIGUNG_DURCH_FUESSE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BETAETIGUNG_DURCH_HANDRAD" prefix="SYMBOL">
+<description>Betätigung durch Handrad</description>
+<gates>
+<gate name="1" symbol="BETAETIGUNG_DURCH_HANDRAD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BETAETIGUNG_DURCH_HEBEL" prefix="SYMBOL" uservalue="yes">
+<description>Betätigung durch Hebel</description>
+<gates>
+<gate name="1" symbol="BETAETIGUNG_DURCH_HEBEL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BETAETIGUNG_DURCH_KURBEL" prefix="SYMBOL" uservalue="yes">
+<description>Betätigung durch Kurbel</description>
+<gates>
+<gate name="1" symbol="BETAETIGUNG_DURCH_KURBEL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BETAETIGUNG_DURCH_NOCKENSTEUERUNG" prefix="SYMBOL">
+<description>Betätigung durch Nockensteuerung</description>
+<gates>
+<gate name="1" symbol="BETAETIGUNG_DURCH_NOCKENSTEUERUNG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BETAETIGUNG_DURCH_PILZTASTER" prefix="SYMBOL" uservalue="yes">
+<description>Betätigung durch Pilztaster</description>
+<gates>
+<gate name="1" symbol="BETAETIGUNG_DURCH_PILZTASTER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BETAETIGUNG_DURCH_ROLLE" prefix="SYMBOL" uservalue="yes">
+<description>Betätigung durch Rolle</description>
+<gates>
+<gate name="1" symbol="BETAETIGUNG_DURCH_ROLLE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BETAETIGUNG_DURCH_SCHLUESSEL" prefix="SYMBOL" uservalue="yes">
+<description>Betätigung durch Schlüssel</description>
+<gates>
+<gate name="1" symbol="BETAETIGUNG_DURCH_SCHLUESSEL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BETAETIGUNG_DURCH_UEBER_ODER_UNTERSCHREITUNG_DES_EINSTELLWERTES" prefix="SYMBOL" uservalue="yes">
+<description>Betätigung durch Über oder Unterschreitung des Einstellwertes</description>
+<gates>
+<gate name="1" symbol="BETAETIGUNG_DURCH_UEBER_ODER_UNTERSCHREITUNG_DES_EINSTELLWERTES" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BETAETIGUNG_DURCH_WEGNEHMBAREN_HANDGRIFF" prefix="SYMBOL" uservalue="yes">
+<description>Betätigung durch wegnehmbaren Handgriff</description>
+<gates>
+<gate name="1" symbol="BETAETIGUNG_DURCH_WEGNEHMBAREN_HANDGRIFF" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BETAETIGUNG_DURCH_ZIEHEN" prefix="SYMBOL" uservalue="yes">
+<description>Betätigung durch Ziehen</description>
+<gates>
+<gate name="1" symbol="BETAETIGUNG_DURCH_ZIEHEN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BEWEGUNG_IN_BEIDEN_PFEILRICHTUNGEN" prefix="SYMBOL">
+<description>Bewegung in beiden Pfeilrichtungen</description>
+<gates>
+<gate name="1" symbol="BEWEGUNG_IN_BEIDEN_PFEILRICHTUNGEN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BEWEGUNG_IN_PFEILRICHTUNG" prefix="SYMBOL">
+<description>Bewegung in Pfeilrichtung</description>
+<gates>
+<gate name="1" symbol="BEWEGUNG_IN_PFEILRICHTUNG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DURCHFLUSS_FLUESSIGKEIT" prefix="SYMBOL" uservalue="yes">
+<description>Durchfluss Flüssigkeit</description>
+<gates>
+<gate name="1" symbol="DURCHFLUSS_FLUESSIGKEIT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DURCHFLUSS_GAS" prefix="SYMBOL" uservalue="yes">
+<description>Durchfluss Gas</description>
+<gates>
+<gate name="1" symbol="DURCHFLUSS_GAS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ELEKTROMAG_WIRKUNG" prefix="SYMBOL" uservalue="yes">
+<description>Elektromagnetische Wirkung</description>
+<gates>
+<gate name="1" symbol="ELEKTROMAG_WIRKUNG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ELEKTROMAG_BETAETIGT" prefix="SYMBOL" uservalue="yes">
+<description>Elektromagnetisch betätigt</description>
+<gates>
+<gate name="1" symbol="ELEKTROMAG_BETAETIGT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="EMPFANGEN" prefix="SYMBOL" uservalue="yes">
+<description>Empfangen</description>
+<gates>
+<gate name="1" symbol="EMPFANGEN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ENERGIE-SIGNALFLUSS_IN_BEIDEN_RICHTUNGEN_GLEICHZEITIG" prefix="SYMBOL" uservalue="yes">
+<description>Energie Signalfluss in beiden Richtungen gleichzeitig</description>
+<gates>
+<gate name="1" symbol="ENERGIE-SIGNALFLUSS_IN_BEIDEN_RICHTUNGEN_GLEICHZEITIG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ENERGIE-SIGNALFLUSS_IN_EINER_RICHTUNG" prefix="SYMBOL" uservalue="yes">
+<description>Energie Signalfluss in einer Richtung</description>
+<gates>
+<gate name="1" symbol="ENERGIE-SIGNALFLUSS_IN_EINER_RICHTUNG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HANDANTRIEB" prefix="SYMBOL" uservalue="yes">
+<description>Handantrieb</description>
+<gates>
+<gate name="1" symbol="HANDANTRIEB" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HANDANTRIEB_MIT_SCHUTZ_GEGEN_ZUFAELLIGE_BERUEHRUNG" prefix="SYMBOL" uservalue="yes">
+<description>Handantrieb mit Schutz gegen zufällige Berührung</description>
+<gates>
+<gate name="1" symbol="HANDANTRIEB_MIT_SCHUTZ_GEGEN_ZUFAELLIGE_BERUEHRUNG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HYDRAULISCHER_ODER_PNEUMATISCHER_ANTRIEB" prefix="SYMBOL" uservalue="yes">
+<description>Hydraulischer oder pneumatischer Antrieb</description>
+<gates>
+<gate name="1" symbol="HYDRAULISCHER_ODER_PNEUMATISCHER_ANTRIEB" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="IN_BEIDEN_RICHTUNGEN_DREHBAR" prefix="SYMBOL" uservalue="yes">
+<description>In beiden Richtungen drehbar</description>
+<gates>
+<gate name="1" symbol="IN_BEIDEN_RICHTUNGEN_DREHBAR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="IN_EINER_RICHTUNG_DREHBAR" prefix="SYMBOL" uservalue="yes">
+<description>In einer Richtung drehbar</description>
+<gates>
+<gate name="1" symbol="IN_EINER_RICHTUNG_DREHBAR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KLINKE_EINGEKLINKT" prefix="SYMBOL" uservalue="yes">
+<description>Klincke eingeklinckt</description>
+<gates>
+<gate name="1" symbol="KLINKE_EINGEKLINKT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KLINKE_NICHT_EINGEKLINKT" prefix="SYMBOL" uservalue="yes">
+<description>Klincke nicht eingeklinckt</description>
+<gates>
+<gate name="1" symbol="KLINKE_NICHT_EINGEKLINKT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MAGNETISCHE_ABHAENGIGKEIT" prefix="SYMBOL" uservalue="yes">
+<description>Magnetische Abhängigkeit</description>
+<gates>
+<gate name="1" symbol="MAGNETISCHE_ABHAENGIGKEIT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MECHANISCHE_VERRIEGELUNG" prefix="SYMBOL" uservalue="yes">
+<description>Mechanische Verriegelung</description>
+<gates>
+<gate name="1" symbol="MECHANISCHE_VERRIEGELUNG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RASTE" prefix="SYMBOL" uservalue="yes">
+<description>Raste</description>
+<gates>
+<gate name="1" symbol="RASTE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RASTE_EINGERASTET" prefix="SYMBOL" uservalue="yes">
+<description>Raste eingerastet</description>
+<gates>
+<gate name="1" symbol="RASTE_EINGERASTET" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RASTE_NICHT_EINGERASTET" prefix="SYMBOL" uservalue="yes">
+<description>Raste nicht eingerastet</description>
+<gates>
+<gate name="1" symbol="RASTE_NICHT_EINGERASTET" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SENDEN" prefix="SYMBOL" uservalue="yes">
+<description>Senden</description>
+<gates>
+<gate name="1" symbol="SENDEN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPERRE" prefix="SYMBOL" uservalue="yes">
+<description>Sperre</description>
+<gates>
+<gate name="1" symbol="SPERRE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPERRE_NACH_LINKS_GESPERRT" prefix="SYMBOL" uservalue="yes">
+<description>Sperre nach links gesperrt</description>
+<gates>
+<gate name="1" symbol="SPERRE_NACH_LINKS_GESPERRT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="STEUERUNG_DURCH_ELEKTRISCHE_UHR" prefix="SYMBOL" uservalue="yes">
+<description>Steuerung durch elektrische Uhr</description>
+<gates>
+<gate name="1" symbol="STEUERUNG_DURCH_ELEKTRISCHE_UHR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="STEUERUNG_DURCH_ELEKTROMOTOR" prefix="SYMBOL" uservalue="yes">
+<description>Steuerung durch Elektromotor</description>
+<gates>
+<gate name="1" symbol="STEUERUNG_DURCH_ELEKTROMOTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="STEUERUNG_DURCH_EREIGNISZAEHLER" prefix="SYMBOL" uservalue="yes">
+<description>Steuerung durch Ereigniszähler</description>
+<gates>
+<gate name="1" symbol="STEUERUNG_DURCH_EREIGNISZAEHLER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="STEUERUNG_DURCH_FLUESSIGKEITSPEGEL" prefix="SYMBOL" uservalue="yes">
+<description>Steuerung durch Flüssigkeitspegel</description>
+<gates>
+<gate name="1" symbol="STEUERUNG_DURCH_FLUESSIGKEITSPEGEL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="STEUERUNG_DURCH_HALBLEITER" prefix="SYMBOL" uservalue="yes">
+<description>Steuerung durch Halbleiter</description>
+<gates>
+<gate name="1" symbol="STEUERUNG_DURCH_HALBLEITER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="STEUERUNG_DURCH_THERMISCHEN_EFFEKT" prefix="SYMBOL" uservalue="yes">
+<description>Steuerung durch thermischen Effekt</description>
+<gates>
+<gate name="1" symbol="STEUERUNG_DURCH_THERMISCHEN_EFFEKT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="THERMISCHE_WIRKUNG" prefix="SYMBOL" uservalue="yes">
+<description>Thermische Wirkung</description>
+<gates>
+<gate name="1" symbol="THERMISCHE_WIRKUNG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPULE_ALLGEMEIN" prefix="SYMBOL" uservalue="yes">
+<description>Spule / Antrieb allgemein</description>
+<gates>
+<gate name="G$1" symbol="SPULE_ALLGEMEIN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPULE_ABFALLVERZOEGERT" prefix="SYMBOL" uservalue="yes">
+<description>Spule mit Abfallverzögerung</description>
+<gates>
+<gate name="G$1" symbol="SPULE_ABFALLVERZOEGERT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPULE_ANZUGSVERZOEGERT" prefix="SYMBOL" uservalue="yes">
+<description>Spule Anzugsverzögert</description>
+<gates>
+<gate name="G$1" symbol="SPULE_ANZUGSVERZOEGERT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPULE_MIT_ZWEI_GEGENSINNIG_WIRKENDEN_WICKLUNGEN" prefix="SYMBOL" uservalue="yes">
+<description>Spule mit zwei gegensinnig wirkenden Wicklungen</description>
+<gates>
+<gate name="G$1" symbol="SPULE_MIT_ZWEI_GEGENSINNIG_WIRKENDEN_WICKLUNGEN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPULE_ANZUGS-ABFALLVERZOEGERT" prefix="SYMBOL" uservalue="yes">
+<description>Spule Anzugs- und Abfallverzögert</description>
+<gates>
+<gate name="G$1" symbol="SPULE_ANZUGS-ABFALLVERZOEGERT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPULE_MIT_EINER_WIRKSAMEN_WICKLUNG" prefix="SYMBOL" uservalue="yes">
+<description>Spule mit einer wirksamen Wicklung</description>
+<gates>
+<gate name="G$1" symbol="SPULE_MIT_EINER_WIRKSAMEN_WICKLUNG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPULE_MIT_ZWEI_GETRENNTEN_WICKLUNGEN" prefix="SYMBOL" uservalue="yes">
+<description>Spule mit zwei getrennten Wicklung</description>
+<gates>
+<gate name="G$1" symbol="SPULE_MIT_ZWEI_GETRENNTEN_WICKLUNGEN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BREMSE_GESCHLOSSEN" prefix="SYMBOL" uservalue="yes">
+<description>Bremse geschlossen</description>
+<gates>
+<gate name="G$1" symbol="BREMSE_GESCHLOSSEN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BREMSE_OFFEN" prefix="SYMBOL" uservalue="yes">
+<description>Bremse offen</description>
+<gates>
+<gate name="G$1" symbol="BREMSE_OFFEN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PERMANENTMAGNET_STAB-FORM" prefix="SYMBOL" uservalue="yes">
+<description>Permanentmagnet Stab-Form</description>
+<gates>
+<gate name="G$1" symbol="PERMANENTMAGNET_STAB-FORM" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PERMANENTMAGNET_U-FORM" prefix="SYMBOL" uservalue="yes">
+<description>Permanentmagnet U-Form</description>
+<gates>
+<gate name="G$1" symbol="PERMANENTMAGNET_U-FORM" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KRAFTANTRIEB_ALLGEMEIN" prefix="SYMBOL" uservalue="yes">
+<description>Kradftantrieb</description>
+<gates>
+<gate name="G$1" symbol="KRAFTANTRIEB_ALLGEMEIN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KRAFTANTRIEB_DRUCK" prefix="SYMBOL" uservalue="yes">
+<description>Kraftantrieb Druck</description>
+<gates>
+<gate name="G$1" symbol="KRAFTANTRIEB_DRUCK" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KRAFTANTRIEB_TEMPERATUR" prefix="SYMBOL" uservalue="yes">
+<description>Kraftantrieb Temperatur</description>
+<gates>
+<gate name="G$1" symbol="KRAFTANTRIEB_TEMPERATUR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KUPPLUNG_ENTKUPPELT" prefix="SYMBOL" uservalue="yes">
+<description>Kupplung entkuppelt</description>
+<gates>
+<gate name="G$1" symbol="KUPPLUNG_ENTKUPPELT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KUPPLUNG_GEKUPPELT" prefix="SYMBOL" uservalue="yes">
+<description>Kupplung gekuppelt</description>
+<gates>
+<gate name="G$1" symbol="KUPPLUNG_GEKUPPELT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SCHALTSCHLOSS_ELEKTROMECHANISCH" prefix="SYMBOL" uservalue="yes">
+<description>Schaltschloss elektromechanisch</description>
+<gates>
+<gate name="G$1" symbol="SCHALTSCHLOSS_ELEKTROMECHANISCH" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SCHALTSCHLOSS_MECHANISCH" prefix="SYMBOL" uservalue="yes">
+<description>Schaltschloss mechanisch</description>
+<gates>
+<gate name="G$1" symbol="SCHALTSCHLOSS_MECHANISCH" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ENERGIEZAEHLER_WATTSTUNDENZAEHLER_1-PHASEN" prefix="SYMBOL" uservalue="yes">
+<description>Energiezäler, Wattstundenzähler</description>
+<gates>
+<gate name="G$1" symbol="ENERGIEZAEHLER_WATTSTUNDENZAEHLER_1-PHASEN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SIGNAL_BLINKEND" prefix="SYMBOL" uservalue="yes">
+<description>Signal blinkend</description>
+<gates>
+<gate name="G$1" symbol="SIGNAL_BLINKEND" x="0" y="0"/>
+<gate name="G$2" symbol="SIGNAL_BLINKEND" x="0" y="0"/>
+<gate name="G$3" symbol="SIGNAL_BLINKEND" x="0" y="0"/>
+<gate name="G$4" symbol="SIGNAL_BLINKEND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MOTOR" prefix="SYMBOL" uservalue="yes">
+<description>Motor allgemein</description>
+<gates>
+<gate name="G$1" symbol="MOTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ARBEITSKONTAKT_VERZOEGERT" prefix="SYMBOL">
+<description>Arbeitskontakt verzögert</description>
+<gates>
+<gate name="G$1" symbol="SCHLIESSER_VERZOEGERT" x="0" y="0" addlevel="always"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="WISCHKONTAKT_IN_BEIDEN_RICHTUNGEN_SCHLIESSEND" prefix="SYMBOL" uservalue="yes">
+<description>Wischkontakt in beiden Richtungen schließend</description>
+<gates>
+<gate name="G$1" symbol="WISCHKONTAKT_IN_BEIDEN_RICHTUNGEN_SCHLIESSEND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="OEFFNER_RUHEKONTAKT" prefix="SYMBOL" uservalue="yes">
+<description>Öffner (Ruhekontakt)</description>
+<gates>
+<gate name="G$1" symbol="OEFFNER_1-POL_KS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SCHLIESSER_ARBEITSKONTAKT" prefix="SYMBOL" uservalue="yes">
+<description>Schließer (Arbeitskontakt)</description>
+<gates>
+<gate name="G$1" symbol="SCHLIESSER_ARBEITSKONTAKT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SCHLIESSER_OEFFNET_VERZOEGERT" prefix="SYMBOL" uservalue="yes">
+<description>Schließer verzögert</description>
+<gates>
+<gate name="G$1" symbol="SCHLIESSER_OEFFNET_VERZOEGERT" x="0" y="0" addlevel="always"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SCHLIESSER_TEMPERATURABHAENGIG" prefix="SYMBOL" uservalue="yes">
+<description>Schließer temperaturabhängig</description>
+<gates>
+<gate name="G$1" symbol="SCHLIESSER_TEMPERATURABHAENGIG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LASTTRENNSCHALTER" prefix="SYMBOL" uservalue="yes">
+<description>Lasttrennschalter</description>
+<gates>
+<gate name="G$1" symbol="LASTTRENNSCHALTER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LEISTUNGSSCHALTER" prefix="SYMBOL" uservalue="yes">
+<description>Leistungsschalter</description>
+<gates>
+<gate name="G$1" symbol="LEISTUNGSSCHALTER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MEHRSTELLENSCHALTER_4-POL" prefix="SYMBOL" uservalue="yes">
+<description>Mehrstellenschalter 4-pol.</description>
+<gates>
+<gate name="G$1" symbol="MEHRSTELLENSCHALTER_4-POL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MEHRSTELLENSCHALTER_6-POL" prefix="SYMBOL" uservalue="yes">
+<description>Mehrstellenschalter 6-pol.</description>
+<gates>
+<gate name="G$1" symbol="MEHRSTELLENSCHALTER_6-POL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="OEFFNER_OEFFNET_VERZOEGERT" prefix="SYMBOL" uservalue="yes">
+<description>Öffner öffnet verzögert</description>
+<gates>
+<gate name="G$1" symbol="OEFFNER_OEFFNET_VERZOEGERT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="OEFFNER_RASTEND" prefix="SYMBOL" uservalue="yes">
+<description>Öffner rastend</description>
+<gates>
+<gate name="G$1" symbol="OEFFNER_RASTEND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="OEFFNER_SCHLIESST_VERZOEGERT" prefix="SYMBOL" uservalue="yes">
+<description>Öffner schließt verzögert</description>
+<gates>
+<gate name="G$1" symbol="OEFFNER_SCHLIESST_VERZOEGERT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="OEFFNER_MIT_VORZEITIGER_OEFFNUNG" prefix="SYMBOL">
+<description>Öffnungskontakt mit vorzeitiger Öffnung</description>
+<gates>
+<gate name="G$1" symbol="OEFFNER_MIT_VORZEITIGER_OEFFNUNG" x="0" y="0" addlevel="always"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="OEFFNER_MIT_VORZEITIGER_SCHLIESSUNG" prefix="SYMBOL">
+<description>Öffnungskontakt mit vorzeitiger Schließung</description>
+<gates>
+<gate name="G$1" symbol="OEFFNER_MIT_VORZEITIGER_SCHLIESSUNG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SCHLIESSER_MIT_VORZEITIGER_SCHLIESSUNG" prefix="SYMBOL" uservalue="yes">
+<description>Schließkontakt mit vorzeitiger Schließung</description>
+<gates>
+<gate name="G$1" symbol="SCHLIESSER_MIT_VORZEITIGER_SCHLIESSUNG" x="0" y="0" addlevel="always"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SCHLIESSER_MIT_VERZOEGERTER_SCHLIESSUNG" prefix="SYMBOL" uservalue="yes">
+<description>Schließer mit verzögerter Schließung</description>
+<gates>
+<gate name="G$1" symbol="SCHLIESSER_MIT_VERZOEGERTER_SCHLIESSUNG" x="0" y="0" addlevel="always"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="UMSCHALTKONTAKT" prefix="SYMBOL" uservalue="yes">
+<description>Umschaltkontakt</description>
+<gates>
+<gate name="G$1" symbol="UMSCHALTKONTAKT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="UMSCHALTKONTAKT_MIT_UEBERBRUECKUNG" prefix="SYMBOL" uservalue="yes">
+<description>Umschaltkontakt mit Überbrückung</description>
+<gates>
+<gate name="G$1" symbol="UMSCHALTKONTAKT_MIT_UEBERBRUECKUNG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="UMSCHALTKONTAKT_OEFFNET_VERZOEGERT" prefix="SYMBOL" uservalue="yes">
+<description>Umschaltkontakt öffnet verzögert</description>
+<gates>
+<gate name="G$1" symbol="UMSCHALTKONTAKT_OEFFNET_VERZOEGERT_15_16_18" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="UMSCHALTKONTAKT_SCHLIESST_VERZOEGERT" prefix="SYMBOL" uservalue="yes">
+<description>Umschaltkontakt schließt verzögert</description>
+<gates>
+<gate name="G$1" symbol="UMSCHALTKONTAKT_SCHLIESST_VERZOEGERT_15/16/18" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ZWEIWEG-UMSCHALTER_MIT_AUS-STELLUNG" prefix="SYMBOL" uservalue="yes">
+<description>Zweiweg-Umschalter mit Aus-Stellung</description>
+<gates>
+<gate name="G$1" symbol="ZWEIWEG-UMSCHALTKONTAKT_MIT_AUS-STELLUNG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPULE_POLARISIERT" prefix="SYMBOL" uservalue="yes">
+<description>Spule polarisiert</description>
+<gates>
+<gate name="G$1" symbol="SPULE_POLARISIERT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPULE_REMANENT_WIRKEND" prefix="SYMBOL" uservalue="yes">
+<description>Spule für Remanenzrelais</description>
+<gates>
+<gate name="G$1" symbol="SPULE_REMANENZRELAIS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPULE_FUER_MECHANISCHE_RESONANZ" prefix="SYMBOL" uservalue="yes">
+<description>Spule für mechanische Resonanz</description>
+<gates>
+<gate name="G$1" symbol="SPULE_FUER_MECHANISCHE_RESONANZ" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPULE_MECH_VERRIEGELT" prefix="SYMBOL" uservalue="yes">
+<description>Spule mech. verriegelt</description>
+<gates>
+<gate name="G$1" symbol="SPULE_MECH_VERRIEGELT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPULE_FUER_WECHSELSTROM" prefix="SYMBOL" uservalue="yes">
+<description>Spule für Wechselstrom</description>
+<gates>
+<gate name="G$1" symbol="SPULE_FUER_WECHSELSTROM" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="OEFFNER_THERMISCH" prefix="SYMBOL" uservalue="yes">
+<description>Thermischer Öffner</description>
+<gates>
+<gate name="G$1" symbol="OEFFNER_THERMISCH" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DOPPELFUNKENSTRECKE" prefix="SYMBOL" uservalue="yes">
+<description>Doppelfunkenstrecke</description>
+<gates>
+<gate name="G$1" symbol="DOPPELFUNKENSTRECKE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FUNKENSTRECKE" prefix="SYMBOL" uservalue="yes">
+<description>Funkenstrecke</description>
+<gates>
+<gate name="G$1" symbol="FUNKENSTRECKE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SICHERUNG_-MIT_KENNZEICHNUNG_DES_NETZTEILIGEN_ANSCHLUSSES" prefix="SYMBOL" uservalue="yes">
+<description>Sicherung mit Kennzeichnung des netzteiligen Anschlusses</description>
+<gates>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TRENNSICHERUNG_1-POL" prefix="SYMBOL" uservalue="yes">
+<description>Trennsicherung 1-pol.</description>
+<gates>
+<gate name="G$1" symbol="TRENNSICHERUNG_1-POL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="WICKLUNG" prefix="SYMBOL" uservalue="yes">
+<description>Wicklung</description>
+<gates>
+<gate name="G$1" symbol="WICKLUNG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PRIMAERELEMENT_AKKUMULATOR-BATTERIE" prefix="SYMBOL">
+<description>Primärelement, Akkumulator (Zelle) Batterie</description>
+<gates>
+<gate name="G$1" symbol="PRIMAERELEMENT_AKKUMULATOR-BATTERIE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DREHSTROM_400/230V_3/N/PE_~50HZ" prefix="SYMBOL" uservalue="yes">
+<description>Drehstrom N/PE 50Hz</description>
+<gates>
+<gate name="G$1" symbol="DREHSTROM_400/230V_3/N/PE_~50HZ" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="STECKVERBINDER" prefix="SYMBOL" uservalue="yes">
+<description>Steckverbinder mit Steckerstift und Steckerbuchse</description>
+<gates>
+<gate name="G$1" symbol="STECKVERBINDER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="STECKERBUCHSE" prefix="SYMBOL" uservalue="yes">
+<description>Steckerbuchse</description>
+<gates>
+<gate name="G$1" symbol="STECKERBUCHSE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="STECKERSTIFT" prefix="SYMBOL" uservalue="yes">
+<description>Steckerstift</description>
+<gates>
+<gate name="G$1" symbol="STECKERSTIFT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SCHLIESSER_SCHLIESST_VERZOEGERT" prefix="SYMBOL" uservalue="yes">
+<description>Schließer schließt verzögert</description>
+<gates>
+<gate name="G$1" symbol="SCHLIESSER_SCHLIESST_VERZOEGERT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="OEFFNER_OEFFNET_VERZOEGERT_KS" prefix="S" uservalue="yes">
+<description>Öffner öffnet verzögert, mit XREF für Kontaktspiegel</description>
+<gates>
+<gate name="G$1" symbol="OEFFNER_OEFFNET_VERZOEGERT_KS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>

@@ -1,0 +1,1071 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="inch" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+</layers>
+<library>
+<description>&lt;b&gt;Photocells&lt;/b&gt;&lt;p&gt;
+Manufakturer: PerkinElmer Optoelektronics&lt;br&gt;
+www.perkinelmer.com/opto</description>
+<packages>
+<package name="D11XX_H">
+<description>&lt;b&gt;Photo Sensor&lt;/b&gt; Oil Burner Control Applications&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_PhotocellsD1160.pdf</description>
+<wire x1="-3.05" y1="0" x2="-4.05" y2="1" width="0.2032" layer="21" curve="-90"/>
+<wire x1="-4.05" y1="1" x2="-4.05" y2="19.95" width="0.2032" layer="21"/>
+<wire x1="-4.05" y1="19.95" x2="4.05" y2="19.95" width="0.2032" layer="21" curve="-180"/>
+<wire x1="4.05" y1="19.95" x2="4.05" y2="1" width="0.2032" layer="21"/>
+<wire x1="4.05" y1="1" x2="3.05" y2="0" width="0.2032" layer="21" curve="-90"/>
+<wire x1="3.05" y1="0" x2="-3.05" y2="0" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="-5" x2="-2.5" y2="-4.125" width="0.4" layer="51"/>
+<wire x1="-2.5" y1="-4.125" x2="-2.5" y2="-0.15" width="0.4" layer="21"/>
+<wire x1="2.5" y1="-5" x2="2.5" y2="-4.125" width="0.4" layer="51"/>
+<wire x1="2.5" y1="-4.125" x2="2.5" y2="-0.15" width="0.4" layer="21"/>
+<pad name="1" x="-2.5" y="-5" drill="0.7" diameter="1.4"/>
+<pad name="2" x="2.5" y="-5" drill="0.7" diameter="1.4"/>
+<text x="-4.445" y="0.635" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="0" y="2.54" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-3.25" y1="16" x2="3.25" y2="22.25" layer="21"/>
+</package>
+<package name="D11XX">
+<description>&lt;b&gt;Photo Sensor&lt;/b&gt; Oil Burner Control Applications&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_PhotocellsD1160.pdf</description>
+<wire x1="-4.05" y1="-0.05" x2="4.05" y2="-0.05" width="0.2032" layer="21" curve="-180"/>
+<wire x1="4.05" y1="0.05" x2="-4.05" y2="0.05" width="0.2032" layer="21" curve="-180"/>
+<wire x1="-2.95" y1="-2.575" x2="-2.95" y2="-0.7" width="0.1016" layer="21"/>
+<wire x1="-2.95" y1="0.675" x2="-2.95" y2="2.5" width="0.1016" layer="21"/>
+<wire x1="-2.95" y1="2.5" x2="2.95" y2="2.5" width="0.1016" layer="21"/>
+<wire x1="2.95" y1="2.5" x2="2.95" y2="0.675" width="0.1016" layer="21"/>
+<wire x1="2.95" y1="-0.65" x2="2.95" y2="-2.575" width="0.1016" layer="21"/>
+<wire x1="2.95" y1="-2.575" x2="-2.95" y2="-2.575" width="0.1016" layer="21"/>
+<wire x1="-0.9" y1="-3.575" x2="-0.9" y2="-2.775" width="0.1016" layer="21"/>
+<wire x1="0.9" y1="-3.575" x2="0.9" y2="-2.775" width="0.1016" layer="21"/>
+<pad name="1" x="-2.5" y="0" drill="0.7" diameter="1.4"/>
+<pad name="2" x="2.5" y="0" drill="0.7" diameter="1.4"/>
+<text x="-2.54" y="-5.715" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.81" y="4.445" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-3" y1="-2.625" x2="3" y2="2.55" layer="51"/>
+<polygon width="0.1016" layer="21">
+<vertex x="-0.9" y="-2.775"/>
+<vertex x="-1.2" y="-3.35"/>
+<vertex x="-0.6" y="-3.35"/>
+</polygon>
+<polygon width="0.1016" layer="21">
+<vertex x="0.9" y="-2.775"/>
+<vertex x="0.6" y="-3.35"/>
+<vertex x="1.2" y="-3.35"/>
+</polygon>
+</package>
+<package name="W55XX">
+<description>&lt;b&gt;Photo Sensor&lt;/b&gt; Oil Burner Control Applications&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_PhotocellsD1160.pdf</description>
+<wire x1="-3.775" y1="-2.15" x2="-3.775" y2="2.15" width="0.2032" layer="21" curve="-180"/>
+<wire x1="-0.9" y1="-1.825" x2="-0.9" y2="-1.025" width="0.1016" layer="21"/>
+<wire x1="0.9" y1="-1.825" x2="0.9" y2="-1.025" width="0.1016" layer="21"/>
+<wire x1="3.775" y1="2.15" x2="3.775" y2="-2.15" width="0.2032" layer="21" curve="-180"/>
+<wire x1="-3.775" y1="2.15" x2="3.775" y2="2.15" width="0.2032" layer="21"/>
+<wire x1="3.775" y1="-2.15" x2="-3.775" y2="-2.15" width="0.2032" layer="21"/>
+<wire x1="-3.5" y1="2.2" x2="3.5" y2="2.2" width="0.2032" layer="21" curve="-45.23973"/>
+<wire x1="3.5" y1="-2.2" x2="-3.5" y2="-2.2" width="0.2032" layer="21" curve="-45.23973"/>
+<pad name="1" x="-3.81" y="0" drill="0.7" diameter="1.4"/>
+<pad name="2" x="3.81" y="0" drill="0.7" diameter="1.4"/>
+<text x="-3.25" y="-4.5" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.5" y="3.25" size="1.27" layer="27">&gt;VALUE</text>
+<polygon width="0.1016" layer="21">
+<vertex x="-0.9" y="-1.025"/>
+<vertex x="-1.2" y="-1.6"/>
+<vertex x="-0.6" y="-1.6"/>
+</polygon>
+<polygon width="0.1016" layer="21">
+<vertex x="0.9" y="-1.025"/>
+<vertex x="0.6" y="-1.6"/>
+<vertex x="1.2" y="-1.6"/>
+</polygon>
+</package>
+<package name="W55XX_H">
+<description>&lt;b&gt;Photo Sensor&lt;/b&gt; Oil Burner Control Applications&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_PhotocellsD1160.pdf</description>
+<wire x1="-5.925" y1="24.9" x2="-3.925" y2="26.9" width="0.2032" layer="21" curve="-90"/>
+<wire x1="-3.925" y1="26.9" x2="3.925" y2="26.9" width="0.2032" layer="21"/>
+<wire x1="3.925" y1="26.9" x2="5.925" y2="24.9" width="0.2032" layer="21" curve="-90"/>
+<wire x1="-5.925" y1="24.9" x2="-5.925" y2="2" width="0.2032" layer="21"/>
+<wire x1="-5.925" y1="2" x2="-3.925" y2="0" width="0.2032" layer="21" curve="90"/>
+<wire x1="-3.925" y1="0" x2="3.925" y2="0" width="0.2032" layer="21"/>
+<wire x1="3.925" y1="0" x2="5.925" y2="2" width="0.2032" layer="21" curve="90"/>
+<wire x1="5.925" y1="2" x2="5.925" y2="24.9" width="0.2032" layer="21"/>
+<wire x1="-3.81" y1="-5.08" x2="-3.81" y2="-0.145" width="0.4" layer="21"/>
+<wire x1="-3.81" y1="-5.08" x2="-3.81" y2="-6" width="0.4" layer="51"/>
+<wire x1="3.81" y1="-5.08" x2="3.81" y2="-0.145" width="0.4" layer="21"/>
+<wire x1="3.81" y1="-5.08" x2="3.81" y2="-6" width="0.4" layer="51"/>
+<pad name="1" x="-3.81" y="-6" drill="0.7" diameter="1.4"/>
+<pad name="2" x="3.81" y="-6" drill="0.7" diameter="1.4"/>
+<text x="-6.35" y="1.27" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="-3.81" y="3.175" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-4.5" y1="9" x2="4.5" y2="25" layer="21"/>
+</package>
+<package name="U1160_H">
+<description>&lt;b&gt;Sensor&lt;/b&gt; Oil Burner Control Applications&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_U1160.pdf</description>
+<wire x1="-1.5" y1="0" x2="-2.5" y2="1" width="0.2032" layer="21" curve="-90"/>
+<wire x1="-2.5" y1="1" x2="-2.5" y2="12.4" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="12.4" x2="2.5" y2="12.4" width="0.2032" layer="21" curve="-180"/>
+<wire x1="2.5" y1="12.4" x2="2.5" y2="1" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="1" x2="1.5" y2="0" width="0.2032" layer="21" curve="-90"/>
+<wire x1="1.5" y1="0" x2="-1.5" y2="0" width="0.2032" layer="21"/>
+<wire x1="-1.27" y1="-5" x2="-1.27" y2="-4.125" width="0.4" layer="51"/>
+<wire x1="-1.27" y1="-4.125" x2="-1.27" y2="-0.15" width="0.4" layer="21"/>
+<wire x1="1.27" y1="-5" x2="1.27" y2="-4.125" width="0.4" layer="51"/>
+<wire x1="1.27" y1="-4.125" x2="1.27" y2="-0.15" width="0.4" layer="21"/>
+<pad name="1" x="-1.27" y="-5" drill="0.7" diameter="1.4"/>
+<pad name="2" x="1.27" y="-5" drill="0.7" diameter="1.4"/>
+<text x="-3.175" y="0.635" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="0.635" y="1.27" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-2" y1="10.5" x2="2" y2="13.5" layer="21"/>
+</package>
+<package name="U1160">
+<description>&lt;b&gt;Sensor&lt;/b&gt; Oil Burner Control Applications&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_U1160.pdf</description>
+<wire x1="-2.5" y1="-0.025" x2="2.5" y2="-0.025" width="0.2032" layer="21" curve="-180"/>
+<wire x1="2.5" y1="0.025" x2="-2.5" y2="0.025" width="0.2032" layer="21" curve="-180"/>
+<wire x1="-1.9" y1="0.6" x2="-1.9" y2="1.4" width="0.2032" layer="21"/>
+<wire x1="-1.9" y1="1.4" x2="1.9" y2="1.4" width="0.2032" layer="21"/>
+<wire x1="1.9" y1="1.4" x2="1.9" y2="0.6" width="0.2032" layer="21"/>
+<wire x1="1.9" y1="-0.6" x2="1.9" y2="-1.4" width="0.2032" layer="21"/>
+<wire x1="1.9" y1="-1.4" x2="-1.9" y2="-1.4" width="0.2032" layer="21"/>
+<wire x1="-1.9" y1="-1.4" x2="-1.9" y2="-0.6" width="0.2032" layer="21"/>
+<wire x1="-0.5" y1="-2.2" x2="-0.5" y2="-1.65" width="0.1016" layer="21"/>
+<wire x1="0.5" y1="-2.2" x2="0.5" y2="-1.65" width="0.1016" layer="21"/>
+<pad name="1" x="-1.27" y="0" drill="0.7" diameter="1.4"/>
+<pad name="2" x="1.27" y="0" drill="0.7" diameter="1.4"/>
+<text x="-2.5" y="-4" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3" y="3" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-2" y1="-1.5" x2="2" y2="1.5" layer="51"/>
+<polygon width="0.1016" layer="21">
+<vertex x="-0.5" y="-1.65"/>
+<vertex x="-0.65" y="-2.025"/>
+<vertex x="-0.35" y="-2.025"/>
+</polygon>
+<polygon width="0.1016" layer="21">
+<vertex x="0.5" y="-1.65"/>
+<vertex x="0.35" y="-2.025"/>
+<vertex x="0.65" y="-2.025"/>
+</polygon>
+</package>
+<package name="T0-46-A10XX">
+<description>&lt;b&gt;Sensor&lt;/b&gt; Robust Light Sensing Applications&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_PhotocellsA1050.pdf</description>
+<wire x1="-1.4326" y1="-1.5" x2="1.4326" y2="-1.5" width="0.2032" layer="21"/>
+<wire x1="1.4326" y1="-1.5" x2="1.4326" y2="-0.825" width="0.2032" layer="21"/>
+<wire x1="1.4326" y1="0.825" x2="1.4326" y2="1.5" width="0.2032" layer="21"/>
+<wire x1="1.4326" y1="1.5" x2="-1.4326" y2="1.5" width="0.2032" layer="21"/>
+<wire x1="-1.4326" y1="1.5" x2="-1.4326" y2="0.825" width="0.2032" layer="21"/>
+<wire x1="-1.4326" y1="-0.825" x2="-1.4326" y2="-1.5" width="0.2032" layer="21"/>
+<wire x1="-0.8758" y1="1.4147" x2="-0.4042" y2="0.9432" width="0.2032" layer="21" curve="90"/>
+<wire x1="-0.4042" y1="0.9432" x2="0.6737" y2="0.9432" width="0.2032" layer="21"/>
+<wire x1="0.6737" y1="0.9432" x2="0.6737" y2="0.6063" width="0.2032" layer="21" curve="-180"/>
+<wire x1="0.6737" y1="0.6063" x2="-0.2021" y2="0.6063" width="0.2032" layer="21"/>
+<wire x1="-0.2021" y1="0.6063" x2="-0.2021" y2="0.2695" width="0.2032" layer="21" curve="180"/>
+<wire x1="-0.2021" y1="0.2695" x2="0.2021" y2="0.2695" width="0.2032" layer="21"/>
+<wire x1="0.2021" y1="0.2695" x2="0.2021" y2="-0.0674" width="0.2032" layer="21" curve="-180"/>
+<wire x1="0.2021" y1="-0.0674" x2="-0.2021" y2="-0.0674" width="0.2032" layer="21"/>
+<wire x1="-0.2021" y1="-0.0674" x2="-0.2021" y2="-0.4042" width="0.2032" layer="21" curve="180"/>
+<wire x1="-0.2021" y1="-0.4042" x2="0.1347" y2="-0.4042" width="0.2032" layer="21"/>
+<wire x1="0.1347" y1="-0.4042" x2="0.1347" y2="-0.741" width="0.2032" layer="21" curve="-180"/>
+<wire x1="0.1347" y1="-0.741" x2="-0.6737" y2="-0.741" width="0.2032" layer="21"/>
+<wire x1="-0.6737" y1="-0.741" x2="-0.6737" y2="-1.0779" width="0.2032" layer="21" curve="180"/>
+<wire x1="-0.6737" y1="-1.0779" x2="0.6063" y2="-1.0779" width="0.2032" layer="21"/>
+<wire x1="0.6063" y1="-1.0779" x2="0.8758" y2="-1.4147" width="0.2032" layer="21" curve="-102.667937"/>
+<circle x="0" y="0" radius="3.1" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="2.55" width="0.2032" layer="21"/>
+<pad name="1" x="-1.7" y="0" drill="0.7" diameter="1.4"/>
+<pad name="2" x="1.7" y="0" drill="0.7" diameter="1.4"/>
+<text x="-1.905" y="-5.08" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.905" y="3.81" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="TO-8_B10">
+<description>&lt;b&gt;Sensor&lt;/b&gt; Street Light control&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_PhotocellsB1060.pdf</description>
+<wire x1="-3.6" y1="-3.6" x2="-3.6" y2="-1" width="0.2032" layer="21"/>
+<wire x1="-3.6" y1="1" x2="-3.6" y2="3.6" width="0.2032" layer="21"/>
+<wire x1="-3.6" y1="3.6" x2="3.6" y2="3.6" width="0.2032" layer="21"/>
+<wire x1="3.6" y1="3.6" x2="3.6" y2="1" width="0.2032" layer="21"/>
+<wire x1="3.6" y1="-1" x2="3.6" y2="-3.6" width="0.2032" layer="21"/>
+<wire x1="3.6" y1="-3.6" x2="-3.6" y2="-3.6" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="3.5" x2="2.5" y2="3" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="3" x2="-2.5" y2="3" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="3" x2="-2.5" y2="2.5" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="2.5" x2="2.5" y2="2.5" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="2.5" x2="2.5" y2="2" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="2" x2="-2.5" y2="2" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="2" x2="-2.5" y2="1.5" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="1.5" x2="2" y2="1.5" width="0.2032" layer="21"/>
+<wire x1="2" y1="1.5" x2="2" y2="1" width="0.2032" layer="21"/>
+<wire x1="2" y1="1" x2="-2" y2="1" width="0.2032" layer="21"/>
+<wire x1="-2" y1="1" x2="-2" y2="0.5" width="0.2032" layer="21"/>
+<wire x1="-2" y1="0.5" x2="2" y2="0.5" width="0.2032" layer="21"/>
+<wire x1="2" y1="0.5" x2="2" y2="0" width="0.2032" layer="21"/>
+<wire x1="2" y1="0" x2="-2" y2="0" width="0.2032" layer="21"/>
+<wire x1="-2" y1="0" x2="-2" y2="-0.5" width="0.2032" layer="21"/>
+<wire x1="-2" y1="-0.5" x2="2" y2="-0.5" width="0.2032" layer="21"/>
+<wire x1="2" y1="-0.5" x2="2" y2="-1" width="0.2032" layer="21"/>
+<wire x1="2" y1="-1" x2="-2.5" y2="-1" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="-1" x2="-2.5" y2="-1.5" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="-1.5" x2="2.5" y2="-1.5" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="-1.5" x2="2.5" y2="-2" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="-2" x2="-2.5" y2="-2" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="-2" x2="-2.5" y2="-2.5" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="-2.5" x2="2.5" y2="-2.5" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="-2.5" x2="2.5" y2="-3" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="-3" x2="-2.5" y2="-3" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="-3" x2="-2.5" y2="-3.5" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="6.9001" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="6.1002" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="5.3002" width="0.2032" layer="21"/>
+<pad name="1" x="-3.75" y="0" drill="0.8" diameter="1.4"/>
+<pad name="2" x="3.75" y="0" drill="0.8" diameter="1.4"/>
+<text x="-3" y="-8.5" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.5" y="7.5" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="TO-5_V10">
+<description>&lt;b&gt;Sensor&lt;/b&gt; Street Light control&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_PhotocellsB1060.pdf</description>
+<wire x1="-2.6" y1="-2.6" x2="-2.6" y2="-1" width="0.2032" layer="21"/>
+<wire x1="-2.6" y1="1" x2="-2.6" y2="2.6" width="0.2032" layer="21"/>
+<wire x1="-2.6" y1="2.6" x2="2.6" y2="2.6" width="0.2032" layer="21"/>
+<wire x1="2.6" y1="2.6" x2="2.6" y2="1" width="0.2032" layer="21"/>
+<wire x1="2.6" y1="-1" x2="2.6" y2="-2.6" width="0.2032" layer="21"/>
+<wire x1="2.6" y1="-2.6" x2="-2.6" y2="-2.6" width="0.2032" layer="21"/>
+<wire x1="2" y1="2.5" x2="2" y2="2" width="0.2032" layer="21"/>
+<wire x1="2" y1="2" x2="-2" y2="2" width="0.2032" layer="21"/>
+<wire x1="-2" y1="2" x2="-2" y2="1.5" width="0.2032" layer="21"/>
+<wire x1="-2" y1="1.5" x2="2" y2="1.5" width="0.2032" layer="21"/>
+<wire x1="2" y1="1.5" x2="2" y2="1" width="0.2032" layer="21"/>
+<wire x1="2" y1="1" x2="-1.5" y2="1" width="0.2032" layer="21"/>
+<wire x1="-1.5" y1="1" x2="-1.5" y2="0.5" width="0.2032" layer="21"/>
+<wire x1="-1.5" y1="0.5" x2="1.5" y2="0.5" width="0.2032" layer="21"/>
+<wire x1="1.5" y1="0.5" x2="1.5" y2="0" width="0.2032" layer="21"/>
+<wire x1="1.5" y1="0" x2="-1.5" y2="0" width="0.2032" layer="21"/>
+<wire x1="-1.5" y1="0" x2="-1.5" y2="-0.5" width="0.2032" layer="21"/>
+<wire x1="-1.5" y1="-0.5" x2="1.5" y2="-0.5" width="0.2032" layer="21"/>
+<wire x1="1.5" y1="-0.5" x2="1.5" y2="-1" width="0.2032" layer="21"/>
+<wire x1="1.5" y1="-1" x2="-2" y2="-1" width="0.2032" layer="21"/>
+<wire x1="-2" y1="-1" x2="-2" y2="-1.5" width="0.2032" layer="21"/>
+<wire x1="-2" y1="-1.5" x2="2" y2="-1.5" width="0.2032" layer="21"/>
+<wire x1="2" y1="-1.5" x2="2" y2="-2" width="0.2032" layer="21"/>
+<wire x1="2" y1="-2" x2="-2" y2="-2" width="0.2032" layer="21"/>
+<wire x1="-2" y1="-2" x2="-2" y2="-2.5" width="0.2032" layer="21"/>
+<wire x1="3.5" y1="-3" x2="4" y2="-3.5" width="0.2032" layer="21"/>
+<wire x1="4" y1="-3.5" x2="3.5" y2="-4" width="0.2032" layer="21"/>
+<wire x1="3.5" y1="-4" x2="3" y2="-3.5" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="3.9262" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="4.55" width="0.2032" layer="21"/>
+<pad name="1" x="-2.7" y="0" drill="0.8" diameter="1.4"/>
+<pad name="2" x="2.7" y="0" drill="0.8" diameter="1.4"/>
+<text x="-2.5" y="-6.5" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3" y="5" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="M9960_H">
+<description>&lt;b&gt;Photo Sensor&lt;/b&gt; Beacon Light, Photometer Applications&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_M9960.pdf</description>
+<wire x1="-2.5" y1="2.55" x2="-2.5" y2="7.75" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="7.75" x2="2.5" y2="7.75" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="2.55" x2="2.5" y2="2.55" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="2.55" x2="2.5" y2="7.75" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="0" x2="-1.75" y2="0.988" width="0.4" layer="51"/>
+<wire x1="1.75" y1="0" x2="1.75" y2="0.988" width="0.4" layer="51"/>
+<wire x1="-1.75" y1="0.988" x2="-1.75" y2="2.434" width="0.4" layer="21"/>
+<wire x1="1.75" y1="0.988" x2="1.75" y2="2.434" width="0.4" layer="21"/>
+<wire x1="1.778" y1="2.54" x2="1.524" y2="2.794" width="0.1016" layer="21" curve="90"/>
+<wire x1="1.524" y1="2.794" x2="-1.524" y2="2.794" width="0.1016" layer="21"/>
+<wire x1="-1.524" y1="2.794" x2="-1.524" y2="3.048" width="0.1016" layer="21" curve="-180"/>
+<wire x1="-1.524" y1="3.048" x2="1.524" y2="3.048" width="0.1016" layer="21"/>
+<wire x1="1.524" y1="3.048" x2="1.524" y2="3.302" width="0.1016" layer="21" curve="180"/>
+<wire x1="1.524" y1="3.302" x2="-1.524" y2="3.302" width="0.1016" layer="21"/>
+<wire x1="-1.524" y1="3.302" x2="-1.524" y2="3.556" width="0.1016" layer="21" curve="-180"/>
+<wire x1="-1.524" y1="3.556" x2="1.524" y2="3.556" width="0.1016" layer="21"/>
+<wire x1="1.524" y1="3.556" x2="1.524" y2="3.81" width="0.1016" layer="21" curve="180"/>
+<wire x1="1.524" y1="3.81" x2="-1.524" y2="3.81" width="0.1016" layer="21"/>
+<wire x1="-1.524" y1="3.81" x2="-1.524" y2="4.064" width="0.1016" layer="21" curve="-180"/>
+<wire x1="-1.524" y1="4.064" x2="1.524" y2="4.064" width="0.1016" layer="21"/>
+<wire x1="1.524" y1="4.064" x2="1.524" y2="4.318" width="0.1016" layer="21" curve="180"/>
+<wire x1="1.524" y1="4.318" x2="-1.524" y2="4.318" width="0.1016" layer="21"/>
+<wire x1="-1.524" y1="4.318" x2="-1.524" y2="4.572" width="0.1016" layer="21" curve="-180"/>
+<wire x1="-1.524" y1="4.572" x2="1.524" y2="4.572" width="0.1016" layer="21"/>
+<wire x1="1.524" y1="4.572" x2="1.524" y2="4.826" width="0.1016" layer="21" curve="180"/>
+<wire x1="1.524" y1="4.826" x2="-1.524" y2="4.826" width="0.1016" layer="21"/>
+<wire x1="-1.524" y1="4.826" x2="-1.524" y2="5.08" width="0.1016" layer="21" curve="-180"/>
+<wire x1="-1.524" y1="5.08" x2="1.524" y2="5.08" width="0.1016" layer="21"/>
+<wire x1="1.524" y1="5.08" x2="1.524" y2="5.334" width="0.1016" layer="21" curve="180"/>
+<wire x1="1.524" y1="5.334" x2="-1.524" y2="5.334" width="0.1016" layer="21"/>
+<wire x1="-1.524" y1="5.334" x2="-1.524" y2="5.588" width="0.1016" layer="21" curve="-180"/>
+<wire x1="-1.524" y1="5.588" x2="1.524" y2="5.588" width="0.1016" layer="21"/>
+<wire x1="1.524" y1="5.588" x2="1.524" y2="5.842" width="0.1016" layer="21" curve="180"/>
+<wire x1="1.524" y1="5.842" x2="-0.762" y2="5.842" width="0.1016" layer="21"/>
+<wire x1="-0.762" y1="5.842" x2="-0.762" y2="6.096" width="0.1016" layer="21" curve="-180"/>
+<wire x1="-0.762" y1="6.096" x2="0.762" y2="6.096" width="0.1016" layer="21"/>
+<wire x1="0.762" y1="6.096" x2="0.762" y2="6.35" width="0.1016" layer="21" curve="180"/>
+<wire x1="0.762" y1="6.35" x2="-0.762" y2="6.35" width="0.1016" layer="21"/>
+<wire x1="-0.762" y1="6.35" x2="-0.762" y2="6.604" width="0.1016" layer="21" curve="-180"/>
+<wire x1="-0.762" y1="6.604" x2="0.762" y2="6.604" width="0.1016" layer="21"/>
+<wire x1="0.762" y1="6.604" x2="0.762" y2="6.858" width="0.1016" layer="21" curve="180"/>
+<wire x1="0.762" y1="6.858" x2="-0.762" y2="6.858" width="0.1016" layer="21"/>
+<wire x1="-0.762" y1="6.858" x2="-0.762" y2="7.112" width="0.1016" layer="21" curve="-180"/>
+<wire x1="-0.762" y1="7.112" x2="0.762" y2="7.112" width="0.1016" layer="21"/>
+<wire x1="0.762" y1="7.112" x2="0.762" y2="7.366" width="0.1016" layer="21" curve="180"/>
+<wire x1="0.762" y1="7.366" x2="-0.762" y2="7.366" width="0.1016" layer="21"/>
+<wire x1="-0.762" y1="7.366" x2="-1.016" y2="7.62" width="0.1016" layer="21" curve="-90"/>
+<circle x="-1.778" y="6.858" radius="0.254" width="0.1016" layer="21"/>
+<circle x="1.778" y="6.858" radius="0.254" width="0.1016" layer="21"/>
+<pad name="1" x="-1.75" y="0" drill="0.8" diameter="1.4"/>
+<pad name="2" x="1.75" y="0" drill="0.8" diameter="1.4"/>
+<text x="-1.778" y="-2.286" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="8.128" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="M9960">
+<description>&lt;b&gt;Photo Sensor&lt;/b&gt; Beacon Light, Photometer Applications&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_M9960.pdf</description>
+<wire x1="-2.5" y1="-1.26" x2="-2.5" y2="-0.378" width="0.2032" layer="21"/>
+<wire x1="-2.5" y1="-0.378" x2="2.5" y2="-0.378" width="0.2032" layer="51"/>
+<wire x1="-2.5" y1="-1.26" x2="2.5" y2="-1.26" width="0.2032" layer="21"/>
+<wire x1="2.5" y1="-1.26" x2="2.5" y2="-0.378" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="0" x2="-1.75" y2="-0.282" width="0.4" layer="51"/>
+<wire x1="1.75" y1="0" x2="1.75" y2="-0.282" width="0.4" layer="51"/>
+<pad name="1" x="-1.75" y="0" drill="0.8" diameter="1.4"/>
+<pad name="2" x="1.75" y="0" drill="0.8" diameter="1.4"/>
+<text x="-2.54" y="-3.175" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.175" y="1.27" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="TO46-VT200">
+<description>&lt;b&gt;Photoconductive Cell&lt;/b&gt; VT200 Series&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt200seriesdatasheet.pdf</description>
+<wire x1="-0.5" y1="2" x2="-0.5" y2="1.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="-0.5" y1="1.5" x2="1" y2="1.5" width="0.1016" layer="21"/>
+<wire x1="1" y1="1.5" x2="1" y2="1" width="0.1016" layer="21" curve="-180"/>
+<wire x1="1" y1="1" x2="-0.5" y2="1" width="0.1016" layer="21"/>
+<wire x1="-0.5" y1="1" x2="-0.5" y2="0.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="-0.5" y1="0.5" x2="0.25" y2="0.5" width="0.1016" layer="21"/>
+<wire x1="0.25" y1="0.5" x2="0.25" y2="0" width="0.1016" layer="21" curve="-180"/>
+<wire x1="0.25" y1="0" x2="-0.25" y2="0" width="0.1016" layer="21"/>
+<wire x1="-0.25" y1="0" x2="-0.25" y2="-0.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="-0.25" y1="-0.5" x2="0.25" y2="-0.5" width="0.1016" layer="21"/>
+<wire x1="0.25" y1="-0.5" x2="0.25" y2="-1" width="0.1016" layer="21" curve="-180"/>
+<wire x1="0.25" y1="-1" x2="-1" y2="-1" width="0.1016" layer="21"/>
+<wire x1="-1" y1="-1" x2="-1" y2="-1.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="-1" y1="-1.5" x2="0.75" y2="-1.5" width="0.1016" layer="21"/>
+<wire x1="0.75" y1="-1.5" x2="0.75" y2="-2" width="0.1016" layer="21" curve="-180"/>
+<wire x1="0.75" y1="-2" x2="-0.5" y2="-2" width="0.1016" layer="21"/>
+<wire x1="-0.5" y1="-2" x2="-0.75" y2="-2.25" width="0.1016" layer="21" curve="90"/>
+<wire x1="-0.5" y1="2" x2="0.5" y2="2" width="0.1016" layer="21"/>
+<wire x1="0.5" y1="2" x2="0.75" y2="2.25" width="0.1016" layer="21" curve="90"/>
+<circle x="0" y="0" radius="2.8" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="2.35" width="0.2032" layer="21"/>
+<pad name="1" x="-1.27" y="0" drill="0.8" diameter="1.4"/>
+<pad name="2" x="1.27" y="0" drill="0.8" diameter="1.4"/>
+<text x="-2.25" y="-4.25" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.75" y="3" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="VT300">
+<description>&lt;b&gt;Photo Sensor Dual Element&lt;/b&gt; VT300CT Series&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt300ctseriesdatasheet.pdf</description>
+<wire x1="-3.56" y1="3.04" x2="-4.08" y2="3.56" width="0.2032" layer="21"/>
+<wire x1="-4.08" y1="3.56" x2="-3.56" y2="4.08" width="0.2032" layer="21"/>
+<wire x1="-3.56" y1="4.08" x2="-3.04" y2="3.56" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="3.0501" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="4.15" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="4.6" width="0.2032" layer="21"/>
+<pad name="1" x="-2.54" y="0" drill="0.8" diameter="1.4"/>
+<pad name="2" x="0" y="2.54" drill="0.8" diameter="1.4"/>
+<pad name="3" x="2.54" y="0" drill="0.8" diameter="1.4"/>
+<text x="-3.52" y="-6.79" size="1.27" layer="25">&gt;NAME</text>
+<text x="-4.02" y="5.54" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="VT400">
+<description>&lt;b&gt;Photoconductive Cell&lt;/b&gt; VT400 Series&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt400seriesdatasheet.pdf</description>
+<wire x1="-2.75" y1="4.575" x2="2.8" y2="4.575" width="0.254" layer="21"/>
+<wire x1="2.75" y1="-4.575" x2="-2.8" y2="-4.575" width="0.254" layer="21"/>
+<wire x1="-2.825" y1="-4.575" x2="-2.825" y2="4.575" width="0.254" layer="21" curve="-116.610473"/>
+<wire x1="2.825" y1="4.575" x2="2.825" y2="-4.575" width="0.254" layer="21" curve="-116.610473"/>
+<wire x1="2" y1="4.5" x2="1.5" y2="4" width="0.254" layer="21" curve="-90"/>
+<wire x1="1.5" y1="4" x2="-2.5" y2="4" width="0.254" layer="21"/>
+<wire x1="-2.5" y1="4" x2="-2.5" y2="3" width="0.254" layer="21" curve="180"/>
+<wire x1="-2.5" y1="3" x2="3" y2="3" width="0.254" layer="21"/>
+<wire x1="3" y1="3" x2="3" y2="2" width="0.254" layer="21" curve="-180"/>
+<wire x1="3" y1="2" x2="-3" y2="2" width="0.254" layer="21"/>
+<wire x1="-3" y1="2" x2="-3" y2="1" width="0.254" layer="21" curve="180"/>
+<wire x1="-3" y1="1" x2="1.5" y2="1" width="0.254" layer="21"/>
+<wire x1="1.5" y1="1" x2="1.5" y2="0" width="0.254" layer="21" curve="-180"/>
+<wire x1="1.5" y1="0" x2="-1.5" y2="0" width="0.254" layer="21"/>
+<wire x1="-1.5" y1="0" x2="-1.5" y2="-1" width="0.254" layer="21" curve="180"/>
+<wire x1="-1.5" y1="-1" x2="2.5" y2="-1" width="0.254" layer="21"/>
+<wire x1="2.5" y1="-1" x2="2.5" y2="-2" width="0.254" layer="21" curve="-180"/>
+<wire x1="2.5" y1="-2" x2="-3" y2="-2" width="0.254" layer="21"/>
+<wire x1="-3" y1="-2" x2="-3" y2="-3" width="0.254" layer="21" curve="180"/>
+<wire x1="-3" y1="-3" x2="2.5" y2="-3" width="0.254" layer="21"/>
+<wire x1="2.5" y1="-3" x2="2.5" y2="-4" width="0.254" layer="21" curve="-180"/>
+<wire x1="2.5" y1="-4" x2="-2" y2="-4" width="0.254" layer="21"/>
+<wire x1="-2" y1="-4" x2="-2.5" y2="-4.5" width="0.254" layer="21" curve="90"/>
+<pad name="1" x="-3.81" y="0" drill="0.8" diameter="1.4"/>
+<pad name="2" x="3.81" y="0" drill="0.8" diameter="1.4"/>
+<text x="-3.5" y="-6.46" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.5" y="4.96" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="VT500">
+<description>&lt;b&gt;Photoconductive Cell&lt;/b&gt; VT500 Sereis&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt500seriesdatasheet.pdf</description>
+<wire x1="-3" y1="2" x2="-3" y2="1.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="-3" y1="1.5" x2="3" y2="1.5" width="0.1016" layer="21"/>
+<wire x1="3" y1="1.5" x2="3" y2="1" width="0.1016" layer="21" curve="-180"/>
+<wire x1="3" y1="1" x2="-2.5" y2="1" width="0.1016" layer="21"/>
+<wire x1="-2.5" y1="1" x2="-2.5" y2="0.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="-2.5" y1="0.5" x2="2.25" y2="0.5" width="0.1016" layer="21"/>
+<wire x1="2.25" y1="0.5" x2="2.25" y2="0" width="0.1016" layer="21" curve="-180"/>
+<wire x1="2.25" y1="0" x2="-2.25" y2="0" width="0.1016" layer="21"/>
+<wire x1="-2.25" y1="0" x2="-2.25" y2="-0.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="-2.25" y1="-0.5" x2="2.25" y2="-0.5" width="0.1016" layer="21"/>
+<wire x1="2.25" y1="-0.5" x2="2.25" y2="-1" width="0.1016" layer="21" curve="-180"/>
+<wire x1="2.25" y1="-1" x2="-3" y2="-1" width="0.1016" layer="21"/>
+<wire x1="-3" y1="-1" x2="-3" y2="-1.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="-3" y1="-1.5" x2="4.75" y2="-1.5" width="0.1016" layer="21"/>
+<wire x1="4.75" y1="-1.5" x2="4.75" y2="-2" width="0.1016" layer="21" curve="-180"/>
+<wire x1="-3" y1="2" x2="4" y2="2" width="0.1016" layer="21"/>
+<wire x1="4" y1="2" x2="4" y2="2.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="4" y1="2.5" x2="-4" y2="2.5" width="0.1016" layer="21"/>
+<wire x1="-4" y1="2.5" x2="-4" y2="3" width="0.1016" layer="21" curve="-180"/>
+<wire x1="-4" y1="3" x2="4" y2="3" width="0.1016" layer="21"/>
+<wire x1="4" y1="3" x2="4" y2="3.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="4" y1="3.5" x2="-3.5" y2="3.5" width="0.1016" layer="21"/>
+<wire x1="-3.5" y1="3.5" x2="-3.5" y2="4" width="0.1016" layer="21" curve="-180"/>
+<wire x1="-3.5" y1="4" x2="3.5" y2="4" width="0.1016" layer="21"/>
+<wire x1="3.5" y1="4" x2="3.5" y2="4.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="3.5" y1="4.5" x2="-2.5" y2="4.5" width="0.1016" layer="21"/>
+<wire x1="-2.5" y1="4.5" x2="-2.5" y2="5" width="0.1016" layer="21" curve="-180"/>
+<wire x1="-2.5" y1="5" x2="2.5" y2="5" width="0.1016" layer="21"/>
+<wire x1="2.5" y1="5" x2="2.5" y2="5.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="2.5" y1="5.5" x2="-2" y2="5.5" width="0.1016" layer="21"/>
+<wire x1="-2" y1="5.5" x2="-2.5" y2="6" width="0.1016" layer="21" curve="-90"/>
+<wire x1="4.75" y1="-2" x2="-4.5" y2="-2" width="0.1016" layer="21"/>
+<wire x1="-4.5" y1="-2" x2="-4.5" y2="-2.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="-4.5" y1="-2.5" x2="4" y2="-2.5" width="0.1016" layer="21"/>
+<wire x1="4" y1="-2.5" x2="4" y2="-3" width="0.1016" layer="21" curve="-180"/>
+<wire x1="4" y1="-3" x2="-4" y2="-3" width="0.1016" layer="21"/>
+<wire x1="-4" y1="-3" x2="-4" y2="-3.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="-4" y1="-3.5" x2="3.5" y2="-3.5" width="0.1016" layer="21"/>
+<wire x1="3.5" y1="-3.5" x2="3.5" y2="-4" width="0.1016" layer="21" curve="-180"/>
+<wire x1="3.5" y1="-4" x2="-3.5" y2="-4" width="0.1016" layer="21"/>
+<wire x1="-3.5" y1="-4" x2="-3.5" y2="-4.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="-3.5" y1="-4.5" x2="2.5" y2="-4.5" width="0.1016" layer="21"/>
+<wire x1="2.5" y1="-4.5" x2="2.5" y2="-5" width="0.1016" layer="21" curve="-180"/>
+<wire x1="2.5" y1="-5" x2="-2" y2="-5" width="0.1016" layer="21"/>
+<wire x1="-2" y1="-5" x2="-2" y2="-5.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="-2" y1="-5.5" x2="2" y2="-5.5" width="0.1016" layer="21"/>
+<wire x1="2" y1="-5.5" x2="2.5" y2="-6" width="0.1016" layer="21" curve="-90"/>
+<circle x="0" y="0" radius="8.1503" width="0.2032" layer="21"/>
+<circle x="0" y="0" radius="6.5504" width="0.2032" layer="21"/>
+<pad name="1" x="-3.81" y="0" drill="0.8" diameter="1.4"/>
+<pad name="2" x="3.81" y="0" drill="0.8" diameter="1.4"/>
+<text x="-3.52" y="-9.33" size="1.27" layer="25">&gt;NAME</text>
+<text x="-5.29" y="8.08" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="VT800CT">
+<description>&lt;b&gt;Photo Sensor Dual element&lt;/b&gt; VT800CT Series&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt800ctseriesdatasheet.pdf</description>
+<wire x1="-1.775" y1="2.9" x2="1.75" y2="2.9" width="0.2032" layer="21"/>
+<wire x1="1.775" y1="-2.9" x2="-1.75" y2="-2.9" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-2.9" x2="-1.775" y2="2.9" width="0.2032" layer="21" curve="-117.060986"/>
+<wire x1="1.75" y1="2.9" x2="1.775" y2="-2.9" width="0.2032" layer="21" curve="-117.060986"/>
+<wire x1="2.7403" y1="1.8314" x2="1.3023" y2="1.8314" width="0.2032" layer="21"/>
+<wire x1="1.3023" y1="1.8314" x2="-1.35" y2="1.825" width="0.2032" layer="21" curve="66.295727"/>
+<wire x1="-1.35" y1="1.825" x2="-1.35" y2="1.475" width="0.2032" layer="21"/>
+<wire x1="-1.35" y1="1.475" x2="1.2074" y2="1.5194" width="0.2032" layer="21" curve="-62.038393"/>
+<wire x1="1.2074" y1="1.5194" x2="1.6822" y2="1.5194" width="0.2032" layer="21"/>
+<wire x1="1.6822" y1="1.5194" x2="1.6822" y2="0.5426" width="0.2032" layer="21"/>
+<wire x1="1.6822" y1="0.5426" x2="0.8454" y2="0.5291" width="0.2032" layer="21"/>
+<wire x1="0.8454" y1="0.5291" x2="-0.925" y2="0.525" width="0.2032" layer="21" curve="80.181678"/>
+<wire x1="-0.925" y1="0.525" x2="-1.3973" y2="0.5155" width="0.2032" layer="21"/>
+<wire x1="-1.3973" y1="0.5155" x2="-1.3973" y2="0.2035" width="0.2032" layer="21"/>
+<wire x1="-1.3973" y1="0.2035" x2="-0.9161" y2="0.2035" width="0.2032" layer="21"/>
+<wire x1="0.9233" y1="0.1785" x2="1.5601" y2="0.1899" width="0.2032" layer="21"/>
+<wire x1="1.5601" y1="0.1899" x2="1.6822" y2="0.0678" width="0.2032" layer="21"/>
+<wire x1="1.6822" y1="0.0678" x2="1.6822" y2="-0.6647" width="0.2032" layer="21"/>
+<wire x1="1.6822" y1="-0.6647" x2="1.5465" y2="-0.8275" width="0.2032" layer="21"/>
+<wire x1="1.5465" y1="-0.8275" x2="1.0632" y2="-0.8275" width="0.2032" layer="21"/>
+<wire x1="1.0632" y1="-0.8275" x2="-1.0581" y2="-0.8411" width="0.2032" layer="21" curve="-80.028285"/>
+<wire x1="-1.0581" y1="-0.8411" x2="-1.4109" y2="-0.8411" width="0.2032" layer="21"/>
+<wire x1="-1.4109" y1="-0.8411" x2="-1.4109" y2="-1.1802" width="0.2032" layer="21"/>
+<wire x1="-1.4109" y1="-1.1802" x2="-1.1667" y2="-1.1802" width="0.2032" layer="21"/>
+<wire x1="-1.1667" y1="-1.1802" x2="1.1395" y2="-1.1938" width="0.2032" layer="21" curve="69.898694"/>
+<wire x1="1.1395" y1="-1.1938" x2="1.6686" y2="-1.1938" width="0.2032" layer="21"/>
+<wire x1="1.6686" y1="-1.1938" x2="1.7364" y2="-1.2752" width="0.2032" layer="21"/>
+<wire x1="1.7364" y1="-1.2752" x2="1.7364" y2="-1.9671" width="0.2032" layer="21"/>
+<wire x1="1.7364" y1="-1.9671" x2="-1.2616" y2="-2.2384" width="0.2032" layer="21" curve="-64.86142"/>
+<wire x1="-1.2616" y1="-2.2384" x2="-1.75" y2="-2.2384" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-2.2384" x2="-1.75" y2="-2.7675" width="0.2032" layer="21"/>
+<wire x1="-2.7403" y1="-1.8721" x2="-1.2481" y2="-1.8721" width="0.2032" layer="21"/>
+<wire x1="-1.2481" y1="-1.8721" x2="1.3702" y2="-1.8178" width="0.2032" layer="21" curve="60.653332"/>
+<wire x1="1.3702" y1="-1.8178" x2="1.3702" y2="-1.533" width="0.2032" layer="21"/>
+<wire x1="1.3702" y1="-1.533" x2="1.1531" y2="-1.533" width="0.2032" layer="21"/>
+<wire x1="1.1531" y1="-1.533" x2="-1.2566" y2="-1.4923" width="0.2032" layer="21" curve="-65.726121"/>
+<wire x1="-1.2566" y1="-1.4923" x2="-1.7229" y2="-1.4923" width="0.2032" layer="21"/>
+<wire x1="-1.7229" y1="-1.4923" x2="-1.7093" y2="-0.5426" width="0.2032" layer="21"/>
+<wire x1="-1.7093" y1="-0.5426" x2="-0.8547" y2="-0.5426" width="0.2032" layer="21"/>
+<wire x1="-0.8547" y1="-0.5426" x2="0.9496" y2="-0.5019" width="0.2032" layer="21" curve="86.200505"/>
+<wire x1="0.9496" y1="-0.5019" x2="1.3702" y2="-0.5155" width="0.2032" layer="21"/>
+<wire x1="1.3702" y1="-0.5155" x2="1.3702" y2="-0.1357" width="0.2032" layer="21"/>
+<wire x1="1.3702" y1="-0.1357" x2="0.9025" y2="-0.1357" width="0.2032" layer="21"/>
+<wire x1="-0.9089" y1="-0.1628" x2="-1.6279" y2="-0.1628" width="0.2032" layer="21"/>
+<wire x1="-1.6279" y1="-0.1628" x2="-1.6958" y2="-0.095" width="0.2032" layer="21"/>
+<wire x1="-1.6958" y1="-0.095" x2="-1.7093" y2="0.7461" width="0.2032" layer="21"/>
+<wire x1="-1.7093" y1="0.7461" x2="-1.6144" y2="0.814" width="0.2032" layer="21"/>
+<wire x1="-1.6144" y1="0.814" x2="-1.1196" y2="0.814" width="0.2032" layer="21"/>
+<wire x1="-1.1196" y1="0.814" x2="0.9946" y2="0.8275" width="0.2032" layer="21" curve="-74.262631"/>
+<wire x1="0.9946" y1="0.8275" x2="1.3973" y2="0.8275" width="0.2032" layer="21"/>
+<wire x1="1.3973" y1="0.8275" x2="1.4" y2="1.15" width="0.2032" layer="21"/>
+<wire x1="1.4" y1="1.15" x2="1.075" y2="1.15" width="0.2032" layer="21"/>
+<wire x1="1.075" y1="1.15" x2="-1.2074" y2="1.1531" width="0.2032" layer="21" curve="68.310476"/>
+<wire x1="-1.2074" y1="1.1531" x2="-1.6551" y2="1.1531" width="0.2032" layer="21"/>
+<wire x1="-1.6551" y1="1.1531" x2="-1.7229" y2="1.2481" width="0.2032" layer="21"/>
+<wire x1="-1.7229" y1="1.2481" x2="-1.7229" y2="1.9942" width="0.2032" layer="21"/>
+<wire x1="-1.7229" y1="1.9942" x2="1.4651" y2="2.1841" width="0.2032" layer="21" curve="-66.472003"/>
+<wire x1="1.4651" y1="2.1841" x2="1.7229" y2="2.1841" width="0.2032" layer="21"/>
+<wire x1="1.7229" y1="2.1841" x2="1.7229" y2="2.7675" width="0.2032" layer="21"/>
+<pad name="1" x="-2.54" y="0" drill="0.8" diameter="1.4"/>
+<pad name="2" x="0" y="0" drill="0.8" diameter="1.4"/>
+<pad name="3" x="2.54" y="0" drill="0.8" diameter="1.4"/>
+<text x="-2.54" y="-4.445" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="3.175" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="VT800">
+<description>&lt;b&gt;Photoconductive Cell&lt;/b&gt; VT800 Series&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt800seriesdatasheet.pdf</description>
+<wire x1="-1.775" y1="2.9" x2="1.75" y2="2.9" width="0.2032" layer="21"/>
+<wire x1="1.775" y1="-2.9" x2="-1.75" y2="-2.9" width="0.2032" layer="21"/>
+<wire x1="-1.75" y1="-2.9" x2="-1.775" y2="2.9" width="0.2032" layer="21" curve="-117.060986"/>
+<wire x1="1.75" y1="2.9" x2="1.775" y2="-2.9" width="0.2032" layer="21" curve="-117.060986"/>
+<wire x1="-1.2" y1="0.3" x2="1.2" y2="0.3" width="0.1016" layer="21"/>
+<wire x1="1.2" y1="0.3" x2="1.2" y2="-0.3" width="0.1016" layer="21" curve="-180"/>
+<wire x1="1.2" y1="-0.3" x2="-1.2" y2="-0.3" width="0.1016" layer="21"/>
+<wire x1="-1.2" y1="-0.3" x2="-1.2" y2="-0.9" width="0.1016" layer="21" curve="180"/>
+<wire x1="-1.2" y1="-0.9" x2="1.2" y2="-0.9" width="0.1016" layer="21"/>
+<wire x1="1.2" y1="-0.9" x2="1.2" y2="-1.5" width="0.1016" layer="21" curve="-180"/>
+<wire x1="1.2" y1="-1.5" x2="-1.2" y2="-1.5" width="0.1016" layer="21"/>
+<wire x1="-1.2" y1="-1.5" x2="-1.2" y2="-2.1" width="0.1016" layer="21" curve="180"/>
+<wire x1="-1.2" y1="-2.1" x2="1.2" y2="-2.1" width="0.1016" layer="21"/>
+<wire x1="1.2" y1="-2.1" x2="1.2" y2="-2.7" width="0.1016" layer="21" curve="-180"/>
+<wire x1="1.2" y1="-2.7" x2="-1.8" y2="-2.7" width="0.1016" layer="21"/>
+<wire x1="-1.2" y1="0.3" x2="-1.2" y2="0.9" width="0.1016" layer="21" curve="-180"/>
+<wire x1="-1.2" y1="0.9" x2="1.2" y2="0.9" width="0.1016" layer="21"/>
+<wire x1="1.2" y1="0.9" x2="1.2" y2="1.5" width="0.1016" layer="21" curve="180"/>
+<wire x1="1.2" y1="1.5" x2="-1.2" y2="1.5" width="0.1016" layer="21"/>
+<wire x1="-1.2" y1="1.5" x2="-1.2" y2="2.1" width="0.1016" layer="21" curve="-180"/>
+<wire x1="-1.2" y1="2.1" x2="1.2" y2="2.1" width="0.1016" layer="21"/>
+<wire x1="1.2" y1="2.1" x2="1.2" y2="2.7" width="0.1016" layer="21" curve="180"/>
+<wire x1="1.2" y1="2.7" x2="-1.8" y2="2.7" width="0.1016" layer="21"/>
+<pad name="1" x="-2.54" y="0" drill="0.8" diameter="1.4"/>
+<pad name="2" x="2.54" y="0" drill="0.8" diameter="1.4"/>
+<text x="-2.54" y="-4.445" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="3.175" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="VT900">
+<description>&lt;b&gt;Photoconductive Cell&lt;/b&gt; VT900 Series&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt900seriesdatasheet.pdf</description>
+<wire x1="-1.2" y1="1.975" x2="1.2" y2="1.975" width="0.2032" layer="21"/>
+<wire x1="1.2" y1="-1.975" x2="-1.2" y2="-1.975" width="0.2032" layer="21"/>
+<wire x1="-1.2" y1="-1.975" x2="-1.225" y2="1.975" width="0.2032" layer="21" curve="-116.381221"/>
+<wire x1="1.2" y1="1.975" x2="1.225" y2="-1.975" width="0.2032" layer="21" curve="-116.381221"/>
+<wire x1="-1" y1="1.6" x2="0.8" y2="1.6" width="0.1016" layer="21"/>
+<wire x1="0.8" y1="1.6" x2="0.8" y2="1.2" width="0.1016" layer="21" curve="-180"/>
+<wire x1="0.8" y1="1.2" x2="-0.6" y2="1.2" width="0.1016" layer="21"/>
+<wire x1="-0.6" y1="1.2" x2="-0.6" y2="0.8" width="0.1016" layer="21" curve="180"/>
+<wire x1="-0.6" y1="0.8" x2="0.4" y2="0.8" width="0.1016" layer="21"/>
+<wire x1="0.4" y1="0.8" x2="0.4" y2="0.4" width="0.1016" layer="21" curve="-180"/>
+<wire x1="0.4" y1="0.4" x2="-0.2" y2="0.4" width="0.1016" layer="21"/>
+<wire x1="-0.2" y1="0.4" x2="-0.2" y2="0" width="0.1016" layer="21" curve="180"/>
+<wire x1="-0.2" y1="0" x2="0.2" y2="0" width="0.1016" layer="21"/>
+<wire x1="0.2" y1="0" x2="0.2" y2="-0.4" width="0.1016" layer="21" curve="-180"/>
+<wire x1="0.2" y1="-0.4" x2="-0.4" y2="-0.4" width="0.1016" layer="21"/>
+<wire x1="-0.4" y1="-0.4" x2="-0.4" y2="-0.8" width="0.1016" layer="21" curve="180"/>
+<wire x1="-0.4" y1="-0.8" x2="0.6" y2="-0.8" width="0.1016" layer="21"/>
+<wire x1="0.6" y1="-0.8" x2="0.6" y2="-1.2" width="0.1016" layer="21" curve="-180"/>
+<wire x1="0.6" y1="-1.2" x2="-1" y2="-1.2" width="0.1016" layer="21"/>
+<wire x1="-1" y1="-1.2" x2="-1" y2="-1.6" width="0.1016" layer="21" curve="180"/>
+<wire x1="-1" y1="-1.6" x2="1" y2="-1.6" width="0.1016" layer="21"/>
+<wire x1="1" y1="-1.6" x2="1.2" y2="-1.8" width="0.1016" layer="21" curve="-90"/>
+<wire x1="-1" y1="1.6" x2="-1.2" y2="1.8" width="0.1016" layer="21" curve="-90"/>
+<pad name="1" x="-1.27" y="0" drill="0.8" diameter="1.4"/>
+<pad name="2" x="1.27" y="0" drill="0.8" diameter="1.4"/>
+<text x="-2.54" y="-3.81" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="2.54" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="PHOTOCELL">
+<wire x1="-3.048" y1="2.413" x2="-1.651" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="-3.175" y1="1.27" x2="-1.778" y2="-0.127" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.016" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="1.016" y1="-1.143" x2="-1.016" y2="-0.381" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="-0.381" x2="1.016" y2="0.381" width="0.254" layer="94"/>
+<wire x1="1.016" y1="0.381" x2="-1.016" y2="1.143" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="1.143" x2="1.016" y2="1.905" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="1.016" y2="1.905" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="-1.905" x2="1.016" y2="-1.143" width="0.254" layer="94"/>
+<text x="2.54" y="0" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+<polygon width="0.1524" layer="94">
+<vertex x="-1.778" y="-0.127"/>
+<vertex x="-2.667" y="0.254"/>
+<vertex x="-2.159" y="0.762"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-1.651" y="1.016"/>
+<vertex x="-2.54" y="1.397"/>
+<vertex x="-2.032" y="1.905"/>
+</polygon>
+</symbol>
+<symbol name="PHOTOCELL-DUO">
+<wire x1="-3.048" y1="7.493" x2="-1.651" y2="6.096" width="0.1524" layer="94"/>
+<wire x1="-3.175" y1="6.35" x2="-1.778" y2="4.953" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="-1.016" y2="3.175" width="0.254" layer="94"/>
+<wire x1="1.016" y1="3.937" x2="-1.016" y2="4.699" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="4.699" x2="1.016" y2="5.461" width="0.254" layer="94"/>
+<wire x1="1.016" y1="5.461" x2="-1.016" y2="6.223" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="6.223" x2="1.016" y2="6.985" width="0.254" layer="94"/>
+<wire x1="0" y1="7.62" x2="1.016" y2="6.985" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="3.175" x2="1.016" y2="3.937" width="0.254" layer="94"/>
+<wire x1="-3.048" y1="-2.667" x2="-1.651" y2="-4.064" width="0.1524" layer="94"/>
+<wire x1="-3.175" y1="-3.81" x2="-1.778" y2="-5.207" width="0.1524" layer="94"/>
+<wire x1="0" y1="-7.62" x2="-1.016" y2="-6.985" width="0.254" layer="94"/>
+<wire x1="1.016" y1="-6.223" x2="-1.016" y2="-5.461" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="-5.461" x2="1.016" y2="-4.699" width="0.254" layer="94"/>
+<wire x1="1.016" y1="-4.699" x2="-1.016" y2="-3.937" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="-3.937" x2="1.016" y2="-3.175" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="1.016" y2="-3.175" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="-6.985" x2="1.016" y2="-6.223" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
+<text x="2.54" y="5.08" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.54" y="2.54" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="0" y="10.16" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="2" x="2.54" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="3" x="0" y="-10.16" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+<polygon width="0.1524" layer="94">
+<vertex x="-1.778" y="4.953"/>
+<vertex x="-2.667" y="5.334"/>
+<vertex x="-2.159" y="5.842"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-1.651" y="6.096"/>
+<vertex x="-2.54" y="6.477"/>
+<vertex x="-2.032" y="6.985"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-1.778" y="-5.207"/>
+<vertex x="-2.667" y="-4.826"/>
+<vertex x="-2.159" y="-4.318"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-1.651" y="-4.064"/>
+<vertex x="-2.54" y="-3.683"/>
+<vertex x="-2.032" y="-3.175"/>
+</polygon>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="PHOTOCELL" prefix="PH">
+<description>&lt;b&gt;Photo Sensor&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="PHOTOCELL" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="D11" package="D11XX_H">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="W55" package="W55XX_H">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="D11" prefix="PH">
+<description>&lt;b&gt;Photo Sensor&lt;/b&gt; Oil Burner Control Applications&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_PhotocellsD1160.pdf</description>
+<gates>
+<gate name="G$1" symbol="PHOTOCELL" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="D11XX">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="60_12"/>
+<technology name="60_13"/>
+<technology name="72_12"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="W55" prefix="PH">
+<description>&lt;b&gt;Photo Sensor&lt;/b&gt; Oil Burner Control Applications&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_PhotocellsD1160.pdf</description>
+<gates>
+<gate name="G$1" symbol="PHOTOCELL" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="W55XX">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="60_11"/>
+<technology name="60_12"/>
+<technology name="60_13"/>
+<technology name="60_14"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="U1160" prefix="PH">
+<description>&lt;b&gt;Sensor&lt;/b&gt; Oil Burner Control Applications&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_U1160.pdf</description>
+<gates>
+<gate name="G$1" symbol="PHOTOCELL" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="U1160">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+<technology name="_12"/>
+<technology name="_13"/>
+<technology name="_14"/>
+<technology name="_32"/>
+<technology name="_33"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="A10" prefix="PH">
+<description>&lt;b&gt;Sensor&lt;/b&gt; Robust Light Sensing Applications&lt;p&gt;
+Outdoor Light Sensing Application&lt;br&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_PhotocellsA1050.pdf</description>
+<gates>
+<gate name="G$1" symbol="PHOTOCELL" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="T0-46-A10XX">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="50_09"/>
+<technology name="50_11"/>
+<technology name="50_12"/>
+<technology name="50_13"/>
+<technology name="50_14"/>
+<technology name="60_09"/>
+<technology name="60_11"/>
+<technology name="60_12"/>
+<technology name="60_13"/>
+<technology name="60_14"/>
+<technology name="60_31"/>
+<technology name="60_32"/>
+<technology name="60_33"/>
+<technology name="60_34"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="?1060*" prefix="PH">
+<description>&lt;b&gt;Sensor&lt;/b&gt; Street Light control&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_PhotocellsB1060.pdf</description>
+<gates>
+<gate name="G$1" symbol="PHOTOCELL" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="B" package="TO-8_B10">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="_23"/>
+</technologies>
+</device>
+<device name="V" package="TO-5_V10">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="_21"/>
+<technology name="_31"/>
+<technology name="_32"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="M9960_11" prefix="PH">
+<description>&lt;b&gt;Photo Sensor&lt;/b&gt; Beacon Light, Photometer Applications&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_M9960.pdf</description>
+<gates>
+<gate name="G$1" symbol="PHOTOCELL" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="M9960">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="A"/>
+<technology name="B"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VT2*" prefix="PH">
+<description>&lt;b&gt;Photoconductive Cell&lt;/b&gt; VT200 Series&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt200seriesdatasheet.pdf</description>
+<gates>
+<gate name="G$1" symbol="PHOTOCELL" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="TO46-VT200">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="0N1"/>
+<technology name="0N2"/>
+<technology name="0N3"/>
+<technology name="0N4"/>
+<technology name="3N1"/>
+<technology name="3N2"/>
+<technology name="3N3"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VT3*CT" prefix="PH">
+<description>&lt;b&gt;Photo Sensor Dual Element&lt;/b&gt; VT300CT Series&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt300ctseriesdatasheet.pdf</description>
+<gates>
+<gate name="G$1" symbol="PHOTOCELL-DUO" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="VT300">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name="0"/>
+<technology name="3"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VT43N" prefix="PH">
+<description>&lt;b&gt;Photoconductive Cell&lt;/b&gt; VT400 Series&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt400seriesdatasheet.pdf</description>
+<gates>
+<gate name="G$1" symbol="PHOTOCELL" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="VT400">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="1"/>
+<technology name="2"/>
+<technology name="3"/>
+<technology name="4"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VT5*" prefix="PH">
+<description>&lt;b&gt;Photoconductive Cell&lt;/b&gt; VT500 Sereis&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt500seriesdatasheet.pdf</description>
+<gates>
+<gate name="G$1" symbol="PHOTOCELL" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="VT500">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="0N1"/>
+<technology name="0N2"/>
+<technology name="0N3"/>
+<technology name="3N1"/>
+<technology name="3N2"/>
+<technology name="3N3"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VT83CT" prefix="PH">
+<description>&lt;b&gt;Photo Sensor Dual element&lt;/b&gt; VT800CT Series&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt800ctseriesdatasheet.pdf</description>
+<gates>
+<gate name="G$1" symbol="PHOTOCELL-DUO" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="VT800CT">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VT8" prefix="PH">
+<description>&lt;b&gt;Photoconductive Cell&lt;/b&gt; VT800 Series&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt800seriesdatasheet.pdf</description>
+<gates>
+<gate name="G$1" symbol="PHOTOCELL" x="0" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="VT800">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="0N1"/>
+<technology name="0N2"/>
+<technology name="3N1"/>
+<technology name="3N2"/>
+<technology name="3N3"/>
+<technology name="3N4"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VT9" prefix="OPH">
+<description>&lt;b&gt;Photoconductive Cell&lt;/b&gt; VT900 Series&lt;p&gt;
+Source: http://optoelectronics.perkinelmer.com/content/Datasheets/DTS_vt900seriesdatasheet.pdf</description>
+<gates>
+<gate name="G$1" symbol="PHOTOCELL" x="-2.54" y="0" swaplevel="1"/>
+</gates>
+<devices>
+<device name="" package="VT900">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="0N1"/>
+<technology name="0N2"/>
+<technology name="0N3"/>
+<technology name="0N4"/>
+<technology name="35GA"/>
+<technology name="35GB"/>
+<technology name="35GC"/>
+<technology name="3N1"/>
+<technology name="3N2"/>
+<technology name="3N3"/>
+<technology name="3N4"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>

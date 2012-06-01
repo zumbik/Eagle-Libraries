@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="inch" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Hilfslinien" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<description>&lt;b&gt;Kondensatoren für Elektropläne&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Autor librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="DIFFERENZIALKONDENSATOR">
+<description>Dummy</description>
+<pad name="1" x="-5.08" y="0" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="2.54" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="3" x="2.54" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="KONDENSATOR_KAPAZITAET_EINSTELLBAR_[TRIMMER]">
+<description>Dummy</description>
+<pad name="2" x="-5.08" y="0" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="1" x="5.08" y="0" drill="0.2" diameter="0.6" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="KONDENSATOR_KAPAZITAET_VERAENDERBAR_MIT_ANGABE_DES_BEWEGBAREN_TEILES">
+<description>Dummy</description>
+<pad name="2" x="-2.54" y="0" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="1" x="7.62" y="0" drill="0.2" diameter="0.6" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="DURCHFUEHRUNGSKONDENSATOR_KOAXIAL">
+<description>Dummy</description>
+<pad name="1" x="0" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="0" y="-7.62" drill="0.2" diameter="0.6" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="GEPOLTER_ELEKTROLYTKONDENSATOR">
+<description>Dummy</description>
+<pad name="+" x="5.08" y="0" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="-" x="-5.08" y="0" drill="0.2" diameter="0.6" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="GEPOLTER_KONDENSATOR">
+<description>Dummy</description>
+<pad name="+" x="5.08" y="0" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="-" x="-5.08" y="0" drill="0.2" diameter="0.6" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="KONDENSATOR_KAPAZITAET_ALLGEMEIN">
+<description>Dummy</description>
+<pad name="1" x="-5.08" y="0" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="5.08" y="0" drill="0.2" diameter="0.6" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="KONDENSATOR_MIT_ANZAPFUNG">
+<description>Dummy</description>
+<pad name="1" x="-6.35" y="0" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="6.35" y="0" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="3" x="0" y="-7.62" drill="0.2" diameter="0.6" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="KONDENSATOR_MIT_KENNZEICHNUNG_DES_AUSSENBELAGS">
+<description>Dummy</description>
+<pad name="1" x="-5.08" y="0" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="5.08" y="0" drill="0.2" diameter="0.6" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="UNGEPOLTER_ELEKTROLYTKONDENSATOR">
+<description>Dummy</description>
+<pad name="1" x="-5.08" y="0" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="5.08" y="0" drill="0.2" diameter="0.6" shape="square"/>
+<text x="0" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="0" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="DIFFERENZIALKONDENSATOR">
+<wire x1="0" y1="2.54" x2="-0.762" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-0.762" y1="4.064" x2="-0.762" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-0.762" y1="-1.016" x2="-0.762" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-0.762" y1="-2.54" x2="-0.762" y2="-4.064" width="0.254" layer="94"/>
+<wire x1="-1.778" y1="4.064" x2="-1.778" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.778" y1="0" x2="-1.778" y2="-4.064" width="0.254" layer="94"/>
+<wire x1="0.1704" y1="1.4352" x2="-2.7052" y2="-1.4352" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-1.778" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-0.762" y2="-2.54" width="0.1524" layer="94"/>
+<text x="-5.08" y="-2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-5.08" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas"/>
+<pin name="2" x="2.54" y="2.54" visible="off" length="short" direction="pas" rot="R180"/>
+<pin name="3" x="2.54" y="-2.54" visible="off" length="short" direction="pas" rot="R180"/>
+<polygon width="0.1524" layer="94">
+<vertex x="-0.1807" y="0.9396"/>
+<vertex x="-0.3304" y="1.0893"/>
+<vertex x="0.1704" y="1.4352"/>
+</polygon>
+</symbol>
+<symbol name="KONDENSATOR_KAPAZITAET_EINSTELLBAR_[TRIMMER]">
+<wire x1="0" y1="2.54" x2="0" y2="1.016" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="3.683" y1="1.016" x2="-3.81" y2="1.016" width="0.254" layer="94"/>
+<wire x1="3.683" y1="-1.016" x2="-3.81" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="2.4724" y1="4.6734" x2="4.6284" y2="2.5174" width="0.1524" layer="94"/>
+<wire x1="3.5438" y1="3.6018" x2="-3.6468" y2="-3.589" width="0.1524" layer="94"/>
+<text x="-5.08" y="0" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-2.54" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="KONDENSATOR_KAPAZITAET_VERAENDERBAR_MIT_ANGABE_DES_BEWEGBAREN_TEILES">
+<wire x1="3.589" y1="3.589" x2="-3.589" y2="-3.6018" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.007" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.0198" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="1.016" x2="-3.81" y2="1.016" width="0.254" layer="94"/>
+<wire x1="3.81" y1="-1.016" x2="-3.81" y2="-1.016" width="0.254" layer="94"/>
+<circle x="0" y="-1.0198" radius="0.5118" width="0" layer="94"/>
+<text x="-5.08" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<polygon width="0.1524" layer="94" spacing="2.54">
+<vertex x="2.3496" y="2.711"/>
+<vertex x="2.724" y="2.3366"/>
+<vertex x="3.589" y="3.589"/>
+</polygon>
+</symbol>
+<symbol name="DURCHFUEHRUNGSKONDENSATOR_KOAXIAL">
+<wire x1="-1.778" y1="1.778" x2="-1.778" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-1.778" y1="-1.27" x2="-1.778" y2="-4.318" width="0.1524" layer="94"/>
+<wire x1="1.778" y1="1.778" x2="1.778" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="1.778" y1="-1.27" x2="1.778" y2="-4.318" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="-1.27" x2="-3.81" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-3.048" y1="-1.27" x2="-1.778" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="1.016" y1="-4.318" x2="1.016" y2="1.778" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="1.778" x2="0" y2="1.778" width="0.254" layer="94"/>
+<wire x1="0" y1="1.778" x2="1.016" y2="1.778" width="0.254" layer="94"/>
+<wire x1="0" y1="1.778" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-1.016" y1="-4.318" x2="-1.016" y2="1.778" width="0.254" layer="94"/>
+<wire x1="1.778" y1="-1.27" x2="3.048" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="3.81" y1="-1.27" x2="5.08" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-1.016" y1="-4.318" x2="0" y2="-4.318" width="0.254" layer="94"/>
+<wire x1="0" y1="-4.318" x2="1.016" y2="-4.318" width="0.254" layer="94"/>
+<wire x1="0" y1="-4.318" x2="0" y2="-5.08" width="0.1524" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="0" y="-7.62" visible="off" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="GEPOLTER_ELEKTROLYTKONDENSATOR">
+<wire x1="0" y1="2.54" x2="0" y2="2.285" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.0198" width="0.1524" layer="94"/>
+<wire x1="3.8214" y1="1.007" x2="-3.8082" y2="1.007" width="0.254" layer="94"/>
+<wire x1="3.8214" y1="-1.0198" x2="-3.8082" y2="-1.0198" width="0.254" layer="94"/>
+<wire x1="3.8214" y1="4.0666" x2="1.7816" y2="4.0666" width="0.254" layer="94"/>
+<wire x1="2.8016" y1="5.0736" x2="2.8016" y2="3.0468" width="0.254" layer="94"/>
+<wire x1="3.8214" y1="2.285" x2="-3.8082" y2="2.285" width="0.254" layer="94"/>
+<wire x1="3.8214" y1="1.007" x2="3.8214" y2="2.285" width="0.254" layer="94"/>
+<wire x1="-3.8082" y1="1.007" x2="-3.8082" y2="2.285" width="0.254" layer="94"/>
+<text x="-5.08" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-2.54" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="-" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="+" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="GEPOLTER_KONDENSATOR">
+<wire x1="2.2786" y1="4.0615" x2="2.2786" y2="2.0347" width="0.254" layer="94"/>
+<wire x1="1.2588" y1="3.0545" x2="3.2984" y2="3.0545" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.0147" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.0121" width="0.1524" layer="94"/>
+<wire x1="-3.8212" y1="1.0147" x2="3.8084" y2="1.0147" width="0.254" layer="94"/>
+<wire x1="-3.8212" y1="-1.0121" x2="3.8084" y2="-1.0121" width="0.254" layer="94"/>
+<text x="-5.08" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-2.54" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="-" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="+" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="KONDENSATOR_KAPAZITAET_ALLGEMEIN">
+<wire x1="0" y1="-2.54" x2="0" y2="-1.0147" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.0121" width="0.1524" layer="94"/>
+<wire x1="3.8212" y1="-1.0147" x2="-3.8084" y2="-1.0147" width="0.254" layer="94"/>
+<wire x1="3.8212" y1="1.0121" x2="-3.8084" y2="1.0121" width="0.254" layer="94"/>
+<text x="-6.35" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-6.35" y="-2.54" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="KONDENSATOR_MIT_ANZAPFUNG">
+<wire x1="0" y1="-5.08" x2="0" y2="-2.285" width="0.1524" layer="94"/>
+<wire x1="0" y1="5.08" x2="0" y2="2.285" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="0" x2="-3.81" y2="0" width="0.1524" layer="94"/>
+<wire x1="-3.8084" y1="-2.285" x2="3.8084" y2="-2.285" width="0.254" layer="94"/>
+<wire x1="-3.8084" y1="2.285" x2="3.8084" y2="2.285" width="0.254" layer="94"/>
+<text x="-5.08" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-2.54" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="1" x="0" y="7.62" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="0" y="-7.62" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="3" x="7.62" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="KONDENSATOR_MIT_KENNZEICHNUNG_DES_AUSSENBELAGS">
+<wire x1="3.8084" y1="-1.1044" x2="4.9444" y2="-3.3766" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.1044" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="0.9354" width="0.1524" layer="94"/>
+<wire x1="3.8084" y1="-1.1044" x2="-3.8084" y2="-1.1044" width="0.254" layer="94"/>
+<wire x1="3.8084" y1="0.9354" x2="-3.8084" y2="0.9354" width="0.254" layer="94"/>
+<wire x1="-3.8084" y1="-1.1044" x2="-4.9444" y2="-3.3766" width="0.254" layer="94"/>
+<text x="-6.35" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-6.35" y="-2.54" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+</symbol>
+<symbol name="UNGEPOLTER_ELEKTROLYTKONDENSATOR">
+<wire x1="0" y1="-2.54" x2="0" y2="-2.285" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="2.285" width="0.1524" layer="94"/>
+<wire x1="3.8212" y1="-1.007" x2="-3.8084" y2="-1.007" width="0.254" layer="94"/>
+<wire x1="3.8212" y1="1.0198" x2="-3.8084" y2="1.0198" width="0.254" layer="94"/>
+<wire x1="3.8212" y1="-2.285" x2="-3.8084" y2="-2.285" width="0.254" layer="94"/>
+<wire x1="3.8212" y1="-1.007" x2="3.8212" y2="-2.285" width="0.254" layer="94"/>
+<wire x1="3.8212" y1="2.285" x2="-3.8084" y2="2.285" width="0.254" layer="94"/>
+<wire x1="3.8212" y1="2.285" x2="3.8212" y2="1.0198" width="0.254" layer="94"/>
+<wire x1="-3.8084" y1="-1.007" x2="-3.8084" y2="-2.285" width="0.254" layer="94"/>
+<wire x1="-3.8084" y1="2.285" x2="-3.8084" y2="1.0198" width="0.254" layer="94"/>
+<text x="-5.08" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="DIFFERENZIALKONDENSATOR" prefix="C" uservalue="yes">
+<description>Differenzialkondensator</description>
+<gates>
+<gate name="G$1" symbol="DIFFERENZIALKONDENSATOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DIFFERENZIALKONDENSATOR">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KONDENSATOR_KAPAZITAET_EINSTELLBAR_[TRIMMER]" prefix="C" uservalue="yes">
+<description>Kondensator / Kapazität einstellbar (Trimmer)</description>
+<gates>
+<gate name="G$1" symbol="KONDENSATOR_KAPAZITAET_EINSTELLBAR_[TRIMMER]" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="KONDENSATOR_KAPAZITAET_EINSTELLBAR_[TRIMMER]">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KONDENSATOR_KAPAZITAET_VERAENDERBAR_MIT_ANGABE_DES_BEWEGBAREN_TEILES" prefix="C" uservalue="yes">
+<description>Kondensator / Kapazität veränderbar mit Angabe des bewegbaren Teils</description>
+<gates>
+<gate name="G$1" symbol="KONDENSATOR_KAPAZITAET_VERAENDERBAR_MIT_ANGABE_DES_BEWEGBAREN_TEILES" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="KONDENSATOR_KAPAZITAET_VERAENDERBAR_MIT_ANGABE_DES_BEWEGBAREN_TEILES">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DURCHFUEHRUNGSKONDENSATOR_KOAXIAL" prefix="C" uservalue="yes">
+<description>Durchführungskondensator koaxial</description>
+<gates>
+<gate name="G$1" symbol="DURCHFUEHRUNGSKONDENSATOR_KOAXIAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DURCHFUEHRUNGSKONDENSATOR_KOAXIAL">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GEPOLTER_ELEKTROLYTKONDENSATOR" prefix="C" uservalue="yes">
+<description>Gepolter Elektrolytkondensator</description>
+<gates>
+<gate name="G$1" symbol="GEPOLTER_ELEKTROLYTKONDENSATOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="GEPOLTER_ELEKTROLYTKONDENSATOR">
+<connects>
+<connect gate="G$1" pin="+" pad="+"/>
+<connect gate="G$1" pin="-" pad="-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GEPOLTER_KONDENSATOR" prefix="C" uservalue="yes">
+<description>Gepolter Kondensator</description>
+<gates>
+<gate name="G$1" symbol="GEPOLTER_KONDENSATOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="GEPOLTER_KONDENSATOR">
+<connects>
+<connect gate="G$1" pin="+" pad="+"/>
+<connect gate="G$1" pin="-" pad="-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KONDENSATOR_KAPAZITAET_ALLGEMEIN" prefix="C" uservalue="yes">
+<description>Kondensator / Kapazität allgemein</description>
+<gates>
+<gate name="G$1" symbol="KONDENSATOR_KAPAZITAET_ALLGEMEIN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="KONDENSATOR_KAPAZITAET_ALLGEMEIN">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KONDENSATOR_MIT_ANZAPFUNG" prefix="C" uservalue="yes">
+<description>Kondensator mit Anzapfung</description>
+<gates>
+<gate name="G$1" symbol="KONDENSATOR_MIT_ANZAPFUNG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="KONDENSATOR_MIT_ANZAPFUNG">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KONDENSATOR_MIT_KENNZEICHNUNG_DES_AUSSENBELAGS" prefix="C" uservalue="yes">
+<description>Kondensator mit Kennzeichnung des Außenbelags</description>
+<gates>
+<gate name="G$1" symbol="KONDENSATOR_MIT_KENNZEICHNUNG_DES_AUSSENBELAGS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="KONDENSATOR_MIT_KENNZEICHNUNG_DES_AUSSENBELAGS">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="UNGEPOLTER_ELEKTROLYTKONDENSATOR" prefix="C" uservalue="yes">
+<description>Ungepolter Elektrolytkondensator</description>
+<gates>
+<gate name="G$1" symbol="UNGEPOLTER_ELEKTROLYTKONDENSATOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="UNGEPOLTER_ELEKTROLYTKONDENSATOR">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>

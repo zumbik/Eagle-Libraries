@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="50" unitdist="mil" unit="mil" style="dots" multiple="2" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="yes"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="yes"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="yes"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="yes"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="yes"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="yes"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="yes"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="yes"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="yes"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="yes"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="yes"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="yes"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<description>&lt;b&gt;Messfühler für Elektropläne&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Autor librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="MESSFUEHLER_4">
+<description>Dummy</description>
+<pad name="1" x="-8.89" y="0" drill="0.5" diameter="1" shape="square"/>
+<pad name="2" x="-3.81" y="0" drill="0.5" diameter="1" shape="square"/>
+<pad name="3" x="3.81" y="0" drill="0.5" diameter="1" shape="square"/>
+<pad name="4" x="8.89" y="0" drill="0.5" diameter="1" shape="square"/>
+<text x="-3.175" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-3.175" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="MESSFUEHLER_3">
+<description>Dummy</description>
+<pad name="1" x="-5.08" y="0" drill="0.5" diameter="1" shape="square"/>
+<pad name="2" x="0" y="0" drill="0.5" diameter="1" shape="square"/>
+<pad name="3" x="5.08" y="0" drill="0.5" diameter="1" shape="square"/>
+<text x="-2.54" y="1.27" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-2.54" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="MESSFUEHLER_2">
+<description>Dummy</description>
+<pad name="1" x="-2.54" y="0" drill="0.5" diameter="1" shape="square"/>
+<pad name="2" x="2.54" y="0" drill="0.5" diameter="1" shape="square"/>
+<text x="-2.54" y="0.635" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="MESSFUEHLER_2">
+<wire x1="-7.62" y1="2.54" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-3.81" x2="-7.62" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-3.81" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<text x="-8.89" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-6.35" y="0" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-6.35" y="-2.54" size="1.778" layer="96">&gt;FUNKTION</text>
+<text x="-8.89" y="-1.27" size="1.778" layer="96" rot="R180">&gt;TYPE</text>
+<text x="-8.89" y="-3.81" size="1.778" layer="96" rot="R180">&gt;HERSTELLER</text>
+<pin name="1" x="-2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="2.54" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="MESSFUEHLER_3">
+<wire x1="-7.62" y1="2.54" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="7.62" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-3.81" x2="-7.62" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-3.81" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<text x="-8.89" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-6.35" y="0" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-6.35" y="-2.54" size="1.778" layer="96">&gt;FUNKTION</text>
+<text x="-8.89" y="-1.27" size="1.778" layer="96" rot="R180">&gt;TYPE</text>
+<text x="-8.89" y="-3.81" size="1.778" layer="96" rot="R180">&gt;HERSTELLER</text>
+<pin name="1" x="-5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="3" x="5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="MESSFUEHLER_4">
+<wire x1="-7.62" y1="2.54" x2="12.7" y2="2.54" width="0.254" layer="94"/>
+<wire x1="12.7" y1="2.54" x2="12.7" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-3.81" x2="-7.62" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-3.81" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
+<text x="-8.89" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-6.35" y="0" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-6.35" y="-2.54" size="1.778" layer="96">&gt;FUNKTION</text>
+<text x="-8.89" y="-1.27" size="1.778" layer="96" rot="R180">&gt;TYPE</text>
+<text x="-8.89" y="-3.81" size="1.778" layer="96" rot="R180">&gt;HERSTELLER</text>
+<pin name="1" x="-5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="2" x="0" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="3" x="5.08" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="4" x="10.16" y="5.08" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MESSFUEHLER_4" prefix="B" uservalue="yes">
+<description>Messfühler mit vier Anschlüssen, 2 Versorgung, 2 Signal</description>
+<gates>
+<gate name="G$1" symbol="MESSFUEHLER_4" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MESSFUEHLER_4">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MESSFUEHLER_3" prefix="B" uservalue="yes">
+<description>Messfühler mit drei Anschlüssen, 2 Versorgung, 1 Signal</description>
+<gates>
+<gate name="G$1" symbol="MESSFUEHLER_3" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MESSFUEHLER_3">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MESSFUEHLER_2" prefix="B" uservalue="yes">
+<description>Messfühler mit zwei Anschlüssen</description>
+<gates>
+<gate name="G$1" symbol="MESSFUEHLER_2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MESSFUEHLER_2">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>

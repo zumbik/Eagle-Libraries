@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="50" unitdist="mil" unit="mil" style="dots" multiple="2" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Hilfslinien" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+</layers>
+<library>
+<description>&lt;b&gt;Motoren für Elektropläne&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Autor librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="MOTOR_1-PHASEN">
+<description>Dummy</description>
+<circle x="0" y="0" radius="5.08" width="0.1524" layer="21"/>
+<pad name="V" x="0" y="3.175" drill="0.8" shape="square"/>
+<pad name="U" x="-2.54" y="3.175" drill="0.8" shape="square"/>
+<pad name="PE" x="2.54" y="3.175" drill="0.8" shape="square"/>
+<text x="-2.54" y="-0.635" size="1.778" layer="21">M 1~</text>
+</package>
+<package name="MOTOR_3-PHASEN">
+<description>Dummy</description>
+<circle x="0" y="0" radius="5.08" width="0.1524" layer="21"/>
+<pad name="V1" x="0" y="3.175" drill="0.8" shape="square"/>
+<pad name="U1" x="-2.54" y="3.175" drill="0.8" shape="square"/>
+<pad name="W1" x="2.54" y="3.175" drill="0.8" shape="square"/>
+<pad name="U2" x="-2.54" y="-3.175" drill="0.8" shape="square"/>
+<pad name="V2" x="0" y="-3.175" drill="0.8" shape="square"/>
+<pad name="W2" x="2.54" y="-3.175" drill="0.8" shape="square"/>
+<pad name="PE" x="3.81" y="0" drill="0.8" shape="square"/>
+<text x="-2.54" y="-0.635" size="1.778" layer="21">M 3~</text>
+</package>
+<package name="MOTOR_3-POL_PE">
+<description>Dummy</description>
+<pad name="PE" x="10.16" y="10.16" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="U1" x="-5.08" y="10.16" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="V1" x="0" y="10.16" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="W1" x="5.08" y="10.16" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="MOTOR_3-PHASEN_STERN-DREIECK-ANLAUF_ALTERNATIV">
+<description>Dummy</description>
+<circle x="0" y="0" radius="5.08" width="0.1524" layer="21"/>
+<pad name="V1" x="0" y="3.175" drill="0.8" shape="square"/>
+<pad name="U1" x="-2.54" y="3.175" drill="0.8" shape="square"/>
+<pad name="W1" x="2.54" y="3.175" drill="0.8" shape="square"/>
+<pad name="W2" x="-2.54" y="-3.175" drill="0.8" shape="square"/>
+<pad name="U2" x="0" y="-3.175" drill="0.8" shape="square"/>
+<pad name="V2" x="2.54" y="-3.175" drill="0.8" shape="square"/>
+<pad name="PE" x="3.81" y="0" drill="0.8" shape="square"/>
+<text x="-2.54" y="-0.635" size="1.778" layer="21">M 3~</text>
+</package>
+</packages>
+<symbols>
+<symbol name="MOTOR_1-PHASEN">
+<wire x1="6.477" y1="-1.27" x2="7.62" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="-1.27" x2="7.62" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="-2.54" y2="4.572" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="5.08" x2="2.54" y2="4.572" width="0.1524" layer="94"/>
+<circle x="0" y="-1.27" radius="6.35" width="0.2032" layer="94"/>
+<text x="-1.397" y="-1.27" size="2.54" layer="94">M</text>
+<text x="-2.159" y="-5.08" size="2.54" layer="94">1~</text>
+<text x="-3.81" y="-8.89" size="1.778" layer="95" rot="MR180">&gt;PART</text>
+<text x="-3.81" y="-11.43" size="1.778" layer="96" rot="MR180">&gt;VALUE</text>
+<text x="-3.81" y="-19.05" size="1.778" layer="96" rot="MR180">&gt;FUNKTION</text>
+<text x="-3.81" y="-13.97" size="1.778" layer="96" rot="MR180">&gt;TYPE</text>
+<text x="-3.81" y="-16.51" size="1.778" layer="96" rot="MR180">&gt;HERSTELLER</text>
+<pin name="V" x="2.54" y="7.62" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="U" x="-2.54" y="7.62" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="PE" x="7.62" y="7.62" visible="pad" length="middle" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="MOTOR_3-PHASEN_STERN-DREIECK">
+<wire x1="-7.62" y1="5.08" x2="-3.81" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-7.62" y1="0" x2="-6.35" y2="0" width="0.1524" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="-3.683" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="3.81" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="0" x2="6.35" y2="0" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="3.81" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="0" y1="7.62" x2="0" y2="6.35" width="0.1524" layer="94"/>
+<circle x="0" y="0" radius="6.35" width="0.2032" layer="94"/>
+<text x="-2.159" y="0" size="3.81" layer="94">M</text>
+<text x="-1.778" y="-3.81" size="2.54" layer="94">3~</text>
+<text x="-5.08" y="-7.62" size="1.778" layer="95" rot="MR180">&gt;PART</text>
+<text x="-5.08" y="-10.16" size="1.778" layer="96" rot="MR180">&gt;VALUE</text>
+<text x="-5.08" y="-17.78" size="1.778" layer="96" rot="MR180">&gt;FUNKTION</text>
+<text x="-5.08" y="-12.7" size="1.778" layer="96" rot="MR180">&gt;TYPE</text>
+<text x="-5.08" y="-15.24" size="1.778" layer="96" rot="MR180">&gt;HERSTELLER</text>
+<pin name="W1" x="-10.16" y="5.08" visible="pad" length="short" direction="pas"/>
+<pin name="V1" x="-10.16" y="0" visible="pad" length="short" direction="pas"/>
+<pin name="U1" x="-10.16" y="-5.08" visible="pad" length="short" direction="pas"/>
+<pin name="W2" x="10.16" y="5.08" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="V2" x="10.16" y="0" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="U2" x="10.16" y="-5.08" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="PE" x="0" y="10.16" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="MOTOR_3-POL_PE">
+<wire x1="5.08" y1="7.62" x2="5.08" y2="3.81" width="0.1524" layer="94"/>
+<wire x1="0" y1="7.62" x2="0" y2="6.35" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="7.62" x2="-5.08" y2="3.683" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="10.16" y2="0" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="0" x2="6.35" y2="0" width="0.1524" layer="94"/>
+<circle x="0" y="0" radius="6.35" width="0.2032" layer="94"/>
+<text x="-2.54" y="0" size="3.81" layer="94">M</text>
+<text x="-2.54" y="-3.81" size="2.54" layer="94">3~</text>
+<text x="-3.81" y="-7.62" size="1.778" layer="95" rot="MR180">&gt;PART</text>
+<text x="-3.81" y="-10.16" size="1.778" layer="96" rot="MR180">&gt;VALUE</text>
+<text x="-3.81" y="-17.78" size="1.778" layer="96" rot="MR180">&gt;FUNKTION</text>
+<text x="-3.81" y="-12.7" size="1.778" layer="96" rot="MR180">&gt;TYPE</text>
+<text x="-3.81" y="-15.24" size="1.778" layer="96" rot="MR180">&gt;HERSTELLER</text>
+<pin name="W1" x="5.08" y="10.16" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="V1" x="0" y="10.16" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="U1" x="-5.08" y="10.16" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="PE" x="10.16" y="10.16" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+<symbol name="MOTOR_3-PHASEN_STERN-DREIECK-ANLAUF_ALTERNATIV">
+<wire x1="-7.62" y1="5.08" x2="-3.81" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-7.62" y1="0" x2="-6.35" y2="0" width="0.1524" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="-3.683" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="3.81" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="0" x2="6.35" y2="0" width="0.1524" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="3.81" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="0" y1="7.62" x2="0" y2="6.35" width="0.1524" layer="94"/>
+<circle x="0" y="0" radius="6.35" width="0.2032" layer="94"/>
+<text x="-2.159" y="0" size="3.81" layer="94">M</text>
+<text x="-1.778" y="-3.81" size="2.54" layer="94">3~</text>
+<text x="-5.08" y="-7.62" size="1.778" layer="95" rot="MR180">&gt;PART</text>
+<text x="-5.08" y="-10.16" size="1.778" layer="96" rot="MR180">&gt;VALUE</text>
+<text x="-5.08" y="-17.78" size="1.778" layer="96" rot="MR180">&gt;FUNKTION</text>
+<text x="-5.08" y="-12.7" size="1.778" layer="96" rot="MR180">&gt;TYPE</text>
+<text x="-5.08" y="-15.24" size="1.778" layer="96" rot="MR180">&gt;HERSTELLER</text>
+<pin name="W1" x="-10.16" y="5.08" visible="pad" length="short" direction="pas"/>
+<pin name="V1" x="-10.16" y="0" visible="pad" length="short" direction="pas"/>
+<pin name="U1" x="-10.16" y="-5.08" visible="pad" length="short" direction="pas"/>
+<pin name="V2" x="10.16" y="5.08" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="U2" x="10.16" y="0" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="W2" x="10.16" y="-5.08" visible="pad" length="short" direction="pas" rot="R180"/>
+<pin name="PE" x="0" y="10.16" visible="pad" length="short" direction="pas" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MOTOR_1-PHASEN" prefix="M" uservalue="yes">
+<description>1-Phasen-Wechselstrom-Motor</description>
+<gates>
+<gate name="1" symbol="MOTOR_1-PHASEN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MOTOR_1-PHASEN">
+<connects>
+<connect gate="1" pin="PE" pad="PE"/>
+<connect gate="1" pin="U" pad="U"/>
+<connect gate="1" pin="V" pad="V"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MOTOR_3-PHASEN_STERN-DREIECK_ANLAUF" prefix="M" uservalue="yes">
+<description>3-Phasen-Wechselstrom-Motor für Stern-Dreieckschaltung mit PE</description>
+<gates>
+<gate name="1" symbol="MOTOR_3-PHASEN_STERN-DREIECK" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MOTOR_3-PHASEN">
+<connects>
+<connect gate="1" pin="PE" pad="PE"/>
+<connect gate="1" pin="U1" pad="U1"/>
+<connect gate="1" pin="U2" pad="U2"/>
+<connect gate="1" pin="V1" pad="V1"/>
+<connect gate="1" pin="V2" pad="V2"/>
+<connect gate="1" pin="W1" pad="W1"/>
+<connect gate="1" pin="W2" pad="W2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MOTOR_3-POL_PE" prefix="M" uservalue="yes">
+<description>3-Phasen-Motor mit PE</description>
+<gates>
+<gate name="G$1" symbol="MOTOR_3-POL_PE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MOTOR_3-POL_PE">
+<connects>
+<connect gate="G$1" pin="PE" pad="PE"/>
+<connect gate="G$1" pin="U1" pad="U1"/>
+<connect gate="G$1" pin="V1" pad="V1"/>
+<connect gate="G$1" pin="W1" pad="W1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MOTOR_3-PHASEN_STERN-DREIECK-ANLAUF_ALTERNATIV" prefix="M" uservalue="yes">
+<description>3-Phasen-Wechselstrom-Motor (alternativ)</description>
+<gates>
+<gate name="G$1" symbol="MOTOR_3-PHASEN_STERN-DREIECK-ANLAUF_ALTERNATIV" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MOTOR_3-PHASEN_STERN-DREIECK-ANLAUF_ALTERNATIV">
+<connects>
+<connect gate="G$1" pin="PE" pad="PE"/>
+<connect gate="G$1" pin="U1" pad="U1"/>
+<connect gate="G$1" pin="U2" pad="U2"/>
+<connect gate="G$1" pin="V1" pad="V1"/>
+<connect gate="G$1" pin="V2" pad="V2"/>
+<connect gate="G$1" pin="W1" pad="W1"/>
+<connect gate="G$1" pin="W2" pad="W2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="FUNKTION" value="" constant="no"/>
+<attribute name="HERSTELLER" value="" constant="no"/>
+<attribute name="TYPE" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>

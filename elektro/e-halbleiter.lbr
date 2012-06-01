@@ -1,0 +1,1352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="inch" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Hilfslinien" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<description>&lt;b&gt;Halbleiter-Bauelemente für Elektropläne&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Autor librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="ABSCHALTTHYRISTORDIODE">
+<description>Dummy</description>
+<pad name="1" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="3" x="5.08" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="ABSCHALTTHYRISTORDIODE_FORM2">
+<description>Dummy</description>
+<pad name="1" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="3" x="5.08" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="BACKWARD_DIODE">
+<description>Dummy</description>
+<pad name="1" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="BEGRENZER">
+<description>Dummy</description>
+<pad name="1" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="DIODE">
+<description>Dummy</description>
+<pad name="A" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="C" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="GLEICHRICHTERGERAET">
+<description>Dummy</description>
+<pad name="1" x="-3.81" y="0" drill="0.8" shape="square"/>
+<pad name="2" x="-1.27" y="0" drill="0.8" shape="square"/>
+<pad name="3" x="1.27" y="0" drill="0.8" shape="square"/>
+<pad name="4" x="3.81" y="0" drill="0.8" shape="square"/>
+</package>
+<package name="KAPAZITAETSDIODE">
+<description>Dummy</description>
+<pad name="A" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="B" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="PHOTODIODE">
+<description>Dummy</description>
+<pad name="A" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="B" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="RUECKWAERTS_LEITENDE_THYRISTORDIODE">
+<description>Dummy</description>
+<pad name="1" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="RUECKWAERTS_LEITENDE_THYRISTORDIODE_ANODENANSCHLUSS">
+<description>Dummy</description>
+<pad name="1" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="3" x="-5.08" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="RUECKWAERTS_LEITENDE_THYRISTORDIODE_KATHODENANSCHLUSS">
+<description>Dummy</description>
+<pad name="1" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="3" x="5.08" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="RUECKWAERTS_SPERRENDE_THYRISTORDIODE">
+<description>Dummy</description>
+<pad name="A" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="C" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="RUECKWAERTS_SPERRENDE_THYRISTORDIODE_ANODENANSCHLUSS">
+<description>Dummy</description>
+<pad name="A" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="C" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="G" x="5.08" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="RUECKWAERTS_SPERRENDE_THYRISTORDIODE_KATHODENANSCHLUSS">
+<description>Dummy</description>
+<pad name="A" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="C" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="G" x="5.08" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="RUECKWAERTS_SPERRENDE_THYRISTORDIODE__ANODEN_KATHODENANSCHLUSS_FORM2">
+<description>Dummy</description>
+<pad name="A" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="C" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="G1" x="5.08" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="G2" x="5.08" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="RUECKWAERTS_SPERRENDE_THYRISTORDIODE_ANODEN-KATHODENANSCHLUSS_FORM1">
+<description>Dummy</description>
+<pad name="A" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="B" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="G1" x="5.08" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="G2" x="-5.08" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="THYRISTOR">
+<description>Dummy</description>
+<pad name="A" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="C" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="G" x="-2.54" y="0" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="TRIAC">
+<description>Dummy</description>
+<pad name="A1" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="A2" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="G" x="5.08" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="TUNNELDIODE">
+<description>Dummy</description>
+<pad name="A" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="C" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="VARISTOR">
+<description>Dummy</description>
+<pad name="1" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="Z-DIODE">
+<description>Dummy</description>
+<pad name="A" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="C" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="ZWEIRICHTUNGSTHYRISTORDIODE_FORM2">
+<description>Dummy</description>
+<pad name="1" x="0" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="2" x="0" y="-2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="ANREICHERUNGS_IG_FET_N-KANAL">
+<description>Dummy</description>
+<pad name="D" x="2.54" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="G" x="-2.54" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="S" x="-2.54" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="ANREICHERUNGS_IG_FET_P-KANAL_AUF_N_SUBSTRAT">
+<description>Dummy</description>
+<pad name="D1" x="-2.54" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="D2" x="2.54" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="G" x="-2.54" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="ANREICHERUNGS_IG_FET_P-KANAL_UND_HERAUSGEFUEHRTEN_SUBSTRATANSCHLUSS">
+<description>Dummy</description>
+<pad name="D1" x="-2.54" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="D2" x="2.54" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="G" x="-2.54" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="S" x="0" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="IE-FET_MIT_ZWEI_N-KANAELEN_UND_HERAUSGEFUEHRTEM_SUBSTRATANSCHLUSS">
+<description>Dummy</description>
+<pad name="D1" x="-2.54" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="D2" x="2.54" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="G1" x="-2.54" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="G2" x="2.54" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="S" x="0" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="NPN-TRANSISTOR">
+<description>Dummy</description>
+<pad name="B" x="0" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="C" x="5.08" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="E" x="-5.08" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="PNP-PHOTOTRANSISTOR">
+<description>Dummy</description>
+<pad name="C" x="5.08" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="E" x="-5.08" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="PNP-TRANSISTOR">
+<description>Dummy</description>
+<pad name="B" x="0" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="C" x="5.08" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="E" x="-5.08" y="2.54" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="SPERRSCHICHT_FET_N-KANAL">
+<description>Dummy</description>
+<pad name="D" x="2.54" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="G" x="-2.54" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="S" x="-2.54" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="SPERRSCHICHT_FET_P-KANAL">
+<description>Dummy</description>
+<pad name="D" x="2.54" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="G" x="-2.54" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="S" x="-2.54" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+<package name="VERARMUNGS_IG_FET_N-KANAL">
+<description>Dummy</description>
+<pad name="G" x="-2.54" y="5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="S1" x="-2.54" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+<pad name="S2" x="2.54" y="-5.08" drill="0.2" diameter="0.6" shape="square"/>
+</package>
+</packages>
+<symbols>
+<symbol name="ABSCHALTTHYRISTORDIODE">
+<wire x1="2.1698" y1="3.048" x2="2.1698" y2="2.032" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="1.016" x2="1.3174" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="1.3174" y1="2.54" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="0" y2="1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.016" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="C" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="A" x="0" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="G" x="5.08" y="2.54" visible="off" length="short" direction="in" rot="R180"/>
+</symbol>
+<symbol name="ABSCHALTTHYRISTORDIODE_FORM2">
+<wire x1="2.1698" y1="-2.032" x2="2.1698" y2="-3.048" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="-1.016" x2="1.3174" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.3174" y1="-2.54" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.143" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.016" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A" x="0" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="C" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="G" x="5.08" y="-2.54" visible="off" length="short" direction="in" rot="R180"/>
+</symbol>
+<symbol name="BACKWARD_DIODE">
+<wire x1="-1.524" y1="-1.27" x2="-1.524" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="-1.778" x2="-1.524" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.27" x2="1.524" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.778" x2="1.524" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.524" y1="0" x2="0" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="0" x2="1.524" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="0" x2="0" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.778" x2="0" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.778" x2="-1.524" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.778" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="C" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="A" x="0" y="2.54" visible="off" length="short" direction="in" rot="R270"/>
+</symbol>
+<symbol name="BEGRENZER">
+<wire x1="1.27" y1="1.778" x2="0" y2="0.0086" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.778" x2="1.27" y2="1.778" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-1.778" x2="0" y2="0.0086" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-1.778" x2="0" y2="0.0086" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-1.778" x2="-1.27" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.778" x2="0" y2="0.0086" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="0" x2="1.524" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="0.508" x2="-1.524" y2="0" width="0.254" layer="94"/>
+<wire x1="1.524" y1="0" x2="1.524" y2="-0.508" width="0.254" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="1" x="0" y="2.54" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="2" x="0" y="-2.54" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="DIODE">
+<wire x1="1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="C" x="0" y="2.54" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="A" x="0" y="-2.54" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="GLEICHRICHTERGERAET">
+<wire x1="-3.81" y1="2.54" x2="3.81" y2="2.54" width="0.254" layer="94"/>
+<wire x1="3.81" y1="2.54" x2="3.81" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="3.81" y1="-2.54" x2="-3.81" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="2.54" x2="-3.81" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="1.524" x2="0" y2="-1.651" width="0.1524" layer="94"/>
+<text x="-5.08" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="L" x="-2.54" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="+" x="-2.54" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="N" x="2.54" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="-" x="2.54" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="KAPAZITAETSDIODE">
+<wire x1="-2.4582" y1="-0.5898" x2="-2.4582" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-2.4582" y1="-2.286" x2="-2.4582" y2="-1.6058" width="0.1524" layer="94"/>
+<wire x1="-3.0954" y1="-1.27" x2="-1.8211" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-3.0954" y1="-1.6058" x2="-1.8211" y2="-1.6058" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<text x="-3.81" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A" x="0" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="B" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="PHOTODIODE">
+<wire x1="1.4637" y1="-0.4477" x2="3.5216" y2="-1.6273" width="0.254" layer="94"/>
+<wire x1="2.342" y1="0.0603" x2="4.3998" y2="-1.1193" width="0.254" layer="94"/>
+<wire x1="1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A" x="0" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="B" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<polygon width="0.254" layer="94">
+<vertex x="2.2386" y="-1.1021"/>
+<vertex x="2.4195" y="-0.7921"/>
+<vertex x="1.4637" y="-0.4477"/>
+</polygon>
+<polygon width="0.254" layer="94">
+<vertex x="3.1255" y="-0.5855"/>
+<vertex x="3.2977" y="-0.2841"/>
+<vertex x="2.342" y="0.0603"/>
+</polygon>
+</symbol>
+<symbol name="RUECKWAERTS_LEITENDE_THYRISTORDIODE">
+<wire x1="-1.524" y1="-1.016" x2="-1.524" y2="-2.032" width="0.254" layer="94"/>
+<wire x1="-1.778" y1="0" x2="1.778" y2="0" width="0.254" layer="94"/>
+<wire x1="1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A" x="0" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="C" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="RUECKWAERTS_LEITENDE_THYRISTORDIODE_ANODENANSCHLUSS">
+<wire x1="-1.524" y1="-1.016" x2="-1.524" y2="-2.032" width="0.254" layer="94"/>
+<wire x1="0.508" y1="1.016" x2="1.27" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A" x="0" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="C" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="G" x="5.08" y="2.54" visible="off" length="short" direction="in" rot="R180"/>
+</symbol>
+<symbol name="RUECKWAERTS_LEITENDE_THYRISTORDIODE_KATHODENANSCHLUSS">
+<wire x1="-1.524" y1="-1.016" x2="-1.524" y2="-2.032" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.016" x2="0.508" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0.508" y1="-1.016" x2="1.524" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="-2.54" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0.508" y1="-1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A" x="0" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="C" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="G" x="5.08" y="-2.54" visible="off" length="short" direction="in" rot="R180"/>
+</symbol>
+<symbol name="RUECKWAERTS_SPERRENDE_THYRISTORDIODE">
+<wire x1="-2.032" y1="0" x2="2.032" y2="0" width="0.254" layer="94"/>
+<wire x1="1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="C" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="A" x="0" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+</symbol>
+<symbol name="RUECKWAERTS_SPERRENDE_THYRISTORDIODE_ANODENANSCHLUSS">
+<wire x1="0.508" y1="1.016" x2="1.27" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A" x="0" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="C" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="G" x="5.08" y="2.54" visible="off" length="short" direction="in" rot="R180"/>
+</symbol>
+<symbol name="RUECKWAERTS_SPERRENDE_THYRISTORDIODE_KATHODENANSCHLUSS">
+<wire x1="0.508" y1="-1.016" x2="1.27" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A" x="0" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="C" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="G" x="5.08" y="-2.54" visible="off" length="short" direction="in" rot="R180"/>
+</symbol>
+<symbol name="RUECKWAERTS_SPERRENDE_THYRISTORDIODE__ANODEN_KATHODENANSCHLUSS_FORM2">
+<wire x1="0.508" y1="1.016" x2="1.27" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="2.54" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0.508" y1="-1.016" x2="1.27" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<text x="-2.54" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A" x="0" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="C" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="G1" x="5.08" y="-2.54" visible="off" length="short" direction="in" rot="R180"/>
+<pin name="G2" x="5.08" y="2.54" visible="off" length="short" direction="in" rot="R180"/>
+</symbol>
+<symbol name="RUECKWAERTS_SPERRENDE_THYRISTORDIODE_ANODEN-KATHODENANSCHLUSS_FORM1">
+<wire x1="0.508" y1="-1.016" x2="1.27" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="1.016" x2="-1.27" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-1.27" y1="2.54" x2="-2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A" x="0" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="B" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="G1" x="5.08" y="-2.54" visible="off" length="short" direction="in" rot="R180"/>
+<pin name="G2" x="-5.08" y="2.54" visible="off" length="short" direction="in"/>
+</symbol>
+<symbol name="THYRISTOR">
+<wire x1="-1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="1.016" x2="-1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="1.016" x2="0.762" y2="0" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="-1.016" x2="1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="0.762" y2="0" width="0.1524" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A" x="0" y="2.54" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="C" x="0" y="-2.54" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="G" x="2.54" y="0" visible="off" length="point" direction="in" rot="R180"/>
+</symbol>
+<symbol name="TRIAC">
+<wire x1="0" y1="1.016" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.8481" x2="0" y2="-1.016" width="0.1524" layer="94"/>
+<wire x1="0" y1="-1.016" x2="0" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="-1.016" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-3.048" y1="1.016" x2="0" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-3.048" y1="1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.016" x2="-3.048" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="3.048" y1="-1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="3.048" y1="-1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="1.016" x2="3.048" y2="1.016" width="0.254" layer="94"/>
+<text x="-3.81" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A1" x="0" y="2.54" visible="off" length="point" direction="pas" rot="R270"/>
+<pin name="A2" x="0" y="-2.54" visible="off" length="point" direction="pas" rot="R90"/>
+<pin name="G" x="5.08" y="-2.54" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="TUNNELDIODE">
+<wire x1="-1.524" y1="-0.508" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-0.508" x2="1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A" x="0" y="2.54" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="C" x="0" y="-2.54" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="VARISTOR">
+<wire x1="0" y1="1.016" x2="0" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-1.016" x2="0" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-3.048" y1="1.016" x2="0" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-3.048" y1="1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.016" x2="-3.048" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="3.048" y1="-1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="3.048" y1="-1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="0" y1="1.016" x2="3.048" y2="1.016" width="0.254" layer="94"/>
+<text x="-3.81" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="1" x="0" y="2.54" visible="off" length="point" direction="in"/>
+<pin name="2" x="0" y="-2.54" visible="off" length="point" direction="in"/>
+</symbol>
+<symbol name="Z-DIODE">
+<wire x1="-1.524" y1="-0.508" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="1.524" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="1.016" x2="0" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-1.016" x2="-1.524" y2="-1.016" width="0.254" layer="94"/>
+<text x="-2.54" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-2.54" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A" x="0" y="2.54" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="C" x="0" y="-2.54" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="ZWEIRICHTUNGSTHYRISTORDIODE_FORM2">
+<wire x1="-3.556" y1="-1.27" x2="3.556" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-0.254" x2="-1.524" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="-3.048" y1="-0.254" x2="0" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="-3.048" y1="-0.254" x2="-1.524" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.286" x2="-3.048" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.286" x2="1.524" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="3.048" y1="-2.286" x2="0" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="3.048" y1="-2.286" x2="1.524" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="0" y1="-0.254" x2="3.048" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-0.254" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-2.286" width="0.1524" layer="94"/>
+<text x="-3.81" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-3.81" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="A1" x="0" y="2.54" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="A2" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="ANREICHERUNGS_IG_FET_N-KANAL">
+<wire x1="0" y1="-2.54" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-0.508" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-0.508" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="2.794" y1="-0.508" x2="1.397" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0.508" x2="-2.54" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="-2.794" y1="-0.508" x2="-1.524" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="-0.508" x2="0.508" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-0.5166" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.5166" x2="-0.254" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.5166" x2="0.254" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0.508" x2="-2.54" y2="2.54" width="0.1524" layer="94"/>
+<circle x="0" y="0" radius="3.556" width="0.254" layer="94"/>
+<text x="-5.08" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="G" x="-2.54" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="S" x="-2.54" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="D" x="2.54" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="ANREICHERUNGS_IG_FET_P-KANAL_AUF_N_SUBSTRAT">
+<wire x1="2.794" y1="-0.508" x2="2.54" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-0.508" x2="1.524" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0.508" x2="-2.54" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="-2.794" y1="-0.508" x2="-2.54" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-0.508" x2="-1.524" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="-0.508" x2="0" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.508" x2="0.508" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0.254" y2="-1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-0.254" y2="-1.778" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-0.508" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-0.508" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0.508" x2="-2.54" y2="2.54" width="0.1524" layer="94"/>
+<circle x="0" y="0" radius="3.556" width="0.254" layer="94"/>
+<text x="-5.08" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="G" x="-2.54" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="D1" x="-2.54" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="D2" x="2.54" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="ANREICHERUNGS_IG_FET_P-KANAL_UND_HERAUSGEFUEHRTEN_SUBSTRATANSCHLUSS">
+<wire x1="2.54" y1="-0.508" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-0.508" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="2.794" y1="-0.508" x2="1.524" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0.508" x2="-2.54" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="-2.794" y1="-0.508" x2="-1.524" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="-0.508" y1="-0.508" x2="0" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.508" x2="0.508" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.508" x2="0" y2="-3.3838" width="0.1524" layer="94"/>
+<wire x1="0" y1="-3.3838" x2="0.254" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-3.3838" x2="-0.254" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0.508" x2="-2.54" y2="2.54" width="0.1524" layer="94"/>
+<circle x="0" y="0" radius="3.556" width="0.254" layer="94"/>
+<text x="-5.08" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="G" x="-2.54" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="S" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="D1" x="-2.54" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="D2" x="2.54" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="IE-FET_MIT_ZWEI_N-KANAELEN_UND_HERAUSGEFUEHRTEM_SUBSTRATANSCHLUSS">
+<wire x1="2.54" y1="0.508" x2="3.048" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.508" x2="0.254" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-0.508" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0.508" x2="2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-3.048" y1="-0.508" x2="-2.54" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-0.508" x2="0" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.508" x2="3.048" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.508" x2="-0.254" y2="-1.27" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-0.508" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0.508" x2="-1.905" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0.508" x2="-2.54" y2="2.54" width="0.1524" layer="94"/>
+<circle x="0" y="0" radius="3.556" width="0.254" layer="94"/>
+<text x="-5.08" y="2.54" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="0" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="G1" x="-2.54" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="G2" x="2.54" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="S" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="D1" x="-2.54" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="D2" x="2.54" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="NPN-TRANSISTOR">
+<wire x1="2.032" y1="-1.6962" x2="1.0504" y2="-1.6962" width="0.1524" layer="94"/>
+<wire x1="1.0504" y1="-1.6962" x2="0" y2="-1.6962" width="0.1524" layer="94"/>
+<wire x1="0" y1="-1.6962" x2="-1.0504" y2="-1.6962" width="0.1524" layer="94"/>
+<wire x1="-1.0504" y1="-1.6962" x2="-2.032" y2="-1.6962" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="1.0504" y2="-1.6962" width="0.1524" layer="94"/>
+<wire x1="0" y1="-1.6962" x2="0" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-1.0504" y2="-1.6962" width="0.1524" layer="94"/>
+<wire x1="-1.9304" y1="0.8447" x2="-1.3871" y2="0.2673" width="0.1524" layer="94"/>
+<wire x1="-1.9304" y1="0.8447" x2="-2.0221" y2="0.0641" width="0.1524" layer="94"/>
+<circle x="0" y="0" radius="3.556" width="0.254" layer="94"/>
+<text x="-5.08" y="0" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-2.54" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="E" x="-5.08" y="2.54" visible="off" length="short" direction="in"/>
+<pin name="C" x="5.08" y="2.54" visible="off" length="short" direction="in" rot="R180"/>
+<pin name="B" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="PNP-PHOTOTRANSISTOR">
+<wire x1="-2.475" y1="3.2714" x2="-4.5328" y2="4.451" width="0.1524" layer="94"/>
+<wire x1="-2.475" y1="4.2874" x2="-4.5328" y2="5.467" width="0.1524" layer="94"/>
+<wire x1="2.032" y1="-1.6962" x2="1.0504" y2="-1.6962" width="0.1524" layer="94"/>
+<wire x1="1.0504" y1="-1.6962" x2="-1.0504" y2="-1.6962" width="0.1524" layer="94"/>
+<wire x1="-1.0504" y1="-1.6962" x2="-2.032" y2="-1.6962" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="1.0504" y2="-1.6962" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-1.0504" y2="-1.6962" width="0.1524" layer="94"/>
+<wire x1="-1.5494" y1="-0.3113" x2="-2.0828" y2="0.2794" width="0.1524" layer="94"/>
+<wire x1="-1.5494" y1="-0.3113" x2="-1.4577" y2="0.4693" width="0.1524" layer="94"/>
+<circle x="0" y="0" radius="3.556" width="0.254" layer="94"/>
+<text x="-5.08" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="E" x="-5.08" y="2.54" visible="off" length="short" direction="in"/>
+<pin name="C" x="5.08" y="2.54" visible="off" length="short" direction="in" rot="R180"/>
+<polygon width="0.1524" layer="94">
+<vertex x="-3.4307" y="4.6318"/>
+<vertex x="-3.2585" y="4.9418"/>
+<vertex x="-2.475" y="4.2874"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-3.4307" y="3.6158"/>
+<vertex x="-3.2585" y="3.9172"/>
+<vertex x="-2.475" y="3.2714"/>
+</polygon>
+</symbol>
+<symbol name="PNP-TRANSISTOR">
+<wire x1="2.032" y1="-1.6962" x2="1.0504" y2="-1.6962" width="0.1524" layer="94"/>
+<wire x1="1.0504" y1="-1.6962" x2="0" y2="-1.6962" width="0.1524" layer="94"/>
+<wire x1="0" y1="-1.6962" x2="-1.0504" y2="-1.6962" width="0.1524" layer="94"/>
+<wire x1="-1.0504" y1="-1.6962" x2="-2.032" y2="-1.6962" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="1.0504" y2="-1.6962" width="0.1524" layer="94"/>
+<wire x1="0" y1="-1.6962" x2="0" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-1.0504" y2="-1.6962" width="0.1524" layer="94"/>
+<wire x1="-1.5494" y1="-0.2859" x2="-2.0927" y2="0.2915" width="0.1524" layer="94"/>
+<wire x1="-1.5494" y1="-0.2859" x2="-1.4577" y2="0.4947" width="0.1524" layer="94"/>
+<circle x="0" y="0" radius="3.556" width="0.254" layer="94"/>
+<text x="-5.08" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="E" x="-5.08" y="2.54" visible="off" length="short" direction="in"/>
+<pin name="C" x="5.08" y="2.54" visible="off" length="short" direction="in" rot="R180"/>
+<pin name="B" x="0" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="SPERRSCHICHT_FET_N-KANAL">
+<wire x1="3.048" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0" x2="-3.048" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0.762" x2="-2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0.762" x2="-2.286" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0.762" x2="-2.794" y2="1.524" width="0.1524" layer="94"/>
+<circle x="0" y="0" radius="3.556" width="0.254" layer="94"/>
+<text x="-5.08" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="G" x="-2.54" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="D" x="2.54" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="S" x="-2.54" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="SPERRSCHICHT_FET_P-KANAL">
+<wire x1="3.048" y1="0" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="0" x2="-3.048" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="1.524" x2="-2.54" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="2.54" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="1.524" x2="-2.286" y2="0.762" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="1.524" x2="-2.794" y2="0.762" width="0.1524" layer="94"/>
+<circle x="0" y="0" radius="3.556" width="0.254" layer="94"/>
+<text x="-5.08" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="G" x="-2.54" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="S" x="-2.54" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="D" x="2.54" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+<symbol name="VERARMUNGS_IG_FET_N-KANAL">
+<wire x1="2.54" y1="0.508" x2="-2.54" y2="0.508" width="0.1524" layer="94"/>
+<wire x1="-3.048" y1="-0.508" x2="-2.54" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-0.508" x2="0" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.508" x2="2.54" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-0.508" x2="3.048" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-2.5034" x2="0" y2="-0.508" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.508" x2="-0.2239" y2="-1.3346" width="0.1524" layer="94"/>
+<wire x1="0" y1="-0.508" x2="0.2153" y2="-1.3346" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-0.508" x2="-2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-0.508" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0.508" x2="-2.54" y2="2.54" width="0.1524" layer="94"/>
+<circle x="0" y="0" radius="3.556" width="0.254" layer="94"/>
+<text x="-5.08" y="1.27" size="1.778" layer="95" rot="R180">&gt;PART</text>
+<text x="-5.08" y="-1.27" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="G" x="-2.54" y="5.08" visible="off" length="short" direction="in" rot="R270"/>
+<pin name="S1" x="-2.54" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+<pin name="S2" x="2.54" y="-5.08" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="ABSCHALTTHYRISTORDIODE_STEUEREINGANG_ANODE" prefix="K" uservalue="yes">
+<description>Abschaltthyristordiode mit Anode als Steuereingang</description>
+<gates>
+<gate name="G$1" symbol="ABSCHALTTHYRISTORDIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ABSCHALTTHYRISTORDIODE">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
+<connect gate="G$1" pin="G" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ABSCHALTTHYRISTORDIODE_STEUEREINGANG_KATHODE" prefix="K" uservalue="yes">
+<description>Abschaltthyristordiode mit Kathode als Steuereingang</description>
+<gates>
+<gate name="G$1" symbol="ABSCHALTTHYRISTORDIODE_FORM2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ABSCHALTTHYRISTORDIODE_FORM2">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
+<connect gate="G$1" pin="G" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BACKWARD_DIODE" prefix="K" uservalue="yes">
+<description>Backward-Diode</description>
+<gates>
+<gate name="G$1" symbol="BACKWARD_DIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="BACKWARD_DIODE">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BEGRENZER" prefix="K" uservalue="yes">
+<description>Begrenzer</description>
+<gates>
+<gate name="G$1" symbol="BEGRENZER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="BEGRENZER">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DIODE" prefix="R" uservalue="yes">
+<description>Diode</description>
+<gates>
+<gate name="G$1" symbol="DIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="DIODE">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GLEICHRICHTERGERAET" prefix="R" uservalue="yes">
+<description>Gleichrichtergerät</description>
+<gates>
+<gate name="G$1" symbol="GLEICHRICHTERGERAET" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="GLEICHRICHTERGERAET">
+<connects>
+<connect gate="G$1" pin="+" pad="1"/>
+<connect gate="G$1" pin="-" pad="2"/>
+<connect gate="G$1" pin="L" pad="3"/>
+<connect gate="G$1" pin="N" pad="4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="KAPAZITAETSDIODE" prefix="R" uservalue="yes">
+<description>Kapazitätsdiode</description>
+<gates>
+<gate name="G$1" symbol="KAPAZITAETSDIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="KAPAZITAETSDIODE">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="B" pad="B"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PHOTODIODE" prefix="B" uservalue="yes">
+<description>Photodiode</description>
+<gates>
+<gate name="G$1" symbol="PHOTODIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PHOTODIODE">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="B" pad="B"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RUECKWAERTS_LEITENDE_THYRISTORDIODE" prefix="K" uservalue="yes">
+<description>Rückwärtsleitende Thyristordiode</description>
+<gates>
+<gate name="G$1" symbol="RUECKWAERTS_LEITENDE_THYRISTORDIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RUECKWAERTS_LEITENDE_THYRISTORDIODE">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RUECKWAERTS_LEITENDE_THYRISTORDIODE_ANODENANSCHLUSS" prefix="K" uservalue="yes">
+<description>Rückwärtsleitende Thyristordiode mit Steuereingang an Anode</description>
+<gates>
+<gate name="G$1" symbol="RUECKWAERTS_LEITENDE_THYRISTORDIODE_ANODENANSCHLUSS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RUECKWAERTS_LEITENDE_THYRISTORDIODE_ANODENANSCHLUSS">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
+<connect gate="G$1" pin="G" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RUECKWAERTS_LEITENDE_THYRISTORDIODE_KATHODENANSCHLUSS" prefix="K" uservalue="yes">
+<description>Rückwärtsleitende Thyristordiode mit Steuereingang an Kathode</description>
+<gates>
+<gate name="G$1" symbol="RUECKWAERTS_LEITENDE_THYRISTORDIODE_KATHODENANSCHLUSS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RUECKWAERTS_LEITENDE_THYRISTORDIODE_KATHODENANSCHLUSS">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="C" pad="2"/>
+<connect gate="G$1" pin="G" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RUECKWAERTS_SPERRENDE_THYRISTORDIODE" prefix="R" uservalue="yes">
+<description>Rückwärtssperrende Thyristordiode</description>
+<gates>
+<gate name="G$1" symbol="RUECKWAERTS_SPERRENDE_THYRISTORDIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RUECKWAERTS_SPERRENDE_THYRISTORDIODE">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RUECKWAERTS_SPERRENDE_THYRISTORDIODE_ANODENANSCHLUSS" prefix="K" uservalue="yes">
+<description>Rückwärtssperrende Thyristordiode, Anodenanschluss</description>
+<gates>
+<gate name="G$1" symbol="RUECKWAERTS_SPERRENDE_THYRISTORDIODE_ANODENANSCHLUSS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RUECKWAERTS_SPERRENDE_THYRISTORDIODE_ANODENANSCHLUSS">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="G" pad="G"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RUECKWAERTS_SPERRENDE_THYRISTORDIODE_KATHODENANSCHLUSS" prefix="K" uservalue="yes">
+<description>Rückwärtssperrende Thyristordiode, Kathodenanschluss</description>
+<gates>
+<gate name="G$1" symbol="RUECKWAERTS_SPERRENDE_THYRISTORDIODE_KATHODENANSCHLUSS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RUECKWAERTS_SPERRENDE_THYRISTORDIODE_KATHODENANSCHLUSS">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="G" pad="G"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RUECKWAERTS_SPERRENDE_THYRISTORDIODE__ANODEN_KATHODENANSCHLUSS_FORM2" prefix="K" uservalue="yes">
+<description>Rückwärtssperrende Thyristordiode, Anoden-/Kathodenanschluss</description>
+<gates>
+<gate name="G$1" symbol="RUECKWAERTS_SPERRENDE_THYRISTORDIODE__ANODEN_KATHODENANSCHLUSS_FORM2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RUECKWAERTS_SPERRENDE_THYRISTORDIODE__ANODEN_KATHODENANSCHLUSS_FORM2">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="G1" pad="G1"/>
+<connect gate="G$1" pin="G2" pad="G2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RUECKWAERTS_SPERRENDE_THYRISTORDIODE_ANODEN-KATHODENANSCHLUSS_FORM1" prefix="K" uservalue="yes">
+<description>Rückwärtssperrende Thyristordiode, Anoden-/Kathodenanschluss</description>
+<gates>
+<gate name="G$1" symbol="RUECKWAERTS_SPERRENDE_THYRISTORDIODE_ANODEN-KATHODENANSCHLUSS_FORM1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RUECKWAERTS_SPERRENDE_THYRISTORDIODE_ANODEN-KATHODENANSCHLUSS_FORM1">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="G1" pad="G1"/>
+<connect gate="G$1" pin="G2" pad="G2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="THYRISTOR" prefix="K" uservalue="yes">
+<description>Thyristor</description>
+<gates>
+<gate name="G$1" symbol="THYRISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="THYRISTOR">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="G" pad="G"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TRIAC" prefix="K" uservalue="yes">
+<description>Triac</description>
+<gates>
+<gate name="G$1" symbol="TRIAC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TRIAC">
+<connects>
+<connect gate="G$1" pin="A1" pad="A1"/>
+<connect gate="G$1" pin="A2" pad="A2"/>
+<connect gate="G$1" pin="G" pad="G"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TUNNELDIODE" prefix="R" uservalue="yes">
+<description>Tunneldiode</description>
+<gates>
+<gate name="G$1" symbol="TUNNELDIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TUNNELDIODE">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VARISTOR" prefix="R" uservalue="yes">
+<description>Varistor</description>
+<gates>
+<gate name="G$1" symbol="VARISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="VARISTOR">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="Z-DIODE" prefix="R" uservalue="yes">
+<description>Z-Diode</description>
+<gates>
+<gate name="G$1" symbol="Z-DIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="Z-DIODE">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ZWEIRICHTUNGS_THYRISTORDIODE_MIT_KLEMME" prefix="K" uservalue="yes">
+<description>Zweirichtungsthyristordiode mit Klemme</description>
+<gates>
+<gate name="G$1" symbol="ZWEIRICHTUNGSTHYRISTORDIODE_FORM2" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ZWEIRICHTUNGSTHYRISTORDIODE_FORM2">
+<connects>
+<connect gate="G$1" pin="A1" pad="1"/>
+<connect gate="G$1" pin="A2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ANREICHERUNGS_IG_FET_N-KANAL" prefix="K" uservalue="yes">
+<description>Anreicherungs-IG-FET, N-Kanal</description>
+<gates>
+<gate name="G$1" symbol="ANREICHERUNGS_IG_FET_N-KANAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ANREICHERUNGS_IG_FET_N-KANAL">
+<connects>
+<connect gate="G$1" pin="D" pad="D"/>
+<connect gate="G$1" pin="G" pad="G"/>
+<connect gate="G$1" pin="S" pad="S"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ANREICHERUNGS_IG_FET_P-KANAL_AUF_N_SUBSTRAT" prefix="K" uservalue="yes">
+<description>Anreicherungs-IG-FET, P-Kanal auf N-Substrat</description>
+<gates>
+<gate name="G$1" symbol="ANREICHERUNGS_IG_FET_P-KANAL_AUF_N_SUBSTRAT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ANREICHERUNGS_IG_FET_P-KANAL_AUF_N_SUBSTRAT">
+<connects>
+<connect gate="G$1" pin="D1" pad="D1"/>
+<connect gate="G$1" pin="D2" pad="D2"/>
+<connect gate="G$1" pin="G" pad="G"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ANREICHERUNGS_IG_FET_P-KANAL_UND_HERAUSGEFUEHRTEN_SUBSTRATANSCHLUSS" prefix="K" uservalue="yes">
+<description>Anreicherungs-IG-FET, P-Kanal, herausgeführter Substratanschluss</description>
+<gates>
+<gate name="G$1" symbol="ANREICHERUNGS_IG_FET_P-KANAL_UND_HERAUSGEFUEHRTEN_SUBSTRATANSCHLUSS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ANREICHERUNGS_IG_FET_P-KANAL_UND_HERAUSGEFUEHRTEN_SUBSTRATANSCHLUSS">
+<connects>
+<connect gate="G$1" pin="D1" pad="D1"/>
+<connect gate="G$1" pin="D2" pad="D2"/>
+<connect gate="G$1" pin="G" pad="G"/>
+<connect gate="G$1" pin="S" pad="S"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="IE-FET_MIT_ZWEI_N-KANAELEN_UND_HERAUSGEFUEHRTEM_SUBSTRATANSCHLUSS" prefix="K" uservalue="yes">
+<description>IE-FET mit zwei N-Kanälen, herausgeführter Substratanschluss</description>
+<gates>
+<gate name="G$1" symbol="IE-FET_MIT_ZWEI_N-KANAELEN_UND_HERAUSGEFUEHRTEM_SUBSTRATANSCHLUSS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="IE-FET_MIT_ZWEI_N-KANAELEN_UND_HERAUSGEFUEHRTEM_SUBSTRATANSCHLUSS">
+<connects>
+<connect gate="G$1" pin="D1" pad="D1"/>
+<connect gate="G$1" pin="D2" pad="D2"/>
+<connect gate="G$1" pin="G1" pad="G1"/>
+<connect gate="G$1" pin="G2" pad="G2"/>
+<connect gate="G$1" pin="S" pad="S"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="NPN-TRANSISTOR" prefix="K" uservalue="yes">
+<description>NPN-Transistor</description>
+<gates>
+<gate name="G$1" symbol="NPN-TRANSISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="NPN-TRANSISTOR">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PNP-PHOTOTRANSISTOR" prefix="K" uservalue="yes">
+<description>PNP-Phototransistor</description>
+<gates>
+<gate name="G$1" symbol="PNP-PHOTOTRANSISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PNP-PHOTOTRANSISTOR">
+<connects>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PNP-TRANSISTOR" prefix="K" uservalue="yes">
+<description>PNP-Transistor</description>
+<gates>
+<gate name="G$1" symbol="PNP-TRANSISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PNP-TRANSISTOR">
+<connects>
+<connect gate="G$1" pin="B" pad="B"/>
+<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="E" pad="E"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPERRSCHICHT_FET_N-KANAL" prefix="K" uservalue="yes">
+<description>Sperrschicht-FET, N-Kanal</description>
+<gates>
+<gate name="G$1" symbol="SPERRSCHICHT_FET_N-KANAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SPERRSCHICHT_FET_N-KANAL">
+<connects>
+<connect gate="G$1" pin="D" pad="D"/>
+<connect gate="G$1" pin="G" pad="G"/>
+<connect gate="G$1" pin="S" pad="S"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPERRSCHICHT_FET_P-KANAL" prefix="K" uservalue="yes">
+<description>Sperrschicht-FET, P-Kanal</description>
+<gates>
+<gate name="G$1" symbol="SPERRSCHICHT_FET_P-KANAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SPERRSCHICHT_FET_P-KANAL">
+<connects>
+<connect gate="G$1" pin="D" pad="D"/>
+<connect gate="G$1" pin="G" pad="G"/>
+<connect gate="G$1" pin="S" pad="S"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VERARMUNGS_IG_FET_N-KANAL" prefix="K" uservalue="yes">
+<description>Verarmungs-IG-FET, N-Kanal</description>
+<gates>
+<gate name="G$1" symbol="VERARMUNGS_IG_FET_N-KANAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="VERARMUNGS_IG_FET_N-KANAL">
+<connects>
+<connect gate="G$1" pin="G" pad="G"/>
+<connect gate="G$1" pin="S1" pad="S1"/>
+<connect gate="G$1" pin="S2" pad="S2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>

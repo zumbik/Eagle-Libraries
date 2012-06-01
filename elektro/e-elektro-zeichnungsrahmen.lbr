@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Hilfslinien" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+</layers>
+<library>
+<description>&lt;b&gt;Rahmen für Elektropläne&lt;/b&gt;&lt;p&gt;
+Die vordefinierten Rahmen eignen sich für &lt;u&gt;Kontakt- und Signalreferenzen&lt;/u&gt;, die ab Version 5.0 möglich sind.&lt;p&gt;
+
+Wird ein Rahmen mit vordefinerten &lt;u&gt;Attributen&lt;/u&gt;, z. B. RAHMEN_A4_8Z-19S, in eine neue Schaltung
+geholt, dann sind zunächst die Platzhaltertexte (&gt;ATTRIBUTNAME) sichtbar, weil diese Attribute noch nicht
+angelegt sind. Verwenden Sie das User-Language-Programm &lt;u&gt;e-attributverwaltung.ulp&lt;/u&gt;, um auf
+bequeme Weise die noch nicht definierten Attribute zu generieren.&lt;p&gt;
+&lt;author&gt;Autor librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="RAHMEN_A4_8Z-19S">
+<wire x1="25.4" y1="10.922" x2="25.4" y2="0" width="0.1524" layer="94"/>
+<wire x1="38.1" y1="10.922" x2="38.1" y2="0" width="0.1524" layer="94"/>
+<wire x1="54.61" y1="11.049" x2="54.61" y2="0" width="0.1524" layer="94"/>
+<wire x1="261.62" y1="0" x2="261.62" y2="5.715" width="0.1524" layer="94"/>
+<wire x1="261.62" y1="5.715" x2="284.353" y2="5.715" width="0.1524" layer="94"/>
+<wire x1="64.77" y1="11.049" x2="64.77" y2="8.382" width="0.1524" layer="94"/>
+<wire x1="64.77" y1="8.382" x2="64.77" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="64.77" y1="3.175" x2="64.77" y2="0" width="0.1524" layer="94"/>
+<wire x1="227.33" y1="11.049" x2="227.33" y2="5.715" width="0.1524" layer="94"/>
+<wire x1="227.33" y1="5.715" x2="261.62" y2="5.715" width="0.1524" layer="94"/>
+<wire x1="201.93" y1="0" x2="201.93" y2="5.715" width="0.1524" layer="94"/>
+<wire x1="201.93" y1="5.715" x2="227.33" y2="5.715" width="0.1524" layer="94"/>
+<wire x1="179.07" y1="0" x2="179.07" y2="5.715" width="0.1524" layer="94"/>
+<wire x1="179.07" y1="5.715" x2="179.07" y2="11.049" width="0.1524" layer="94"/>
+<wire x1="201.93" y1="5.715" x2="179.07" y2="5.715" width="0.1524" layer="94"/>
+<wire x1="173.99" y1="0" x2="173.99" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="173.99" y1="3.175" x2="173.99" y2="11.049" width="0.1524" layer="94"/>
+<wire x1="146.05" y1="0" x2="146.05" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="146.05" y1="3.175" x2="173.99" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="120.65" y1="3.175" x2="146.05" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="120.65" y1="0" x2="120.65" y2="3.175" width="0.0508" layer="94"/>
+<wire x1="90.17" y1="0" x2="90.17" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="120.65" y1="3.175" x2="90.17" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="90.17" y1="3.175" x2="90.17" y2="11.049" width="0.1524" layer="94"/>
+<wire x1="146.05" y1="3.175" x2="146.05" y2="11.049" width="0.1524" layer="94"/>
+<wire x1="64.77" y1="8.382" x2="90.17" y2="8.382" width="0.1524" layer="94"/>
+<wire x1="64.77" y1="5.842" x2="90.17" y2="5.842" width="0.1524" layer="94"/>
+<wire x1="64.77" y1="3.175" x2="90.17" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="0" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="95" style="shortdash"/>
+<wire x1="5.08" y1="167.64" x2="281.94" y2="167.64" width="0" layer="98" style="dashdot"/>
+<wire x1="5.08" y1="86.36" x2="281.94" y2="86.36" width="0" layer="98" style="dashdot"/>
+<wire x1="5.08" y1="60.96" x2="281.94" y2="60.96" width="0" layer="98" style="dashdot"/>
+<wire x1="5.08" y1="50.8" x2="281.94" y2="50.8" width="0" layer="98" style="longdash"/>
+<wire x1="0" y1="14.351" x2="0" y2="0" width="0.3048" layer="94"/>
+<wire x1="0" y1="0" x2="284.48" y2="0" width="0.3048" layer="94"/>
+<wire x1="284.48" y1="0" x2="284.48" y2="17.78" width="0.3048" layer="94"/>
+<text x="262.89" y="0.635" size="1.778" layer="95">&gt;SHEET</text>
+<text x="5.08" y="50.8" size="1.778" layer="94">&gt;CONTACT_XREF</text>
+<text x="228.092" y="6.35" size="1.524" layer="95">&gt;DRAWING_NAME</text>
+<text x="26.035" y="0.635" size="1.6764" layer="95">Datum</text>
+<text x="38.735" y="0.635" size="1.6764" layer="95">Name</text>
+<text x="55.245" y="0.635" size="1.6764" layer="95">Norm</text>
+<text x="90.932" y="0.635" size="1.6764" layer="95">Urspr.:</text>
+<text x="121.285" y="0.762" size="1.6764" layer="95">Ers. f.</text>
+<text x="147.32" y="0.635" size="1.6764" layer="95">Ers. d.</text>
+<text x="179.705" y="3.175" size="1.778" layer="95">Ersteller</text>
+<text x="179.705" y="8.763" size="1.778" layer="95">Auftrags-Nr.:</text>
+<text x="226.568" y="10.541" size="1.778" layer="95" rot="R180">Werks-Nr.</text>
+<text x="203.2" y="3.175" size="1.778" layer="95">Zeichnungs-Nr.</text>
+<text x="262.89" y="3.175" size="1.778" layer="95">Blatt</text>
+<text x="55.245" y="3.81" size="1.6764" layer="95">Gepr.</text>
+<text x="55.245" y="6.35" size="1.6764" layer="95">Bearb.</text>
+<text x="55.245" y="8.89" size="1.6764" layer="95">Datum</text>
+<text x="90.932" y="8.89" size="1.6764" layer="95">Kunde:</text>
+<text x="90.932" y="5.969" size="1.6764" layer="95">Kunden-</text>
+<text x="90.932" y="3.81" size="1.6764" layer="95">Zeichnung:</text>
+<text x="179.705" y="6.35" size="1.524" layer="95">&gt;AUFTRAGS_NR</text>
+<text x="65.405" y="6.35" size="1.524" layer="95">&gt;BEARBEITET</text>
+<text x="65.405" y="8.89" size="1.524" layer="95">&gt;DATUM</text>
+<text x="26.035" y="3.81" size="1.524" layer="95">&gt;DATUM1</text>
+<text x="26.035" y="6.35" size="1.524" layer="95">&gt;DATUM2</text>
+<text x="26.035" y="8.89" size="1.524" layer="95">&gt;DATUM3</text>
+<text x="128.778" y="0.762" size="1.524" layer="95">&gt;ERSATZ_FUER</text>
+<text x="155.194" y="0.762" size="1.524" layer="95">&gt;ERSETZT_DURCH</text>
+<text x="179.705" y="0.635" size="1.524" layer="95">&gt;ERSTELLER</text>
+<text x="65.405" y="3.81" size="1.524" layer="95">&gt;GEPRUEFT</text>
+<text x="38.735" y="3.81" size="1.524" layer="95">&gt;NAME1</text>
+<text x="38.735" y="6.35" size="1.524" layer="95">&gt;NAME2</text>
+<text x="38.735" y="8.89" size="1.524" layer="95">&gt;NAME3</text>
+<text x="65.405" y="0.635" size="1.524" layer="95">&gt;NORM</text>
+<text x="98.806" y="0.635" size="1.524" layer="95">&gt;URSPRUNG</text>
+<text x="226.568" y="7.874" size="1.524" layer="95" rot="R180">&gt;WERKS_NR</text>
+<text x="203.2" y="0.635" size="1.524" layer="95">&gt;ZEICHNUNGS_NR</text>
+<text x="103.632" y="3.81" size="1.524" layer="95">&gt;KD_ZEICHNUNG</text>
+<text x="102.616" y="8.89" size="1.524" layer="95">&gt;KUNDE</text>
+<text x="228.092" y="8.763" size="1.524" layer="95">Dateiname:</text>
+<text x="1.27" y="-3.81" size="1.524" layer="95">Papierrand</text>
+<text x="128.27" y="-5.08" size="1.524" layer="95">Heftrand</text>
+<text x="5.08" y="60.96" size="1.778" layer="98">Klemmen</text>
+<text x="5.08" y="167.64" size="1.778" layer="98">Sicherungen</text>
+<text x="5.08" y="86.36" size="1.778" layer="98">Spulen</text>
+<text x="0.635" y="0.635" size="1.6764" layer="95">Änderung</text>
+<text x="0.635" y="3.81" size="1.524" layer="95">&gt;AENDERUNG1</text>
+<text x="0.635" y="6.35" size="1.524" layer="95">&gt;AENDERUNG2</text>
+<text x="0.635" y="8.89" size="1.524" layer="95">&gt;AENDERUNG3</text>
+<text x="7.62" y="13.97" size="1.778" layer="98" rot="R90">Bereich für Kontaktspiegel</text>
+<text x="10.16" y="13.97" size="1.778" layer="98" rot="R90">und Peripherie</text>
+<frame x1="0" y1="11.049" x2="284.48" y2="200.66" columns="19" rows="8" layer="94" border-right="no" border-bottom="no"/>
+</symbol>
+<symbol name="RAHMEN_A4_8Z-19S_OHNE_DOKUMENTENFELD">
+<wire x1="0" y1="-7.62" x2="2.54" y2="-7.62" width="0.254" layer="95" style="shortdash"/>
+<text x="1.27" y="-6.35" size="1.524" layer="95">Papierrand</text>
+<text x="128.27" y="-7.62" size="1.524" layer="95">Heftrand</text>
+<frame x1="0" y1="0" x2="297.18" y2="182.88" columns="19" rows="8" layer="94" border-right="no" border-bottom="no"/>
+</symbol>
+<symbol name="RAHMEN_A4_8Z-19S_SPS">
+<wire x1="25.4" y1="10.922" x2="25.4" y2="0" width="0.1524" layer="94"/>
+<wire x1="38.1" y1="10.922" x2="38.1" y2="0" width="0.1524" layer="94"/>
+<wire x1="54.61" y1="11.049" x2="54.61" y2="0" width="0.1524" layer="94"/>
+<wire x1="261.62" y1="0" x2="261.62" y2="5.715" width="0.1524" layer="94"/>
+<wire x1="261.62" y1="5.715" x2="284.353" y2="5.715" width="0.1524" layer="94"/>
+<wire x1="64.77" y1="11.049" x2="64.77" y2="8.382" width="0.1524" layer="94"/>
+<wire x1="64.77" y1="8.382" x2="64.77" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="64.77" y1="3.175" x2="64.77" y2="0" width="0.1524" layer="94"/>
+<wire x1="227.33" y1="11.049" x2="227.33" y2="5.715" width="0.1524" layer="94"/>
+<wire x1="227.33" y1="5.715" x2="261.62" y2="5.715" width="0.1524" layer="94"/>
+<wire x1="201.93" y1="0" x2="201.93" y2="5.715" width="0.1524" layer="94"/>
+<wire x1="201.93" y1="5.715" x2="227.33" y2="5.715" width="0.1524" layer="94"/>
+<wire x1="179.07" y1="0" x2="179.07" y2="5.715" width="0.1524" layer="94"/>
+<wire x1="179.07" y1="5.715" x2="179.07" y2="11.049" width="0.1524" layer="94"/>
+<wire x1="201.93" y1="5.715" x2="179.07" y2="5.715" width="0.1524" layer="94"/>
+<wire x1="173.99" y1="0" x2="173.99" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="173.99" y1="3.175" x2="173.99" y2="11.049" width="0.1524" layer="94"/>
+<wire x1="146.05" y1="0" x2="146.05" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="146.05" y1="3.175" x2="173.99" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="120.65" y1="3.175" x2="146.05" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="120.65" y1="0" x2="120.65" y2="3.175" width="0.0508" layer="94"/>
+<wire x1="90.17" y1="0" x2="90.17" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="120.65" y1="3.175" x2="90.17" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="90.17" y1="3.175" x2="90.17" y2="11.049" width="0.1524" layer="94"/>
+<wire x1="146.05" y1="3.175" x2="146.05" y2="11.049" width="0.1524" layer="94"/>
+<wire x1="64.77" y1="8.382" x2="90.17" y2="8.382" width="0.1524" layer="94"/>
+<wire x1="64.77" y1="5.842" x2="90.17" y2="5.842" width="0.1524" layer="94"/>
+<wire x1="64.77" y1="3.175" x2="90.17" y2="3.175" width="0.1524" layer="94"/>
+<wire x1="0" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="95" style="shortdash"/>
+<wire x1="3.81" y1="25.4" x2="283.21" y2="25.4" width="0" layer="98" style="longdash"/>
+<wire x1="0" y1="14.351" x2="0" y2="0" width="0.3048" layer="94"/>
+<wire x1="0" y1="0" x2="284.48" y2="0" width="0.3048" layer="94"/>
+<wire x1="5.08" y1="60.96" x2="281.94" y2="60.96" width="0" layer="98" style="dashdot"/>
+<wire x1="284.48" y1="10.922" x2="284.48" y2="0" width="0.3048" layer="94"/>
+<text x="262.89" y="0.635" size="1.778" layer="95">&gt;SHEET</text>
+<text x="5.08" y="25.4" size="1.778" layer="94">&gt;CONTACT_XREF</text>
+<text x="228.092" y="6.35" size="1.524" layer="95">&gt;DRAWING_NAME</text>
+<text x="0.635" y="0.635" size="1.6764" layer="95">Änderung</text>
+<text x="26.035" y="0.635" size="1.6764" layer="95">Datum</text>
+<text x="38.735" y="0.635" size="1.6764" layer="95">Name</text>
+<text x="55.245" y="0.635" size="1.6764" layer="95">Norm</text>
+<text x="90.932" y="0.635" size="1.6764" layer="95">Urspr.:</text>
+<text x="121.285" y="0.762" size="1.6764" layer="95">Ers. f.</text>
+<text x="147.32" y="0.635" size="1.6764" layer="95">Ers. d.</text>
+<text x="179.705" y="3.175" size="1.778" layer="95">Ersteller</text>
+<text x="179.705" y="8.763" size="1.778" layer="95">Auftrags-Nr.:</text>
+<text x="226.568" y="10.541" size="1.778" layer="95" rot="R180">Werks-Nr.</text>
+<text x="203.2" y="3.175" size="1.778" layer="95">Zeichnungs-Nr.</text>
+<text x="262.89" y="3.175" size="1.778" layer="95">Blatt</text>
+<text x="55.245" y="3.81" size="1.6764" layer="95">Gepr.</text>
+<text x="55.245" y="6.35" size="1.6764" layer="95">Bearb.</text>
+<text x="55.245" y="8.89" size="1.6764" layer="95">Datum</text>
+<text x="90.932" y="8.89" size="1.6764" layer="95">Kunde:</text>
+<text x="90.932" y="5.969" size="1.6764" layer="95">Kunden-</text>
+<text x="90.932" y="3.81" size="1.6764" layer="95">Zeichnung:</text>
+<text x="0.635" y="3.81" size="1.524" layer="95">&gt;AENDERUNG1</text>
+<text x="0.635" y="6.35" size="1.524" layer="95">&gt;AENDERUNG2</text>
+<text x="0.635" y="8.89" size="1.524" layer="95">&gt;AENDERUNG3</text>
+<text x="179.705" y="6.35" size="1.524" layer="95">&gt;AUFTRAGS_NR</text>
+<text x="65.405" y="6.35" size="1.524" layer="95">&gt;BEARBEITET</text>
+<text x="65.405" y="8.89" size="1.524" layer="95">&gt;DATUM</text>
+<text x="26.035" y="3.81" size="1.524" layer="95">&gt;DATUM1</text>
+<text x="26.035" y="6.35" size="1.524" layer="95">&gt;DATUM2</text>
+<text x="26.035" y="8.89" size="1.524" layer="95">&gt;DATUM3</text>
+<text x="128.778" y="0.762" size="1.524" layer="95">&gt;ERSATZ_FUER</text>
+<text x="155.194" y="0.762" size="1.524" layer="95">&gt;ERSETZT_DURCH</text>
+<text x="179.705" y="0.635" size="1.524" layer="95">&gt;ERSTELLER</text>
+<text x="65.405" y="3.81" size="1.524" layer="95">&gt;GEPRUEFT</text>
+<text x="38.735" y="3.81" size="1.524" layer="95">&gt;NAME1</text>
+<text x="38.735" y="6.35" size="1.524" layer="95">&gt;NAME2</text>
+<text x="38.735" y="8.89" size="1.524" layer="95">&gt;NAME3</text>
+<text x="65.405" y="0.635" size="1.524" layer="95">&gt;NORM</text>
+<text x="98.806" y="0.635" size="1.524" layer="95">&gt;URSPRUNG</text>
+<text x="226.568" y="7.874" size="1.524" layer="95" rot="R180">&gt;WERKS_NR</text>
+<text x="203.2" y="0.635" size="1.524" layer="95">&gt;ZEICHNUNGS_NR</text>
+<text x="103.632" y="3.81" size="1.524" layer="95">&gt;KD_ZEICHNUNG</text>
+<text x="102.616" y="8.89" size="1.524" layer="95">&gt;KUNDE</text>
+<text x="228.092" y="8.763" size="1.524" layer="95">Dateiname:</text>
+<text x="1.27" y="-3.81" size="1.524" layer="95">Papierrand</text>
+<text x="128.27" y="-5.08" size="1.524" layer="95">Heftrand</text>
+<text x="5.08" y="60.96" size="1.778" layer="98">Klemmen</text>
+<text x="6.35" y="12.7" size="1.778" layer="98" rot="R90">Bereich für</text>
+<text x="13.97" y="12.7" size="1.778" layer="98" rot="R90">und</text>
+<text x="16.51" y="12.7" size="1.778" layer="98" rot="R90">Peripherie</text>
+<text x="11.43" y="12.7" size="1.778" layer="98" rot="R90">spiegel</text>
+<text x="8.89" y="12.7" size="1.778" layer="98" rot="R90">Kontakt-</text>
+<frame x1="0" y1="11.049" x2="284.48" y2="200.66" columns="19" rows="8" layer="94" border-right="no" border-bottom="no"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="RAHMEN_A4_8Z-19S" prefix="RAHMEN">
+<description>Zeichnungsrahmen  DIN A4  für Leistungs- und Steuerungsteil der Stomlaufpläne mit Attributen.&lt;p&gt;
+8 Zeilen, 19 Spalten und Hilfslinien.&lt;br&gt;
+Verwenden Sie das User-Language-Programm &lt;u&gt;e-attribute-anlegen.ulp&lt;/u&gt;, um auf
+bequeme Weise die noch nicht definierten Attribute zu generieren.</description>
+<gates>
+<gate name="1" symbol="RAHMEN_A4_8Z-19S" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name="">
+<attribute name="AENDERUNG1" value="" constant="no"/>
+<attribute name="AENDERUNG2" value="" constant="no"/>
+<attribute name="AENDERUNG3" value="" constant="no"/>
+<attribute name="DATUM1" value="" constant="no"/>
+<attribute name="DATUM2" value="" constant="no"/>
+<attribute name="DATUM3" value="" constant="no"/>
+<attribute name="NAME1" value="" constant="no"/>
+<attribute name="NAME2" value="" constant="no"/>
+<attribute name="NAME3" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RAHMEN_A4_8Z-19S_OHNE_DOKUMENTENFELD" prefix="RAHMEN">
+<description>Zeichnungsrahmen DIN A4, 8 Zeilen, 19 Spalten ohne Dokumentenfeld</description>
+<gates>
+<gate name="G$1" symbol="RAHMEN_A4_8Z-19S_OHNE_DOKUMENTENFELD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RAHMEN_A4_8Z-19S_SPS" prefix="RAHMEN">
+<description>Zeichnungsrahmen DIN A4 für SPS mit Attributen.&lt;p&gt;
+ 8 Zeilen, 19 Spalten und Hilfslinien&lt;br&gt;
+ Verwenden Sie das User-Language-Programm &lt;u&gt;e-attribute-anlegen.ulp&lt;/u&gt;, um auf
+bequeme Weise die noch nicht definierten Attribute zu generieren.</description>
+<gates>
+<gate name="G$1" symbol="RAHMEN_A4_8Z-19S_SPS" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name="">
+<attribute name="AENDERUNG1" value="" constant="no"/>
+<attribute name="AENDERUNG2" value="" constant="no"/>
+<attribute name="AENDERUNG3" value="" constant="no"/>
+<attribute name="DATUM1" value="" constant="no"/>
+<attribute name="DATUM2" value="" constant="no"/>
+<attribute name="DATUM3" value="" constant="no"/>
+<attribute name="NAME1" value="" constant="no"/>
+<attribute name="NAME2" value="" constant="no"/>
+<attribute name="NAME3" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>

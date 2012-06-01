@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.0">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="100" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+</layers>
+<library>
+<description>&lt;b&gt;TRACO &lt;/b&gt;(R)&lt;b&gt; POWER&lt;/b&gt; DC DC Konverter&lt;p&gt;
+www.tracopower.com&lt;p&gt;
+Source:&lt;br&gt;
+&lt;i&gt;traco.lbr&lt;/i&gt; from Bodo Fuhrmann  from Martin-Luther-Universität Halle, &amp;lt;bodo@biochemtech.uni-halle.de&amp;gt;&lt;br&gt;
+&lt;i&gt;traco1.lbr&lt;/i&gt; from Hari Babu Kotte  from Mittuniversitetet,  &amp;lt;kotte_hari@rediffmail.com&amp;gt;&lt;br&gt;
+Author: &lt;author&gt;librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="TME-24V">
+<description>&lt;b&gt;DC/DC Converter TME Series 1 Watt (24V)&lt;/b&gt;&lt;p&gt;
+Source: www.tracopower.com .. tme.pdf</description>
+<wire x1="-5.65" y1="5.23" x2="5.65" y2="5.23" width="0.2032" layer="21"/>
+<wire x1="5.65" y1="5.23" x2="5.65" y2="4.23" width="0.2032" layer="21"/>
+<wire x1="5.65" y1="4.23" x2="5.65" y2="-1.58" width="0.2032" layer="21"/>
+<wire x1="5.65" y1="-1.58" x2="-5.65" y2="-1.58" width="0.2032" layer="21"/>
+<wire x1="-5.65" y1="-1.58" x2="-5.65" y2="4.23" width="0.2032" layer="21"/>
+<wire x1="-5.65" y1="4.23" x2="-5.65" y2="5.23" width="0.2032" layer="21"/>
+<pad name="1" x="-3.81" y="0" drill="0.7" diameter="1.1"/>
+<pad name="2" x="-1.27" y="0" drill="0.7" diameter="1.1"/>
+<pad name="3" x="1.27" y="0" drill="0.7" diameter="1.1"/>
+<pad name="4" x="3.81" y="0" drill="0.7" diameter="1.1"/>
+<text x="-5.08" y="6.35" size="1.27" layer="25">&gt;NAME</text>
+<text x="-5.08" y="2.54" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="TME">
+<description>&lt;b&gt;DC/DC Converter TME Series 1 Watt (5/12V)&lt;/b&gt;&lt;p&gt;
+Source: www.tracopower.com .. tme.pdf</description>
+<wire x1="5.65" y1="4.23" x2="5.65" y2="-1.58" width="0.2032" layer="21"/>
+<wire x1="5.65" y1="-1.58" x2="-5.65" y2="-1.58" width="0.2032" layer="21"/>
+<wire x1="-5.65" y1="-1.58" x2="-5.65" y2="4.23" width="0.2032" layer="21"/>
+<wire x1="-5.65" y1="4.23" x2="5.65" y2="4.23" width="0.2032" layer="21"/>
+<pad name="1" x="-3.81" y="0" drill="0.7" diameter="1.1"/>
+<pad name="2" x="-1.27" y="0" drill="0.7" diameter="1.1"/>
+<pad name="3" x="1.27" y="0" drill="0.7" diameter="1.1"/>
+<pad name="4" x="3.81" y="0" drill="0.7" diameter="1.1"/>
+<text x="-5.08" y="5.08" size="1.27" layer="25">&gt;NAME</text>
+<text x="-5.08" y="1.905" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="TAP2422">
+<description>&lt;font color="red"&gt;&lt;b&gt;Abgekündigt&lt;/b&gt;&lt;/font&gt;</description>
+<wire x1="-12.7" y1="-25.4" x2="12.7" y2="-25.4" width="0.127" layer="21"/>
+<wire x1="12.7" y1="-25.4" x2="12.7" y2="25.4" width="0.127" layer="21"/>
+<wire x1="12.7" y1="25.4" x2="-12.7" y2="25.4" width="0.127" layer="21"/>
+<wire x1="-12.7" y1="25.4" x2="-12.7" y2="-25.4" width="0.127" layer="21"/>
+<pad name="+VOUT" x="10.16" y="10.16" drill="0.8128" diameter="1.397" shape="square"/>
+<pad name="COM" x="0" y="10.16" drill="0.8128" diameter="1.397" shape="square"/>
+<pad name="-VOUT" x="-10.16" y="10.16" drill="0.8128" diameter="1.397" shape="square"/>
+<pad name="+VIN" x="2.54" y="-10.16" drill="0.8128" diameter="1.397" shape="square"/>
+<pad name="-VIN" x="-2.54" y="-10.16" drill="0.8128" diameter="1.397" shape="square"/>
+<text x="5.08" y="-24.13" size="1.27" layer="25">&gt;name</text>
+<text x="-11.43" y="22.86" size="1.27" layer="27">&gt;value</text>
+</package>
+<package name="TRACOPOWER2W">
+<description>&lt;b&gt;DC/DC-Konverter&lt;/b&gt; 2 Watt&lt;p&gt;
+Source: http://www.tracopower.com/datasheet_g/tel2-d.pdf</description>
+<wire x1="11.8" y1="-7" x2="11.8" y2="6.6" width="0.127" layer="21"/>
+<wire x1="11.8" y1="-7" x2="-12" y2="-7" width="0.127" layer="21"/>
+<wire x1="-12" y1="-7" x2="-12" y2="6.6" width="0.127" layer="21"/>
+<wire x1="-12" y1="6.6" x2="11.8" y2="6.6" width="0.127" layer="21"/>
+<circle x="-9.525" y="-3.81" radius="0.635" width="0" layer="21"/>
+<pad name="16" x="-9.2" y="4.8" drill="0.8" diameter="1.4"/>
+<pad name="15" x="-6.6" y="4.8" drill="0.8" diameter="1.4"/>
+<pad name="14" x="-4.1" y="4.8" drill="0.8" diameter="1.4"/>
+<pad name="13" x="-1.6" y="4.8" drill="0.8" diameter="1.4"/>
+<pad name="12" x="1" y="4.8" drill="0.8" diameter="1.4"/>
+<pad name="11" x="3.6" y="4.8" drill="0.8" diameter="1.4"/>
+<pad name="10" x="6.1" y="4.8" drill="0.8" diameter="1.4"/>
+<pad name="9" x="8.6" y="4.8" drill="0.8" diameter="1.4"/>
+<pad name="1" x="-9.2" y="-5.3" drill="0.8" diameter="1.4" shape="octagon"/>
+<pad name="2" x="-6.6" y="-5.3" drill="0.8" diameter="1.4"/>
+<pad name="3" x="-4.1" y="-5.3" drill="0.8" diameter="1.4"/>
+<pad name="4" x="-1.6" y="-5.3" drill="0.8" diameter="1.4"/>
+<pad name="5" x="1" y="-5.3" drill="0.8" diameter="1.4"/>
+<pad name="6" x="3.5" y="-5.3" drill="0.8" diameter="1.4"/>
+<pad name="7" x="6.1" y="-5.3" drill="0.8" diameter="1.4"/>
+<pad name="8" x="8.6" y="-5.2" drill="0.8" diameter="1.4"/>
+<text x="-8.6" y="-0.7" size="1.27" layer="21">DC DC CONVERTER</text>
+</package>
+<package name="TEN3XXXX">
+<description>&lt;b&gt;DC/DC Konverter&lt;/b&gt; 3 Watt&lt;p&gt;
+Source: http://www.tracopower.com/datasheet_g/ten3-d.pdf</description>
+<wire x1="-16.383" y1="-1.27" x2="-16.383" y2="-6.604" width="0.127" layer="21"/>
+<wire x1="-16.383" y1="1.27" x2="-16.383" y2="-1.27" width="0.127" layer="21" curve="-180"/>
+<wire x1="16.383" y1="-6.604" x2="16.383" y2="6.604" width="0.127" layer="21"/>
+<wire x1="-16.383" y1="6.604" x2="-16.383" y2="1.27" width="0.127" layer="21"/>
+<wire x1="-16.383" y1="-6.604" x2="-14.859" y2="-6.604" width="0.127" layer="21"/>
+<wire x1="-10.541" y1="-6.604" x2="-12.319" y2="-6.604" width="0.127" layer="51"/>
+<wire x1="-12.319" y1="-6.604" x2="-13.081" y2="-6.604" width="0.127" layer="21"/>
+<wire x1="-14.859" y1="-6.604" x2="-13.081" y2="-6.604" width="0.127" layer="51"/>
+<wire x1="-5.461" y1="-6.604" x2="-7.239" y2="-6.604" width="0.127" layer="51"/>
+<wire x1="-7.239" y1="-6.604" x2="-8.001" y2="-6.604" width="0.127" layer="21"/>
+<wire x1="-9.779" y1="-6.604" x2="-8.001" y2="-6.604" width="0.127" layer="51"/>
+<wire x1="-0.381" y1="-6.604" x2="-2.159" y2="-6.604" width="0.127" layer="51"/>
+<wire x1="-2.159" y1="-6.604" x2="-2.921" y2="-6.604" width="0.127" layer="21"/>
+<wire x1="-4.699" y1="-6.604" x2="-2.921" y2="-6.604" width="0.127" layer="51"/>
+<wire x1="-9.779" y1="-6.604" x2="-10.541" y2="-6.604" width="0.127" layer="21"/>
+<wire x1="-4.699" y1="-6.604" x2="-5.461" y2="-6.604" width="0.127" layer="21"/>
+<wire x1="0.381" y1="-6.604" x2="-0.381" y2="-6.604" width="0.127" layer="21"/>
+<wire x1="2.159" y1="-6.604" x2="0.381" y2="-6.604" width="0.127" layer="51"/>
+<wire x1="7.239" y1="-6.604" x2="5.461" y2="-6.604" width="0.127" layer="51"/>
+<wire x1="5.461" y1="-6.604" x2="4.699" y2="-6.604" width="0.127" layer="21"/>
+<wire x1="2.921" y1="-6.604" x2="4.699" y2="-6.604" width="0.127" layer="51"/>
+<wire x1="12.319" y1="-6.604" x2="10.541" y2="-6.604" width="0.127" layer="51"/>
+<wire x1="10.541" y1="-6.604" x2="9.779" y2="-6.604" width="0.127" layer="21"/>
+<wire x1="8.001" y1="-6.604" x2="9.779" y2="-6.604" width="0.127" layer="51"/>
+<wire x1="8.001" y1="-6.604" x2="7.239" y2="-6.604" width="0.127" layer="21"/>
+<wire x1="16.383" y1="-6.604" x2="14.859" y2="-6.604" width="0.127" layer="21"/>
+<wire x1="2.921" y1="-6.604" x2="2.159" y2="-6.604" width="0.127" layer="21"/>
+<wire x1="-16.383" y1="6.604" x2="-14.859" y2="6.604" width="0.127" layer="21"/>
+<wire x1="-10.541" y1="6.604" x2="-12.319" y2="6.604" width="0.127" layer="51"/>
+<wire x1="-12.319" y1="6.604" x2="-13.081" y2="6.604" width="0.127" layer="21"/>
+<wire x1="-14.859" y1="6.604" x2="-13.081" y2="6.604" width="0.127" layer="51"/>
+<wire x1="-5.461" y1="6.604" x2="-7.239" y2="6.604" width="0.127" layer="51"/>
+<wire x1="-7.239" y1="6.604" x2="-8.001" y2="6.604" width="0.127" layer="21"/>
+<wire x1="-9.779" y1="6.604" x2="-8.001" y2="6.604" width="0.127" layer="51"/>
+<wire x1="-0.381" y1="6.604" x2="-2.159" y2="6.604" width="0.127" layer="51"/>
+<wire x1="-2.159" y1="6.604" x2="-2.921" y2="6.604" width="0.127" layer="21"/>
+<wire x1="-4.699" y1="6.604" x2="-2.921" y2="6.604" width="0.127" layer="51"/>
+<wire x1="-9.779" y1="6.604" x2="-10.541" y2="6.604" width="0.127" layer="21"/>
+<wire x1="-4.699" y1="6.604" x2="-5.461" y2="6.604" width="0.127" layer="21"/>
+<wire x1="0.381" y1="6.604" x2="-0.381" y2="6.604" width="0.127" layer="21"/>
+<wire x1="2.159" y1="6.604" x2="0.381" y2="6.604" width="0.127" layer="51"/>
+<wire x1="7.239" y1="6.604" x2="5.461" y2="6.604" width="0.127" layer="51"/>
+<wire x1="5.461" y1="6.604" x2="4.699" y2="6.604" width="0.127" layer="21"/>
+<wire x1="2.921" y1="6.604" x2="4.699" y2="6.604" width="0.127" layer="51"/>
+<wire x1="12.319" y1="6.604" x2="10.541" y2="6.604" width="0.127" layer="51"/>
+<wire x1="10.541" y1="6.604" x2="9.779" y2="6.604" width="0.127" layer="21"/>
+<wire x1="8.001" y1="6.604" x2="9.779" y2="6.604" width="0.127" layer="51"/>
+<wire x1="8.001" y1="6.604" x2="7.239" y2="6.604" width="0.127" layer="21"/>
+<wire x1="16.383" y1="6.604" x2="14.859" y2="6.604" width="0.127" layer="21"/>
+<wire x1="2.921" y1="6.604" x2="2.159" y2="6.604" width="0.127" layer="21"/>
+<wire x1="13.081" y1="6.604" x2="12.319" y2="6.604" width="0.127" layer="21"/>
+<wire x1="14.859" y1="6.604" x2="13.081" y2="6.604" width="0.127" layer="51"/>
+<wire x1="13.081" y1="-6.604" x2="12.319" y2="-6.604" width="0.127" layer="21"/>
+<wire x1="14.859" y1="-6.604" x2="13.081" y2="-6.604" width="0.127" layer="51"/>
+<pad name="2" x="-11.43" y="-7.62" drill="0.8128" diameter="1.4224" shape="long" rot="R90"/>
+<pad name="3" x="-8.89" y="-7.62" drill="0.8128" diameter="1.4224" shape="long" rot="R90"/>
+<pad name="9" x="6.35" y="-7.62" drill="0.8128" diameter="1.4224" shape="long" rot="R90"/>
+<pad name="11" x="11.43" y="-7.62" drill="0.8128" diameter="1.4224" shape="long" rot="R90"/>
+<pad name="14" x="11.43" y="7.62" drill="0.8128" diameter="1.4224" shape="long" rot="R90"/>
+<pad name="16" x="6.35" y="7.62" drill="0.8128" diameter="1.4224" shape="long" rot="R90"/>
+<pad name="22" x="-8.89" y="7.62" drill="0.8128" diameter="1.4224" shape="long" rot="R90"/>
+<pad name="23" x="-11.43" y="7.62" drill="0.8128" diameter="1.4224" shape="long" rot="R90"/>
+<text x="-11.43" y="0.381" size="1.778" layer="25" ratio="10">&gt;NAME</text>
+<text x="-13.335" y="-5.9182" size="1.27" layer="21" ratio="10" rot="R90">1</text>
+<text x="-13.335" y="3.6068" size="1.27" layer="21" ratio="10" rot="R90">24</text>
+<text x="14.605" y="-5.9182" size="1.27" layer="21" ratio="10" rot="R90">12</text>
+<text x="14.605" y="3.8608" size="1.27" layer="21" ratio="10" rot="R90">13</text>
+<text x="-11.43" y="-2.159" size="1.778" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+<package name="TMEXXXXS">
+<description>&lt;b&gt;DC/DC Konverter&lt;/b&gt; 1 Watt&lt;p&gt;
+Source: http://www.tracopower.com/datasheet_g/tme-d.pdf</description>
+<wire x1="-6.35" y1="3.81" x2="6.35" y2="3.81" width="0.127" layer="21"/>
+<wire x1="6.35" y1="3.81" x2="6.35" y2="-3.81" width="0.127" layer="21"/>
+<wire x1="6.35" y1="-3.81" x2="-5.08" y2="-3.81" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="-3.81" x2="-6.35" y2="-3.81" width="0.127" layer="21"/>
+<wire x1="-6.35" y1="-3.81" x2="-6.35" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="-6.35" y1="-2.54" x2="-6.35" y2="3.81" width="0.127" layer="21"/>
+<wire x1="-6.35" y1="-2.54" x2="-5.08" y2="-2.54" width="0.127" layer="21"/>
+<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="-3.81" width="0.127" layer="21"/>
+<pad name="1" x="-3.81" y="1.27" drill="0.8128" diameter="1.397" shape="square"/>
+<pad name="2" x="-1.27" y="1.27" drill="0.8128" diameter="1.397" shape="square"/>
+<pad name="3" x="1.27" y="1.27" drill="0.8128" diameter="1.397" shape="square"/>
+<pad name="4" x="3.81" y="1.27" drill="0.8128" diameter="1.397" shape="square"/>
+<text x="-6.35" y="5.08" size="1.27" layer="21">&gt;name</text>
+<text x="0" y="-6.35" size="1.27" layer="21">&gt;value</text>
+<text x="-5.08" y="-1.27" size="1.27" layer="21">E-</text>
+<text x="-2.54" y="-1.27" size="1.27" layer="21">E+</text>
+<text x="0" y="-1.27" size="1.27" layer="21">A-</text>
+<text x="2.54" y="-1.27" size="1.27" layer="21">A+</text>
+</package>
+<package name="10515">
+<wire x1="0" y1="0" x2="76.2" y2="0" width="0.254" layer="21"/>
+<wire x1="76.2" y1="0" x2="76.2" y2="50.8" width="0.254" layer="21"/>
+<wire x1="76.2" y1="50.8" x2="0" y2="50.8" width="0.254" layer="21"/>
+<wire x1="0" y1="50.8" x2="0" y2="0" width="0.254" layer="21"/>
+<pad name="2" x="3.81" y="12.7" drill="1.27" diameter="2.1844" shape="square"/>
+<pad name="1" x="3.81" y="38.1" drill="1.27" diameter="2.1844" shape="square"/>
+<pad name="6" x="69.85" y="15.24" drill="1.27" diameter="2.1844" shape="square"/>
+<pad name="5" x="69.85" y="25.4" drill="1.27" diameter="2.1844" shape="square"/>
+<pad name="4" x="69.85" y="35.56" drill="1.27" diameter="2.1844" shape="square"/>
+<pad name="3" x="69.85" y="45.72" drill="1.27" diameter="2.1844" shape="square"/>
+<pad name="7" x="69.85" y="5.08" drill="1.27" diameter="2.1844" shape="square"/>
+<text x="11.43" y="44.45" size="1.27" layer="21">&gt;name</text>
+<text x="11.43" y="40.64" size="1.27" layer="21">&gt;value</text>
+</package>
+<package name="05105">
+<description>&lt;b&gt;DC/DC Konverter&lt;/b&gt; 5 Watt&lt;p&gt;
+Source: http://www.tracopower.com/datasheet_g/tpm-d.pdf</description>
+<wire x1="0" y1="0" x2="50.8" y2="0" width="0.127" layer="21"/>
+<wire x1="50.8" y1="0" x2="50.8" y2="50.8" width="0.127" layer="21"/>
+<wire x1="50.8" y1="50.8" x2="0" y2="50.8" width="0.127" layer="21"/>
+<wire x1="0" y1="50.8" x2="0" y2="0" width="0.127" layer="21"/>
+<pad name="3" x="2.54" y="2.54" drill="1.27" diameter="2.1844" shape="square"/>
+<pad name="4" x="2.54" y="46.99" drill="1.27" diameter="2.1844" shape="square"/>
+<pad name="2" x="34.29" y="2.54" drill="1.27" diameter="2.1844" shape="square"/>
+<pad name="1" x="34.29" y="17.78" drill="1.27" diameter="2.1844" shape="square"/>
+<text x="6.35" y="40.64" size="1.27" layer="21">&gt;name</text>
+<text x="6.35" y="36.83" size="1.27" layer="21">&gt;value</text>
+</package>
+<package name="TES3">
+<description>&lt;b&gt;DC/DC&lt;/b&gt;-Konverter TES 3 Serie, 3 W&lt;p&gt;
+Source: &lt;a href="http://www.tracopower.com/datasheet_g/tes3-d.pdf"&gt; Data sheet &lt;/a&gt;</description>
+<wire x1="-16.05" y1="7.275" x2="16.05" y2="7.275" width="0.2032" layer="21"/>
+<wire x1="16.05" y1="7.275" x2="16.05" y2="-7.3" width="0.2032" layer="21"/>
+<wire x1="16.05" y1="-7.3" x2="-16.05" y2="-7.3" width="0.2032" layer="21"/>
+<wire x1="-16.05" y1="-7.3" x2="-16.05" y2="7.275" width="0.2032" layer="21"/>
+<circle x="-13.97" y="-5.08" radius="0.635" width="0" layer="21"/>
+<smd name="1" x="-13.97" y="-8.636" dx="1.3" dy="2.2" layer="1"/>
+<smd name="2" x="-11.43" y="-8.636" dx="1.3" dy="2.2" layer="1"/>
+<smd name="3" x="-8.89" y="-8.636" dx="1.3" dy="2.2" layer="1"/>
+<smd name="10" x="8.89" y="-8.636" dx="1.3" dy="2.2" layer="1"/>
+<smd name="11" x="11.43" y="-8.636" dx="1.3" dy="2.2" layer="1"/>
+<smd name="12" x="13.97" y="-8.636" dx="1.3" dy="2.2" layer="1"/>
+<smd name="13" x="13.97" y="8.636" dx="1.3" dy="2.2" layer="1" rot="R180"/>
+<smd name="14" x="11.43" y="8.636" dx="1.3" dy="2.2" layer="1" rot="R180"/>
+<smd name="15" x="8.89" y="8.636" dx="1.3" dy="2.2" layer="1" rot="R180"/>
+<smd name="22" x="-8.89" y="8.636" dx="1.3" dy="2.2" layer="1" rot="R180"/>
+<smd name="23" x="-11.43" y="8.636" dx="1.3" dy="2.2" layer="1" rot="R180"/>
+<smd name="24" x="-13.97" y="8.636" dx="1.3" dy="2.2" layer="1" rot="R180"/>
+<text x="-16.51" y="-6.985" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="-12.065" y="-0.635" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="DC-DC-CONVERTER">
+<wire x1="-7.62" y1="5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<text x="-7.62" y="6.35" size="1.778" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="+VIN" x="-10.16" y="2.54" length="short" direction="pas"/>
+<pin name="-VIN" x="-10.16" y="-2.54" length="short" direction="pas"/>
+<pin name="+VOUT" x="12.7" y="2.54" length="short" direction="pas" rot="R180"/>
+<pin name="-VOUT" x="12.7" y="-2.54" length="short" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="TAP2422">
+<wire x1="-10.16" y1="10.16" x2="10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+<text x="-10.16" y="11.43" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-12.7" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="DC+" x="-15.24" y="5.08" length="middle" direction="in"/>
+<pin name="DC-" x="-15.24" y="-5.08" length="middle" direction="in"/>
+<pin name="OUT+" x="15.24" y="7.62" length="middle" direction="pas" rot="R180"/>
+<pin name="0V" x="15.24" y="0" length="middle" direction="pas" rot="R180"/>
+<pin name="OUT-" x="15.24" y="-7.62" length="middle" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="TRACOP1">
+<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<text x="-10.16" y="8.89" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="+VIN" x="-12.7" y="5.08" length="short" direction="in"/>
+<pin name="-VIN" x="-12.7" y="-5.08" length="short" direction="in"/>
+<pin name="+VOUT" x="12.7" y="5.08" length="short" direction="pas" rot="R180"/>
+<pin name="COM" x="12.7" y="0" length="short" direction="pas" rot="R180"/>
+<pin name="-VOUT" x="12.7" y="-5.08" length="short" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="TEN32411">
+<wire x1="-15.24" y1="-12.7" x2="15.24" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-12.7" x2="15.24" y2="12.7" width="0.254" layer="94"/>
+<wire x1="15.24" y1="12.7" x2="-15.24" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="12.7" x2="-15.24" y2="-12.7" width="0.254" layer="94"/>
+<text x="-15.24" y="13.97" size="1.778" layer="95">&gt;NAME</text>
+<text x="-15.24" y="-15.24" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="-VIN2" x="-20.32" y="-10.16" length="middle" direction="in"/>
+<pin name="-VIN1" x="-20.32" y="-5.08" length="middle" direction="in"/>
+<pin name="+VIN2" x="-20.32" y="5.08" length="middle" direction="in"/>
+<pin name="+VIN1" x="-20.32" y="10.16" length="middle" direction="in"/>
+<pin name="+VOUT" x="20.32" y="7.62" length="middle" direction="pas" rot="R180"/>
+<pin name="COMMON" x="20.32" y="-7.62" length="middle" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="TEN32423">
+<wire x1="-15.24" y1="-12.7" x2="15.24" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-12.7" x2="15.24" y2="12.7" width="0.254" layer="94"/>
+<wire x1="15.24" y1="12.7" x2="-15.24" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="12.7" x2="-15.24" y2="-12.7" width="0.254" layer="94"/>
+<text x="-15.24" y="13.97" size="1.778" layer="95">&gt;NAME</text>
+<text x="-15.24" y="-15.24" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="-VIN2" x="-20.32" y="-10.16" length="middle" direction="in"/>
+<pin name="-VIN1" x="-20.32" y="-5.08" length="middle" direction="in"/>
+<pin name="+VIN2" x="-20.32" y="5.08" length="middle" direction="in"/>
+<pin name="+VIN1" x="-20.32" y="10.16" length="middle" direction="in"/>
+<pin name="+VOUT1" x="20.32" y="10.16" length="middle" direction="pas" rot="R180"/>
+<pin name="COMMON1" x="20.32" y="5.08" length="middle" direction="pas" rot="R180"/>
+<pin name="COMMON2" x="20.32" y="-5.08" length="middle" direction="pas" rot="R180"/>
+<pin name="-VOUT2" x="20.32" y="-10.16" length="middle" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="TMEXXXXS">
+<wire x1="-7.62" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
+<text x="-7.62" y="6.35" size="1.778" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="E+" x="-12.7" y="2.54" length="middle" direction="in"/>
+<pin name="E-" x="-12.7" y="-2.54" length="middle" direction="in"/>
+<pin name="A+" x="12.7" y="2.54" length="middle" direction="out" rot="R180"/>
+<pin name="A-" x="12.7" y="-2.54" length="middle" direction="out" rot="R180"/>
+</symbol>
+<symbol name="TPM10515">
+<wire x1="-7.62" y1="7.62" x2="12.7" y2="7.62" width="0.254" layer="94"/>
+<wire x1="12.7" y1="7.62" x2="12.7" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<text x="-7.62" y="8.89" size="1.778" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="AC1" x="-12.7" y="2.54" length="middle" direction="in"/>
+<pin name="AC2" x="-12.7" y="-2.54" length="middle" direction="in"/>
+<pin name="+VDC1" x="17.78" y="5.08" length="middle" direction="pas" rot="R180"/>
+<pin name="COM1" x="17.78" y="2.54" length="middle" direction="pas" rot="R180"/>
+<pin name="-VDC1" x="17.78" y="0" length="middle" direction="pas" rot="R180"/>
+<pin name="+DC2" x="17.78" y="-2.54" length="middle" direction="pas" rot="R180"/>
+<pin name="-VDC2" x="17.78" y="-5.08" length="middle" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="TPM05105">
+<wire x1="-7.62" y1="7.62" x2="-7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="6.35" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="6.35" y1="-5.08" x2="6.35" y2="7.62" width="0.254" layer="94"/>
+<wire x1="6.35" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<text x="-7.62" y="8.89" size="1.778" layer="95">&gt;NAME</text>
+<text x="-7.62" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="AC1" x="-10.16" y="2.54" length="short" direction="in"/>
+<pin name="AC2" x="-10.16" y="0" length="short" direction="in"/>
+<pin name="+DC" x="8.89" y="5.08" length="short" direction="pas" rot="R180"/>
+<pin name="-DC" x="8.89" y="-2.54" length="short" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="TES3-SINGLE">
+<wire x1="-10.16" y1="7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<text x="-10.16" y="8.89" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="-OUT" x="12.7" y="-5.08" length="short" direction="out" rot="R180"/>
+<pin name="+OUT" x="12.7" y="5.08" length="short" direction="out" rot="R180"/>
+<pin name="+IN@1" x="-12.7" y="5.08" length="short" direction="in"/>
+<pin name="+IN@2" x="-12.7" y="2.54" length="short" direction="in"/>
+<pin name="-IN@1" x="-12.7" y="-2.54" length="short" direction="in"/>
+<pin name="-IN@2" x="-12.7" y="-5.08" length="short" direction="in"/>
+</symbol>
+<symbol name="TES3-DUAL">
+<wire x1="-10.16" y1="10.16" x2="12.7" y2="10.16" width="0.254" layer="94"/>
+<wire x1="12.7" y1="10.16" x2="12.7" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-7.62" x2="-10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+<text x="-10.16" y="11.43" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-10.16" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="-OUT" x="15.24" y="-5.08" length="short" direction="out" rot="R180"/>
+<pin name="+OUT" x="15.24" y="7.62" length="short" direction="out" rot="R180"/>
+<pin name="+IN@1" x="-12.7" y="7.62" length="short" direction="in"/>
+<pin name="+IN@2" x="-12.7" y="5.08" length="short" direction="in"/>
+<pin name="-IN@1" x="-12.7" y="-2.54" length="short" direction="in"/>
+<pin name="-IN@2" x="-12.7" y="-5.08" length="short" direction="in"/>
+<pin name="COM@1" x="15.24" y="2.54" length="short" direction="pas" rot="R180"/>
+<pin name="COM@2" x="15.24" y="0" length="short" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TME?*" prefix="V">
+<description>&lt;b&gt;DC/DC Converter TME Series 1 Watt &lt;/b&gt;&lt;p&gt;
+Source: www.tracopower.com .. tme.pdf</description>
+<gates>
+<gate name="G$1" symbol="DC-DC-CONVERTER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="05" package="TME">
+<connects>
+<connect gate="G$1" pin="+VIN" pad="2"/>
+<connect gate="G$1" pin="+VOUT" pad="4"/>
+<connect gate="G$1" pin="-VIN" pad="1"/>
+<connect gate="G$1" pin="-VOUT" pad="3"/>
+</connects>
+<technologies>
+<technology name="05S">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 0505S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007538" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5321" constant="no"/>
+</technology>
+<technology name="09S">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 0509S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007539" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5322" constant="no"/>
+</technology>
+<technology name="12S">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 0512S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007540" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5323" constant="no"/>
+</technology>
+<technology name="15S">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 0515S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007541" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5324" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="24" package="TME-24V">
+<connects>
+<connect gate="G$1" pin="+VIN" pad="2"/>
+<connect gate="G$1" pin="+VOUT" pad="4"/>
+<connect gate="G$1" pin="-VIN" pad="1"/>
+<connect gate="G$1" pin="-VOUT" pad="3"/>
+</connects>
+<technologies>
+<technology name="05S">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 2405S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007547" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5329" constant="no"/>
+</technology>
+<technology name="09S">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 2409S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007548" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5330" constant="no"/>
+</technology>
+<technology name="12S">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 2412S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007549" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5331" constant="no"/>
+</technology>
+<technology name="15S">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 2415S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007550" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5332" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="12" package="TME">
+<connects>
+<connect gate="G$1" pin="+VIN" pad="2"/>
+<connect gate="G$1" pin="+VOUT" pad="4"/>
+<connect gate="G$1" pin="-VIN" pad="1"/>
+<connect gate="G$1" pin="-VOUT" pad="3"/>
+</connects>
+<technologies>
+<technology name="05S">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 1205S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007542" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5325" constant="no"/>
+</technology>
+<technology name="09S">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 1209S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007544" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5326" constant="no"/>
+</technology>
+<technology name="12S">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 1212S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007545" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5327" constant="no"/>
+</technology>
+<technology name="15S">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 1215S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007546" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5328" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TAP2422" prefix="PWS" uservalue="yes">
+<description>&lt;font color="red"&gt;&lt;b&gt;Abgekündigt&lt;/b&gt;&lt;/font&gt; Ersetzt durch TEN 15 Serie,</description>
+<gates>
+<gate name="G$1" symbol="TAP2422" x="-22.86" y="30.48"/>
+</gates>
+<devices>
+<device name="" package="TAP2422">
+<connects>
+<connect gate="G$1" pin="0V" pad="COM"/>
+<connect gate="G$1" pin="DC+" pad="+VIN"/>
+<connect gate="G$1" pin="DC-" pad="-VIN"/>
+<connect gate="G$1" pin="OUT+" pad="+VOUT"/>
+<connect gate="G$1" pin="OUT-" pad="-VOUT"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TEL_2-" prefix="PWS">
+<description>&lt;b&gt;DC/DC-Konverter&lt;/b&gt; 2 Watt, 1 x Input, 1 x +- Output&lt;p&gt;
+Source: http://www.tracopower.com/datasheet_g/tel2-d.pdf</description>
+<gates>
+<gate name="G$1" symbol="TRACOP1" x="-5.08" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="TRACOPOWER2W">
+<connects>
+<connect gate="G$1" pin="+VIN" pad="16"/>
+<connect gate="G$1" pin="+VOUT" pad="9"/>
+<connect gate="G$1" pin="-VIN" pad="1"/>
+<connect gate="G$1" pin="-VOUT" pad="10"/>
+<connect gate="G$1" pin="COM" pad="8"/>
+</connects>
+<technologies>
+<technology name="0521">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEL 2-0521" constant="no"/>
+<attribute name="OC_FARNELL" value="1007027" constant="no"/>
+<attribute name="OC_NEWARK" value="51R4755" constant="no"/>
+</technology>
+<technology name="0522">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEL 2-0522" constant="no"/>
+<attribute name="OC_FARNELL" value="1007028" constant="no"/>
+<attribute name="OC_NEWARK" value="51R4756" constant="no"/>
+</technology>
+<technology name="0523">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEL 2-0523" constant="no"/>
+<attribute name="OC_FARNELL" value="1007029" constant="no"/>
+<attribute name="OC_NEWARK" value="51R4757" constant="no"/>
+</technology>
+<technology name="1221">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEL 2-1221" constant="no"/>
+<attribute name="OC_FARNELL" value="1007032" constant="no"/>
+<attribute name="OC_NEWARK" value="51R4760" constant="no"/>
+</technology>
+<technology name="1222">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEL 2-1222" constant="no"/>
+<attribute name="OC_FARNELL" value="1007033" constant="no"/>
+<attribute name="OC_NEWARK" value="51R4761" constant="no"/>
+</technology>
+<technology name="1223">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEL 2-1223" constant="no"/>
+<attribute name="OC_FARNELL" value="1007034" constant="no"/>
+<attribute name="OC_NEWARK" value="51R4762" constant="no"/>
+</technology>
+<technology name="2421">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEL 2-2421" constant="no"/>
+<attribute name="OC_FARNELL" value="1007039" constant="no"/>
+<attribute name="OC_NEWARK" value="51R4765" constant="no"/>
+</technology>
+<technology name="2422">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEL 2-2422" constant="no"/>
+<attribute name="OC_FARNELL" value="1007041" constant="no"/>
+<attribute name="OC_NEWARK" value="51R4766" constant="no"/>
+</technology>
+<technology name="2423">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEL 2-2423" constant="no"/>
+<attribute name="OC_FARNELL" value="1007042" constant="no"/>
+<attribute name="OC_NEWARK" value="51R4767" constant="no"/>
+</technology>
+<technology name="4821">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEL 2-4821" constant="no"/>
+<attribute name="OC_FARNELL" value="1007045" constant="no"/>
+<attribute name="OC_NEWARK" value="51R4770" constant="no"/>
+</technology>
+<technology name="4822">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEL 2-4822" constant="no"/>
+<attribute name="OC_FARNELL" value="1007046" constant="no"/>
+<attribute name="OC_NEWARK" value="51R4771" constant="no"/>
+</technology>
+<technology name="4823">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEL 2-4823" constant="no"/>
+<attribute name="OC_FARNELL" value="1007047" constant="no"/>
+<attribute name="OC_NEWARK" value="51R4772" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TEN_3*" prefix="PWS">
+<description>&lt;b&gt;DC/DC Konverter&lt;/b&gt; 3 Watt, 2 x Input, 1 x Output&lt;p&gt;
+Source: http://www.tracopower.com/datasheet_g/ten3-d.pdf</description>
+<gates>
+<gate name="G$1" symbol="TEN32411" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TEN3XXXX">
+<connects>
+<connect gate="G$1" pin="+VIN1" pad="22"/>
+<connect gate="G$1" pin="+VIN2" pad="23"/>
+<connect gate="G$1" pin="+VOUT" pad="14"/>
+<connect gate="G$1" pin="-VIN1" pad="2"/>
+<connect gate="G$1" pin="-VIN2" pad="3"/>
+<connect gate="G$1" pin="COMMON" pad="16"/>
+</connects>
+<technologies>
+<technology name="0510">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="0511">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="0512">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="0513">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="1210">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="1211">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="1212">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="1213">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="2410">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="2411">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEN3-2411" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="45K1582" constant="no"/>
+</technology>
+<technology name="2412">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="2413">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEN3-2413" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="14N5516" constant="no"/>
+</technology>
+<technology name="4810">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="4811">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEN 3-4811WI" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="90R9814" constant="no"/>
+</technology>
+<technology name="4812">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="4813">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TEN_3--*" prefix="PWS">
+<description>&lt;b&gt;DC/DC Konverter&lt;/b&gt; 3 Watt, 2 x Input, 2 x Output&lt;p&gt;
+Source: http://www.tracopower.com/datasheet_g/ten3-d.pdf</description>
+<gates>
+<gate name="G$1" symbol="TEN32423" x="-17.78" y="20.32"/>
+</gates>
+<devices>
+<device name="" package="TEN3XXXX">
+<connects>
+<connect gate="G$1" pin="+VIN1" pad="22"/>
+<connect gate="G$1" pin="+VIN2" pad="23"/>
+<connect gate="G$1" pin="+VOUT1" pad="14"/>
+<connect gate="G$1" pin="-VIN1" pad="2"/>
+<connect gate="G$1" pin="-VIN2" pad="3"/>
+<connect gate="G$1" pin="-VOUT2" pad="11"/>
+<connect gate="G$1" pin="COMMON1" pad="9"/>
+<connect gate="G$1" pin="COMMON2" pad="16"/>
+</connects>
+<technologies>
+<technology name="0521">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="0522">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEN 3-0522" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="91R2128" constant="no"/>
+</technology>
+<technology name="0523">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="122">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="1221">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEN31221" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="60R5780" constant="no"/>
+</technology>
+<technology name="1223">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="2421">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="2422">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEN 3-2422WI" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="78R5872" constant="no"/>
+</technology>
+<technology name="2423">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TEN3-2423" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="72J5373" constant="no"/>
+</technology>
+<technology name="4821">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="4822">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="4823">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TME_*S" prefix="PWS">
+<description>&lt;b&gt;DC/DC Konverter&lt;/b&gt; 1 Watt&lt;p&gt;
+Source: http://www.tracopower.com/datasheet_g/tme-d.pdf</description>
+<gates>
+<gate name="G$1" symbol="TMEXXXXS" x="-20.32" y="20.32"/>
+</gates>
+<devices>
+<device name="" package="TMEXXXXS">
+<connects>
+<connect gate="G$1" pin="A+" pad="4"/>
+<connect gate="G$1" pin="A-" pad="3"/>
+<connect gate="G$1" pin="E+" pad="2"/>
+<connect gate="G$1" pin="E-" pad="1"/>
+</connects>
+<technologies>
+<technology name="0505">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 0505S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007538" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5321" constant="no"/>
+</technology>
+<technology name="0509">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 0509S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007539" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5322" constant="no"/>
+</technology>
+<technology name="0512">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 0512S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007540" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5323" constant="no"/>
+</technology>
+<technology name="0515">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 0515S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007541" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5324" constant="no"/>
+</technology>
+<technology name="1205">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 1205S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007542" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5325" constant="no"/>
+</technology>
+<technology name="1209">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 1209S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007544" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5326" constant="no"/>
+</technology>
+<technology name="1212">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 1212S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007545" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5327" constant="no"/>
+</technology>
+<technology name="1215">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 1215S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007546" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5328" constant="no"/>
+</technology>
+<technology name="2405">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 2405S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007547" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5329" constant="no"/>
+</technology>
+<technology name="2409">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 2409S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007548" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5330" constant="no"/>
+</technology>
+<technology name="2412">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 2412S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007549" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5331" constant="no"/>
+</technology>
+<technology name="2415">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="TME 2415S" constant="no"/>
+<attribute name="OC_FARNELL" value="1007550" constant="no"/>
+<attribute name="OC_NEWARK" value="51R5332" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TPM-*" prefix="PWS" uservalue="yes">
+<description>&lt;b&gt;DC/DC Konverter&lt;/b&gt; 10/15 Watt, 1 x Input, 2 x Output&lt;p&gt;
+Suurce: http://www.tracopower.com/datasheet_g/tpm-d.pdf</description>
+<gates>
+<gate name="G$1" symbol="TPM10515" x="-27.94" y="12.7"/>
+</gates>
+<devices>
+<device name="" package="10515">
+<connects>
+<connect gate="G$1" pin="+DC2" pad="4"/>
+<connect gate="G$1" pin="+VDC1" pad="3"/>
+<connect gate="G$1" pin="-VDC1" pad="7"/>
+<connect gate="G$1" pin="-VDC2" pad="6"/>
+<connect gate="G$1" pin="AC1" pad="1"/>
+<connect gate="G$1" pin="AC2" pad="2"/>
+<connect gate="G$1" pin="COM1" pad="5"/>
+</connects>
+<technologies>
+<technology name="05212">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="05215">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TPM_*" prefix="PWS">
+<description>&lt;b&gt;DC/DC Konverter&lt;/b&gt; 5 Watt, 1 x Input, 1 x Output&lt;p&gt;
+Source: http://www.tracopower.com/datasheet_g/tpm-d.pdf</description>
+<gates>
+<gate name="G$1" symbol="TPM05105" x="-25.4" y="25.4"/>
+</gates>
+<devices>
+<device name="" package="05105">
+<connects>
+<connect gate="G$1" pin="+DC" pad="3"/>
+<connect gate="G$1" pin="-DC" pad="4"/>
+<connect gate="G$1" pin="AC1" pad="1"/>
+<connect gate="G$1" pin="AC2" pad="2"/>
+</connects>
+<technologies>
+<technology name="05105">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+<technology name="05112">
+<attribute name="MF" value="" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+<attribute name="OC_FARNELL" value="unknown" constant="no"/>
+<attribute name="OC_NEWARK" value="unknown" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TES3-" prefix="PWS">
+<description>&lt;b&gt;DC/DC&lt;/b&gt; Converter Dual Output, 3W&lt;p&gt;
+Source: &lt;a href="http://www.tracopower.com/datasheet_g/tes3-d.pdf"&gt; Data sheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="TES3-DUAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TES3">
+<connects>
+<connect gate="G$1" pin="+IN@1" pad="23"/>
+<connect gate="G$1" pin="+IN@2" pad="24"/>
+<connect gate="G$1" pin="+OUT" pad="13"/>
+<connect gate="G$1" pin="-IN@1" pad="1"/>
+<connect gate="G$1" pin="-IN@2" pad="2"/>
+<connect gate="G$1" pin="-OUT" pad="12"/>
+<connect gate="G$1" pin="COM@1" pad="10"/>
+<connect gate="G$1" pin="COM@2" pad="15"/>
+</connects>
+<technologies>
+<technology name="1222"/>
+<technology name="1223"/>
+<technology name="2422"/>
+<technology name="2423"/>
+<technology name="4822"/>
+<technology name="4823"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TES3" prefix="PWS">
+<description>&lt;b&gt;DC/DC&lt;/b&gt; Converter Single Output, 3W&lt;p&gt;
+Source: &lt;a href="http://www.tracopower.com/datasheet_g/tes3-d.pdf"&gt; Data sheet &lt;/a&gt;</description>
+<gates>
+<gate name="G$1" symbol="TES3-SINGLE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TES3">
+<connects>
+<connect gate="G$1" pin="+IN@1" pad="23"/>
+<connect gate="G$1" pin="+IN@2" pad="24"/>
+<connect gate="G$1" pin="+OUT" pad="13"/>
+<connect gate="G$1" pin="-IN@1" pad="1"/>
+<connect gate="G$1" pin="-IN@2" pad="2"/>
+<connect gate="G$1" pin="-OUT" pad="15"/>
+</connects>
+<technologies>
+<technology name="-1210"/>
+<technology name="-1211"/>
+<technology name="-1212"/>
+<technology name="-2410"/>
+<technology name="-2411"/>
+<technology name="-2412"/>
+<technology name="-4810"/>
+<technology name="-4811"/>
+<technology name="-4812"/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>
